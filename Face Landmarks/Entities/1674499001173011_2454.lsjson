@@ -1,0 +1,79 @@
+{
+    "1582052933048467:16017": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "b04733a4150c4d4a5b4f95971496a34f"
+                    },
+                    "v": "1674499001173095:2574"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "1084248",
+                "compressedSize": "70352",
+                "extension": "png",
+                "originalRAM": "8650320",
+                "originalSize": "59275",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1674499001173091:2569"
+        }
+    },
+    "1674499001173011:2454": {
+        "IResourceController": {
+            "name": "Landmarks Points Guide [LOOK_AT_ME]",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1582052933048467:16017",
+            "fileId": "1674499001173016:2502",
+            "originalId": "1674499001173031:2503",
+            "publicId": "1674499001173155:2623",
+            "expected_hash": "a645935ecddc246bf68f4784ff329fc3",
+            "additional": {
+                "originHash": "b04733a4150c4d4a5b4f95971496a34f"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582052933048467:16017",
+            "name": "Files/File6.png",
+            "flags": 1
+        }
+    },
+    "1674499001173016:2502": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173016_2502.pvr"
+        }
+    },
+    "1674499001173031:2503": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173031_2503.png"
+        }
+    },
+    "1674499001173091:2569": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173091_2569.png"
+        }
+    },
+    "1674499001173095:2574": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173095_2574.pvr"
+        }
+    },
+    "1674499001173155:2623": {
+        "IResourceController": {
+            "public": {
+                "path": "Landmarks Points Guide [LOOK_AT_ME].png",
+                "hash": "b04733a4150c4d4a5b4f95971496a34f"
+            }
+        }
+    }
+}

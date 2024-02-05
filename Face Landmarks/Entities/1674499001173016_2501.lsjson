@@ -1,0 +1,17 @@
+{
+    "1674499001173016:2501": {
+        "IResourceController": {
+            "name": "Tear 2",
+            "type": 8,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645663034441403:183522"
+        },
+        "IResourceManager": {
+            "uid": "1645663034441403:183522",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

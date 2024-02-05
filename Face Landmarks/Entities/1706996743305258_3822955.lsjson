@@ -1,0 +1,23 @@
+{
+    "1706996743305258:3822955": {
+        "IResourceController": {
+            "name": "Balloons Pack Resources",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1706996743308358:3822958",
+            "resources": [
+                "1706996743308958:3822959",
+                "1706996743530111:3823045"
+            ]
+        }
+    },
+    "1706996743308358:3822958": {
+        "IResourceController": {
+            "public": {
+                "path": "Balloons Pack Resources"
+            }
+        }
+    }
+}

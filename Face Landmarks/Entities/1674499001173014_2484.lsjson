@@ -1,0 +1,30 @@
+{
+    "1674499001173014:2484": {
+        "IResourceController": {
+            "name": "Diff",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1588299059698277:1173158",
+            "fileId": "1674499001173083:2560",
+            "originalId": "1674499001173083:2561",
+            "expected_hash": "0febd5bc9be04ba2e49753f22e5c565d"
+        },
+        "IResourceManager": {
+            "uid": "1588299059698277:1173158",
+            "name": "Files/File_1674499001173083_2560.jpeg",
+            "flags": 1
+        }
+    },
+    "1674499001173083:2560": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173083_2560.jpeg"
+        }
+    },
+    "1674499001173083:2561": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173083_2561.jpeg"
+        }
+    }
+}

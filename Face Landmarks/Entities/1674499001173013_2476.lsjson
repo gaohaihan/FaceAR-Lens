@@ -1,0 +1,79 @@
+{
+    "1582765983357724:188518": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "21bea38a0c61ec09f788064bf98aece3"
+                    },
+                    "v": "1674499001173093:2571"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "131072",
+                "compressedSize": "22472",
+                "extension": "png",
+                "originalRAM": "1048576",
+                "originalSize": "28187",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1674499001173088:2566"
+        }
+    },
+    "1674499001173013:2476": {
+        "IResourceController": {
+            "name": "magnifying_body_base",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1582765983357724:188518",
+            "fileId": "1674499001173070:2546",
+            "originalId": "1674499001173071:2547",
+            "publicId": "1674499001173156:2631",
+            "expected_hash": "745944ae04561c01807b382b082ab821",
+            "additional": {
+                "originHash": "21bea38a0c61ec09f788064bf98aece3"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582765983357724:188518",
+            "name": "Files/File160.png",
+            "flags": 1
+        }
+    },
+    "1674499001173070:2546": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173070_2546.pvr"
+        }
+    },
+    "1674499001173071:2547": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173071_2547.png"
+        }
+    },
+    "1674499001173088:2566": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173088_2566.png"
+        }
+    },
+    "1674499001173093:2571": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173093_2571.pvr"
+        }
+    },
+    "1674499001173156:2631": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Textures/magnifying_body_base.png",
+                "hash": "21bea38a0c61ec09f788064bf98aece3"
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "1582676825628863:46681": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "468e32e8cb062444a31ffff8025e32a5"
+                    },
+                    "v": "1674499001173092:2570"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "32768",
+                "compressedSize": "542",
+                "extension": "png",
+                "originalRAM": "262144",
+                "originalSize": "303",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1674499001173087:2565"
+        }
+    },
+    "1674499001173011:2459": {
+        "IResourceController": {
+            "name": "stripe",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1582676825628863:46681",
+            "fileId": "1674499001173038:2511",
+            "originalId": "1674499001173039:2512",
+            "publicId": "1674499001173155:2625",
+            "expected_hash": "6b38e58a62eaf1d44b76125efec8763f",
+            "additional": {
+                "originHash": "468e32e8cb062444a31ffff8025e32a5"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582676825628863:46681",
+            "name": "Files/File86.png",
+            "flags": 1
+        }
+    },
+    "1674499001173038:2511": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173038_2511.pvr"
+        }
+    },
+    "1674499001173039:2512": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173039_2512.png"
+        }
+    },
+    "1674499001173087:2565": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173087_2565.png"
+        }
+    },
+    "1674499001173092:2570": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173092_2570.pvr"
+        }
+    },
+    "1674499001173155:2625": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Textures/stripe.png",
+                "hash": "468e32e8cb062444a31ffff8025e32a5"
+            }
+        }
+    }
+}

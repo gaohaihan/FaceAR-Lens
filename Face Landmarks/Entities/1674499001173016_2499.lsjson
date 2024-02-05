@@ -1,0 +1,39 @@
+{
+    "1674499001173016:2499": {
+        "IResourceController": {
+            "name": "tear",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645663019945900:172511",
+            "fileId": "1674499001173129:2610",
+            "originalId": "1674499001173130:2611",
+            "publicId": "1674499001173161:2651",
+            "expected_hash": "9ea682f912b7781f4a866559795aeaaf"
+        },
+        "IResourceManager": {
+            "uid": "1645663019945900:172511",
+            "name": "Files/File_1674499001173129_2610",
+            "flags": 1
+        }
+    },
+    "1674499001173129:2610": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173129_2610"
+        }
+    },
+    "1674499001173130:2611": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173130_2611.lsmat"
+        }
+    },
+    "1674499001173161:2651": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Materials/tear.lsmat",
+                "hash": "5ad3b5a093301ebbdb0d33ad241ce64b"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "1674499001173161:2648": {
+        "IResourceController": {
+            "public": {
+                "path": "../AdditionalFiles/FaceLandmarks Template Resources/Models/Tear/Meshes_1"
+            }
+        }
+    },
+    "1674499001173268:2707": {
+        "IResourceController": {
+            "name": "Meshes_1",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1674499001173161:2648",
+            "resources": [
+                "1674499001173015:2497"
+            ]
+        }
+    }
+}

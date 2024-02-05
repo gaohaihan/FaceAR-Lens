@@ -1,0 +1,39 @@
+{
+    "1674499001173015:2494": {
+        "IResourceController": {
+            "name": "magnify",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645662098041797:634176",
+            "fileId": "1674499001173123:2603",
+            "originalId": "1674499001173124:2604",
+            "publicId": "1674499001173160:2646",
+            "expected_hash": "9ea682f912b7781f4a866559795aeaaf"
+        },
+        "IResourceManager": {
+            "uid": "1645662098041797:634176",
+            "name": "Files/File_1674499001173123_2603",
+            "flags": 1
+        }
+    },
+    "1674499001173123:2603": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173123_2603"
+        }
+    },
+    "1674499001173124:2604": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173124_2604.lsmat"
+        }
+    },
+    "1674499001173160:2646": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Materials/magnify.lsmat",
+                "hash": "552c9144141f86b8b89f41c86f22536d"
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "1582829639621125:514460": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "32496",
+                "compressedSize": "19548",
+                "extension": "mesh",
+                "originalRAM": "32496",
+                "originalSize": "19548",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1674499001173118:2598"
+        }
+    },
+    "1674499001173014:2480": {
+        "IResourceController": {
+            "name": "Tear",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1582829639621125:514460",
+            "fileId": "1674499001173077:2554",
+            "originalId": "1674499001173078:2555",
+            "expected_hash": "9f46920ca0c6bdb5a52bb3b97f46472b",
+            "additional": {
+                "originalAttribs": {
+                    "vertexAttribs": [
+                        {
+                            "format": "9",
+                            "index": "0",
+                            "semantic": "position"
+                        },
+                        {
+                            "format": "9",
+                            "index": "1",
+                            "semantic": "normal"
+                        },
+                        {
+                            "format": "9",
+                            "index": "2",
+                            "semantic": "tangent"
+                        },
+                        {
+                            "format": "9",
+                            "index": "3",
+                            "semantic": "texture0"
+                        }
+                    ]
+                }
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582829639621125:514460",
+            "name": "Files/File_1674499001173077_2554.mesh",
+            "flags": 1
+        }
+    },
+    "1674499001173077:2554": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173077_2554.mesh"
+        }
+    },
+    "1674499001173078:2555": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173078_2555.mesh"
+        }
+    },
+    "1674499001173118:2598": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173118_2598.mesh"
+        }
+    }
+}

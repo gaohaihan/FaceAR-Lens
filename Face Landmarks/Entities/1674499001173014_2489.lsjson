@@ -1,0 +1,42 @@
+{
+    "1674499001173014:2489": {
+        "IResourceController": {
+            "name": "eyelid_green",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1623203164219878:164845",
+            "fileId": "1674499001173102:2581",
+            "originalId": "1674499001173103:2582",
+            "publicId": "1674499001173159:2642",
+            "expected_hash": "e46eeeaebfb9a09a3580ab1fcc0a4b57",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1623203164219878:164845",
+            "name": "Files/File_1674499001173102_2581",
+            "flags": 1
+        }
+    },
+    "1674499001173102:2581": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173102_2581"
+        }
+    },
+    "1674499001173103:2582": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173103_2582.lsmat"
+        }
+    },
+    "1674499001173159:2642": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Materials/eyelid_green.lsmat",
+                "hash": "814f1a535c2d386dbcc146731dfbaada"
+            }
+        }
+    }
+}

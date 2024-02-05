@@ -1,0 +1,30 @@
+{
+    "1674499001173011:2458": {
+        "IResourceController": {
+            "name": "Mustache",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1582676600685661:16572",
+            "fileId": "1674499001173036:2508",
+            "originalId": "1674499001173038:2510",
+            "expected_hash": "2ecc3b07888dcea400c8696a5291ad4e"
+        },
+        "IResourceManager": {
+            "uid": "1582676600685661:16572",
+            "name": "Mustache",
+            "flags": 0
+        }
+    },
+    "1674499001173036:2508": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173036_2508.oprfb"
+        }
+    },
+    "1674499001173038:2510": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173038_2510.oprfb"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1706996744052446:3823192": {
+        "IFileManager": {
+            "path": "Files/File_1706996744052446_3823192"
+        }
+    },
+    "1706996744053194:3823193": {
+        "IResourceController": {
+            "name": "balloon_2",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1706996744053197:3823194",
+            "fileId": "1706996744052446:3823192",
+            "originalId": "1706996744069976:3823200",
+            "publicId": "1706996744131057:3823207",
+            "expected_hash": "76f76c15ab334783ecb74d337307ce54"
+        },
+        "IResourceManager": {
+            "uid": "1706996744053197:3823194",
+            "name": "Files/File_1706996744052446_3823192",
+            "flags": 1
+        }
+    },
+    "1706996744069976:3823200": {
+        "IFileManager": {
+            "path": "Files/File_1706996744069976_3823200.lsmat"
+        }
+    },
+    "1706996744131057:3823207": {
+        "IResourceController": {
+            "public": {
+                "path": "Balloons Pack Resources/Materials/balloon_2.lsmat",
+                "hash": "e35958c1596165428c28f58ed22d9f10"
+            }
+        }
+    }
+}

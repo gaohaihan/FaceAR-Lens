@@ -1,0 +1,25 @@
+{
+    "1674499001173154:2620": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Models"
+            }
+        }
+    },
+    "1674499001173269:2710": {
+        "IResourceController": {
+            "name": "Models",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1674499001173154:2620",
+            "resources": [
+                "1674499001173228:2698",
+                "1674499001173233:2701",
+                "1674499001173260:2704",
+                "1674499001173269:2709"
+            ]
+        }
+    }
+}

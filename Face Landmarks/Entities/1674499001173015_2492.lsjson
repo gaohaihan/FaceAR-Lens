@@ -1,0 +1,39 @@
+{
+    "1674499001173015:2492": {
+        "IResourceController": {
+            "name": "silver",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645661812343946:588845",
+            "fileId": "1674499001173119:2599",
+            "originalId": "1674499001173120:2600",
+            "publicId": "1674499001173160:2645",
+            "expected_hash": "9ea682f912b7781f4a866559795aeaaf"
+        },
+        "IResourceManager": {
+            "uid": "1645661812343946:588845",
+            "name": "Files/File_1674499001173119_2599",
+            "flags": 1
+        }
+    },
+    "1674499001173119:2599": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173119_2599"
+        }
+    },
+    "1674499001173120:2600": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173120_2600.lsmat"
+        }
+    },
+    "1674499001173160:2645": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Materials/silver.lsmat",
+                "hash": "ca32660c6608331f630eba2ea84813e8"
+            }
+        }
+    }
+}

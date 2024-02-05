@@ -1,0 +1,37 @@
+{
+    "1674499001173080:2557": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173080_2557.fbx"
+        }
+    },
+    "1674499001173157:2635": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Models/Tear.fbx",
+                "hash": "93d5bacbfd2523d528ac6283b2a6eb6d"
+            }
+        }
+    },
+    "1674499001173269:2709": {
+        "IResourceController": {
+            "name": "Tear",
+            "type": 18,
+            "subtype": -1,
+            "dependency": 2,
+            "hidden": false,
+            "fileId": "1674499001173080:2557",
+            "publicId": "1674499001173157:2635",
+            "expected_hash": "93d5bacbfd2523d528ac6283b2a6eb6d",
+            "resources": [
+                "1674499001173263:2705",
+                "1674499001173264:2706",
+                "1674499001173014:2482",
+                "1674499001173268:2707",
+                "1674499001173269:2708"
+            ],
+            "additional": {
+                "materialMapping": ""
+            }
+        }
+    }
+}

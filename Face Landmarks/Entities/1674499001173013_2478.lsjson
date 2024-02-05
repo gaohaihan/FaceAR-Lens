@@ -1,0 +1,79 @@
+{
+    "1582765996901522:191463": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "dce89e0b205fa124c712f05732075dc4"
+                    },
+                    "v": "1674499001173095:2573"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "131072",
+                "compressedSize": "46681",
+                "extension": "png",
+                "originalRAM": "1048576",
+                "originalSize": "71608",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1674499001173090:2568"
+        }
+    },
+    "1674499001173013:2478": {
+        "IResourceController": {
+            "name": "magnifying_body_materialParams",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1582765996901522:191463",
+            "fileId": "1674499001173074:2550",
+            "originalId": "1674499001173075:2551",
+            "publicId": "1674499001173157:2633",
+            "expected_hash": "bcdae223c9d3d1784e2c3dce85f58d80",
+            "additional": {
+                "originHash": "dce89e0b205fa124c712f05732075dc4"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582765996901522:191463",
+            "name": "Files/File164.png",
+            "flags": 1
+        }
+    },
+    "1674499001173074:2550": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173074_2550.pvr"
+        }
+    },
+    "1674499001173075:2551": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173075_2551.png"
+        }
+    },
+    "1674499001173090:2568": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173090_2568.png"
+        }
+    },
+    "1674499001173095:2573": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173095_2573.pvr"
+        }
+    },
+    "1674499001173157:2633": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Textures/magnifying_body_materialParams.png",
+                "hash": "dce89e0b205fa124c712f05732075dc4"
+            }
+        }
+    }
+}

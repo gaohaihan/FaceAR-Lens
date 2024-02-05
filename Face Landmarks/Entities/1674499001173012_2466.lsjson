@@ -1,0 +1,42 @@
+{
+    "1674499001173012:2466": {
+        "IResourceController": {
+            "name": "refraction",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1582742616143395:17088",
+            "fileId": "1674499001173052:2526",
+            "originalId": "1674499001173053:2527",
+            "publicId": "1674499001173156:2627",
+            "expected_hash": "f3f763b830e38caeba3cd5799202b087",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1582742616143395:17088",
+            "name": "Files/File_1674499001173052_2526",
+            "flags": 1
+        }
+    },
+    "1674499001173052:2526": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173052_2526"
+        }
+    },
+    "1674499001173053:2527": {
+        "IFileManager": {
+            "path": "Files/File_1674499001173053_2527.lsmat"
+        }
+    },
+    "1674499001173156:2627": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Materials/refraction.lsmat",
+                "hash": "0140a3c6ca6fe32d8425ef3907be5476"
+            }
+        }
+    }
+}
