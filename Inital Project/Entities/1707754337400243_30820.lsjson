@@ -1,0 +1,39 @@
+{
+    "1707754337397186:30819": {
+        "IFileManager": {
+            "path": "Files/File_1707754337397186_30819"
+        }
+    },
+    "1707754337400243:30820": {
+        "IResourceController": {
+            "name": "Yellow Material",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707754337400252:30821",
+            "fileId": "1707754337397186:30819",
+            "originalId": "1707754337433781:30830",
+            "publicId": "1707754337902514:30913",
+            "expected_hash": "d34dfd0046fbd4ccdd0b490b54cf784b"
+        },
+        "IResourceManager": {
+            "uid": "1707754337400252:30821",
+            "name": "Files/File_1707754337397186_30819",
+            "flags": 1
+        }
+    },
+    "1707754337433781:30830": {
+        "IFileManager": {
+            "path": "Files/File_1707754337433781_30830.lsmat"
+        }
+    },
+    "1707754337902514:30913": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Yellow Material.lsmat",
+                "hash": "cacae3701df5de307978288d21a23f87"
+            }
+        }
+    }
+}
