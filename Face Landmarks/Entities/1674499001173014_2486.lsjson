@@ -10,7 +10,7 @@
             "fileId": "1674499001173096:2575",
             "originalId": "1674499001173097:2576",
             "publicId": "1674499001173158:2639",
-            "expected_hash": "e46eeeaebfb9a09a3580ab1fcc0a4b57",
+            "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
             }
@@ -35,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/white_eye.lsmat",
-                "hash": "430823df22c35e0c2875b779e55bec4f"
+                "hash": "2623b47c1a6988f3a04a9eaa0843bbb7"
             }
         }
     }

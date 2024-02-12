@@ -10,7 +10,7 @@
             "fileId": "1674499001173123:2603",
             "originalId": "1674499001173124:2604",
             "publicId": "1674499001173160:2646",
-            "expected_hash": "9ea682f912b7781f4a866559795aeaaf"
+            "expected_hash": "2037cf9a26ddfbf76aaa7cc304abb77d"
         },
         "IResourceManager": {
             "uid": "1645662098041797:634176",
@@ -32,7 +32,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/magnify.lsmat",
-                "hash": "552c9144141f86b8b89f41c86f22536d"
+                "hash": "ff5c9f2590337f7f24798d34031bce76"
             }
         }
     }

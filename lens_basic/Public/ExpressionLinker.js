@@ -38,6 +38,7 @@ function GetWeight(){
     // particularlly to the alpha value.
     var max_weight = 1 - script.sensitivity
     var adjusted_weight = weight / max_weight
+    print(adjusted_weight)
 
     return adjusted_weight 
 }

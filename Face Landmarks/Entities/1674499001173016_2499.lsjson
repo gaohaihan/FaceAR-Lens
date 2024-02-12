@@ -10,7 +10,7 @@
             "fileId": "1674499001173129:2610",
             "originalId": "1674499001173130:2611",
             "publicId": "1674499001173161:2651",
-            "expected_hash": "9ea682f912b7781f4a866559795aeaaf"
+            "expected_hash": "2037cf9a26ddfbf76aaa7cc304abb77d"
         },
         "IResourceManager": {
             "uid": "1645663019945900:172511",
@@ -32,7 +32,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/tear.lsmat",
-                "hash": "5ad3b5a093301ebbdb0d33ad241ce64b"
+                "hash": "04f6a621c6e809f7e149fb1408a3e600"
             }
         }
     }

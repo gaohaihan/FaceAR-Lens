@@ -1,0 +1,39 @@
+{
+    "1707775086723361:493282": {
+        "IFileManager": {
+            "path": "Files/File_1707775086723361_493282"
+        }
+    },
+    "1707775086726402:493283": {
+        "IResourceController": {
+            "name": "White Material",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707775086726408:493284",
+            "fileId": "1707775086723361:493282",
+            "originalId": "1707775086753329:493288",
+            "publicId": "1707775087126571:493380",
+            "expected_hash": "9fe2ad17389aa4b58ff5d81a92b80b20"
+        },
+        "IResourceManager": {
+            "uid": "1707775086726408:493284",
+            "name": "Files/File_1707775086723361_493282",
+            "flags": 1
+        }
+    },
+    "1707775086753329:493288": {
+        "IFileManager": {
+            "path": "Files/File_1707775086753329_493288.lsmat"
+        }
+    },
+    "1707775087126571:493380": {
+        "IResourceController": {
+            "public": {
+                "path": "White Material.lsmat",
+                "hash": "7e010eca18b77342b51203d61da8c2fe"
+            }
+        }
+    }
+}

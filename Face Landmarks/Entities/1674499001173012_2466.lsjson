@@ -10,7 +10,7 @@
             "fileId": "1674499001173052:2526",
             "originalId": "1674499001173053:2527",
             "publicId": "1674499001173156:2627",
-            "expected_hash": "f3f763b830e38caeba3cd5799202b087",
+            "expected_hash": "510c537020edd4763a93f80218d26170",
             "additional": {
                 "isUnpackedInPublic": "false"
             }
@@ -35,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/refraction.lsmat",
-                "hash": "0140a3c6ca6fe32d8425ef3907be5476"
+                "hash": "b26774912cf93ef17729eaa194b83827"
             }
         }
     }

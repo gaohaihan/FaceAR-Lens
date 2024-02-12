@@ -10,7 +10,7 @@
             "fileId": "1674499001173102:2581",
             "originalId": "1674499001173103:2582",
             "publicId": "1674499001173159:2642",
-            "expected_hash": "e46eeeaebfb9a09a3580ab1fcc0a4b57",
+            "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
             }
@@ -35,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/eyelid_green.lsmat",
-                "hash": "814f1a535c2d386dbcc146731dfbaada"
+                "hash": "81d95e32674b67006d74acac90928528"
             }
         }
     }

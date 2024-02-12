@@ -10,7 +10,7 @@
             "fileId": "1674499001173104:2583",
             "originalId": "1674499001173105:2584",
             "publicId": "1674499001173159:2643",
-            "expected_hash": "e46eeeaebfb9a09a3580ab1fcc0a4b57",
+            "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
             }
@@ -35,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/mustache.lsmat",
-                "hash": "8d24838a8538302777a0219f273e928c"
+                "hash": "56fe220d0ae39be6f87a76880a4ed6cd"
             }
         }
     }
