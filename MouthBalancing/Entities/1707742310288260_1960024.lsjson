@@ -1,0 +1,38 @@
+{
+    "1707742310282689:1960023": {
+        "IFileManager": {
+            "path": "Files/File_1707742310282689_1960023.js"
+        }
+    },
+    "1707742310288260:1960024": {
+        "IResourceController": {
+            "name": "GetGenericTweenScriptValue",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707742310288290:1960025",
+            "fileId": "1707742310282689:1960023",
+            "publicId": "1707742310308057:1960035",
+            "expected_hash": "f563855af5caff3608f5e42424a03e77"
+        },
+        "IResourceManager": {
+            "uid": "1707742310288290:1960025",
+            "name": "Files/File_1707742310282689_1960023.js",
+            "flags": 1
+        }
+    },
+    "1707742310288290:1960025": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1707742310308057:1960035": {
+        "IResourceController": {
+            "public": {
+                "path": "Tween/Visual Scripting Custom Nodes/TweenManager Nodes/GetGenericTweenScriptValue.js",
+                "hash": "f563855af5caff3608f5e42424a03e77"
+            }
+        }
+    }
+}

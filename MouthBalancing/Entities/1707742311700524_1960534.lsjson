@@ -1,0 +1,24 @@
+{
+    "1707742311700524:1960534": {
+        "IResourceController": {
+            "name": "Position",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1707742311700915:1960535",
+            "resources": [
+                "1707742311688413:1960523",
+                "1707742311732900:1960543",
+                "1707742311774237:1960561"
+            ]
+        }
+    },
+    "1707742311700915:1960535": {
+        "IResourceController": {
+            "public": {
+                "path": "Tween/Visual Scripting Custom Nodes/Tween Nodes/Position"
+            }
+        }
+    }
+}

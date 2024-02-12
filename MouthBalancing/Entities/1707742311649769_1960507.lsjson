@@ -1,0 +1,38 @@
+{
+    "1707742311646548:1960504": {
+        "IFileManager": {
+            "path": "Files/File_1707742311646548_1960504.js"
+        }
+    },
+    "1707742311649769:1960507": {
+        "IResourceController": {
+            "name": "TweenNumber",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707742311649789:1960508",
+            "fileId": "1707742311646548:1960504",
+            "publicId": "1707742311663095:1960518",
+            "expected_hash": "a2e1316680942327c8ca6ba6ce341f7f"
+        },
+        "IResourceManager": {
+            "uid": "1707742311649789:1960508",
+            "name": "Files/File_1707742311646548_1960504.js",
+            "flags": 1
+        }
+    },
+    "1707742311649789:1960508": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1707742311663095:1960518": {
+        "IResourceController": {
+            "public": {
+                "path": "Tween/Visual Scripting Custom Nodes/Tween Nodes/Basic Tweens/TweenNumber.js",
+                "hash": "a2e1316680942327c8ca6ba6ce341f7f"
+            }
+        }
+    }
+}

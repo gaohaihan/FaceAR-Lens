@@ -1,0 +1,27 @@
+{
+    "1707742311956550:1960648": {
+        "IResourceController": {
+            "name": "Rotation",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1707742311956893:1960649",
+            "resources": [
+                "1707742311943759:1960636",
+                "1707742311986236:1960655",
+                "1707742312015677:1960668",
+                "1707742312039676:1960681",
+                "1707742312080821:1960701",
+                "1707742312123180:1960717"
+            ]
+        }
+    },
+    "1707742311956893:1960649": {
+        "IResourceController": {
+            "public": {
+                "path": "Tween/Visual Scripting Custom Nodes/Tween Nodes/Rotation"
+            }
+        }
+    }
+}

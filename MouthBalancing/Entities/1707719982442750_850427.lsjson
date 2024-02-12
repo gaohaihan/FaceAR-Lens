@@ -1,0 +1,79 @@
+{
+    "1707719982421842:850426": {
+        "IFileManager": {
+            "path": "Files/File_1707719982421842_850426.pvr"
+        }
+    },
+    "1707719982442750:850427": {
+        "IResourceController": {
+            "name": "SmileBallFace",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707719982448429:850428",
+            "fileId": "1707719982421842:850426",
+            "originalId": "1707719982455174:850434",
+            "publicId": "1707719982541513:850450",
+            "expected_hash": "f3055a14d946503debf89345ad1c871a",
+            "additional": {
+                "originHash": "0b03ad6f72754b3654f2bd567433d418"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1707719982448429:850428",
+            "name": "Files/File_1707719982421842_850426.png",
+            "flags": 1
+        }
+    },
+    "1707719982448429:850428": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "0b03ad6f72754b3654f2bd567433d418"
+                    },
+                    "v": "1707720007455075:853708"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "209944",
+                "compressedSize": "16318",
+                "extension": "png",
+                "originalRAM": "1669200",
+                "originalSize": "22010",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1707719982481504:850441"
+        }
+    },
+    "1707719982455174:850434": {
+        "IFileManager": {
+            "path": "Files/File_1707719982455174_850434.png"
+        }
+    },
+    "1707719982481504:850441": {
+        "IFileManager": {
+            "path": "Files/File_1707719982481504_850441.png"
+        }
+    },
+    "1707719982541513:850450": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/SmileBallFace.png",
+                "hash": "0b03ad6f72754b3654f2bd567433d418"
+            }
+        }
+    },
+    "1707720007455075:853708": {
+        "IFileManager": {
+            "path": "Files/File_1707720007455075_853708.pvr"
+        }
+    }
+}
