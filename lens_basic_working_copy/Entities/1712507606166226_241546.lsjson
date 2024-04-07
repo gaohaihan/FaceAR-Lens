@@ -1,0 +1,38 @@
+{
+    "1712507606164114:241545": {
+        "IFileManager": {
+            "path": "Files/File_1712507606164114_241545.js"
+        }
+    },
+    "1712507606166226:241546": {
+        "IResourceController": {
+            "name": "ExpressionController",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1712507606166239:241547",
+            "fileId": "1712507606164114:241545",
+            "publicId": "1712507606167440:241552",
+            "expected_hash": "7c7b595f320dad844e9304e8787919d3"
+        },
+        "IResourceManager": {
+            "uid": "1712507606166239:241547",
+            "name": "Files/File_1712507606164114_241545.js",
+            "flags": 1
+        }
+    },
+    "1712507606166239:241547": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1712507606167440:241552": {
+        "IResourceController": {
+            "public": {
+                "path": "ExpressionController.js",
+                "hash": "7c7b595f320dad844e9304e8787919d3"
+            }
+        }
+    }
+}
