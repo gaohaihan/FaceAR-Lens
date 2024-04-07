@@ -1,42 +1,53 @@
 // -----JS CODE-----
-// @input SceneObject UiParentObject
-// @input SceneObject slider
 // @input Component.ScriptComponent controller
-// @input Component.Text ExpressionTitle
+// @input Component.Text displayExpression
+// @input Component.Text displayRepCount
 
 // @input Component.ScriptComponent sliderScript
 // @input Component.FaceMaskVisual target
 // @input Component.RenderMeshVisual faceMesh
 
 // @input string expression
-// @input float sensitivity = 0.5
-script.UiParentObject.enabled = true;
-script.ExpressionTitle.text = script.expression;
-let weight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
+// @input string displayText
+// @input number completedReps
+// @input number requiredReps
+// @input bool midRep
+
 let color = script.target.getMaterial(0).getPass(0).baseColor;
-updateVisual(script.target, weight);
+let sensitivity = global.Sensitivity;
 
+UpdateVisual(script.target);
+CountReps();
 
-// Set sensitivity to value of slider when slider value is changed.
-script.api.GetExpressionName = function(){
-    return script.expression;
+script.api.ReStart = function(){
+    RestartSet()
+    SetVisualText(script.displayExpression, script.displayText);
+    SetVisualText(script.displayRepCount, script.completedReps);
+ }
+
+function SetVisualText(textComponent, text){
+    textComponent.text = text;
 }
 
-// Set sensitivity to value of slider when slider value is changed.
-script.api.onValueChange = function(){
-   var sliderValue = script.sliderScript.api.getSliderValue();
-    script.sensitivity = sliderValue;
-   // print("slider value  " + sliderValue);
-}
+// Count completed reps, expression must return to base line bf another rep is counted.
+function CountReps() {
+     weight = GetWeight();
+     if (weight >= sensitivity && script.midRep !== true){
+       // print("rep start")
+        script.midRep = true;
+        script.completedReps += 1
+        SetVisualText(script.displayRepCount, script.completedReps.toString());
+     }
 
-// Set sensitivity to value of slider when slider value is changed.
-script.api.sliderToggle = function(){
-  // print("slider toggle");
-    script.slider.enabled = !script.slider.enabled;
-}
+     if (weight <= 0.2 && script.midRep === true){
+       // print("rep completed")
+        script.midRep = false;
+     }
+ }
 
-// Update opacity of mask based on epxression weight
-function updateVisual(visualComponent, weight) {
+// Update opacity of mask based on expression weight
+function UpdateVisual(visualComponent) {
+   // print("slider value  " +   sensitivity);
     alpha = GetWeight();
     color = visualComponent.getMaterial(0).getPass(0).baseColor;
     visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
@@ -50,10 +61,14 @@ function GetWeight(){
 
     // TODO: I think this is correct but may need some adjustments
     // particularlly to the alpha value.
-    var max_weight = 1 - script.sensitivity;
+    var max_weight = 1 - sensitivity;
     var adjusted_weight = weight / max_weight;
     //print("weight " + adjusted_weight)
 
     return adjusted_weight;
-
 }
+
+// Update opacity of mask based on expression weight
+function RestartSet(visualComponent) {
+    script.completedReps = 0;
+ }
