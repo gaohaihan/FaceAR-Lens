@@ -1,0 +1,42 @@
+{
+    "1707264872796482:1204005": {
+        "IFileManager": {
+            "path": "Files/File_1707264872796482_1204005.pvr"
+        }
+    },
+    "1707264872797085:1204006": {
+        "IResourceController": {
+            "name": "toggle_background",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707264872797252:1204007",
+            "fileId": "1707264872796482:1204005",
+            "originalId": "1707264872797429:1204012",
+            "publicId": "1707264872802710:1204020",
+            "expected_hash": "8fb4180d0842adf53a14ccf422ddf41d",
+            "additional": {
+                "originHash": "8fb4180d0842adf53a14ccf422ddf41d"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1707264872797252:1204007",
+            "name": "Files/File_1707264872796482_1204005.jpg",
+            "flags": 1
+        }
+    },
+    "1707264872797429:1204012": {
+        "IFileManager": {
+            "path": "Files/File_1707264872797429_1204012.pvr"
+        }
+    },
+    "1707264872802710:1204020": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Textures/Toggle/toggle_background.pvr",
+                "hash": "8fb4180d0842adf53a14ccf422ddf41d"
+            }
+        }
+    }
+}
