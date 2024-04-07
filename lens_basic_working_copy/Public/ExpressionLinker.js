@@ -1,6 +1,8 @@
 // -----JS CODE-----
 // @input SceneObject UiParentObject
 // @input SceneObject slider
+// @input Component.ScriptComponent controller
+// @input Component.Text ExpressionTitle
 
 // @input Component.ScriptComponent sliderScript
 // @input Component.FaceMaskVisual target
@@ -8,19 +10,16 @@
 
 // @input string expression
 // @input float sensitivity = 0.5
-
+script.UiParentObject.enabled = true;
+script.ExpressionTitle.text = script.expression;
 let weight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
 let color = script.target.getMaterial(0).getPass(0).baseColor;
 updateVisual(script.target, weight);
 
+
 // Set sensitivity to value of slider when slider value is changed.
 script.api.GetExpressionName = function(){
     return script.expression;
-}
-
-script.api.EnableComponents = function(){
-   // startDetection = true;
-    script.UiParentObject.enabled = true;
 }
 
 // Set sensitivity to value of slider when slider value is changed.

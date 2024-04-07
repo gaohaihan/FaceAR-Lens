@@ -14,7 +14,7 @@
             "uid": "1707269446381284:2754594",
             "fileId": "1707269446378971:2754592",
             "publicId": "1707269446382661:2754605",
-            "expected_hash": "f9ad6324df2bd87732a9f4f40756e7e1"
+            "expected_hash": "d271e47bd6242247ff0b2193125441a4"
         },
         "IResourceManager": {
             "uid": "1707269446381284:2754594",
@@ -31,7 +31,7 @@
         "IResourceController": {
             "public": {
                 "path": "Show Sensitvity Buttons.js",
-                "hash": "f9ad6324df2bd87732a9f4f40756e7e1"
+                "hash": "d271e47bd6242247ff0b2193125441a4"
             }
         }
     }
