@@ -14,7 +14,7 @@
             "uid": "1707262177892996:328443",
             "fileId": "1707262177891888:328441",
             "publicId": "1707262177894138:328448",
-            "expected_hash": "5e6520530e95cff34010d53129ffd227"
+            "expected_hash": "dc80a466cb69bf28c8766b8ecd45f51b"
         },
         "IResourceManager": {
             "uid": "1707262177892996:328443",
@@ -31,7 +31,7 @@
         "IResourceController": {
             "public": {
                 "path": "ExpressionLinker.js",
-                "hash": "5e6520530e95cff34010d53129ffd227"
+                "hash": "dc80a466cb69bf28c8766b8ecd45f51b"
             }
         }
     }
