@@ -31,8 +31,8 @@ timer.bind(function(eventData){
         
            script.time -= eventData.getDeltaTime();
        } else{
-    
            script.time = 0;
+            print("exercise complete!");
     
        }
     }
