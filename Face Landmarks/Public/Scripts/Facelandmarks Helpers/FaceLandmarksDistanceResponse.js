@@ -24,7 +24,7 @@
 // @input Component.MaterialMeshVisual[] meshObj {"label" : "Mesh Visual Objects"}
 //@ui {"widget":"group_end"}
 
-
+global.distance = 0;
 var getDistanceFunc = null;
 var isInitialized = false;
 var objTransform = [];
@@ -68,7 +68,7 @@ function updateObjectTransform() {
 }
 
 function getModifiedTransform() {
-    var distance = getDistanceFunc();
+    global.distance = getDistanceFunc();
 
     modifiedTransform.x = distance * script.multiplier.x;
     modifiedTransform.y = distance * script.multiplier.y;
