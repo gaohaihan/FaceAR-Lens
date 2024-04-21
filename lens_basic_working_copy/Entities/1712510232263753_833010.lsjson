@@ -6,7 +6,7 @@
     },
     "1712510232263753:833010": {
         "IResourceController": {
-            "name": "Script",
+            "name": "PubSubModule",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -14,7 +14,7 @@
             "uid": "1712510232263765:833011",
             "fileId": "1712510232262643:833009",
             "publicId": "1712510232265275:833016",
-            "expected_hash": "59361291686fd7cebf3981836238abbb"
+            "expected_hash": "ba5461f1f9e35cf83f048127dcff89d5"
         },
         "IResourceManager": {
             "uid": "1712510232263765:833011",
@@ -30,8 +30,8 @@
     "1712510232265275:833016": {
         "IResourceController": {
             "public": {
-                "path": "Script.js",
-                "hash": "59361291686fd7cebf3981836238abbb"
+                "path": "PubSubModule.js",
+                "hash": "ba5461f1f9e35cf83f048127dcff89d5"
             }
         }
     }

@@ -254,7 +254,7 @@
         "PreviewUiComponent": {
             "preview_descriptor": {
                 "is_capture": "0",
-                "camera_type": "2"
+                "camera_type": "1"
             },
             "show_snap_ui": "true",
             "show_sponsored_ui": "false",

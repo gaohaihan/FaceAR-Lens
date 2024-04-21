@@ -6,6 +6,7 @@
 // @input SceneObject prevButton
 // @input SceneObject nextButton
 
+const pubSub = require("./PubSubModule");
 
 let currentIndex = 0;
 let exerciseSize = script.expressions.length;
@@ -17,14 +18,17 @@ script.api.CompleteExercise = function(){
 }
 
 script.api.Next = function(){
+   pubSub.publish(pubSub.EVENTS.NextButtonClicked);
    GoToNextExercise();
 }
 
 script.api.Previous = function(){
+   pubSub.publish(pubSub.EVENTS.PreviousButtonClicked);
    GoToPreviousExercise();
 }
 
 script.api.Start = function(){
+   pubSub.publish(pubSub.EVENTS.StartButtonClicked);
    EnableFirstExercise();
 }
 
