@@ -32,6 +32,7 @@ function UpdateVisual(visualComponent) {
  }
 
 // Count completed reps, expression must return to base line bf another rep is counted.
+// TODO: Still trying to figure out how to count reps when a persons base line values may differ significantly
 function CountReps() {
     SetVisualText(script.displayRepCount, script.completedReps.toString());
      var adjusted_weight = GetWeight();
