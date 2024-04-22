@@ -5,5 +5,4 @@
 
 script.api.ToggleButtons = function(){
     script.button.enabled = !script.button.enabled;
-    print("show")
 }
