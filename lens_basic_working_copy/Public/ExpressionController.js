@@ -1,8 +1,4 @@
 // -----JS CODE-----
-// @input Component.ScriptComponent controller
-// @input Component.Text displayExpression
-// @input Component.Text displayRepCount
-
 // @input Component.ScriptComponent sliderScript
 // @input Component.FaceMaskVisual target
 // @input Component.RenderMeshVisual faceMesh
@@ -22,53 +18,63 @@ UpdateVisual(script.target);
 CountReps();
 //print(minExpressionValue);
 
-// Update opacity of mask based on expression weight
+  /***
+  * Update opacity of mask based on expression weight
+  */
 function UpdateVisual(visualComponent) {
-    // Display prompt
-    SetVisualText(script.displayExpression, script.displayText);
-     alpha = GetWeight();
+    // Display prompt text
+    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+
+    // Set alpha of mask
+     alpha = GetAdjustedWeight();
      color = visualComponent.getMaterial(0).getPass(0).baseColor;
      visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
  }
 
-// Count completed reps, expression must return to base line bf another rep is counted.
-// TODO: Still trying to figure out how to count reps when a persons base line values may differ significantly
+ // TODO: Still trying to figure out how to count reps when a persons base line values may differ significantly
+  /***
+  * Count completed reps, expression must return to base line bf another rep is counted.
+  */
 function CountReps() {
-    SetVisualText(script.displayRepCount, script.completedReps.toString());
-     var adjusted_weight = GetWeight();
-     if (adjusted_weight > 0.5 && script.midRep !== true){
+    // Update rep count text
+     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
+
+     var adjustedWeight = GetAdjustedWeight();
+     //print("adjusted " + adjustedWeight)
+     if (adjustedWeight > 0.125 && script.midRep !== true){
         script.midRep = true;
         script.completedReps += 1
-        SetVisualText(script.displayRepCount, script.completedReps.toString());
+        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
      }
 
-     if (adjusted_weight<= 0.5 && script.midRep === true){
+     var rawWeight = GetRawExpressionWeight();
+     // print("raw " + rawWeight)
+     if (rawWeight <= 0.125 && script.midRep === true){
         script.midRep = false;
      }
  }
 
-// Adjust expression weight for sensitivity
-function GetWeight(){
-    var adjusted_weight;
-    var weight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
-    //print("weight " + weight);
+ /***
+  * Adjust expression weight for sensitivity
+  */
+function GetAdjustedWeight(){
+    var weight = GetRawExpressionWeight();
+    var adjusted_weight = weight * sensitivity;
 
-    // TODO: I think this is correct but may need some adjustments
-    // particularlly to the alpha value.
-    var max_weight = 1 - sensitivity;
-    var adjusted_weight = weight / max_weight;
-    print("weight " + adjusted_weight);
     return adjusted_weight;
 }
 
-// Always set reps back to 0 when leave a exercise
+function GetRawExpressionWeight(){
+    return script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
+}
+
+ /***
+  * Always set reps back to 0 when leave a exercise
+  */
 pubSub.subscribe(pubSub.EVENTS.PreviousButtonClicked, () => {
     script.completedReps = 0;
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
 });
-
-function SetVisualText(textComponent, text){
-    textComponent.text = text;
-}
 
 function WithInRange(input1, input2, deviation)
 {

@@ -21,6 +21,9 @@ script.api.SensitivitySlider = function(){
  // Set value of global sensitivity to value of slider when changed.
   function SetSensitivity(){
     var sliderValue = script.sliderScript.api.getSliderValue();
+    if (sliderValue > 0.9){
+      sliderValue = 0.9
+    }
     global.Sensitivity = sliderValue;
  }
 
@@ -30,11 +33,9 @@ script.api.SensitivitySlider = function(){
     expressionsInSequence.forEach(element => {
       ExpressionMinValues[element] = script.faceMesh.mesh.control.getExpressionWeightByName(element);
    });
-   print("wtf");
-   print(ExpressionMinValues[pubSub.EXPRESSIONS.BrowsUpCenter]);
+  // print(ExpressionMinValues[pubSub.EXPRESSIONS.BrowsUpCenter]);
  }
 
 pubSub.subscribe(pubSub.EVENTS.StartButtonClicked,
    GetExpressionMinValues
 );
-
