@@ -1,13 +1,13 @@
 {
     "lens_id": "",
-    "document_id": "H3SEJrqi83UaeA7G3ARc",
+    "document_id": "vUfXv9RDoViMMWAu3HXC",
     "original_document_id": "H3SEJrqi83UaeA7G3ARc",
     "version": "33",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
     "isReadOnly": "false",
-    "isAutoSaved": "false",
+    "isAutoSaved": "true",
     "api_level": "public",
     "public_api_user_data_access": "unrestricted",
     "studioVersion": {
@@ -254,7 +254,7 @@
         "PreviewUiComponent": {
             "preview_descriptor": {
                 "is_capture": "0",
-                "camera_type": "2"
+                "camera_type": "1"
             },
             "show_snap_ui": "true",
             "show_sponsored_ui": "false",

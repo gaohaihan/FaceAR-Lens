@@ -14,7 +14,7 @@
             "uid": "1712507606166239:241547",
             "fileId": "1712507606164114:241545",
             "publicId": "1712507606167440:241552",
-            "expected_hash": "bf73166653748dcd84056d4ec4333c7d"
+            "expected_hash": "948e16956b60bc731451fee8fd92a35f"
         },
         "IResourceManager": {
             "uid": "1712507606166239:241547",
@@ -24,14 +24,16 @@
     },
     "1712507606166239:241547": {
         "ScriptModulesController": {
-            "dependent_module_names": []
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
         }
     },
     "1712507606167440:241552": {
         "IResourceController": {
             "public": {
                 "path": "ExpressionController.js",
-                "hash": "bf73166653748dcd84056d4ec4333c7d"
+                "hash": "948e16956b60bc731451fee8fd92a35f"
             }
         }
     }

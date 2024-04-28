@@ -24,9 +24,9 @@
     "1712515092469380:2131255": {
         "ScriptModulesController": {
             "dependent_module_names": [
-                "DestructionHelper_120",
                 "EventModule_100",
-                "UIWidgetsModule_120"
+                "UIWidgetsModule_120",
+                "DestructionHelper_120"
             ]
         }
     }
