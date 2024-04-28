@@ -8,17 +8,19 @@ global.Sensitivity = 0.5;
 global.ExpressionMinValues = {};
 
 script.api.SensitivitySlider = function(){
-    //print(global.Sensitivity);
     SetSensitivity();
  }
 
- // Toggle slider visibility
+  /***
+  * Toggle slider visibility
+  */
  script.api.sliderToggle = function(){
-    // print("slider toggle");
       script.sensitivitySlider.enabled = !script.sensitivitySlider.enabled;
   }
 
- // Set value of global sensitivity to value of slider when changed.
+  /***
+  * Set value of global sensitivity to value of slider when changed.
+  */
   function SetSensitivity(){
     var sliderValue = script.sliderScript.api.getSliderValue();
     if (sliderValue > 0.9){
@@ -27,7 +29,10 @@ script.api.SensitivitySlider = function(){
     global.Sensitivity = sliderValue;
  }
 
-// get the resting value for all expressions
+// TODO use to determine user resting expression values.
+  /***
+  * get the resting value for all expressions
+  */
  function GetExpressionMinValues(){
    let expressionsInSequence = Object.values(pubSub.EXPRESSIONS)
     expressionsInSequence.forEach(element => {
