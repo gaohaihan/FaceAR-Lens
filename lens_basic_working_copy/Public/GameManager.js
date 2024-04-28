@@ -9,7 +9,6 @@
 const pubSub = require("./PubSubModule");
 
 let currentIndex = 0;
-let exerciseSize = script.expressions.length;
 script.prevButton.enabled = false;
 script.nextButton.enabled = false;
 
@@ -72,6 +71,7 @@ function EnableFirstExercise(){
 }
 
 function TryEnableNext(){
+   let exerciseSize = script.expressions.length;
    if (currentIndex == exerciseSize - 1)
    {
       script.nextButton.enabled = false
@@ -83,6 +83,7 @@ function TryEnableNext(){
 }
 
 function TryEnablePrev(){
+   let exerciseSize = script.expressions.length;
    if (currentIndex == 0)
    {
       script.prevButton.enabled = false

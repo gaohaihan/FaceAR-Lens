@@ -3,7 +3,7 @@
         "IResourceController": {
             "public": {
                 "path": "GameManager.js",
-                "hash": "948e16956b60bc731451fee8fd92a35f"
+                "hash": "ff1db33374c6df0cfec6547d6abd9690"
             }
         }
     },
@@ -22,7 +22,7 @@
             "uid": "1714328993927100:12562",
             "fileId": "1714328993926058:12560",
             "publicId": "1714328993925758:12559",
-            "expected_hash": "948e16956b60bc731451fee8fd92a35f"
+            "expected_hash": "ff1db33374c6df0cfec6547d6abd9690"
         },
         "IResourceManager": {
             "uid": "1714328993927100:12562",

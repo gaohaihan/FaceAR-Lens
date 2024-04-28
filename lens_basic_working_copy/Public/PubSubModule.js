@@ -5,7 +5,9 @@ const EVENTS = {
     PreviousButtonClicked: 'PreviousButtonClicked',
     NextButtonClicked: 'NextButtonClicked',
     SetExpressionPromptText: 'SetExpressionPromptText',
-    SetExpressionRepText: 'SetExpressionRepText'
+    SetExpressionRepText: 'SetExpressionRepText',
+    ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',
+    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right'
 };
 
 const EXPRESSIONS = {

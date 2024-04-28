@@ -1,17 +1,19 @@
 // -----JS CODE-----
-// @input Component.ScriptComponent sliderScript
 // @input Component.FaceMaskVisual target
 // @input Component.RenderMeshVisual faceMesh
 
-// @input string expression
+// @input string expressionRight
+// @input string expressionLeft
 // @input string displayText
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
 // @input bool midRep
+// @input bool isRightDetectionOn = true
+// @input bool isLeftDetectionOn = true
 
 const pubSub = require("./PubSubModule");
-let minExpressionValue = global.ExpressionMinValues[script.expression];
+//let minExpressionValue = global.ExpressionMinValues[script.expressionRight];
 let color = script.target.getMaterial(0).getPass(0).baseColor;
 let sensitivity = global.Sensitivity;
 UpdateVisual(script.target);
@@ -41,21 +43,21 @@ function CountReps() {
 
      var adjustedWeight = GetAdjustedWeight();
      //print("adjusted " + adjustedWeight)
-     if (adjustedWeight > 0.125 && script.midRep !== true){
+     if (adjustedWeight > script.minExpressionValue && script.midRep !== true){
         script.midRep = true;
         script.completedReps += 1
         pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
      }
 
      var rawWeight = GetRawExpressionWeight();
-     // print("raw " + rawWeight)
-     if (rawWeight <= 0.125 && script.midRep === true){
+     //print("raw " + rawWeight)
+     if (rawWeight <= script.minExpressionValue && script.midRep === true){
         script.midRep = false;
      }
  }
 
  /***
-  * Adjust expression weight for sensitivity
+  * Adjust expression weight for sensitivity.
   */
 function GetAdjustedWeight(){
     var weight = GetRawExpressionWeight();
@@ -64,8 +66,27 @@ function GetAdjustedWeight(){
     return adjusted_weight;
 }
 
+/**
+ * Gets the raw expression weight for both or one side of the expression.
+ */
 function GetRawExpressionWeight(){
-    return script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
+  var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
+  var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
+
+  if (!script.isLeftDetectionOn && !script.isRightDetectionOn ){
+    print("an error occure and both left and right side detection is off for expression")
+  }
+
+  if (!script.isLeftDetectionOn){
+    return rightWeight;
+  }
+
+  if (!script.isRightDetectionOn){
+    return leftWeight;
+  }
+
+  var combinedWeight = (leftWeight + rightWeight) / 2
+  return combinedWeight
 }
 
  /***
@@ -73,8 +94,25 @@ function GetRawExpressionWeight(){
   */
 pubSub.subscribe(pubSub.EVENTS.PreviousButtonClicked, () => {
     script.completedReps = 0;
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
 });
+
+/***
+  * Determine if should detect left side movement
+  */
+pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
+  script.isLeftDetectionOn = data
+  print("left is" + script.isLeftDetectionOn)
+});
+
+/***
+  * Determine if should detect right side movement
+  */
+pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
+  script.isRightDetectionOn = data
+  print("right is" + script.isRightDetectionOn)
+});
+
 
 function WithInRange(input1, input2, deviation)
 {
