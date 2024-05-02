@@ -1,0 +1,38 @@
+{
+    "1714688361845732:1145947": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/My UI Scripts/ButtonUtils.js",
+                "hash": "baff07951ec84c29c60c0cf15eec7bb9"
+            }
+        }
+    },
+    "1714688361846391:1145948": {
+        "IFileManager": {
+            "path": "Files/File_1714688361846391_1145948.js"
+        }
+    },
+    "1714688361848415:1145949": {
+        "IResourceController": {
+            "name": "ButtonUtils",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714688361848447:1145950",
+            "fileId": "1714688361846391:1145948",
+            "publicId": "1714688361845732:1145947",
+            "expected_hash": "baff07951ec84c29c60c0cf15eec7bb9"
+        },
+        "IResourceManager": {
+            "uid": "1714688361848447:1145950",
+            "name": "Files/File_1714688361846391_1145948.js",
+            "flags": 1
+        }
+    },
+    "1714688361848447:1145950": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    }
+}

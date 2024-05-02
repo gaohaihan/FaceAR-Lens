@@ -4,14 +4,6 @@
             "path": "Files/File_1674499001173050_2524.fbx"
         }
     },
-    "1674499001173155:2626": {
-        "IResourceController": {
-            "public": {
-                "path": "FaceLandmarks Template Resources/Models/Eye.fbx",
-                "hash": "02347444e6c3942e84e19fac77df67ab"
-            }
-        }
-    },
     "1674499001173228:2698": {
         "IResourceController": {
             "name": "Eye",
@@ -20,7 +12,7 @@
             "dependency": 2,
             "hidden": false,
             "fileId": "1674499001173050:2524",
-            "publicId": "1674499001173155:2626",
+            "publicId": "1714069961189963:15129",
             "expected_hash": "02347444e6c3942e84e19fac77df67ab",
             "resources": [
                 "1674499001173227:2696",
@@ -42,6 +34,14 @@
                         "v": "1582681544788452:5946"
                     }
                 ]
+            }
+        }
+    },
+    "1714069961189963:15129": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Models/Eye.fbx",
+                "hash": "02347444e6c3942e84e19fac77df67ab"
             }
         }
     }

@@ -6,7 +6,7 @@
     },
     "1712508376759823:460562": {
         "IResourceController": {
-            "name": "SensitivityController",
+            "name": "SensitivityManager",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -32,7 +32,7 @@
     "1712508376761522:460568": {
         "IResourceController": {
             "public": {
-                "path": "SensitivityController.js",
+                "path": "SensitivityManager.js",
                 "hash": "7a274fb224ecfa3a4ef604312d5812b9"
             }
         }

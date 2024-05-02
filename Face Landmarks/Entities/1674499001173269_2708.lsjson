@@ -1,23 +1,23 @@
 {
-    "1674499001173161:2650": {
-        "IResourceController": {
-            "public": {
-                "path": "../AdditionalFiles/FaceLandmarks Template Resources/Models/Tear/Animations_1"
-            }
-        }
-    },
     "1674499001173269:2708": {
         "IResourceController": {
-            "name": "Animations_1",
+            "name": "Animations_10",
             "type": 0,
             "subtype": -1,
             "dependency": 0,
             "hidden": false,
-            "publicId": "1674499001173161:2650",
+            "publicId": "1714069961197097:15135",
             "resources": [
                 "1674499001173015:2498",
                 "1674499001173016:2501"
             ]
+        }
+    },
+    "1714069961197097:15135": {
+        "IResourceController": {
+            "public": {
+                "path": "../AdditionalFiles/FaceLandmarks Template Resources/Models/Tear/Animations_10"
+            }
         }
     }
 }

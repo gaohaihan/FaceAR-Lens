@@ -1,0 +1,38 @@
+{
+    "1714688361850297:1145955": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/My UI Scripts/DisplaySensitivityInPopUp.js",
+                "hash": "8cc75bdb2697aeaa67eb9fa2da685905"
+            }
+        }
+    },
+    "1714688361851030:1145956": {
+        "IFileManager": {
+            "path": "Files/File_1714688361851030_1145956.js"
+        }
+    },
+    "1714688361853140:1145957": {
+        "IResourceController": {
+            "name": "DisplaySensitivityInPopUp",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714688361853153:1145958",
+            "fileId": "1714688361851030:1145956",
+            "publicId": "1714688361850297:1145955",
+            "expected_hash": "8cc75bdb2697aeaa67eb9fa2da685905"
+        },
+        "IResourceManager": {
+            "uid": "1714688361853153:1145958",
+            "name": "Files/File_1714688361851030_1145956.js",
+            "flags": 1
+        }
+    },
+    "1714688361853153:1145958": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    }
+}

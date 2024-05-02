@@ -13,7 +13,7 @@
             "hidden": false,
             "uid": "1706938061633246:2204126",
             "fileId": "1706938061630437:2204124",
-            "publicId": "1706938061640768:2204136",
+            "publicId": "1714069961186689:15125",
             "expected_hash": "59361291686fd7cebf3981836238abbb"
         },
         "IResourceManager": {
@@ -27,7 +27,7 @@
             "dependent_module_names": []
         }
     },
-    "1706938061640768:2204136": {
+    "1714069961186689:15125": {
         "IResourceController": {
             "public": {
                 "path": "Scripts/MouthDistance.js",

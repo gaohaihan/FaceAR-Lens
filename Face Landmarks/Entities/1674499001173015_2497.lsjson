@@ -58,7 +58,7 @@
             "hidden": false,
             "uid": "1645663019871708:172458",
             "fileId": "1674499001173127:2608",
-            "publicId": "1674499001173161:2649",
+            "publicId": "1714069961196643:15134",
             "expected_hash": "9f46920ca0c6bdb5a52bb3b97f46472b",
             "additional": {
                 "info": {
@@ -104,10 +104,10 @@
             "path": "Files/File_1674499001173128_2609.mesh"
         }
     },
-    "1674499001173161:2649": {
+    "1714069961196643:15134": {
         "IResourceController": {
             "public": {
-                "path": "../AdditionalFiles/FaceLandmarks Template Resources/Models/Tear/Meshes_1/Tear.mesh",
+                "path": "../AdditionalFiles/FaceLandmarks Template Resources/Models/Tear/Meshes_10/Tear.mesh",
                 "hash": "9f46920ca0c6bdb5a52bb3b97f46472b"
             }
         }

@@ -1,0 +1,39 @@
+{
+    "1713405014939772:1710470": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "331eea6f39c0ebfb6c56960e8d5b55b6"
+                    },
+                    "v": "1713405016520331:1717225"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "48960",
+                "compressedSize": "2495",
+                "extension": "png",
+                "originalRAM": "383508",
+                "originalSize": "6225",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1713405014949016:1710481"
+        }
+    },
+    "1713405014949016:1710481": {
+        "IFileManager": {
+            "path": "Files/File_1713405014949016_1710481.png"
+        }
+    },
+    "1713405016520331:1717225": {
+        "IFileManager": {
+            "path": "Files/File_1713405016520331_1717225.pvr"
+        }
+    }
+}

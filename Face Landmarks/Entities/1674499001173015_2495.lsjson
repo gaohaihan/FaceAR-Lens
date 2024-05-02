@@ -9,8 +9,8 @@
             "uid": "1645662273193983:680328",
             "fileId": "1674499001173124:2605",
             "originalId": "1674499001173125:2606",
-            "publicId": "1674499001173160:2647",
-            "expected_hash": "e865878dc724e3b0be62fc5378a9a262"
+            "publicId": "1714069961210249:15145",
+            "expected_hash": "3af46b0f32d263d8b4c05d7133272956"
         },
         "IResourceManager": {
             "uid": "1645662273193983:680328",
@@ -28,11 +28,11 @@
             "path": "Files/File_1674499001173125_2606.lsmat"
         }
     },
-    "1674499001173160:2647": {
+    "1714069961210249:15145": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/hand.lsmat",
-                "hash": "0ca8f467a7a616d1cb1b71c677e65409"
+                "hash": "e446b3f08f47d38413f1ae6b5570bc6d"
             }
         }
     }

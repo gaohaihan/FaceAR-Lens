@@ -15,7 +15,7 @@
             "fileId": "1707262152544606:323109",
             "originalId": "1707262152564118:323115",
             "publicId": "1707262152882152:323253",
-            "expected_hash": "ec06d559fb890ed4094ccd2fcdc0012b"
+            "expected_hash": "177c9227c32ea88279c97176fa92a4c9"
         },
         "IResourceManager": {
             "uid": "1707262152545228:323111",
@@ -32,7 +32,7 @@
         "IResourceController": {
             "public": {
                 "path": "Face Mesh Default.lsmat",
-                "hash": "3f32205c450add1160950908e5421ede"
+                "hash": "14ad904fff6d3abf55d4c9b20d4a3622"
             }
         }
     }

@@ -1,11 +1,4 @@
 {
-    "1674499001173158:2637": {
-        "IResourceController": {
-            "public": {
-                "path": "FaceLandmarks Template Resources/Prefabs"
-            }
-        }
-    },
     "1674499001173278:2713": {
         "IResourceController": {
             "name": "Prefabs",
@@ -13,11 +6,18 @@
             "subtype": -1,
             "dependency": 0,
             "hidden": false,
-            "publicId": "1674499001173158:2637",
+            "publicId": "1714069961229528:15161",
             "resources": [
                 "1674499001173015:2496",
                 "1674499001173016:2500"
             ]
+        }
+    },
+    "1714069961229528:15161": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Prefabs"
+            }
         }
     }
 }

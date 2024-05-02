@@ -13,7 +13,7 @@
             "hidden": false,
             "uid": "1706996743393932:3823012",
             "fileId": "1706996743376053:3823009",
-            "publicId": "1706996743399147:3823024",
+            "publicId": "1714069961252315:15176",
             "expected_hash": "f41527f96da43a973180aa164b74cd6d",
             "additional": {
                 "info": {
@@ -104,7 +104,7 @@
             "path": "Files/File_1706996743396123_3823023.mesh"
         }
     },
-    "1706996743399147:3823024": {
+    "1714069961252315:15176": {
         "IResourceController": {
             "public": {
                 "path": "Balloons Pack Resources/Meshes/string_2.mesh",

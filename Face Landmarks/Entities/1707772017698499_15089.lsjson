@@ -1,12 +1,4 @@
 {
-    "1707772017695412:15087": {
-        "IResourceController": {
-            "public": {
-                "path": "Scripts/Resource.ds_store",
-                "hash": "a24f440e6fc5d8f3a6973eac175aaeb1"
-            }
-        }
-    },
     "1707772017696607:15088": {
         "IFileManager": {
             "path": "Files/File_1707772017696607_15088.ds_store"
@@ -21,13 +13,21 @@
             "hidden": false,
             "uid": "1707772017699707:15090",
             "fileId": "1707772017696607:15088",
-            "publicId": "1707772017695412:15087",
+            "publicId": "1714069961187632:15126",
             "expected_hash": "a24f440e6fc5d8f3a6973eac175aaeb1"
         },
         "IResourceManager": {
             "uid": "1707772017699707:15090",
             "name": "Files/File_1707772017696607_15088.ds_store",
             "flags": 1
+        }
+    },
+    "1714069961187632:15126": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/Resource.ds_store",
+                "hash": "a24f440e6fc5d8f3a6973eac175aaeb1"
+            }
         }
     }
 }

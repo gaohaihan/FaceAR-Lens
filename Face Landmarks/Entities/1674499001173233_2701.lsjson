@@ -4,14 +4,6 @@
             "path": "Files/File_1674499001173037_2509.fbx"
         }
     },
-    "1674499001173155:2624": {
-        "IResourceController": {
-            "public": {
-                "path": "FaceLandmarks Template Resources/Models/Mustache.fbx",
-                "hash": "869adc903a1a74888e0c5710689d9563"
-            }
-        }
-    },
     "1674499001173233:2701": {
         "IResourceController": {
             "name": "Mustache",
@@ -20,7 +12,7 @@
             "dependency": 2,
             "hidden": false,
             "fileId": "1674499001173037:2509",
-            "publicId": "1674499001173155:2624",
+            "publicId": "1714069961190996:15130",
             "expected_hash": "869adc903a1a74888e0c5710689d9563",
             "resources": [
                 "1674499001173233:2699",
@@ -29,6 +21,14 @@
             ],
             "additional": {
                 "materialMapping": ""
+            }
+        }
+    },
+    "1714069961190996:15130": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Models/Mustache.fbx",
+                "hash": "869adc903a1a74888e0c5710689d9563"
             }
         }
     }

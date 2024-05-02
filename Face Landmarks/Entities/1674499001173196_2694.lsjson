@@ -1,11 +1,4 @@
 {
-    "1674499001173153:2617": {
-        "IResourceController": {
-            "public": {
-                "path": "Scripts/Facelandmarks Helpers"
-            }
-        }
-    },
     "1674499001173196:2694": {
         "IResourceController": {
             "name": "Facelandmarks Helpers",
@@ -13,12 +6,19 @@
             "subtype": -1,
             "dependency": 0,
             "hidden": false,
-            "publicId": "1674499001173153:2617",
+            "publicId": "1714069961181015:15121",
             "resources": [
                 "1674499001173011:2456",
                 "1674499001173012:2467",
                 "1674499001173014:2483"
             ]
+        }
+    },
+    "1714069961181015:15121": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/Facelandmarks Helpers"
+            }
         }
     }
 }

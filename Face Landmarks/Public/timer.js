@@ -2,8 +2,8 @@
 
 //@input Asset.Texture[] timerTextures
 //@input Component.SpriteVisual[] columns
-//@input Sprite sprites
 //@input int time {"label":"Time", "min":0, "max":9999, "step":1}
+//@input string variable {"label":"Variable to Track"}
 
 var secondsTens = 0
 var secondsOnes = 0

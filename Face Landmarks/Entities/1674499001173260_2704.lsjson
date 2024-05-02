@@ -4,14 +4,6 @@
             "path": "Files/File_1674499001173068_2544.fbx"
         }
     },
-    "1674499001173156:2630": {
-        "IResourceController": {
-            "public": {
-                "path": "FaceLandmarks Template Resources/Models/Hand.fbx",
-                "hash": "767b7c9c009c2bea14f1a32ad02f575f"
-            }
-        }
-    },
     "1674499001173260:2704": {
         "IResourceController": {
             "name": "Hand",
@@ -20,7 +12,7 @@
             "dependency": 2,
             "hidden": false,
             "fileId": "1674499001173068:2544",
-            "publicId": "1674499001173156:2630",
+            "publicId": "1714069961192216:15131",
             "expected_hash": "767b7c9c009c2bea14f1a32ad02f575f",
             "resources": [
                 "1674499001173259:2702",
@@ -50,6 +42,14 @@
                         "v": "1582765967242893:185113"
                     }
                 ]
+            }
+        }
+    },
+    "1714069961192216:15131": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Models/Hand.fbx",
+                "hash": "767b7c9c009c2bea14f1a32ad02f575f"
             }
         }
     }

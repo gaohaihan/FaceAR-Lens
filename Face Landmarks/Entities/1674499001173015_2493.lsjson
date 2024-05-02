@@ -9,7 +9,7 @@
             "uid": "1645661812486716:588954",
             "fileId": "1674499001173121:2601",
             "originalId": "1674499001173122:2602",
-            "publicId": "1674499001173159:2644",
+            "publicId": "1714069961240097:15167",
             "expected_hash": "8a0173d0b987e1abfebd4ef9e3304c0b",
             "additional": {
                 "originHash": "8a0173d0b987e1abfebd4ef9e3304c0b"
@@ -31,7 +31,7 @@
             "path": "Files/File_1674499001173122_2602.png"
         }
     },
-    "1674499001173159:2644": {
+    "1714069961240097:15167": {
         "IResourceController": {
             "public": {
                 "path": "Textures/Normal.png",

@@ -1,0 +1,38 @@
+{
+    "1714681375026463:810230": {
+        "IResourceController": {
+            "public": {
+                "path": "timer.js",
+                "hash": "eea100a0b522611630dbd1c650b19d6e"
+            }
+        }
+    },
+    "1714681375026990:810231": {
+        "IFileManager": {
+            "path": "Files/File_1714681375026990_810231.js"
+        }
+    },
+    "1714681375029184:810232": {
+        "IResourceController": {
+            "name": "timer",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714681375029359:810233",
+            "fileId": "1714681375026990:810231",
+            "publicId": "1714681375026463:810230",
+            "expected_hash": "eea100a0b522611630dbd1c650b19d6e"
+        },
+        "IResourceManager": {
+            "uid": "1714681375029359:810233",
+            "name": "Files/File_1714681375026990_810231.js",
+            "flags": 1
+        }
+    },
+    "1714681375029359:810233": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    }
+}

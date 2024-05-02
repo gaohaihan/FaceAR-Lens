@@ -13,7 +13,7 @@
             "hidden": false,
             "uid": "1582075238691476:1350409",
             "fileId": "1674499001173032:2504",
-            "publicId": "1674499001173153:2616",
+            "publicId": "1714069961180640:15120",
             "expected_hash": "aecfd981e99486392fcd44daa5e90277"
         },
         "IResourceManager": {
@@ -27,7 +27,7 @@
             "path": "Files/File_1674499001173032_2504.js"
         }
     },
-    "1674499001173153:2616": {
+    "1714069961180640:15120": {
         "IResourceController": {
             "public": {
                 "path": "Scripts/PinToFaceLandmarks.js",

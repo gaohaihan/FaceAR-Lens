@@ -9,7 +9,7 @@
             "uid": "1623203104815540:144817",
             "fileId": "1674499001173098:2577",
             "originalId": "1674499001173099:2578",
-            "publicId": "1674499001173158:2640",
+            "publicId": "1714069961202785:15139",
             "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
@@ -31,11 +31,11 @@
             "path": "Files/File_1674499001173099_2578.lsmat"
         }
     },
-    "1674499001173158:2640": {
+    "1714069961202785:15139": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/black_eye.lsmat",
-                "hash": "92dbb19c9b16b1678c7d43161bdd2cb9"
+                "hash": "f3fd2e267fb708e7d1a0c05fc3424a16"
             }
         }
     }

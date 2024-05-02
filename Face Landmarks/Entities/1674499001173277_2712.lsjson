@@ -1,11 +1,4 @@
 {
-    "1674499001173156:2629": {
-        "IResourceController": {
-            "public": {
-                "path": "FaceLandmarks Template Resources/Textures"
-            }
-        }
-    },
     "1674499001173277:2712": {
         "IResourceController": {
             "name": "Textures",
@@ -13,13 +6,20 @@
             "subtype": -1,
             "dependency": 0,
             "hidden": false,
-            "publicId": "1674499001173156:2629",
+            "publicId": "1714069961224215:15156",
             "resources": [
                 "1674499001173011:2459",
                 "1674499001173013:2476",
                 "1674499001173013:2477",
                 "1674499001173013:2478"
             ]
+        }
+    },
+    "1714069961224215:15156": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceLandmarks Template Resources/Textures"
+            }
         }
     }
 }

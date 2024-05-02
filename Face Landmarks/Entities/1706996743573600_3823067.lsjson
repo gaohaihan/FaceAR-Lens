@@ -14,8 +14,8 @@
             "uid": "1706996743573604:3823068",
             "fileId": "1706996743572709:3823066",
             "originalId": "1706996743591177:3823072",
-            "publicId": "1706996743651390:3823081",
-            "expected_hash": "76f76c15ab334783ecb74d337307ce54"
+            "publicId": "1714069961255321:15179",
+            "expected_hash": "3af46b0f32d263d8b4c05d7133272956"
         },
         "IResourceManager": {
             "uid": "1706996743573604:3823068",
@@ -28,11 +28,11 @@
             "path": "Files/File_1706996743591177_3823072.lsmat"
         }
     },
-    "1706996743651390:3823081": {
+    "1714069961255321:15179": {
         "IResourceController": {
             "public": {
                 "path": "Balloons Pack Resources/Materials/string_color_3.lsmat",
-                "hash": "ebff958432fc337dd08d01666bc66d9a"
+                "hash": "ce1fe1f884adec39a61c7c3b7847c338"
             }
         }
     }

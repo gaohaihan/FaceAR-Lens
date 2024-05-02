@@ -9,7 +9,7 @@
             "uid": "1623203195935557:175064",
             "fileId": "1674499001173104:2583",
             "originalId": "1674499001173105:2584",
-            "publicId": "1674499001173159:2643",
+            "publicId": "1714069961206081:15142",
             "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
@@ -31,11 +31,11 @@
             "path": "Files/File_1674499001173105_2584.lsmat"
         }
     },
-    "1674499001173159:2643": {
+    "1714069961206081:15142": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/mustache.lsmat",
-                "hash": "56fe220d0ae39be6f87a76880a4ed6cd"
+                "hash": "0ee7a0a57cbee9a14e3961b5ebe9cc78"
             }
         }
     }

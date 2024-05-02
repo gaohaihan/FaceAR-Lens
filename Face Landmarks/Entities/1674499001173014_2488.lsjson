@@ -9,7 +9,7 @@
             "uid": "1623203134584731:154834",
             "fileId": "1674499001173100:2579",
             "originalId": "1674499001173101:2580",
-            "publicId": "1674499001173159:2641",
+            "publicId": "1714069961203856:15140",
             "expected_hash": "e20670b180f72a092de970bdf8940914",
             "additional": {
                 "isUnpackedInPublic": "false"
@@ -31,11 +31,11 @@
             "path": "Files/File_1674499001173101_2580.lsmat"
         }
     },
-    "1674499001173159:2641": {
+    "1714069961203856:15140": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/eyelid_yellow.lsmat",
-                "hash": "515bf46b05758e332b41b8fdbca742dd"
+                "hash": "0ffef7860f27786d3e987ffe37139b1e"
             }
         }
     }

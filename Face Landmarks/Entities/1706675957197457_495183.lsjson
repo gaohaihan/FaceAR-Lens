@@ -13,7 +13,7 @@
             "hidden": false,
             "uid": "1706675957218615:495187",
             "fileId": "1706675957196308:495182",
-            "publicId": "1706675957233882:495199",
+            "publicId": "1714069961243648:15169",
             "expected_hash": "ffbce66d7c12d942b13208740e9d0059",
             "additional": {
                 "info": {
@@ -114,7 +114,7 @@
             "path": "Files/File_1706675957227820_495198.mesh"
         }
     },
-    "1706675957233882:495199": {
+    "1714069961243648:15169": {
         "IResourceController": {
             "public": {
                 "path": "Sphere.mesh",

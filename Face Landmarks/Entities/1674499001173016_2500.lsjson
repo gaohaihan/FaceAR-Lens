@@ -9,7 +9,7 @@
             "uid": "1645663034355075:183430",
             "fileId": "1674499001173132:2613",
             "originalId": "1674499001173133:2614",
-            "publicId": "1674499001173162:2653",
+            "publicId": "1714069961232062:15163",
             "expected_hash": "c85d0422fee19f6fc9846ad458e0e7e7"
         },
         "IResourceManager": {
@@ -28,11 +28,11 @@
             "path": "Files/File_1674499001173133_2614.oprfb"
         }
     },
-    "1674499001173162:2653": {
+    "1714069961232062:15163": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Prefabs/Right Tear.oprfb",
-                "hash": "b3068f34e0eeda18cf02b1c9b55ac1fe"
+                "hash": "4519c2c80e150c5741bfbd181e80d59d"
             }
         }
     }

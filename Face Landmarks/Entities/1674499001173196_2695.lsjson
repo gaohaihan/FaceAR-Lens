@@ -1,11 +1,4 @@
 {
-    "1674499001173153:2615": {
-        "IResourceController": {
-            "public": {
-                "path": "Scripts"
-            }
-        }
-    },
     "1674499001173196:2695": {
         "IResourceController": {
             "name": "Scripts",
@@ -13,13 +6,20 @@
             "subtype": -1,
             "dependency": 0,
             "hidden": false,
-            "publicId": "1674499001173153:2615",
+            "publicId": "1714069961178583:15119",
             "resources": [
                 "1674499001173011:2455",
                 "1674499001173196:2694",
                 "1706938061632852:2204125",
                 "1707772017698499:15089"
             ]
+        }
+    },
+    "1714069961178583:15119": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts"
+            }
         }
     }
 }

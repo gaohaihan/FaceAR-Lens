@@ -9,7 +9,7 @@
             "uid": "1645662098041797:634176",
             "fileId": "1674499001173123:2603",
             "originalId": "1674499001173124:2604",
-            "publicId": "1674499001173160:2646",
+            "publicId": "1714069961208528:15144",
             "expected_hash": "2037cf9a26ddfbf76aaa7cc304abb77d"
         },
         "IResourceManager": {
@@ -28,11 +28,11 @@
             "path": "Files/File_1674499001173124_2604.lsmat"
         }
     },
-    "1674499001173160:2646": {
+    "1714069961208528:15144": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/magnify.lsmat",
-                "hash": "ff5c9f2590337f7f24798d34031bce76"
+                "hash": "9c1fe375b1106aa4d93a8fc8af6f2568"
             }
         }
     }

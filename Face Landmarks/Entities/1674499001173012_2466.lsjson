@@ -9,7 +9,7 @@
             "uid": "1582742616143395:17088",
             "fileId": "1674499001173052:2526",
             "originalId": "1674499001173053:2527",
-            "publicId": "1674499001173156:2627",
+            "publicId": "1714069961200234:15137",
             "expected_hash": "510c537020edd4763a93f80218d26170",
             "additional": {
                 "isUnpackedInPublic": "false"
@@ -31,11 +31,11 @@
             "path": "Files/File_1674499001173053_2527.lsmat"
         }
     },
-    "1674499001173156:2627": {
+    "1714069961200234:15137": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Materials/refraction.lsmat",
-                "hash": "b26774912cf93ef17729eaa194b83827"
+                "hash": "9cf54a8260024b387e6bfebd8be206c7"
             }
         }
     }

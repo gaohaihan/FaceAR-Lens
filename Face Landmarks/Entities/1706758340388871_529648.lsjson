@@ -13,7 +13,7 @@
             "hidden": false,
             "uid": "1706758340389231:529649",
             "fileId": "1706758340385875:529645",
-            "publicId": "1706758340430660:529659",
+            "publicId": "1714069961244993:15170",
             "expected_hash": "3f7fa6418eb3310d7e52bb65272c21fe"
         },
         "IResourceManager": {
@@ -27,7 +27,7 @@
             "dependent_module_names": []
         }
     },
-    "1706758340430660:529659": {
+    "1714069961244993:15170": {
         "IResourceController": {
             "public": {
                 "path": "Behavior.js",

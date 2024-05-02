@@ -9,7 +9,7 @@
             "uid": "1706996743173635:3822827",
             "fileId": "1706996743201257:3822839",
             "originalId": "1706998315151258:4188732",
-            "publicId": "1706996744144175:3823316",
+            "publicId": "1714069961260761:15184",
             "expected_hash": "b1f53562da1705f116e0092ca5e16014"
         },
         "IResourceManager": {
@@ -23,17 +23,17 @@
             "path": "Files/File_1706996743201257_3822839.oprfb"
         }
     },
-    "1706996744144175:3823316": {
-        "IResourceController": {
-            "public": {
-                "path": "Balloons__PLACE_IN_OBJECTS_PANEL.oprfb",
-                "hash": "9230ea6da02f4a9f329074d1e68dddcf"
-            }
-        }
-    },
     "1706998315151258:4188732": {
         "IFileManager": {
             "path": "Files/File_1706998315151258_4188732.oprfb"
+        }
+    },
+    "1714069961260761:15184": {
+        "IResourceController": {
+            "public": {
+                "path": "Balloons__PLACE_IN_OBJECTS_PANEL.oprfb",
+                "hash": "4139e24fd1479c40f2630d483a0268c4"
+            }
         }
     }
 }

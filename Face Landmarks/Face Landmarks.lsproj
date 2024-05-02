@@ -262,17 +262,17 @@
             },
             "show_snap_ui": "true",
             "show_sponsored_ui": "false",
-            "input_stream_type": "Video",
+            "input_stream_type": "WebCam",
             "preview_images_project_config": {
                 "back_preview_id": "bundle:Preview\/Images\/Patio.jpg",
                 "back_preview_is_favorite": "false",
-                "front_preview_id": "bundle:Preview\/Images\/Hand.jpg",
+                "front_preview_id": "bundle:Preview\/Images\/Person 1.jpg",
                 "front_preview_is_favorite": "false"
             },
             "preview_videos_project_config": {
                 "back_preview_id": "bundle:Preview\/Videos\/Patio.webm",
                 "back_preview_is_favorite": "false",
-                "front_preview_id": "bundle:Preview\/Videos\/Open Mouth Person 3.webm",
+                "front_preview_id": "bundle:Preview\/Videos\/Open Mouth Person 6.webm",
                 "front_preview_is_favorite": "false"
             },
             "preview_ie_project_config": {

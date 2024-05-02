@@ -36,7 +36,7 @@
             "uid": "1582765996901522:191463",
             "fileId": "1674499001173074:2550",
             "originalId": "1674499001173075:2551",
-            "publicId": "1674499001173157:2633",
+            "publicId": "1714069961229113:15160",
             "expected_hash": "bcdae223c9d3d1784e2c3dce85f58d80",
             "additional": {
                 "originHash": "dce89e0b205fa124c712f05732075dc4"
@@ -68,7 +68,7 @@
             "path": "Files/File_1674499001173095_2573.pvr"
         }
     },
-    "1674499001173157:2633": {
+    "1714069961229113:15160": {
         "IResourceController": {
             "public": {
                 "path": "FaceLandmarks Template Resources/Textures/magnifying_body_materialParams.png",
