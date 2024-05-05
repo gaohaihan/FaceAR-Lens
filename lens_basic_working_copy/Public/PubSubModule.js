@@ -7,7 +7,9 @@ const EVENTS = {
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
     ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',
-    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right'
+    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right',
+    DisableBilateralDetection: 'DisableBilateralDetection',
+    EnableBilateralDetection: 'EnableBilateralDetection',
 };
 
 const EXPRESSIONS = {

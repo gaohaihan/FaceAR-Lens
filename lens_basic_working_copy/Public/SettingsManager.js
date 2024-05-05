@@ -1,5 +1,6 @@
 // -----JS CODE-----
-// @input SceneObject sensitivitySlider
+// @input SceneObject sensitivityUI
+// @input SceneObject bilateralUI
 // @input Component.ScriptComponent sliderScript
 // @input Component.RenderMeshVisual faceMesh
 
@@ -12,10 +13,11 @@ script.api.SensitivitySlider = function(){
  }
 
   /***
-  * Toggle slider visibility
+  * Toggle setting controls visibility
   */
- script.api.sliderToggle = function(){
-      script.sensitivitySlider.enabled = !script.sensitivitySlider.enabled;
+ script.api.SettingsToggle = function(){
+      script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
+      script.bilateralUI.enabled = !script.bilateralUI.enabled;
   }
 
   /***
