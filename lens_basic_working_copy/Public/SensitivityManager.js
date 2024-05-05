@@ -1,6 +1,4 @@
 // -----JS CODE-----
-// @input SceneObject sensitivityUI
-// @input SceneObject bilateralUI
 // @input Component.ScriptComponent sliderScript
 // @input Component.RenderMeshVisual faceMesh
 

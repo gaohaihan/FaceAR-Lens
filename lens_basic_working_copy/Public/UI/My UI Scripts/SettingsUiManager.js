@@ -1,5 +1,17 @@
 // -----JS CODE-----
+// @input SceneObject sensitivityUI
+// @input SceneObject bilateralUI
+
 const pubSub = require("./PubSubModule");
+
+/***
+ * Toggle setting controls visibility
+ */
+script.api.SettingsToggle = function(){
+        script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
+script.bilateralUI.enabled = !script.bilateralUI.enabled;
+}
+
 
 script.api.ToggleOn_Left = function(){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, true);
