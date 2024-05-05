@@ -98,6 +98,7 @@ function SetBilateralDetection() {
   pubSub.publish(pubSub.EVENTS.SetBilateralDetection_Left, isLeftDetectionOn);
   pubSub.publish(pubSub.EVENTS.SetBilateralDetection_Right, isRightDetectionOn);
 
+  //print("left " + isLeftDetectionOn + " right " + isRightDetectionOn);
  }
 
 /***
