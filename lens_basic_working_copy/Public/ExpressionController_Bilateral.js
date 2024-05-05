@@ -22,7 +22,6 @@ var isLeftDetectionOn;
 * Called once when onAwake
 */
 function Initialize() {
-print("initalized");
 // Set initial values
 midRep = false;
 color = script.target.getMaterial(0).getPass(0).baseColor;
@@ -119,7 +118,7 @@ var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.e
 var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
 
 if (!isLeftDetectionOn && !isRightDetectionOn ){
-  print("an error occured and both left and right side detection is off for expression")
+  print("an error has occurred and both left and right side detection is off for expression")
 }
 
 if (!isLeftDetectionOn){

@@ -19,16 +19,13 @@ script.api.CompleteExercise = function(){
 
 script.api.Next = function(){
    GoToNextExercise();
-   pubSub.publish(pubSub.EVENTS.NextButtonClicked);
 }
 
 script.api.Previous = function(){
    GoToPreviousExercise();
-   pubSub.publish(pubSub.EVENTS.PreviousButtonClicked);
 }
 
 script.api.Start = function(){
-   pubSub.publish(pubSub.EVENTS.StartButtonClicked);
    EnableFirstExercise();
 }
 
@@ -66,6 +63,7 @@ function GoToPreviousExercise() {
 function EnableFirstExercise(){
    currentIndex = 0;
    TryEnableNext();
+   script.startButton.enabled = false;
 
    print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
