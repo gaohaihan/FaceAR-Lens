@@ -17,13 +17,13 @@ script.api.CompleteExercise = function(){
 }
 
 script.api.Next = function(){
-   pubSub.publish(pubSub.EVENTS.NextButtonClicked);
    GoToNextExercise();
+   pubSub.publish(pubSub.EVENTS.NextButtonClicked);
 }
 
 script.api.Previous = function(){
-   pubSub.publish(pubSub.EVENTS.PreviousButtonClicked);
    GoToPreviousExercise();
+   pubSub.publish(pubSub.EVENTS.PreviousButtonClicked);
 }
 
 script.api.Start = function(){
@@ -43,6 +43,9 @@ function GoToNextExercise() {
 
    script.expressions[previousIndex].enabled = false;
    script.expressions[currentIndex].enabled = true;
+
+   print("current is " + currentIndex);
+   pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
  /***
@@ -55,8 +58,11 @@ function GoToPreviousExercise() {
    TryEnableNext();
    TryEnablePrev();
 
-   script.expressions[currentIndex].enabled = true;
    script.expressions[previousIndex].enabled = false;
+   script.expressions[currentIndex].enabled = true;
+
+   print("current is " + currentIndex);
+   pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
  /***
@@ -65,9 +71,14 @@ function GoToPreviousExercise() {
 function EnableFirstExercise(){
    currentIndex = 0;
    script.expressions[0].enabled = true;
+
    TryEnableNext();
+
    script.UiParent.enabled = true;
    script.startButton.enabled = false;
+
+   print("current is " + currentIndex);
+   pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
 function TryEnableNext(){

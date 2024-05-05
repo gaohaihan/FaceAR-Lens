@@ -8,6 +8,7 @@
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
+// @input number expressionIndex
 
 const pubSub = require("./PubSubModule");
 //let minExpressionValue = global.ExpressionMinValues[script.expressionRight];
@@ -16,26 +17,25 @@ var color;
 var sensitivity;
 var isRightDetectionOn;
 var isLeftDetectionOn;
-Initialize();
-//print(minExpressionValue);
 
- /***
-  * Called once when onAwake
-  */
- function Initialize() {
-  // Set initial values
-  midRep = false;
-  color = script.target.getMaterial(0).getPass(0).baseColor;
-  sensitivity = global.Sensitivity;
-  // Display prompt text
-  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-  SetBilateralDetection();
-  SetEvents();
+/***
+* Called once when onAwake
+*/
+function Initialize() {
+print("initalized");
+// Set initial values
+midRep = false;
+color = script.target.getMaterial(0).getPass(0).baseColor;
+sensitivity = global.Sensitivity;
+// Display prompt text
+pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+SetBilateralDetection();
+SetEvents();
 }
 
- /***
-  * Set functions to be called every frame
-  */
+/***
+* Set functions to be called every frame
+*/
 function SetEvents() {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
@@ -60,10 +60,10 @@ function UpdateVisual(visualComponent) {
      visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
  }
 
- // TODO: Still trying to figure out how to count reps when a persons base line values may differ significantly
-  /***
-  * Count completed reps, expression must return to base line bf another rep is counted.
-  */
+// TODO: Still trying to figure out how to count reps when a persons base line values may differ significantly
+/***
+* Count completed reps, expression must return to base line bf another rep is counted.
+*/
 function CountReps() {
     // Update rep count text
      pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
@@ -86,7 +86,7 @@ function CountReps() {
 /***
 * Publish expressions values for bilateral detection so the UI reflects its values.
 */
-function SetBilateralDetection(eventData) {
+function SetBilateralDetection() {
 // set values to true for first time.
   if (isLeftDetectionOn == null)
     isLeftDetectionOn = true;
@@ -101,9 +101,9 @@ function SetBilateralDetection(eventData) {
 
  }
 
- /***
-  * Adjust expression weight for sensitivity.
-  */
+/***
+* Adjust expression weight for sensitivity.
+*/
 function GetAdjustedWeight(){
   var weight = GetRawExpressionWeight();
   var adjusted_weight = weight * sensitivity;
@@ -135,26 +135,32 @@ return combinedWeight
 }
 
 
+/*SUBSCRIPTIONS*/
+
 /***
-  * Determine if should detect left side movement based on UI buttons being toggled
-  */
+* Always set reps back to 0 when leave a exercise
+*/
+pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
+  if(data == script.expressionIndex)
+  {
+    script.completedReps = 0;
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
+    Initialize();
+  }
+});
+
+/***
+* Determine if should detect left side movement based on UI buttons being toggled
+*/
 pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
   isLeftDetectionOn = data
   print("left is" + isLeftDetectionOn)
 });
 
 /***
-  * Determine if should detect right side movement based on UI buttons being toggled
-  */
+* Determine if should detect right side movement based on UI buttons being toggled
+*/
 pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
   isRightDetectionOn = data
   print("right is" + isRightDetectionOn)
-});
-
-/***
-  * Always set reps back to 0 when leave a exercise
-  */
-pubSub.subscribe(pubSub.EVENTS.PreviousButtonClicked, () => {
-  script.completedReps = 0;
-  pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
 });

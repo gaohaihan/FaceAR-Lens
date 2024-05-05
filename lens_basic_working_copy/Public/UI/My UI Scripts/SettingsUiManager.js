@@ -66,3 +66,19 @@ if (data === false)
     script.bilateralToggle_right.api.toggleOff();
 });
 
+/***
+  * Set left button on/off based on data
+  */
+pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection, (data) => {
+    if (data === true){
+        script.bilateralToggle_left.api.enableInteractable();
+        script.bilateralToggle_right.api.enableInteractable();
+    }
+
+    if (data === false){
+        script.bilateralToggle_left.api.disableInteractable();
+        script.bilateralToggle_right.api.disableInteractable();
+    }
+
+  });
+

@@ -11,6 +11,7 @@ const EVENTS = {
     SetBilateralDetection_Left: 'SetBilateralDetection_Left',
     SetBilateralDetection_Right: ' SetBilateralDetection_Right',
     SetBilateralDetection: 'SetBilateralDetection',
+    ExpressionIndexEnabled: 'ExpressionIndexEnabled',
 };
 
 const EXPRESSIONS = {
