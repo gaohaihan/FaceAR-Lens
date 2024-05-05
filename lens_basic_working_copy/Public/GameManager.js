@@ -9,7 +9,6 @@
 const pubSub = require("./PubSubModule");
 
 let currentIndex = 0;
-let exerciseSize = script.expressions.length;
 script.prevButton.enabled = false;
 script.nextButton.enabled = false;
 
@@ -32,7 +31,9 @@ script.api.Start = function(){
    EnableFirstExercise();
 }
 
-// Go to the Next exercise in the sequence and en/disable the prev and next button.
+ /***
+  * Go to the Next exercise in the sequence and en/disable the prev and next button.
+  */
 function GoToNextExercise() {
    previousIndex = currentIndex;
    currentIndex += 1;
@@ -44,7 +45,9 @@ function GoToNextExercise() {
    script.expressions[currentIndex].enabled = true;
 }
 
-// Go to the previous exercise in the sequence and en/disable the prev and next button.
+ /***
+  * Go to the previous exercise in the sequence and en/disable the prev and next button.
+  */
 function GoToPreviousExercise() {
    previousIndex = currentIndex;
    currentIndex -= 1;
@@ -56,7 +59,9 @@ function GoToPreviousExercise() {
    script.expressions[previousIndex].enabled = false;
 }
 
-// Enable the first exercise in the sequence and disable the start button.
+ /***
+  * Enable the first exercise in the sequence and some UI elements. Disable the start button.
+  */
 function EnableFirstExercise(){
    currentIndex = 0;
    script.expressions[0].enabled = true;
@@ -66,7 +71,7 @@ function EnableFirstExercise(){
 }
 
 function TryEnableNext(){
-   //print("Cur = " + currentIndex)
+   let exerciseSize = script.expressions.length;
    if (currentIndex == exerciseSize - 1)
    {
       script.nextButton.enabled = false
@@ -78,7 +83,7 @@ function TryEnableNext(){
 }
 
 function TryEnablePrev(){
-   // print("prev = " + previousIndex)\
+   let exerciseSize = script.expressions.length;
    if (currentIndex == 0)
    {
       script.prevButton.enabled = false

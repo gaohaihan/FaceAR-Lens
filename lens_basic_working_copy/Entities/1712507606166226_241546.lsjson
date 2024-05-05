@@ -6,7 +6,7 @@
     },
     "1712507606166226:241546": {
         "IResourceController": {
-            "name": "ExpressionController",
+            "name": "ExpressionController_Unilateral",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -14,7 +14,7 @@
             "uid": "1712507606166239:241547",
             "fileId": "1712507606164114:241545",
             "publicId": "1712507606167440:241552",
-            "expected_hash": "948e16956b60bc731451fee8fd92a35f"
+            "expected_hash": "943d1221dd56c760bb9fd8d58719169f"
         },
         "IResourceManager": {
             "uid": "1712507606166239:241547",
@@ -32,8 +32,8 @@
     "1712507606167440:241552": {
         "IResourceController": {
             "public": {
-                "path": "ExpressionController.js",
-                "hash": "948e16956b60bc731451fee8fd92a35f"
+                "path": "ExpressionController_Unilateral.js",
+                "hash": "943d1221dd56c760bb9fd8d58719169f"
             }
         }
     }
