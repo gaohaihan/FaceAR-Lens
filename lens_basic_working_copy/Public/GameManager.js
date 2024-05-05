@@ -1,14 +1,15 @@
 // -----JS CODE-----//
 // @input Component.Text expressionTitleText
-// @input SceneObject[] expressions
 // @input SceneObject UiParent
 // @input SceneObject startButton
 // @input SceneObject prevButton
 // @input SceneObject nextButton
+// this index should include 0
+// @input number maxIndex = 2;
 
 const pubSub = require("./PubSubModule");
 
-let currentIndex = 0;
+var currentIndex = 0;
 script.prevButton.enabled = false;
 script.nextButton.enabled = false;
 
@@ -41,9 +42,6 @@ function GoToNextExercise() {
    TryEnableNext();
    TryEnablePrev();
 
-   script.expressions[previousIndex].enabled = false;
-   script.expressions[currentIndex].enabled = true;
-
    print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
@@ -58,9 +56,6 @@ function GoToPreviousExercise() {
    TryEnableNext();
    TryEnablePrev();
 
-   script.expressions[previousIndex].enabled = false;
-   script.expressions[currentIndex].enabled = true;
-
    print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
@@ -70,20 +65,14 @@ function GoToPreviousExercise() {
   */
 function EnableFirstExercise(){
    currentIndex = 0;
-   script.expressions[0].enabled = true;
-
    TryEnableNext();
-
-   script.UiParent.enabled = true;
-   script.startButton.enabled = false;
 
    print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
 function TryEnableNext(){
-   let exerciseSize = script.expressions.length;
-   if (currentIndex == exerciseSize - 1)
+   if (currentIndex == script.maxIndex)
    {
       script.nextButton.enabled = false
    }
@@ -94,7 +83,6 @@ function TryEnableNext(){
 }
 
 function TryEnablePrev(){
-   let exerciseSize = script.expressions.length;
    if (currentIndex == 0)
    {
       script.prevButton.enabled = false

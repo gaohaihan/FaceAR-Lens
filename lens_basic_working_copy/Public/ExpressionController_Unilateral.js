@@ -19,7 +19,6 @@ var midRep;
 * Called once when onAwake
 */
 function Initialize() {
-  print("initalized");
   // Set initial values
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
@@ -86,7 +85,6 @@ function CountReps() {
 * Disable bilateral UI since it is not applicable to this exercise
 */
 function DisableBilateralDetection() {
-    // enable bilateral controls
     pubSub.publish(pubSub.EVENTS.SetBilateralDetection, false);
    }
 
@@ -107,13 +105,24 @@ function GetRawExpressionWeight(){
 
 /*SUBSCRIPTIONS*/
 /***
+* Enable this script/exercise
+* Initialize values
+* Disable/enable visuals
+* Start detecting on frame update
 * Always set reps back to 0 when leave a exercise
 */
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
-  if(data == script.expressionIndex)
+  if (data == script.expressionIndex)
   {
+    script.enabled = true;
+    script.target.enabled = true;
     script.completedReps = 0;
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
     Initialize();
+  }
+  else
+  {
+    script.enabled = false;
+    script.target.enabled = false;
   }
 });
