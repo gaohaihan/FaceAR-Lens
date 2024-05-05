@@ -112,6 +112,8 @@ function GetAdjustedWeight(){
 
 /**
 * Gets the raw expression weight for both or one side of the expression.
+* Note that the expression weights are flipped.
+* i.e left = on, return right weight.
 */
 function GetRawExpressionWeight(){
 var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
@@ -121,13 +123,14 @@ if (!isLeftDetectionOn && !isRightDetectionOn ){
   print("an error has occurred and both left and right side detection is off for expression")
 }
 
-if (!isLeftDetectionOn){
+if (!isRightDetectionOn){
   return rightWeight;
 }
 
-if (!isRightDetectionOn){
+if (!isLeftDetectionOn){
   return leftWeight;
 }
+
 
 var combinedWeight = (leftWeight + rightWeight) / 2
 return combinedWeight
