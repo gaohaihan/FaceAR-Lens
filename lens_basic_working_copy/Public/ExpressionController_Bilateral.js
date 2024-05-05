@@ -8,26 +8,53 @@
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
-// @input bool midRep
-// @input bool isRightDetectionOn = true
-// @input bool isLeftDetectionOn = true
 
 const pubSub = require("./PubSubModule");
 //let minExpressionValue = global.ExpressionMinValues[script.expressionRight];
-let color = script.target.getMaterial(0).getPass(0).baseColor;
-let sensitivity = global.Sensitivity;
-UpdateVisual(script.target);
-CountReps();
+var midRep;
+var color;
+var sensitivity;
+var isRightDetectionOn;
+var isLeftDetectionOn;
+Initialize();
 //print(minExpressionValue);
 
-  /***
-  * Update opacity of mask based on expression weight
+ /***
+  * Called once when onAwake
   */
-function UpdateVisual(visualComponent) {
-    // Display prompt text
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+ function Initialize() {
+  // Set initial values
+  midRep = false;
+  color = script.target.getMaterial(0).getPass(0).baseColor;
+  sensitivity = global.Sensitivity;
+  // Display prompt text
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+  SetBilateralDetection();
+  SetEvents();
+}
 
-    // Set alpha of mask
+ /***
+  * Set functions to be called every frame
+  */
+function SetEvents() {
+  var updateEvent = script.createEvent("UpdateEvent");
+  updateEvent.bind(OnUpdate);
+}
+
+/***
+* Things to be called every frame
+*/
+function OnUpdate(){
+  // todo is sensitivity a per exercise or global thing?
+  sensitivity = global.Sensitivity;
+  CountReps();
+  UpdateVisual(script.target);
+}
+
+/***
+* Update opacity of mask based on expression weight
+*/
+function UpdateVisual(visualComponent) {
      alpha = GetAdjustedWeight();
      color = visualComponent.getMaterial(0).getPass(0).baseColor;
      visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
@@ -43,79 +70,91 @@ function CountReps() {
 
      var adjustedWeight = GetAdjustedWeight();
      //print("adjusted " + adjustedWeight)
-     if (adjustedWeight > script.minExpressionValue && script.midRep !== true){
-        script.midRep = true;
+     if (adjustedWeight > script.minExpressionValue && midRep !== true){
+        midRep = true;
         script.completedReps += 1
         pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
      }
 
      var rawWeight = GetRawExpressionWeight();
      //print("raw " + rawWeight)
-     if (rawWeight <= script.minExpressionValue && script.midRep === true){
-        script.midRep = false;
+     if (rawWeight <= script.minExpressionValue && midRep === true){
+       midRep = false;
      }
+ }
+
+/***
+* Publish expressions values for bilateral detection so the UI reflects its values.
+*/
+function SetBilateralDetection(eventData) {
+// set values to true for first time.
+  if (isLeftDetectionOn == null)
+    isLeftDetectionOn = true;
+  if (isRightDetectionOn == null)
+    isRightDetectionOn = true;
+
+  // enable bilateral controls
+  pubSub.publish(pubSub.EVENTS.SetBilateralDetection, true);
+  // set right/left buttons on/off
+  pubSub.publish(pubSub.EVENTS.SetBilateralDetection_Left, isLeftDetectionOn);
+  pubSub.publish(pubSub.EVENTS.SetBilateralDetection_Right, isRightDetectionOn);
+
  }
 
  /***
   * Adjust expression weight for sensitivity.
   */
 function GetAdjustedWeight(){
-    var weight = GetRawExpressionWeight();
-    var adjusted_weight = weight * sensitivity;
+  var weight = GetRawExpressionWeight();
+  var adjusted_weight = weight * sensitivity;
 
-    return adjusted_weight;
+  return adjusted_weight;
 }
 
 /**
- * Gets the raw expression weight for both or one side of the expression.
- */
+* Gets the raw expression weight for both or one side of the expression.
+*/
 function GetRawExpressionWeight(){
-  var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
-  var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
+var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
+var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
 
-  if (!script.isLeftDetectionOn && !script.isRightDetectionOn ){
-    print("an error occure and both left and right side detection is off for expression")
-  }
-
-  if (!script.isLeftDetectionOn){
-    return rightWeight;
-  }
-
-  if (!script.isRightDetectionOn){
-    return leftWeight;
-  }
-
-  var combinedWeight = (leftWeight + rightWeight) / 2
-  return combinedWeight
+if (!isLeftDetectionOn && !isRightDetectionOn ){
+  print("an error occured and both left and right side detection is off for expression")
 }
 
- /***
+if (!isLeftDetectionOn){
+  return rightWeight;
+}
+
+if (!isRightDetectionOn){
+  return leftWeight;
+}
+
+var combinedWeight = (leftWeight + rightWeight) / 2
+return combinedWeight
+}
+
+
+/***
+  * Determine if should detect left side movement based on UI buttons being toggled
+  */
+pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
+  isLeftDetectionOn = data
+  print("left is" + isLeftDetectionOn)
+});
+
+/***
+  * Determine if should detect right side movement based on UI buttons being toggled
+  */
+pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
+  isRightDetectionOn = data
+  print("right is" + isRightDetectionOn)
+});
+
+/***
   * Always set reps back to 0 when leave a exercise
   */
 pubSub.subscribe(pubSub.EVENTS.PreviousButtonClicked, () => {
-    script.completedReps = 0;
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
+  script.completedReps = 0;
+  pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
 });
-
-/***
-  * Determine if should detect left side movement
-  */
-pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
-  script.isLeftDetectionOn = data
-  print("left is" + script.isLeftDetectionOn)
-});
-
-/***
-  * Determine if should detect right side movement
-  */
-pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
-  script.isRightDetectionOn = data
-  print("right is" + script.isRightDetectionOn)
-});
-
-
-function WithInRange(input1, input2, deviation)
-{
- var deviation = 0.005;
- return Math.abs(input1 - input2) <= deviation;
-}
