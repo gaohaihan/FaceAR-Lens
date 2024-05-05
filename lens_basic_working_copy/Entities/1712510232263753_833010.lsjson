@@ -14,7 +14,7 @@
             "uid": "1712510232263765:833011",
             "fileId": "1712510232262643:833009",
             "publicId": "1712510232265275:833016",
-            "expected_hash": "99aab8d27dd74f534cd2b675c37a6807"
+            "expected_hash": "ebc387e71fb318e019cf702b4a175895"
         },
         "IResourceManager": {
             "uid": "1712510232263765:833011",
@@ -31,7 +31,7 @@
         "IResourceController": {
             "public": {
                 "path": "PubSubModule.js",
-                "hash": "99aab8d27dd74f534cd2b675c37a6807"
+                "hash": "ebc387e71fb318e019cf702b4a175895"
             }
         }
     }

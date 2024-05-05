@@ -6,7 +6,7 @@
     },
     "1714345488272869:2328292": {
         "IResourceController": {
-            "name": "BilateralToggleButtons",
+            "name": "SettingsUiManager",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -14,7 +14,7 @@
             "uid": "1714345488272880:2328293",
             "fileId": "1714345488271775:2328291",
             "publicId": "1714345488274108:2328298",
-            "expected_hash": "003fce4baccd2de5e65285a1d18bcd57"
+            "expected_hash": "6bce52d62efe20fda28bb17317755471"
         },
         "IResourceManager": {
             "uid": "1714345488272880:2328293",
@@ -32,8 +32,8 @@
     "1714345488274108:2328298": {
         "IResourceController": {
             "public": {
-                "path": "BilateralToggleButtons.js",
-                "hash": "003fce4baccd2de5e65285a1d18bcd57"
+                "path": "UI/My UI Scripts/SettingsUiManager.js",
+                "hash": "6bce52d62efe20fda28bb17317755471"
             }
         }
     }

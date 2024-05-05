@@ -1,9 +1,6 @@
 let subscribers = {};
 
 const EVENTS = {
-    StartButtonClicked: 'StartButtonClicked',
-    PreviousButtonClicked: 'PreviousButtonClicked',
-    NextButtonClicked: 'NextButtonClicked',
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
     ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',

@@ -38,8 +38,8 @@
     "1712515092628263:2131544": {
         "IResourceController": {
             "public": {
-                "path": "UI Button.lsc",
-                "hash": "2ad2c01c1ac0af7f93c0a5005e47cb26"
+                "path": "UI/UI Button.lsc",
+                "hash": "405c35be22fc4c14557fbf5aaf9f1348"
             }
         }
     }
