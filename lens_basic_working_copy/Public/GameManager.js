@@ -39,7 +39,7 @@ function GoToNextExercise() {
    TryEnableNext();
    TryEnablePrev();
 
-   print("current is " + currentIndex);
+ //  print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -53,7 +53,7 @@ function GoToPreviousExercise() {
    TryEnableNext();
    TryEnablePrev();
 
-   print("current is " + currentIndex);
+  // print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -65,7 +65,7 @@ function EnableFirstExercise(){
    TryEnableNext();
    script.startButton.enabled = false;
 
-   print("current is " + currentIndex);
+ //  print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
