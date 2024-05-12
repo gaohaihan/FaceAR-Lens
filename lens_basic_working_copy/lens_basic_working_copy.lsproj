@@ -323,7 +323,16 @@
     },
     "controller": {
         "AssetImportController": {
-            "itemUidToID": ""
+            "itemUidToID": [
+                {
+                    "k": "1715542707182516:69255",
+                    "v": "4WQregdmXPxdie9F04syu1"
+                },
+                {
+                    "k": "1715543038405886:154605",
+                    "v": "5lRZ0mho86S3rtqOZ3m4an"
+                }
+            ]
         },
         "Compression::IController": "",
         "DigitalGoodsController": {

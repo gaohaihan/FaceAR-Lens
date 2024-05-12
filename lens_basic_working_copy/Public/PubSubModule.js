@@ -1,13 +1,15 @@
 let subscribers = {};
 
 const EVENTS = {
-    StartButtonClicked: 'StartButtonClicked',
-    PreviousButtonClicked: 'PreviousButtonClicked',
-    NextButtonClicked: 'NextButtonClicked',
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
+    SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',
-    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right'
+    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right',
+    SetBilateralDetection_Left: 'SetBilateralDetection_Left',
+    SetBilateralDetection_Right: ' SetBilateralDetection_Right',
+    SetBilateralDetection: 'SetBilateralDetection',
+    ExpressionIndexEnabled: 'ExpressionIndexEnabled',
 };
 
 const EXPRESSIONS = {

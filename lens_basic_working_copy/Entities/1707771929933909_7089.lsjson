@@ -2,8 +2,8 @@
     "1707771929840537:7068": {
         "IResourceController": {
             "public": {
-                "path": "Face Mesh Default 2.lsmat",
-                "hash": "ce3616b5d8101775ebc3bd54b057f155"
+                "path": "FaceMesh/Face Mesh Default 2.lsmat",
+                "hash": "15c8774615b19058101c9b78dbc950c9"
             }
         }
     },
