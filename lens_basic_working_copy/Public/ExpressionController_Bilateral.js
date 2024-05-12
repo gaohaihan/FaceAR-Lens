@@ -5,6 +5,7 @@
 // @input string expressionRight
 // @input string expressionLeft
 // @input string displayText
+// @input string finishText
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
@@ -17,6 +18,8 @@ var color;
 var sensitivity;
 var isRightDetectionOn;
 var isLeftDetectionOn;
+// face mask visual disabled by default
+script.target.enabled = false;
 
 /***
 * Called once when onAwake
@@ -27,6 +30,7 @@ midRep = false;
 color = script.target.getMaterial(0).getPass(0).baseColor;
 sensitivity = global.Sensitivity;
 // Display prompt text
+pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
 pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
 SetBilateralDetection();
 SetEvents();
@@ -64,6 +68,12 @@ function UpdateVisual(visualComponent) {
 * Count completed reps, expression must return to base line bf another rep is counted.
 */
 function CountReps() {
+
+  // stop counting when hit required reps
+  if (script.completedReps >= script.requiredReps){
+    Finished();
+    return;
+  }
     // Update rep count text
      pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
 
@@ -135,6 +145,15 @@ if (!isLeftDetectionOn){
 
 var combinedWeight = (leftWeight + rightWeight) / 2
 return combinedWeight
+}
+
+/**
+ * Display finished text
+ */
+function Finished(){
+  if (script.completedReps >= script.requiredReps){
+    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+  }
 }
 
 

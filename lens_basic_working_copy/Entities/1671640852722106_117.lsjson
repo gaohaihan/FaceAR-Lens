@@ -8,9 +8,7 @@
             "hidden": false,
             "uid": "1:1",
             "additional": {
-                "resourceInfoExportKey": {
-                    "RenderTargetRole": "1"
-                }
+                "RenderTargetRole": "1"
             }
         },
         "IResourceManager": {

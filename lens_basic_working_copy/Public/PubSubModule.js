@@ -3,6 +3,7 @@ let subscribers = {};
 const EVENTS = {
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
+    SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',
     ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right',
     SetBilateralDetection_Left: 'SetBilateralDetection_Left',

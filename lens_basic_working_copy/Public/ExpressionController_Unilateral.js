@@ -4,6 +4,7 @@
 
 // @input string expression
 // @input string displayText
+// @input string finishText
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
@@ -14,6 +15,8 @@ var minExpressionValue = global.ExpressionMinValues[script.expression];
 var color;
 var sensitivity;
 var midRep;
+// face mask visual disabled by default
+script.target.enabled = false;
 
 /***
 * Called once when onAwake
@@ -26,7 +29,7 @@ function Initialize() {
 
   // Display prompt text
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
   DisableBilateralDetection();
   SetEvents();
 }
@@ -63,8 +66,14 @@ function UpdateVisual(visualComponent) {
 * Count completed reps, expression must return to base line bf another rep is counted.
 */
 function CountReps() {
+
+  // stop counting when hit required reps
+  if (script.completedReps >= script.requiredReps){
+    Finished();
+    return;
+  }
     // Update rep count text
-     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
+     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
 
      var adjustedWeight = GetAdjustedWeight();
      //print("adjusted " + adjustedWeight)
@@ -100,6 +109,15 @@ function GetAdjustedWeight(){
 
 function GetRawExpressionWeight(){
     return script.faceMesh.mesh.control.getExpressionWeightByName(script.expression);
+}
+
+/**
+ * Display finished text
+ */
+function Finished(){
+  if (script.completedReps >= script.requiredReps){
+    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+  }
 }
 
 
