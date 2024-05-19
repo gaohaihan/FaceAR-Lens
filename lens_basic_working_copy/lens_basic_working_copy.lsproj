@@ -237,11 +237,14 @@
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
-            "hints": "",
-            "lens": "Untitled",
-            "applicability": "3",
+            "icon_hash": "56814dbefc6c60009fe6066406087653",
+            "icon_path": "icon.png",
+            "hints": [
+                ""
+            ],
+            "lens": "FaceARTestLens2",
+            "applicability": "1",
             "compatibility_descriptors": [
-                "mobile",
                 "web"
             ],
             "lens_descriptors": "",

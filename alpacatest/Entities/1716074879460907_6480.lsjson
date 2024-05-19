@@ -1,0 +1,40 @@
+{
+    "1716074879455941:6479": {
+        "IFileManager": {
+            "path": "Files/File_1716074879455941_6479.js"
+        }
+    },
+    "1716074879460907:6480": {
+        "IResourceController": {
+            "name": "Alpaca API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1716074879460952:6481",
+            "fileId": "1716074879455941:6479",
+            "publicId": "1716074879483459:6491",
+            "expected_hash": "64191c3904c1a00163b5a7385d1cdf37"
+        },
+        "IResourceManager": {
+            "uid": "1716074879460952:6481",
+            "name": "Files/File_1716074879455941_6479.js",
+            "flags": 1
+        }
+    },
+    "1716074879460952:6481": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "Alpaca API Module"
+            ]
+        }
+    },
+    "1716074879483459:6491": {
+        "IResourceController": {
+            "public": {
+                "path": "Alpaca API.js",
+                "hash": "64191c3904c1a00163b5a7385d1cdf37"
+            }
+        }
+    }
+}
