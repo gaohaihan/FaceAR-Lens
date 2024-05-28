@@ -1,0 +1,40 @@
+{
+    "1714343607180704:1650023": {
+        "IFileManager": {
+            "path": "Files/File_1714343607180704_1650023.js"
+        }
+    },
+    "1714343607183110:1650024": {
+        "IResourceController": {
+            "name": "ExpressionController_Bilateral",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714343607183123:1650025",
+            "fileId": "1714343607180704:1650023",
+            "publicId": "1714343607186181:1650035",
+            "expected_hash": "4b7587033771c06c15c776855e27e7ea"
+        },
+        "IResourceManager": {
+            "uid": "1714343607183123:1650025",
+            "name": "Files/File_1714343607180704_1650023.js",
+            "flags": 1
+        }
+    },
+    "1714343607183123:1650025": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    },
+    "1714343607186181:1650035": {
+        "IResourceController": {
+            "public": {
+                "path": "ExpressionController_Bilateral.js",
+                "hash": "4b7587033771c06c15c776855e27e7ea"
+            }
+        }
+    }
+}
