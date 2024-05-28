@@ -48,7 +48,6 @@ function SetEvents() {
 * Things to be called every frame
 */
 function OnUpdate(){
-  // todo is sensitivity a per exercise or global thing?
   sensitivity = global.Sensitivity;
   CountReps();
   UpdateVisual(script.target);
@@ -142,7 +141,6 @@ if (!isLeftDetectionOn){
   return leftWeight;
 }
 
-
 var combinedWeight = (leftWeight + rightWeight) / 2
 return combinedWeight
 }
@@ -160,7 +158,7 @@ function Finished(){
 /*SUBSCRIPTIONS*/
 
 /***
-* Enable this script/exercise
+* Enable this script/exercise if the parameter matched the expressionIndex value. 
 * Initialize values
 * Disable/enable visuals
 * Start detecting on frame update
