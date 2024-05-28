@@ -1,0 +1,40 @@
+{
+    "1714338462939509:173225": {
+        "IFileManager": {
+            "path": "Files/File_1714338462939509_173225.js"
+        }
+    },
+    "1714338462942052:173226": {
+        "IResourceController": {
+            "name": "ExpressionTextManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714338462942064:173227",
+            "fileId": "1714338462939509:173225",
+            "publicId": "1714338462944474:173234",
+            "expected_hash": "47d3f0af4fea843e893e67dba6c545e9"
+        },
+        "IResourceManager": {
+            "uid": "1714338462942064:173227",
+            "name": "Files/File_1714338462939509_173225.js",
+            "flags": 1
+        }
+    },
+    "1714338462942064:173227": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    },
+    "1714338462944474:173234": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/My UI Scripts/ExpressionTextManager.js",
+                "hash": "47d3f0af4fea843e893e67dba6c545e9"
+            }
+        }
+    }
+}

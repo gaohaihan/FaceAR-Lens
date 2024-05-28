@@ -1,0 +1,40 @@
+{
+    "1712508376757672:460555": {
+        "IFileManager": {
+            "path": "Files/File_1712508376757672_460555.js"
+        }
+    },
+    "1712508376759823:460562": {
+        "IResourceController": {
+            "name": "SensitivityManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1712508376759833:460563",
+            "fileId": "1712508376757672:460555",
+            "publicId": "1712508376761522:460568",
+            "expected_hash": "0260272eff3500d9368e3575627e88ad"
+        },
+        "IResourceManager": {
+            "uid": "1712508376759833:460563",
+            "name": "Files/File_1712508376757672_460555.js",
+            "flags": 1
+        }
+    },
+    "1712508376759833:460563": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    },
+    "1712508376761522:460568": {
+        "IResourceController": {
+            "public": {
+                "path": "SensitivityManager.js",
+                "hash": "0260272eff3500d9368e3575627e88ad"
+            }
+        }
+    }
+}
