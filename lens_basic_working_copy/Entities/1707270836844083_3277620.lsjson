@@ -32,7 +32,7 @@
         "IResourceController": {
             "public": {
                 "path": "UI/Resources/Materials/Popup Fill Graph.lsmat",
-                "hash": "22a8526345b32ae0e61e91dfcefe4a34"
+                "hash": "b6ca4ff8ff6df3a279c6dc922271b08e"
             }
         }
     }

@@ -32,7 +32,7 @@
     "1714343607186181:1650035": {
         "IResourceController": {
             "public": {
-                "path": "ExpressionController_Bilateral.js",
+                "path": "Exercise Scripts/ExpressionController_Bilateral.js",
                 "hash": "482561607c5684e4f5dd2bbb051fd172"
             }
         }
