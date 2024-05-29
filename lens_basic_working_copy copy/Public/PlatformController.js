@@ -1,32 +1,20 @@
 // -----JS CODE-----
-// @input Component.FaceMaskVisual target
-// @input Component.RenderMeshVisual faceMesh
-// @input string expression1
-// @input string expression2
-// @input float sensitivity = 0.5
-// @input Component.ScriptComponent sliderScript
-// @input SceneObject slider 
 // @input SceneObject platform
 // @input float moveSpeed
 // @input float minRot
 // @input float maxRot
-// @input SceneObject ball
-// @input SceneObject altBall
-
+const pubSub = require("./PubSubModule");
 var moveSpeed = script.moveSpeed;
 var minRot = script.minRot;
 var maxRot = script.maxRot;
 var platform = script.platform;
 // The threshold to destroy ball and spawn a new one when it rolls off a platform
 var posThreshold = 6.4;
-var weight1 = script.faceMesh.mesh.control.getExpressionWeightByName(script.expression1);
-var weight2 = script.faceMesh.mesh.control.getExpressionWeightByName(script.expression2);
 var altBall = script.altBall;
-altBall.enabled = false;
+//altBall.enabled = false;
 var currBall = script.ball;
 
 function SetPlatformRotation(rotDeg) {
-    var rotation = platform.getTransform().getWorldRotation();
     if(rotDeg < minRot) rotDeg = minRot;
     if(rotDeg > maxRot) rotDeg = maxRot;
     var targetEulerRot = convertEulerToRad(new vec3(0, 0, rotDeg));
@@ -48,5 +36,6 @@ function convertEulerToRad(deg) {
 }
 
 pubSub.subscribe(pubSub.EVENTS.SetPlatformRotation, (data) => {
-  SetPlatformRotation(data);
+    //print("rotate" + data);
+    SetPlatformRotation(data);
 });

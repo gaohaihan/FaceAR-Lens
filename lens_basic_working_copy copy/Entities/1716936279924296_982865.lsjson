@@ -14,7 +14,7 @@
             "uid": "1716936279924312:982866",
             "fileId": "1716936279920256:982864",
             "publicId": "1716936279929781:982877",
-            "expected_hash": "d4d7297b6f16b13f91346456b5801aa4"
+            "expected_hash": "80718cbb9aa0b22048c566a0b28216bd"
         },
         "IResourceManager": {
             "uid": "1716936279924312:982866",
@@ -24,14 +24,16 @@
     },
     "1716936279924312:982866": {
         "ScriptModulesController": {
-            "dependent_module_names": []
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
         }
     },
     "1716936279929781:982877": {
         "IResourceController": {
             "public": {
                 "path": "PlatformController.js",
-                "hash": "d4d7297b6f16b13f91346456b5801aa4"
+                "hash": "80718cbb9aa0b22048c566a0b28216bd"
             }
         }
     }
