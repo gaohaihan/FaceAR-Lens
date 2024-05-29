@@ -6,7 +6,7 @@
     },
     "1714343607183110:1650024": {
         "IResourceController": {
-            "name": "ExpressionController_Bilateral",
+            "name": "ExpressionController_Balance",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -14,7 +14,7 @@
             "uid": "1714343607183123:1650025",
             "fileId": "1714343607180704:1650023",
             "publicId": "1714343607186181:1650035",
-            "expected_hash": "4a9dcaa48d0ec33bc07e2d0e0af46044"
+            "expected_hash": "a854fcd46b5fe5542a18181681575d0b"
         },
         "IResourceManager": {
             "uid": "1714343607183123:1650025",
@@ -32,8 +32,8 @@
     "1714343607186181:1650035": {
         "IResourceController": {
             "public": {
-                "path": "ExpressionController_Bilateral.js",
-                "hash": "4a9dcaa48d0ec33bc07e2d0e0af46044"
+                "path": "BalanceGameScripts/ExpressionController_Balance.js",
+                "hash": "a854fcd46b5fe5542a18181681575d0b"
             }
         }
     }

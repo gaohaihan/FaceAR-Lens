@@ -1,20 +1,5 @@
 {
     "1712516188220390:2532798": {
         "RenderOrderComponent": true
-    },
-    "1712516188221885:2532800": {
-        "InspectorComponent": {
-            "Component.ScreenTransform": {
-                "basicModeSetup": {
-                    "attachBottom": "false",
-                    "attachLeft": "true",
-                    "attachRight": "false",
-                    "attachTop": "false",
-                    "fixHeight": "true",
-                    "fixWidth": "true"
-                },
-                "isBasicMode": "false"
-            }
-        }
     }
 }

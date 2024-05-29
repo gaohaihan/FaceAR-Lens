@@ -9,12 +9,10 @@
 // @input number completedReps
 // @input number requiredReps
 // @input number minExpressionValue
+// @input number expressionIndex
 
 const pubSub = require("./PubSubModule");
-//let minExpressionValue = global.ExpressionMinValues[script.expressionRight];
-var midRep;
 var color;
-var sensitivity;// face mask visual disabled by default
 script.target.enabled = false;
 
 /***
@@ -23,7 +21,6 @@ script.target.enabled = false;
 function Initialize() {
 // Set initial values
 color = script.target.getMaterial(0).getPass(0).baseColor;
-sensitivity = global.Sensitivity;
 // Display prompt text
 pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
 pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
@@ -42,7 +39,6 @@ function SetEvents() {
 * Things to be called every frame
 */
 function OnUpdate(){
-  sensitivity = global.Sensitivity;
   UpdateVisual(script.target);
   DetermineBalance();
 }
@@ -60,19 +56,10 @@ function UpdateVisual(visualComponent) {
 * Gets the raw expression weight for both expressions.
 */
 function GetCombinedExpressionWeight(){
-var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
-var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
-var combinedWeight = (leftWeight + rightWeight) / 2
-return combinedWeight
-}
-
-/**
- * Display finished text
- */
-function Finished(){
-  if (script.completedReps >= script.requiredReps){
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
-  }
+  var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
+  var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
+  var combinedWeight = (leftWeight + rightWeight) / 2
+  return combinedWeight
 }
 
 /**
@@ -83,16 +70,15 @@ function DetermineBalance(){
   var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
   var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
   var difference = Math.abs(leftWeight - rightWeight) / 0.1
-  if(difference <= global.Sensitivity){
-  if (difference < 0.2) {
-       //print( "Sens " +   Math.round( global.Sensitivity*100)/100 +  " diff " +  Math.round(difference*100)/100 + " right " +  Math.round(rightWeight*100)/100 + " left " + Math.round(leftWeight*100)/100  + "balanced");
-        pubSub.publish(pubSub.EVENTS.SetPlatformRotation, 0);
-  }
-    
+  if (difference <= global.Sensitivity){
+    if (difference < 0.2) {
+      //print( "Sens " +   Math.round( global.Sensitivity*100)/100 +  " diff " +  Math.round(difference*100)/100 + " right " +  Math.round(rightWeight*100)/100 + " left " + Math.round(leftWeight*100)/100  + "balanced");
+      pubSub.publish(pubSub.EVENTS.SetPlatformRotation, 0);
+    }
     else {
-     //print(" Sens " +   Math.round( global.Sensitivity*100)/100  + " diff " + Math.round(difference*100)/100  +  " right " +  Math.round(rightWeight*100)/100 + " left " + Math.round(leftWeight*100)/100  + " imbalanced");
-        var rotDeg = (leftWeight - rightWeight) * 100;
-        pubSub.publish(pubSub.EVENTS.SetPlatformRotation, rotDeg);
+      //print(" Sens " +   Math.round( global.Sensitivity*100)/100  + " diff " + Math.round(difference*100)/100  +  " right " +  Math.round(rightWeight*100)/100 + " left " + Math.round(leftWeight*100)/100  + " imbalanced");
+      var rotDeg = (leftWeight - rightWeight) * 100;
+      pubSub.publish(pubSub.EVENTS.SetPlatformRotation, rotDeg);
     }
   }
 
@@ -107,10 +93,17 @@ function DetermineBalance(){
 * Enable visuals
 * Start detecting on frame update
 */
-pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
+pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
+  if (data == script.expressionIndex)
+  {
     script.enabled = true;
     script.target.enabled = true;
-    script.completedReps = 0;
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
     Initialize();
+  }
+  else
+  {
+    script.enabled = false;
+    script.target.enabled = false;
+  }
 });
+

@@ -32,7 +32,7 @@
     "1716936279929781:982877": {
         "IResourceController": {
             "public": {
-                "path": "PlatformController.js",
+                "path": "BalanceGameScripts/PlatformController.js",
                 "hash": "80718cbb9aa0b22048c566a0b28216bd"
             }
         }

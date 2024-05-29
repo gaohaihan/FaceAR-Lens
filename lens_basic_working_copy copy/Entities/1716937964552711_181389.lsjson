@@ -14,7 +14,7 @@
             "uid": "1716937964552724:181390",
             "fileId": "1716937964550975:181388",
             "publicId": "1716937964554663:181395",
-            "expected_hash": "dd368905d843a4d7ae9b8b1fbd1f690e"
+            "expected_hash": "4eff4fe99b1e8b51133b5f1a5a6f3643"
         },
         "IResourceManager": {
             "uid": "1716937964552724:181390",
@@ -32,8 +32,8 @@
     "1716937964554663:181395": {
         "IResourceController": {
             "public": {
-                "path": "SphereController.js",
-                "hash": "dd368905d843a4d7ae9b8b1fbd1f690e"
+                "path": "BalanceGameScripts/SphereController.js",
+                "hash": "4eff4fe99b1e8b51133b5f1a5a6f3643"
             }
         }
     }

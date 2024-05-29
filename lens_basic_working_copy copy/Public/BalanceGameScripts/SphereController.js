@@ -25,7 +25,6 @@ function SetEvents() {
     BallDrop()
   }
 
-
   /**
    * Respawn ball if it falls below a certain threshhold on the Y axis
    * Increase fall count
@@ -40,9 +39,6 @@ function SetEvents() {
   }
 
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
-    SetEvents();
-print("drop ball")
+  SetEvents();
   Start();
 });
-
-//pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
