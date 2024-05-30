@@ -9,7 +9,7 @@
     "isReadOnly": "false",
     "isAutoSaved": "false",
     "api_level": "public",
-    "public_api_user_data_access": "restricted",
+    "public_api_user_data_access": "unrestricted",
     "studioVersion": {
         "createdWith": {
             "type": "Public",
@@ -237,9 +237,13 @@
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
-            "hints": "",
-            "lens": "Untitled",
-            "applicability": "3",
+            "icon_hash": "56814dbefc6c60009fe6066406087653",
+            "icon_path": "icon.png",
+            "hints": [
+                ""
+            ],
+            "lens": "testlens1",
+            "applicability": "1",
             "compatibility_descriptors": [
                 "mobile",
                 "web"
@@ -439,6 +443,36 @@
                         "local_only": "false",
                         "visibility": "external",
                         "source": "internal",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1716153090232895:5247",
+                    "v": {
+                        "api_spec_id": "b032a38e-4fb9-4719-a0b5-b31d1ce63900",
+                        "name": "test_api",
+                        "provider_name": "",
+                        "description": "",
+                        "host": "facear",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "facearendpoint1",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "test",
+                                        "is_optional": "true"
+                                    }
+                                ]
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
                         "restricted_js_api_permissions": ""
                     }
                 }

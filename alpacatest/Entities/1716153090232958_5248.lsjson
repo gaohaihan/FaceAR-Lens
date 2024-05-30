@@ -1,0 +1,17 @@
+{
+    "1716153090232958:5248": {
+        "IResourceController": {
+            "name": "test_api",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1716153090232895:5247"
+        },
+        "IResourceManager": {
+            "uid": "1716153090232895:5247",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

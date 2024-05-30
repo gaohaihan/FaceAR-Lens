@@ -14,7 +14,7 @@
             "uid": "1716074879460952:6481",
             "fileId": "1716074879455941:6479",
             "publicId": "1716074879483459:6491",
-            "expected_hash": "64191c3904c1a00163b5a7385d1cdf37"
+            "expected_hash": "3ba4071787bf74b9c7f43d55f6a4a092"
         },
         "IResourceManager": {
             "uid": "1716074879460952:6481",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "Alpaca API.js",
-                "hash": "64191c3904c1a00163b5a7385d1cdf37"
+                "hash": "3ba4071787bf74b9c7f43d55f6a4a092"
             }
         }
     }

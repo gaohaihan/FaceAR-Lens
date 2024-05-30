@@ -1,0 +1,40 @@
+{
+    "1716153090394368:5276": {
+        "IFileManager": {
+            "path": "Files/File_1716153090394368_5276.js"
+        }
+    },
+    "1716153090398140:5277": {
+        "IResourceController": {
+            "name": "test_api API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1716153090398167:5278",
+            "fileId": "1716153090394368:5276",
+            "publicId": "1716153090428050:5286",
+            "expected_hash": "50773b8ceae82d334c167571d7e30c1f"
+        },
+        "IResourceManager": {
+            "uid": "1716153090398167:5278",
+            "name": "Files/File_1716153090394368_5276.js",
+            "flags": 1
+        }
+    },
+    "1716153090398167:5278": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "test_api API Module"
+            ]
+        }
+    },
+    "1716153090428050:5286": {
+        "IResourceController": {
+            "public": {
+                "path": "test_api API.js",
+                "hash": "50773b8ceae82d334c167571d7e30c1f"
+            }
+        }
+    }
+}

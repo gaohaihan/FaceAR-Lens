@@ -1,0 +1,39 @@
+{
+    "1716104980308085:7542": {
+        "IFileManager": {
+            "path": "Files/File_1716104980308085_7542"
+        }
+    },
+    "1716104980310467:7543": {
+        "IResourceController": {
+            "name": "Head Mesh Default",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1716104980310940:7544",
+            "fileId": "1716104980308085:7542",
+            "originalId": "1716104980340749:7553",
+            "publicId": "1716104981114659:7717",
+            "expected_hash": "aaf34a01f22b495e137ed729f62d987f"
+        },
+        "IResourceManager": {
+            "uid": "1716104980310940:7544",
+            "name": "Files/File_1716104980308085_7542",
+            "flags": 1
+        }
+    },
+    "1716104980340749:7553": {
+        "IFileManager": {
+            "path": "Files/File_1716104980340749_7553.lsmat"
+        }
+    },
+    "1716104981114659:7717": {
+        "IResourceController": {
+            "public": {
+                "path": "Head Mesh Default.lsmat",
+                "hash": "d20cfd97b895f680a61a1477f0a37f9a"
+            }
+        }
+    }
+}

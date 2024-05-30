@@ -1,12 +1,12 @@
 // @input Asset.RemoteServiceModule remoteServiceModule
 // @input Component.Text3D text
-
 // Import module
-const Module = require("./Alpaca API Module");
+const Module = require("./test_api API Module");
 const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 // Access functions defined in ApiModule like this:
 //ApiModule.(function name)
+
 
 function callback(error, result) {
     if (error) {
@@ -18,4 +18,4 @@ function callback(error, result) {
     }
 }
 
-ApiModule.get_latest_trades("AAPL", callback);
+ApiModule.facearendpoint1();
