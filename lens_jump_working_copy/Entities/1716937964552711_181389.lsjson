@@ -1,0 +1,40 @@
+{
+    "1716937964550975:181388": {
+        "IFileManager": {
+            "path": "Files/File_1716937964550975_181388.js"
+        }
+    },
+    "1716937964552711:181389": {
+        "IResourceController": {
+            "name": "SphereController",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1716937964552724:181390",
+            "fileId": "1716937964550975:181388",
+            "publicId": "1716937964554663:181395",
+            "expected_hash": "c4731020b277cb66c23a1c56130740d1"
+        },
+        "IResourceManager": {
+            "uid": "1716937964552724:181390",
+            "name": "Files/File_1716937964550975_181388.js",
+            "flags": 1
+        }
+    },
+    "1716937964552724:181390": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    },
+    "1716937964554663:181395": {
+        "IResourceController": {
+            "public": {
+                "path": "BalanceGameScripts/SphereController.js",
+                "hash": "c4731020b277cb66c23a1c56130740d1"
+            }
+        }
+    }
+}

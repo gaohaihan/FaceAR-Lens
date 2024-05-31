@@ -1,0 +1,23 @@
+{
+    "1716941872475725:1318107": {
+        "IResourceController": {
+            "name": "Material",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1716941872476235:1318108",
+            "resources": [
+                "1716941914362121:1327575",
+                "1716941914874887:1327761"
+            ]
+        }
+    },
+    "1716941872476235:1318108": {
+        "IResourceController": {
+            "public": {
+                "path": "Material"
+            }
+        }
+    }
+}
