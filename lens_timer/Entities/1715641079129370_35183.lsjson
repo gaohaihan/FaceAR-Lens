@@ -1,0 +1,38 @@
+{
+    "1715641079125310:35182": {
+        "IFileManager": {
+            "path": "Files/File_1715641079125310_35182.js"
+        }
+    },
+    "1715641079129370:35183": {
+        "IResourceController": {
+            "name": "timer",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1715641079129415:35184",
+            "fileId": "1715641079125310:35182",
+            "publicId": "1715641079139871:35194",
+            "expected_hash": "1d4bc948880b740ab6fd707c4386c7a9"
+        },
+        "IResourceManager": {
+            "uid": "1715641079129415:35184",
+            "name": "Files/File_1715641079125310_35182.js",
+            "flags": 1
+        }
+    },
+    "1715641079129415:35184": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1715641079139871:35194": {
+        "IResourceController": {
+            "public": {
+                "path": "timer.js",
+                "hash": "1d4bc948880b740ab6fd707c4386c7a9"
+            }
+        }
+    }
+}
