@@ -1,57 +1,55 @@
 // -----JS CODE-----
 // @input SceneObject obstacle
 // @input float moveSpeed
+// @input SceneObject ball
+
 const pubSub = require("./PubSubModule");
-var moveSpeed;
 var body = script.obstacle.getComponent("Physics.BodyComponent");
 var transform = script.obstacle.getTransform();
 var colliding = false
+var collider = script.obstacle.getComponent("Physics.ColliderComponent");
+
+// Filter to only detect collisions with ball.
+var filter = Physics.Filter.create();
+filter.skipLayers = LayerSet.fromNumber(101);
+filter.onlyColliders = [script.ball.getComponent("Physics.ColliderComponent")];
+collider.overlapFilter = filter;
+
 function Start(){
-// should be kenematic 
-   body.dynamic = false;
-   started = true;
-   moveSpeed= Math.random(); 
+  body.dynamic = false;
 }
+
+collider.onOverlapEnter.add(function (e) {
+  print("overlap")
+  colliding = true;
+})
+
+collider.onOverlapExit.add(function (e) {
+  colliding = false;
+})
 
 /***
 * Set functions to be called every frame
 */
 function SetEvents() {
-    var updateEvent = script.createEvent("UpdateEvent");
-    updateEvent.bind(OnUpdate);
-  }
-  
-  /***
-  * Things to be called every frame
-  */
-  function OnUpdate(){
-    Move();
-    DetectHit()
-  }
-   // TODO find a better way to detect from all angles.
-    function DetectHit(){
-    // Create a probe to raycast through only the implicit root world.
-    var rootProbe = Physics.createRootProbe();
-    var startingPos = transform.getLocalPosition(); 
-    var endOfRay = new vec3((startingPos.x - 2), startingPos.y, startingPos.z);
-    rootProbe.rayCast(startingPos, endOfRay, function (hit) {
-        if  (hit === null){
-            colliding = false
-            return;
-        }
-        colliding = true;
-    });
-   }
-  
-
-  function Move(amount){
-    
-    if(colliding === false)
-    {
-    var pos = transform.getLocalPosition();
-    pos.x -= moveSpeed;
-    transform.setLocalPosition(pos)
+  var updateEvent = script.createEvent("UpdateEvent");
+  updateEvent.bind(OnUpdate);
 }
+
+/***
+* Things to be called every frame
+*/
+function OnUpdate(){
+  Move();
+}
+
+function Move(amount){
+  if(colliding === false)
+  {
+    var pos = transform.getLocalPosition();
+    pos.x -= script.moveSpeed;
+    transform.setLocalPosition(pos);
+  }
 }
 
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {

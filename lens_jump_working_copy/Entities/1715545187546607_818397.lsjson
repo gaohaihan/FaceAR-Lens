@@ -2,8 +2,8 @@
     "1715545187515263:818325": {
         "IResourceController": {
             "public": {
-                "path": "FaceMesh/Face Mesh Default 5.lsmat",
-                "hash": "a8baf82192bdbf75dd070db550fa767b"
+                "path": "UI/My UI Scripts/FaceMesh/Face Mesh Default 5.lsmat",
+                "hash": "48d487a30b7269d569de8bf7cd131fd3"
             }
         }
     },

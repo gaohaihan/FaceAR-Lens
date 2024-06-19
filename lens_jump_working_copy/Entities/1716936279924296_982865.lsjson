@@ -14,7 +14,7 @@
             "uid": "1716936279924312:982866",
             "fileId": "1716936279920256:982864",
             "publicId": "1716936279929781:982877",
-            "expected_hash": "def1049f108b0303e183eefcd3e315b0"
+            "expected_hash": "1173c1f6259a1835f2f15309a086475c"
         },
         "IResourceManager": {
             "uid": "1716936279924312:982866",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "BalanceGameScripts/PlatformController.js",
-                "hash": "def1049f108b0303e183eefcd3e315b0"
+                "hash": "1173c1f6259a1835f2f15309a086475c"
             }
         }
     }
