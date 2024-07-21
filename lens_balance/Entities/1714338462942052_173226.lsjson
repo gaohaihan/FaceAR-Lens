@@ -32,7 +32,7 @@
     "1714338462944474:173234": {
         "IResourceController": {
             "public": {
-                "path": "UI/My UI Scripts/ExpressionTextManager.js",
+                "path": "scripts/MyUIScripts/ExpressionTextManager.js",
                 "hash": "47d3f0af4fea843e893e67dba6c545e9"
             }
         }

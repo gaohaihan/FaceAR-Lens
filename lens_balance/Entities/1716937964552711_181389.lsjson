@@ -32,7 +32,7 @@
     "1716937964554663:181395": {
         "IResourceController": {
             "public": {
-                "path": "BalanceGameScripts/SphereController.js",
+                "path": "scripts/BalanceGameScripts/SphereController.js",
                 "hash": "4eff4fe99b1e8b51133b5f1a5a6f3643"
             }
         }

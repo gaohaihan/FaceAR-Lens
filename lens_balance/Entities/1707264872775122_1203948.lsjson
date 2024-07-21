@@ -30,7 +30,7 @@
     "1707264872780436:1203959": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts/UIColorPicker.js",
+                "path": "scripts/ImportedUIScripts/UIColorPicker.js",
                 "hash": "3899f64c6205627b542fc65f4fa22420"
             }
         }

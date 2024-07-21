@@ -14,7 +14,7 @@
             "uid": "1712510232263765:833011",
             "fileId": "1712510232262643:833009",
             "publicId": "1712510232265275:833016",
-            "expected_hash": "39e4dd68cf6201582c89981579562345"
+            "expected_hash": "626beef34411de54fef4806a7c925575"
         },
         "IResourceManager": {
             "uid": "1712510232263765:833011",
@@ -30,8 +30,8 @@
     "1712510232265275:833016": {
         "IResourceController": {
             "public": {
-                "path": "BalanceGameScripts/PubSubModule.js",
-                "hash": "39e4dd68cf6201582c89981579562345"
+                "path": "scripts/BalanceGameScripts/PubSubModule.js",
+                "hash": "626beef34411de54fef4806a7c925575"
             }
         }
     }

@@ -15,6 +15,7 @@ script.api.SensitivitySlider = function(){
   */
  script.api.SettingsToggle = function(){
       script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
+      script.bilateralUI.enabled = !script.bilateralUI.enabled;
   }
 
   /***

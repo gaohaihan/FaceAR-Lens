@@ -2,7 +2,7 @@
     "1714328993704281:12443": {
         "IResourceController": {
             "public": {
-                "path": "UI/My UI Scripts/DisplaySensitivityInPopUp.js",
+                "path": "scripts/MyUIScripts/DisplaySensitivityInPopUp.js",
                 "hash": "c1744489b89e8fcce5df69746e42cde3"
             }
         }

@@ -14,7 +14,7 @@
             "uid": "1714345488272880:2328293",
             "fileId": "1714345488271775:2328291",
             "publicId": "1714345488274108:2328298",
-            "expected_hash": "b0b75cfb4f855a1c9b7c7b53ace04481"
+            "expected_hash": "6bce52d62efe20fda28bb17317755471"
         },
         "IResourceManager": {
             "uid": "1714345488272880:2328293",
@@ -32,8 +32,8 @@
     "1714345488274108:2328298": {
         "IResourceController": {
             "public": {
-                "path": "UI/My UI Scripts/SettingsUiManager.js",
-                "hash": "b0b75cfb4f855a1c9b7c7b53ace04481"
+                "path": "scripts/MyUIScripts/SettingsUiManager.js",
+                "hash": "6bce52d62efe20fda28bb17317755471"
             }
         }
     }

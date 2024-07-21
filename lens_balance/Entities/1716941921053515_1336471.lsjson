@@ -18,7 +18,7 @@
     "1716941921053914:1336472": {
         "IResourceController": {
             "public": {
-                "path": "BalanceGameScripts"
+                "path": "scripts/BalanceGameScripts"
             }
         }
     }

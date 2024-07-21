@@ -14,7 +14,7 @@
             "uid": "1712508376759833:460563",
             "fileId": "1712508376757672:460555",
             "publicId": "1712508376761522:460568",
-            "expected_hash": "8d5620df605b961ef1ff3b1083e57e78"
+            "expected_hash": "0260272eff3500d9368e3575627e88ad"
         },
         "IResourceManager": {
             "uid": "1712508376759833:460563",
@@ -32,8 +32,8 @@
     "1712508376761522:460568": {
         "IResourceController": {
             "public": {
-                "path": "SensitivityManager.js",
-                "hash": "8d5620df605b961ef1ff3b1083e57e78"
+                "path": "scripts/SensitivityManager.js",
+                "hash": "0260272eff3500d9368e3575627e88ad"
             }
         }
     }

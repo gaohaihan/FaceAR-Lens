@@ -1,7 +1,7 @@
 {
     "1707264872748622:1203913": {
         "IResourceController": {
-            "name": "Scripts",
+            "name": "ImportedUIScripts",
             "type": 0,
             "subtype": -1,
             "dependency": 0,
@@ -20,7 +20,7 @@
     "1707264872748738:1203914": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts"
+                "path": "scripts/ImportedUIScripts"
             }
         }
     }

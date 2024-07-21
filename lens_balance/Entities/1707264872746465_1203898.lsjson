@@ -30,7 +30,7 @@
     "1707264872752790:1203915": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts/UIButton.js",
+                "path": "scripts/ImportedUIScripts/UIButton.js",
                 "hash": "5b33eee8ee1df2fbb140a5cb2fa939fc"
             }
         }
