@@ -32,7 +32,7 @@
     "1712507606167440:241552": {
         "IResourceController": {
             "public": {
-                "path": "Exercise Scripts/ExpressionController_Unilateral.js",
+                "path": "scripts/Exercise Scripts/ExpressionController_Unilateral.js",
                 "hash": "75feb410f2a83caabd24a7462c25673f"
             }
         }

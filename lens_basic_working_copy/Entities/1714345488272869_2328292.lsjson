@@ -32,7 +32,7 @@
     "1714345488274108:2328298": {
         "IResourceController": {
             "public": {
-                "path": "UI/My UI Scripts/SettingsUiManager.js",
+                "path": "scripts/My UI Scripts/SettingsUiManager.js",
                 "hash": "6bce52d62efe20fda28bb17317755471"
             }
         }

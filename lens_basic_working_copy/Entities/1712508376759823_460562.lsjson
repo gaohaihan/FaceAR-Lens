@@ -32,7 +32,7 @@
     "1712508376761522:460568": {
         "IResourceController": {
             "public": {
-                "path": "SensitivityManager.js",
+                "path": "scripts/SensitivityManager.js",
                 "hash": "0260272eff3500d9368e3575627e88ad"
             }
         }

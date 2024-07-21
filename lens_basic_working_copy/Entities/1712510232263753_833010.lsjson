@@ -30,7 +30,7 @@
     "1712510232265275:833016": {
         "IResourceController": {
             "public": {
-                "path": "Exercise Scripts/PubSubModule.js",
+                "path": "scripts/Exercise Scripts/PubSubModule.js",
                 "hash": "2a6502af0b0ada2127d0385b07f3d78c"
             }
         }

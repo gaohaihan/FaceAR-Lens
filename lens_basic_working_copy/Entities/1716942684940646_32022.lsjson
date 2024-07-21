@@ -17,7 +17,7 @@
     "1716942684941017:32023": {
         "IResourceController": {
             "public": {
-                "path": "Exercise Scripts"
+                "path": "scripts/Exercise Scripts"
             }
         }
     }
