@@ -10,7 +10,7 @@
 // @input number minExpressionValue
 // @input number expressionIndex
 
-const pubSub = require("./PubSubModule");
+const pubSub = require("../Exercise Scripts/PubSubModule");
 var minExpressionValue = global.ExpressionMinValues[script.expression];
 var color;
 var sensitivity;

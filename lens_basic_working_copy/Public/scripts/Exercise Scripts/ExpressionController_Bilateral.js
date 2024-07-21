@@ -11,7 +11,7 @@
 // @input number minExpressionValue
 // @input number expressionIndex
 
-const pubSub = require("./PubSubModule");
+const pubSub = require("../Exercise Scripts/PubSubModule");
 //let minExpressionValue = global.ExpressionMinValues[script.expressionRight];
 var midRep;
 var color;
