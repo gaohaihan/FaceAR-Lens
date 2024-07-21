@@ -30,7 +30,7 @@
     "1707264872784222:1203972": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts/UIPopup.js",
+                "path": "scripts/ImportedUIScripts/UIPopup.js",
                 "hash": "ff5e821b7f7d018fd0a03a4634d15da1"
             }
         }

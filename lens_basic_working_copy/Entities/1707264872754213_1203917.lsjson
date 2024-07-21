@@ -30,7 +30,7 @@
     "1707264872758532:1203928": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts/UIToggle.js",
+                "path": "scripts/ImportedUIScripts/UIToggle.js",
                 "hash": "63f5718b78b0e3a23881210d26cfb4b9"
             }
         }

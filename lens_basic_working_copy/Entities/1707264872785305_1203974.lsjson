@@ -30,7 +30,7 @@
     "1707264872788920:1203985": {
         "IResourceController": {
             "public": {
-                "path": "UI/Resources/Scripts/UIDiscretePicker.js",
+                "path": "scripts/ImportedUIScripts/UIDiscretePicker.js",
                 "hash": "8d56ba82106a6e5c7144ced901f1bfbf"
             }
         }
