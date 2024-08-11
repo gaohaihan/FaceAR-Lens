@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1707264872784554:1203973": {
         "IFileManager": {
@@ -36,3 +37,43 @@
         }
     }
 }
+=======
+{
+    "1707264872784554:1203973": {
+        "IFileManager": {
+            "path": "Files/File_1707264872784554_1203973.js"
+        }
+    },
+    "1707264872785305:1203974": {
+        "IResourceController": {
+            "name": "UIDiscretePicker",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707264872785309:1203975",
+            "fileId": "1707264872784554:1203973",
+            "publicId": "1707264872788920:1203985",
+            "expected_hash": "8d56ba82106a6e5c7144ced901f1bfbf"
+        },
+        "IResourceManager": {
+            "uid": "1707264872785309:1203975",
+            "name": "Files/File_1707264872784554_1203973.js",
+            "flags": 1
+        }
+    },
+    "1707264872785309:1203975": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1707264872788920:1203985": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Scripts/UIDiscretePicker.js",
+                "hash": "8d56ba82106a6e5c7144ced901f1bfbf"
+            }
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

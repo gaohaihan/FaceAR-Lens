@@ -1,0 +1,17 @@
+{
+    "1723398063465623:25708": {
+        "IResourceController": {
+            "name": "FaceAR",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1723398063465609:25707"
+        },
+        "IResourceManager": {
+            "uid": "1723398063465609:25707",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

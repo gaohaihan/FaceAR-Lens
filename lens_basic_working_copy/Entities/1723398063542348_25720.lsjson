@@ -1,0 +1,40 @@
+{
+    "1723398063538054:25719": {
+        "IFileManager": {
+            "path": "Files/File_1723398063538054_25719.js"
+        }
+    },
+    "1723398063542348:25720": {
+        "IResourceController": {
+            "name": "FaceAR API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1723398063542373:25721",
+            "fileId": "1723398063538054:25719",
+            "publicId": "1723398063554469:25726",
+            "expected_hash": "06aeb6ebe2a08be9738474e68b455d71"
+        },
+        "IResourceManager": {
+            "uid": "1723398063542373:25721",
+            "name": "Files/File_1723398063538054_25719.js",
+            "flags": 1
+        }
+    },
+    "1723398063542373:25721": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "FaceAR API Module"
+            ]
+        }
+    },
+    "1723398063554469:25726": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceAR API.js",
+                "hash": "06aeb6ebe2a08be9738474e68b455d71"
+            }
+        }
+    }
+}

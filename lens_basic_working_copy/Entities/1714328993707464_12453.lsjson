@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1714328993706406:12451": {
         "IResourceController": {
@@ -36,3 +37,43 @@
         }
     }
 }
+=======
+{
+    "1714328993706406:12451": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/My UI Scripts/ButtonUtils.js",
+                "hash": "baff07951ec84c29c60c0cf15eec7bb9"
+            }
+        }
+    },
+    "1714328993706650:12452": {
+        "IFileManager": {
+            "path": "Files/File_1714328993706650_12452.js"
+        }
+    },
+    "1714328993707464:12453": {
+        "IResourceController": {
+            "name": "ButtonUtils",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714328993707468:12454",
+            "fileId": "1714328993706650:12452",
+            "publicId": "1714328993706406:12451",
+            "expected_hash": "baff07951ec84c29c60c0cf15eec7bb9"
+        },
+        "IResourceManager": {
+            "uid": "1714328993707468:12454",
+            "name": "Files/File_1714328993706650_12452.js",
+            "flags": 1
+        }
+    },
+    "1714328993707468:12454": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1707270836843351:3277619": {
         "IFileManager": {
@@ -37,3 +38,44 @@
         }
     }
 }
+=======
+{
+    "1707270836843351:3277619": {
+        "IFileManager": {
+            "path": "Files/File_1707270836843351_3277619"
+        }
+    },
+    "1707270836844083:3277620": {
+        "IResourceController": {
+            "name": "Popup Fill Graph",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707270836844087:3277621",
+            "fileId": "1707270836843351:3277619",
+            "originalId": "1707270836864711:3277627",
+            "publicId": "1707270837008080:3277729",
+            "expected_hash": "51fef1b87a3d082bd66d8ae57c2a4e1e"
+        },
+        "IResourceManager": {
+            "uid": "1707270836844087:3277621",
+            "name": "Files/File_1707270836843351_3277619",
+            "flags": 1
+        }
+    },
+    "1707270836864711:3277627": {
+        "IFileManager": {
+            "path": "Files/File_1707270836864711_3277627.lsmat"
+        }
+    },
+    "1707270837008080:3277729": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Materials/Popup Fill Graph.lsmat",
+                "hash": "5036b13ea6c13b1228cd8a5349572515"
+            }
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

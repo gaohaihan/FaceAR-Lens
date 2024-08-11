@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1707262152544606:323109": {
         "IFileManager": {
@@ -37,3 +38,44 @@
         }
     }
 }
+=======
+{
+    "1707262152544606:323109": {
+        "IFileManager": {
+            "path": "Files/File_1707262152544606_323109"
+        }
+    },
+    "1707262152545225:323110": {
+        "IResourceController": {
+            "name": "Face Mesh Default",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707262152545228:323111",
+            "fileId": "1707262152544606:323109",
+            "originalId": "1707262152564118:323115",
+            "publicId": "1707262152882152:323253",
+            "expected_hash": "177c9227c32ea88279c97176fa92a4c9"
+        },
+        "IResourceManager": {
+            "uid": "1707262152545228:323111",
+            "name": "Files/File_1707262152544606_323109",
+            "flags": 1
+        }
+    },
+    "1707262152564118:323115": {
+        "IFileManager": {
+            "path": "Files/File_1707262152564118_323115.lsmat"
+        }
+    },
+    "1707262152882152:323253": {
+        "IResourceController": {
+            "public": {
+                "path": "FaceMesh/Face Mesh Default.lsmat",
+                "hash": "77cc0ab301d46f344d9670429c0efb5f"
+            }
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

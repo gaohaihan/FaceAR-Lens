@@ -313,7 +313,38 @@
             ]
         },
         "RemoteApi::ModelManager": {
-            "api_specs": ""
+            "api_specs": [
+                {
+                    "k": "1723398063465609:25707",
+                    "v": {
+                        "api_spec_id": "875c6c5a-44e1-4a38-b2cd-d2e57473c4c3",
+                        "name": "FaceAR",
+                        "provider_name": "",
+                        "description": "",
+                        "host": "facear",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "sensitivity",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "sensitivityVal",
+                                        "is_optional": "false"
+                                    }
+                                ]
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                }
+            ]
         },
         "RenderOrderComponent": "",
         "WorldComponent": {

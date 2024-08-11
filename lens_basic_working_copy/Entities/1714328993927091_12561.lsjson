@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1714328993925758:12559": {
         "IResourceController": {
@@ -38,3 +39,45 @@
         }
     }
 }
+=======
+{
+    "1714328993925758:12559": {
+        "IResourceController": {
+            "public": {
+                "path": "GameManager.js",
+                "hash": "d26b918159e2c0fc1fa5b4b614a01197"
+            }
+        }
+    },
+    "1714328993926058:12560": {
+        "IFileManager": {
+            "path": "Files/File_1714328993926058_12560.js"
+        }
+    },
+    "1714328993927091:12561": {
+        "IResourceController": {
+            "name": "GameManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1714328993927100:12562",
+            "fileId": "1714328993926058:12560",
+            "publicId": "1714328993925758:12559",
+            "expected_hash": "d26b918159e2c0fc1fa5b4b614a01197"
+        },
+        "IResourceManager": {
+            "uid": "1714328993927100:12562",
+            "name": "Files/File_1714328993926058_12560.js",
+            "flags": 1
+        }
+    },
+    "1714328993927100:12562": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

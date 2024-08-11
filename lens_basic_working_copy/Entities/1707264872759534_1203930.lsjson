@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1707264872758898:1203929": {
         "IFileManager": {
@@ -36,3 +37,43 @@
         }
     }
 }
+=======
+{
+    "1707264872758898:1203929": {
+        "IFileManager": {
+            "path": "Files/File_1707264872758898_1203929.js"
+        }
+    },
+    "1707264872759534:1203930": {
+        "IResourceController": {
+            "name": "UIPanel",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707264872759540:1203931",
+            "fileId": "1707264872758898:1203929",
+            "publicId": "1707264872763451:1203943",
+            "expected_hash": "dd0fbff3f3a3839661124f523c66116c"
+        },
+        "IResourceManager": {
+            "uid": "1707264872759540:1203931",
+            "name": "Files/File_1707264872758898_1203929.js",
+            "flags": 1
+        }
+    },
+    "1707264872759540:1203931": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1707264872763451:1203943": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Scripts/UIPanel.js",
+                "hash": "dd0fbff3f3a3839661124f523c66116c"
+            }
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

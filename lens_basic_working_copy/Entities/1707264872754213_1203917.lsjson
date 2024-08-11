@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1707264872753322:1203916": {
         "IFileManager": {
@@ -36,3 +37,43 @@
         }
     }
 }
+=======
+{
+    "1707264872753322:1203916": {
+        "IFileManager": {
+            "path": "Files/File_1707264872753322_1203916.js"
+        }
+    },
+    "1707264872754213:1203917": {
+        "IResourceController": {
+            "name": "UIToggle",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1707264872754227:1203918",
+            "fileId": "1707264872753322:1203916",
+            "publicId": "1707264872758532:1203928",
+            "expected_hash": "63f5718b78b0e3a23881210d26cfb4b9"
+        },
+        "IResourceManager": {
+            "uid": "1707264872754227:1203918",
+            "name": "Files/File_1707264872753322_1203916.js",
+            "flags": 1
+        }
+    },
+    "1707264872754227:1203918": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1707264872758532:1203928": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Scripts/UIToggle.js",
+                "hash": "63f5718b78b0e3a23881210d26cfb4b9"
+            }
+        }
+    }
+}
+>>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)
