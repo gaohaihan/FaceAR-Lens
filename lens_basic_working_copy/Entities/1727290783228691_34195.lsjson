@@ -1,0 +1,40 @@
+{
+    "1727290783227977:34194": {
+        "IFileManager": {
+            "path": "Files/File_1727290783227977_34194.js"
+        }
+    },
+    "1727290783228691:34195": {
+        "IResourceController": {
+            "name": "button_pressed API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1727290783228703:34196",
+            "fileId": "1727290783227977:34194",
+            "publicId": "1727290783230555:34201",
+            "expected_hash": "0a5cce8cf8b2770b6a47df4be3ad58fb"
+        },
+        "IResourceManager": {
+            "uid": "1727290783228703:34196",
+            "name": "Files/File_1727290783227977_34194.js",
+            "flags": 1
+        }
+    },
+    "1727290783228703:34196": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "button_pressed API Module"
+            ]
+        }
+    },
+    "1727290783230555:34201": {
+        "IResourceController": {
+            "public": {
+                "path": "scripts/button_pressed API.js",
+                "hash": "0a5cce8cf8b2770b6a47df4be3ad58fb"
+            }
+        }
+    }
+}

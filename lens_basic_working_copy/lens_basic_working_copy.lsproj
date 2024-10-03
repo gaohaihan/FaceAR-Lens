@@ -242,8 +242,8 @@
             "hints": [
                 ""
             ],
-            "lens": "FaceARTestLens2",
-            "applicability": "1",
+            "lens": "SliderAPITest",
+            "applicability": "3",
             "compatibility_descriptors": [
                 "web"
             ],
@@ -295,7 +295,7 @@
         },
         "InspectorComponent": "",
         "LayerComponent": {
-            "nextLayerId": "3",
+            "nextLayerId": "4",
             "showOrthographicLayer": "true",
             "layersInfo": [
                 {
@@ -309,12 +309,19 @@
                     "layerName": "Orthographic Layer",
                     "layerMask": "1048576",
                     "colorCode": "21"
+                },
+                {
+                    "layerId": "3",
+                    "layerName": "OverlayCamera",
+                    "layerMask": "2",
+                    "colorCode": "0"
                 }
             ]
         },
         "RemoteApi::ModelManager": {
             "api_specs": [
                 {
+<<<<<<< Updated upstream
                     "k": "1723398063465609:25707",
                     "v": {
                         "api_spec_id": "875c6c5a-44e1-4a38-b2cd-d2e57473c4c3",
@@ -326,16 +333,58 @@
                         "endpoints": [
                             {
                                 "ref_id": "sensitivity",
+=======
+                    "k": "1726758507846313:8249716",
+                    "v": {
+                        "api_spec_id": "363ee2a5-ad35-4a5f-9547-d42b2c60a927",
+                        "name": "Placeholder",
+                        "provider_name": "Snap",
+                        "description": "Placeholder for the testing of remote API integrations in CameraKit powered applications.",
+                        "host": "snap",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "test",
+>>>>>>> Stashed changes
                                 "metadata": {
                                     "name": "",
                                     "description": ""
                                 },
+<<<<<<< Updated upstream
                                 "parameters": [
                                     {
                                         "name": "sensitivityVal",
                                         "is_optional": "false"
                                     }
                                 ]
+=======
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "external",
+                        "source": "internal",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1727290783211822:34176",
+                    "v": {
+                        "api_spec_id": "0807319b-ca6b-404a-85a4-f7783636bc0d",
+                        "name": "button_pressed",
+                        "provider_name": "",
+                        "description": "",
+                        "host": "snap",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "button_pressed",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+>>>>>>> Stashed changes
                             }
                         ],
                         "local_only": "true",

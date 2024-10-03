@@ -15,7 +15,7 @@
             "uid": "1712508376759833:460563",
             "fileId": "1712508376757672:460555",
             "publicId": "1712508376761522:460568",
-            "expected_hash": "0260272eff3500d9368e3575627e88ad"
+            "expected_hash": "36bbf25f3bee17c7ba7f9d21a5017090"
         },
         "IResourceManager": {
             "uid": "1712508376759833:460563",
@@ -26,7 +26,8 @@
     "1712508376759833:460563": {
         "ScriptModulesController": {
             "dependent_module_names": [
-                "PubSubModule"
+                "PubSubModule",
+                "button_pressed API Module"
             ]
         }
     },
@@ -34,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/SensitivityManager.js",
-                "hash": "0260272eff3500d9368e3575627e88ad"
+                "hash": "36bbf25f3bee17c7ba7f9d21a5017090"
             }
         }
     }
