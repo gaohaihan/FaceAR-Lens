@@ -12,6 +12,9 @@ const pubSub = require("./PubSubModule");
 global.Sensitivity = 0.5;
 global.ExpressionMinValues = {};
 
+script.api.SensitivitySlider = function(){
+    SetSensitivity();
+ }
 
   /***
   * Toggle setting controls visibility
@@ -21,8 +24,6 @@ global.ExpressionMinValues = {};
       script.bilateralUI.enabled = !script.bilateralUI.enabled;
   }
 
-<<<<<<< Updated upstream
-=======
   /***
   * Set value of global sensitivity to value of slider when changed.
   */
@@ -34,7 +35,6 @@ global.ExpressionMinValues = {};
     }
     //global.Sensitivity = sliderValue; 
  }
->>>>>>> Stashed changes
 
 // TODO use to determine user resting expression values.
   /***

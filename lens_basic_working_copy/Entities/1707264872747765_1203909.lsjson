@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "1707264872747765:1203909": {
         "IResourceController": {
@@ -22,29 +21,3 @@
         }
     }
 }
-=======
-{
-    "1707264872747765:1203909": {
-        "IResourceController": {
-            "name": "UI",
-            "type": 0,
-            "subtype": -1,
-            "dependency": 0,
-            "hidden": false,
-            "publicId": "1707264872747942:1203910",
-            "resources": [
-                "1707264872748294:1203911",
-                "1714328993703940:12442",
-                "1712515092468051:2131252"
-            ]
-        }
-    },
-    "1707264872747942:1203910": {
-        "IResourceController": {
-            "public": {
-                "path": "UI"
-            }
-        }
-    }
-}
->>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

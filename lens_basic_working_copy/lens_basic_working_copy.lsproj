@@ -321,19 +321,6 @@
         "RemoteApi::ModelManager": {
             "api_specs": [
                 {
-<<<<<<< Updated upstream
-                    "k": "1723398063465609:25707",
-                    "v": {
-                        "api_spec_id": "875c6c5a-44e1-4a38-b2cd-d2e57473c4c3",
-                        "name": "FaceAR",
-                        "provider_name": "",
-                        "description": "",
-                        "host": "facear",
-                        "documentation_url": "",
-                        "endpoints": [
-                            {
-                                "ref_id": "sensitivity",
-=======
                     "k": "1726758507846313:8249716",
                     "v": {
                         "api_spec_id": "363ee2a5-ad35-4a5f-9547-d42b2c60a927",
@@ -345,19 +332,10 @@
                         "endpoints": [
                             {
                                 "ref_id": "test",
->>>>>>> Stashed changes
                                 "metadata": {
                                     "name": "",
                                     "description": ""
                                 },
-<<<<<<< Updated upstream
-                                "parameters": [
-                                    {
-                                        "name": "sensitivityVal",
-                                        "is_optional": "false"
-                                    }
-                                ]
-=======
                                 "parameters": ""
                             }
                         ],
@@ -384,7 +362,6 @@
                                     "description": ""
                                 },
                                 "parameters": ""
->>>>>>> Stashed changes
                             }
                         ],
                         "local_only": "true",
