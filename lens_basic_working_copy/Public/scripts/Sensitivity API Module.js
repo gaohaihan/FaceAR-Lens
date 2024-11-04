@@ -1,9 +1,9 @@
 /* // NOTE: This file contains code for accessing an external API encapsulated as a JS module. You should not modify this file.
- * // Instead, you should modify the "button_pressed API" script and access the functions through the imported class wrapper.
+ * // Instead, you should modify the "Sensitivity API" script and access the functions through the imported class wrapper.
 */
 
 /*
- * @param {RemoteApiResponse} response A raw API response from an button_pressed API
+ * @param {RemoteApiResponse} response A raw API response from an Sensitivity API
  * @param {function} cb A callback to call with error and result data once the response has been parsed and error checked
  *
 */
@@ -65,7 +65,7 @@ function setParameter(paramKey, paramValue, parameters, isOptional) {
     }
 }
 
-ApiModule.prototype.button_pressed = function(cb) {
+ApiModule.prototype.sensitivity = function(cb) {
     var req = global.RemoteApiRequest.create();
     req.endpoint = "sensitivity";
     this.remoteServiceModule.performApiRequest(req, function(response) {

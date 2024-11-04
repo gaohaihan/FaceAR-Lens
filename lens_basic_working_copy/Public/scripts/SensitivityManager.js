@@ -1,12 +1,6 @@
 // -----JS CODE-----
 // @input Component.ScriptComponent sliderScript
 // @input Component.RenderMeshVisual faceMesh
-// @input Asset.RemoteServiceModule remoteServiceModule
-// @input Component.ScriptComponent apiScript
-
-//import module
-const Module = require("./button_pressed API Module");
-const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 const pubSub = require("./PubSubModule");
 global.Sensitivity = 0.5;
@@ -52,11 +46,6 @@ script.api.SensitivitySlider = function(){
 pubSub.subscribe(pubSub.EVENTS.StartButtonClicked,
    GetExpressionMinValues
 );
-
-var event = script.createEvent("UpdateEvent");
-event.bind(function(eventdata){
-    script.apiScript.api.makeRequest()
-});
 
 
 
