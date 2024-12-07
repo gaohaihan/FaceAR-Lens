@@ -14,7 +14,7 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 
 var midRep;
 var color;
-var sensitivity;
+var difficulty;
 var isRightDetectionOn;
 var isLeftDetectionOn;
 var currentDifficulty;
@@ -29,7 +29,7 @@ function Initialize() {
 currentDifficulty = script.baseDifficulty;
 midRep = false;
 color = script.target.getMaterial(0).getPass(0).baseColor;
-sensitivity = global.Sensitivity;
+difficulty = global.Difficulty;
 // Display prompt text
 pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
 pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
@@ -49,7 +49,7 @@ function SetEvents() {
 * Things to be called every frame
 */
 function OnUpdate(){
-  sensitivity = global.Sensitivity;
+  difficulty = global.Difficulty;
   CountReps();
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
@@ -68,7 +68,7 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
-  currentDifficulty = script.baseDifficulty / ( 1 - sensitivity);;
+  currentDifficulty = script.baseDifficulty / ( 1 - difficulty);
 }
 
 /***

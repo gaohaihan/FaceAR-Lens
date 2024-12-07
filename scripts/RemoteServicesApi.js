@@ -16,7 +16,7 @@ function handleResponse(hasError, json) {
         const parsedData = json;
         switch (parsedData.elementName) {
             case "sensitivity" :
-                global.Sensitivity = parseFloat(parsedData.value);
+                global.Difficulty = parseFloat(parsedData.value);
                 script.responseData.text = parsedData.value;
                 break;
             case "startButton" :
@@ -59,5 +59,5 @@ function handleResponse(hasError, json) {
 }
 
 script.api.makeRequest = function() {
-  ApiModule.sensitivity(handleResponse); 
+  ApiModule.difficulty(handleResponse);
 };

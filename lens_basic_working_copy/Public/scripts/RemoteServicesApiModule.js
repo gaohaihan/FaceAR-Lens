@@ -65,7 +65,7 @@ function setParameter(paramKey, paramValue, parameters, isOptional) {
     }
 }
 
-ApiModule.prototype.sensitivity = function(cb) {
+ApiModule.prototype.difficulty = function(cb) {
     var req = global.RemoteApiRequest.create();
     req.endpoint = "sensitivity";
     this.remoteServiceModule.performApiRequest(req, function(response) {

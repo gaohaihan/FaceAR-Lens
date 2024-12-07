@@ -11,7 +11,7 @@
 
 const pubSub = require("../Exercise Scripts/PubSubModule");
 var color;
-var sensitivity;
+var difficulty;
 var midRep;
 var currentDifficulty;
 // face mask visual disabled by default
@@ -25,7 +25,7 @@ function Initialize() {
   currentDifficulty = script.baseDifficulty;
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
-  sensitivity = global.Sensitivity;
+  difficulty = global.Difficulty;
 
   // Display prompt text
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
@@ -46,8 +46,7 @@ function SetEvents() {
 * Things to be called every frame
 */
 function OnUpdate(){
-  // todo is sensitivity a per exercise or global thing?
-  sensitivity = global.Sensitivity;
+  difficulty = global.Difficulty;
   CountReps();
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
@@ -66,10 +65,10 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
-  currentDifficulty = script.baseDifficulty / ( 1 - sensitivity);;
+  currentDifficulty = script.baseDifficulty / ( 1 - difficulty);
 }
 
-/***
+/**
 * Count completed reps, expression must return to base line bf another rep is counted.
 */
 function CountReps() {

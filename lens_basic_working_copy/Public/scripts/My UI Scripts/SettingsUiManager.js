@@ -1,5 +1,5 @@
 // -----JS CODE-----
-// @input SceneObject sensitivityUI
+// @input SceneObject difficultyUI
 // @input SceneObject bilateralUI
 // @input Component.ScriptComponent bilateralToggle_left
 // @input Component.ScriptComponent bilateralToggle_right
@@ -10,14 +10,6 @@ script.api.ToggleOn_Left = ToggleOnLeft;
 script.api.ToggleOn_Right = ToggleOnRight;
 script.api.ToggleOff_Left = ToggleOffLeft
 script.api.ToggleOff_Right = ToggleOffRight;
-
-/***
- * Toggle setting controls visibility
- */
-script.api.SettingsToggle = function(){
-        script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
-        script.bilateralUI.enabled = !script.bilateralUI.enabled;
-}
 
 /***
  * Publish bilateral controls being toggle on/off
