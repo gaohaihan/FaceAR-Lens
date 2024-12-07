@@ -27,7 +27,7 @@ script.api.SensitivitySlider = function(){
     if (sliderValue > 0.9){
       sliderValue = 0.9
     }
-    global.Sensitivity = sliderValue;
+    //global.Sensitivity = sliderValue;
  }
 
 // TODO use to determine user resting expression values.

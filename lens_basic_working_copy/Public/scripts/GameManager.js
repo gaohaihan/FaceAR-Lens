@@ -9,7 +9,7 @@
 // @input Asset.RemoteServiceModule remoteServiceModule
 // @input Component.ScriptComponent apiScript
 /**
- * TO CREATE A NEW EXPRESSION: 
+ * TO CREATE A NEW EXPRESSION:
  * Start by creating a new object with two child objects: a face mask and an ExpressionController script.(Choose between a bilateral or unilateral)
  * Apply Texture to Face Mesh: Assign an appropriate texture to the face mesh by setting the Texture variable. This determines the material displayed when the expression is detected.
  * Configure ExpressionController:
@@ -22,7 +22,6 @@
    * The Expression Index is an int value that starts at 0 and determines the order of the expression sequence.
  */
 
-/// test
 //import module
 const Module = require("./Sensitivity API Module");
 const ApiModule = new Module.ApiModule(script.remoteServiceModule);
