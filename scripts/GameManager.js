@@ -23,7 +23,7 @@
  */
 
 //import module
-const Module = require("./Sensitivity API Module");
+const Module = require("./RemoteServicesApiModule");
 const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 const pubSub = require("./PubSubModule");

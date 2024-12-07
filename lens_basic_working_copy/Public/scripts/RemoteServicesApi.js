@@ -4,7 +4,7 @@
 // @input Component.ScriptComponent settingUI
 
 // Import module
-const Module = require("./Sensitivity API Module");
+const Module = require("./RemoteServicesApiModule");
 const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 // Access functions defined in ApiModule like this:

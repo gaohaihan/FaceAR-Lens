@@ -1,5 +1,5 @@
 let subscribers = {};
-// test 
+
 const EVENTS = {
     // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',

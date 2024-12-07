@@ -23,7 +23,7 @@ script.api.SensitivitySlider = function(){
   */
   function SetSensitivity(){
     var sliderValue = script.sliderScript.api.getSliderValue();
-    // Dont allow to go to 1 bc then the slider says inf and cannot be displayed.
+    // Dont allow to go to 1 bc then the slider says inf and cannot be displayed. 
     if (sliderValue > 0.9){
       sliderValue = 0.9
     }
