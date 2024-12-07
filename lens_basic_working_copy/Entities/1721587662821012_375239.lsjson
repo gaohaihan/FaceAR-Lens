@@ -3,7 +3,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/Exercise Scripts/PubSubModule.js",
-                "hash": "a9575d3de910b5f23e50598588dc2847"
+                "hash": "1445c589d4b88ec05cbb03997771c6bd"
             }
         }
     },
@@ -22,7 +22,7 @@
             "uid": "1721587662821021:375240",
             "fileId": "1721587662820320:375238",
             "publicId": "1721587662820005:375237",
-            "expected_hash": "a9575d3de910b5f23e50598588dc2847"
+            "expected_hash": "1445c589d4b88ec05cbb03997771c6bd"
         },
         "IResourceManager": {
             "uid": "1721587662821021:375240",

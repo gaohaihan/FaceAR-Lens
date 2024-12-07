@@ -6,7 +6,7 @@
     },
     "1728260632565624:87771": {
         "IResourceController": {
-            "name": "Sensitivity API Module",
+            "name": "RemoteServicesApiModule",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -30,7 +30,7 @@
     "1728260632569404:87777": {
         "IResourceController": {
             "public": {
-                "path": "scripts/Sensitivity API Module.js",
+                "path": "scripts/RemoteServicesApiModule.js",
                 "hash": "4301811de66ff909c96aa6c71935290d"
             }
         }

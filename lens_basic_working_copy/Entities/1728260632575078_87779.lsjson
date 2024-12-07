@@ -6,7 +6,7 @@
     },
     "1728260632575078:87779": {
         "IResourceController": {
-            "name": "Sensitivity API",
+            "name": "RemoteServicesApi",
             "type": 4,
             "subtype": 0,
             "dependency": 0,
@@ -14,7 +14,7 @@
             "uid": "1728260632575097:87780",
             "fileId": "1728260632573346:87778",
             "publicId": "1728260632578413:87785",
-            "expected_hash": "ac810867b3b5bf12e8a4a696698cbcc1"
+            "expected_hash": "017a4adf163c62448eea861c3645a903"
         },
         "IResourceManager": {
             "uid": "1728260632575097:87780",
@@ -25,15 +25,15 @@
     "1728260632575097:87780": {
         "ScriptModulesController": {
             "dependent_module_names": [
-                "Sensitivity API Module"
+                "RemoteServicesApiModule"
             ]
         }
     },
     "1728260632578413:87785": {
         "IResourceController": {
             "public": {
-                "path": "scripts/Sensitivity API.js",
-                "hash": "ac810867b3b5bf12e8a4a696698cbcc1"
+                "path": "scripts/RemoteServicesApi.js",
+                "hash": "017a4adf163c62448eea861c3645a903"
             }
         }
     }

@@ -14,7 +14,7 @@
             "uid": "1714343607183123:1650025",
             "fileId": "1714343607180704:1650023",
             "publicId": "1714343607186181:1650035",
-            "expected_hash": "51716f2d0986d9635c08f142947d21de"
+            "expected_hash": "4f5dd3db8812473b8db9cbeb90d75c91"
         },
         "IResourceManager": {
             "uid": "1714343607183123:1650025",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/Exercise Scripts/ExpressionController_Bilateral.js",
-                "hash": "51716f2d0986d9635c08f142947d21de"
+                "hash": "4f5dd3db8812473b8db9cbeb90d75c91"
             }
         }
     }
