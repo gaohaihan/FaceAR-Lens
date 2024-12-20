@@ -3,6 +3,8 @@ let subscribers = {};
 const EVENTS = {
     // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',
+    SetExpressionSetText: 'SetExpressionSetText',
+    SetExpressionRequiredSetText: 'SetExpressionRequiredSetText',
     SetExpressionRepText: 'SetExpressionRepText',
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',

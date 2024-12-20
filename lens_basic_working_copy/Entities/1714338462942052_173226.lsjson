@@ -14,7 +14,7 @@
             "uid": "1714338462942064:173227",
             "fileId": "1714338462939509:173225",
             "publicId": "1714338462944474:173234",
-            "expected_hash": "9803e65f804a93138a0fba4c3764ed26"
+            "expected_hash": "e0fcc939610e3889803ece1022ebc285"
         },
         "IResourceManager": {
             "uid": "1714338462942064:173227",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/My UI Scripts/ExpressionTextManager.js",
-                "hash": "9803e65f804a93138a0fba4c3764ed26"
+                "hash": "e0fcc939610e3889803ece1022ebc285"
             }
         }
     }
