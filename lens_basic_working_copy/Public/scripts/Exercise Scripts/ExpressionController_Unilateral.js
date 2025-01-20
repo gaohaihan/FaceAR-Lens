@@ -16,7 +16,7 @@ var color;
 var difficulty;
 var midRep;
 var currentDifficulty=0
-var minDifficulty = 0;
+var BaseExpressionValue = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
 
@@ -24,7 +24,7 @@ script.target.enabled = false;
 * Called once when onAwake
 */
  function StartExercise() {
-  // Wait for 2 seconds before executing a function
+  // Wait for 3 seconds before executing a function
   var delayedEvent = script.createEvent("DelayedCallbackEvent");
   delayedEvent.bind(function(eventData)
   {
@@ -33,20 +33,21 @@ script.target.enabled = false;
   });
   // Start with a 3 second delay
   delayedEvent.reset(3);
-  GetMinDifficulty();
+  GetBaseExpressionValue();
 }
 
 function Initialize(){
    // Set initial values
+   currentDifficulty = BaseExpressionValue + 0.05;
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
+   DisableBilateralDetection();
 
    // Display prompt text
    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
-   DisableBilateralDetection();
 }
 
 /***
@@ -58,13 +59,11 @@ function SetEvents() {
 }
 
 /***
-* grab user min value for current expression
+* Grab user base expression values
 */
-function GetMinDifficulty() {
+function GetBaseExpressionValue() {
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
-  const temp = GetRawExpressionWeight();
-  minDifficulty = temp + 0.05;
-  currentDifficulty = minDifficulty;
+  BaseExpressionValue = GetRawExpressionWeight();
 }
 
 /***
@@ -90,12 +89,12 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
+  var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
     currentDifficulty = 1;
-
 }
 
 /**
