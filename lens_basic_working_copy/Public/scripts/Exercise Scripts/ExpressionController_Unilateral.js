@@ -15,7 +15,7 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 var color;
 var difficulty;
 var midRep;
-var currentDifficulty=0
+var currentDifficulty = 0
 var BaseExpressionValue = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
