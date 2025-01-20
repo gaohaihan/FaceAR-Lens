@@ -42,8 +42,6 @@ script.target.enabled = false;
 * Set functions to be called every frame
 */
 function SetEvents() {
-  var timer = 0;
-
   script.createEvent("UpdateEvent").bind( () => {
     if (timer < 5){
       var temp = GetRawExpressionWeight();

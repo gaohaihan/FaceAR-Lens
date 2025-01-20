@@ -27,13 +27,11 @@ script.target.enabled = false;
    // Set initial values
    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "please look at the camera for 5s");
 
-   //currentDifficulty = script.baseDifficulty;
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
  
    // Display prompt text
-   //pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
    DisableBilateralDetection();
@@ -44,8 +42,6 @@ script.target.enabled = false;
 * Set functions to be called every frame
 */
 function SetEvents() {
-  var timer = 0;
-
   script.createEvent("UpdateEvent").bind( () => {
     if (timer < 5){
       var temp = GetRawExpressionWeight();
