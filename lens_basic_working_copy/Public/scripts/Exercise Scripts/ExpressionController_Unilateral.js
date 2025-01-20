@@ -15,40 +15,55 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 var color;
 var difficulty;
 var midRep;
-var currentDifficulty;
+var currentDifficulty=0 
+var minDifficulty = 0; 
 // face mask visual disabled by default
 script.target.enabled = false;
 
 /***
 * Called once when onAwake
 */
-function Initialize() {
-  // Set initial values
-  currentDifficulty = script.baseDifficulty;
-  midRep = false;
-  color = script.target.getMaterial(0).getPass(0).baseColor;
-  difficulty = global.Difficulty;
+ function Initialize() {
+   // Set initial values
+   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "please look at the camera for 5s");
 
-  // Display prompt text
-  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
-  DisableBilateralDetection();
-  SetEvents();
+   //currentDifficulty = script.baseDifficulty;
+   midRep = false;
+   color = script.target.getMaterial(0).getPass(0).baseColor;
+   difficulty = global.Difficulty;
+ 
+   // Display prompt text
+   //pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
+   DisableBilateralDetection();
+   SetEvents();
 }
 
 /***
 * Set functions to be called every frame
 */
 function SetEvents() {
-  var updateEvent = script.createEvent("UpdateEvent");
-  updateEvent.bind(OnUpdate);
+  var timer = 0;
+
+  script.createEvent("UpdateEvent").bind( () => {
+    if (timer < 5){
+      var temp = GetRawExpressionWeight();
+      print("test" + temp.toString());
+      minDifficulty = temp + 0.05;
+      currentDifficulty = minDifficulty;
+      timer += getDeltaTime();
+    } else{
+      OnUpdate();
+    }
+  });
 }
 
 /***
 * Things to be called every frame
 */
 function OnUpdate(){
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
   difficulty = global.Difficulty;
   CountReps();
   UpdateVisual(script.target);
@@ -68,7 +83,7 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
-  currentDifficulty = script.baseDifficulty / ( 1 - difficulty);
+  currentDifficulty = minDifficulty / ( 1 - difficulty);
 }
 
 /**
@@ -148,7 +163,7 @@ function DisplayDebug(weight){
 * Always set reps back to 0 when leave a exercise
 */
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
-  if (data == script.expressionIndex)
+  if (data === script.expressionIndex)
   {
     script.enabled = true;
     script.target.enabled = true;
