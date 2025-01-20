@@ -15,51 +15,62 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 var color;
 var difficulty;
 var midRep;
-var currentDifficulty=0 
-var minDifficulty = 0; 
+var currentDifficulty=0
+var minDifficulty = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
 
 /***
 * Called once when onAwake
 */
- function Initialize() {
-   // Set initial values
-   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "please look at the camera for 5s");
+ function StartExercise() {
+  // Wait for 2 seconds before executing a function
+  var delayedEvent = script.createEvent("DelayedCallbackEvent");
+  delayedEvent.bind(function(eventData)
+  {
+    Initialize();
+    SetEvents();
+  });
+  // Start with a 3 second delay
+  delayedEvent.reset(3);
+  GetMinDifficulty();
+}
 
+function Initialize(){
+   // Set initial values
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
- 
+
    // Display prompt text
+   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
    DisableBilateralDetection();
-   SetEvents();
 }
 
 /***
 * Set functions to be called every frame
 */
 function SetEvents() {
-  script.createEvent("UpdateEvent").bind( () => {
-    if (timer < 5){
-      var temp = GetRawExpressionWeight();
-      print("test" + temp.toString());
-      minDifficulty = temp + 0.05;
-      currentDifficulty = minDifficulty;
-      timer += getDeltaTime();
-    } else{
-      OnUpdate();
-    }
-  });
+  var updateEvent = script.createEvent("UpdateEvent");
+  updateEvent.bind(OnUpdate);
+}
+
+/***
+* grab user min value for current expression
+*/
+function GetMinDifficulty() {
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
+  const temp = GetRawExpressionWeight();
+  minDifficulty = temp + 0.05;
+  currentDifficulty = minDifficulty;
 }
 
 /***
 * Things to be called every frame
 */
 function OnUpdate(){
-  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
   difficulty = global.Difficulty;
   CountReps();
   UpdateVisual(script.target);
@@ -80,6 +91,11 @@ function UpdateVisual(visualComponent) {
 */
 function UpdateCurrentDifficulty(){
   currentDifficulty = minDifficulty / ( 1 - difficulty);
+
+  // cannot be detected over 1
+  if (currentDifficulty > 1)
+    currentDifficulty = 1;
+
 }
 
 /**
@@ -91,11 +107,11 @@ function CountReps() {
         Finished();
         return;
     }
-    
+
     // Update rep count text
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-    
+
     var rawWeight = GetRawExpressionWeight();
     if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
@@ -108,7 +124,7 @@ function CountReps() {
         pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
         pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
     }
-    
+
     var rawWeight = GetRawExpressionWeight();
     if (rawWeight <= currentDifficulty && midRep === true){
         midRep = false;
@@ -167,7 +183,7 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.completedReps = 0;
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
-    Initialize();
+    StartExercise();
   }
   else
   {
