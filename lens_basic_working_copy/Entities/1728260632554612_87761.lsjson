@@ -1,0 +1,17 @@
+{
+    "1728260632554612:87761": {
+        "IResourceController": {
+            "name": "Sensitivity",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1728260632554570:87760"
+        },
+        "IResourceManager": {
+            "uid": "1728260632554570:87760",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "1714345488271775:2328291": {
         "IFileManager": {
@@ -15,7 +14,7 @@
             "uid": "1714345488272880:2328293",
             "fileId": "1714345488271775:2328291",
             "publicId": "1714345488274108:2328298",
-            "expected_hash": "6bce52d62efe20fda28bb17317755471"
+            "expected_hash": "350d4828171dd8bd71ce1682a9864589"
         },
         "IResourceManager": {
             "uid": "1714345488272880:2328293",
@@ -34,50 +33,8 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/My UI Scripts/SettingsUiManager.js",
-                "hash": "6bce52d62efe20fda28bb17317755471"
+                "hash": "350d4828171dd8bd71ce1682a9864589"
             }
         }
     }
 }
-=======
-{
-    "1714345488271775:2328291": {
-        "IFileManager": {
-            "path": "Files/File_1714345488271775_2328291.js"
-        }
-    },
-    "1714345488272869:2328292": {
-        "IResourceController": {
-            "name": "SettingsUiManager",
-            "type": 4,
-            "subtype": 0,
-            "dependency": 0,
-            "hidden": false,
-            "uid": "1714345488272880:2328293",
-            "fileId": "1714345488271775:2328291",
-            "publicId": "1714345488274108:2328298",
-            "expected_hash": "6bce52d62efe20fda28bb17317755471"
-        },
-        "IResourceManager": {
-            "uid": "1714345488272880:2328293",
-            "name": "Files/File_1714345488271775_2328291.js",
-            "flags": 1
-        }
-    },
-    "1714345488272880:2328293": {
-        "ScriptModulesController": {
-            "dependent_module_names": [
-                "PubSubModule"
-            ]
-        }
-    },
-    "1714345488274108:2328298": {
-        "IResourceController": {
-            "public": {
-                "path": "UI/My UI Scripts/SettingsUiManager.js",
-                "hash": "6bce52d62efe20fda28bb17317755471"
-            }
-        }
-    }
-}
->>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)

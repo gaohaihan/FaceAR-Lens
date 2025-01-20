@@ -1,0 +1,17 @@
+{
+    "1727290783211866:34177": {
+        "IResourceController": {
+            "name": "button_pressed",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1727290783211822:34176"
+        },
+        "IResourceManager": {
+            "uid": "1727290783211822:34176",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

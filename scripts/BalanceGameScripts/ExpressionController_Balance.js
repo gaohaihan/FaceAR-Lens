@@ -70,7 +70,7 @@ function DetermineBalance(){
   var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
   var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
   var difference = Math.abs(leftWeight - rightWeight) / 0.1
-  if (difference <= global.Sensitivity){
+  if (difference <= global.Difficulty){
     if (difference < 0.2) {
       //print( "Sens " +   Math.round( global.Sensitivity*100)/100 +  " diff " +  Math.round(difference*100)/100 + " right " +  Math.round(rightWeight*100)/100 + " left " + Math.round(leftWeight*100)/100  + "balanced");
       pubSub.publish(pubSub.EVENTS.SetPlatformRotation, 0);

@@ -1,0 +1,40 @@
+{
+    "1733601649283078:838560": {
+        "IFileManager": {
+            "path": "Files/File_1733601649283078_838560.js"
+        }
+    },
+    "1733601649284858:838561": {
+        "IResourceController": {
+            "name": "DebugTextManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1733601649284871:838562",
+            "fileId": "1733601649283078:838560",
+            "publicId": "1733601649285949:838567",
+            "expected_hash": "73e2aa2586da08cc319c11cd1b819cfc"
+        },
+        "IResourceManager": {
+            "uid": "1733601649284871:838562",
+            "name": "Files/File_1733601649283078_838560.js",
+            "flags": 1
+        }
+    },
+    "1733601649284871:838562": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    },
+    "1733601649285949:838567": {
+        "IResourceController": {
+            "public": {
+                "path": "scripts/My UI Scripts/DebugTextManager.js",
+                "hash": "73e2aa2586da08cc319c11cd1b819cfc"
+            }
+        }
+    }
+}

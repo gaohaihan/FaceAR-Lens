@@ -1,0 +1,40 @@
+{
+    "1728260632573346:87778": {
+        "IFileManager": {
+            "path": "Files/File_1728260632573346_87778.js"
+        }
+    },
+    "1728260632575078:87779": {
+        "IResourceController": {
+            "name": "RemoteServicesApi",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1728260632575097:87780",
+            "fileId": "1728260632573346:87778",
+            "publicId": "1728260632578413:87785",
+            "expected_hash": "a0bfcb9180dc4d6f9e7c41c997b575ca"
+        },
+        "IResourceManager": {
+            "uid": "1728260632575097:87780",
+            "name": "Files/File_1728260632573346_87778.js",
+            "flags": 1
+        }
+    },
+    "1728260632575097:87780": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "RemoteServicesApiModule"
+            ]
+        }
+    },
+    "1728260632578413:87785": {
+        "IResourceController": {
+            "public": {
+                "path": "scripts/RemoteServicesApi.js",
+                "hash": "a0bfcb9180dc4d6f9e7c41c997b575ca"
+            }
+        }
+    }
+}

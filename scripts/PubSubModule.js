@@ -1,11 +1,17 @@
 let subscribers = {};
-// test 
+
 const EVENTS = {
     // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',
+
+    // DEBUG EVENTS
+    SetLeftDebugText: 'SetLeftDebugText',
+    SetRightDebugText: 'SetRightDebugText',
+    SetCombinedText: 'SetCombinedText',
+    SetMinExpressionWeightText: 'SetMinExpressionWeightText',
 
     // BILATERAL EXERCISE EVENTS
     ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',

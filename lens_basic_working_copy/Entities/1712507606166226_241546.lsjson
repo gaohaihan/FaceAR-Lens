@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "1712507606164114:241545": {
         "IFileManager": {
@@ -15,7 +14,7 @@
             "uid": "1712507606166239:241547",
             "fileId": "1712507606164114:241545",
             "publicId": "1712507606167440:241552",
-            "expected_hash": "07cb4458a13a49cb95f4f13ba8ec2f5d"
+            "expected_hash": "ccdc6e968fd473980cfee8dd72dcd8bd"
         },
         "IResourceManager": {
             "uid": "1712507606166239:241547",
@@ -34,50 +33,8 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/Exercise Scripts/ExpressionController_Unilateral.js",
-                "hash": "07cb4458a13a49cb95f4f13ba8ec2f5d"
+                "hash": "ccdc6e968fd473980cfee8dd72dcd8bd"
             }
         }
     }
 }
-=======
-{
-    "1712507606164114:241545": {
-        "IFileManager": {
-            "path": "Files/File_1712507606164114_241545.js"
-        }
-    },
-    "1712507606166226:241546": {
-        "IResourceController": {
-            "name": "ExpressionController_Unilateral",
-            "type": 4,
-            "subtype": 0,
-            "dependency": 0,
-            "hidden": false,
-            "uid": "1712507606166239:241547",
-            "fileId": "1712507606164114:241545",
-            "publicId": "1712507606167440:241552",
-            "expected_hash": "75feb410f2a83caabd24a7462c25673f"
-        },
-        "IResourceManager": {
-            "uid": "1712507606166239:241547",
-            "name": "Files/File_1712507606164114_241545.js",
-            "flags": 1
-        }
-    },
-    "1712507606166239:241547": {
-        "ScriptModulesController": {
-            "dependent_module_names": [
-                "PubSubModule"
-            ]
-        }
-    },
-    "1712507606167440:241552": {
-        "IResourceController": {
-            "public": {
-                "path": "Exercise Scripts/ExpressionController_Unilateral.js",
-                "hash": "75feb410f2a83caabd24a7462c25673f"
-            }
-        }
-    }
-}
->>>>>>> cbd7ee8 (modify lens_studio_weorking_copy)
