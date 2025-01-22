@@ -10,8 +10,8 @@ const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 // Access functions defined in ApiModule like this:
 //ApiModule.(function name)
 function handleResponse(hasError, json) {
-    print(`received from app, has error: ${hasError}`)
-    print(`json: ${json}`);
+    // print(`received from app, has error: ${hasError}`)
+    // print(`json: ${json}`);
     try{
         const parsedData = json;
         switch (parsedData.elementName) {

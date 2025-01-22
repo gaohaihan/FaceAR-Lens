@@ -5,6 +5,8 @@
 // @input string expressionLeft
 // @input string displayText
 // @input string finishText
+// @input number completedSets
+// @input number requiredSets
 // @input number completedReps
 // @input number requiredReps
 // @input number baseDifficulty
@@ -15,26 +17,43 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 var midRep;
 var color;
 var difficulty;
+var leftBaseExpressionValue = 0;
+var rightBaseExpressionValue = 0;
 var isRightDetectionOn;
 var isLeftDetectionOn;
-var currentDifficulty;
+var currentDifficulty = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
 
 /***
 * Called once when onAwake
 */
-function Initialize() {
-// Set initial values
-currentDifficulty = script.baseDifficulty;
-midRep = false;
-color = script.target.getMaterial(0).getPass(0).baseColor;
-difficulty = global.Difficulty;
-// Display prompt text
-pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
-pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-SetBilateralDetection();
-SetEvents();
+function StartExercise() {
+  // Wait for 3 seconds before executing a function
+  var delayedEvent = script.createEvent("DelayedCallbackEvent");
+  delayedEvent.bind(function(eventData)
+  {
+    Initialize();
+    SetEvents();
+  });
+  // Start with a 3 second delay
+  delayedEvent.reset(3);
+  GetBaseExpressionValue();
+}
+
+function Initialize(){
+  // Set initial values
+  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
+  print("test currnt" + currentDifficulty.toString());
+  midRep = false;
+  color = script.target.getMaterial(0).getPass(0).baseColor;
+  difficulty = global.Difficulty;
+  SetBilateralDetection();
+
+  // Display prompt text
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
 }
 
 /***
@@ -46,13 +65,24 @@ function SetEvents() {
 }
 
 /***
+* Grab user base expression values
+*/
+function GetBaseExpressionValue() {
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
+  leftBaseExpressionValue = GetRawLeftWeight();
+  print("test left" + leftBaseExpressionValue.toString())
+  rightBaseExpressionValue = GetRawRightWeight();
+  print("test right" + rightBaseExpressionValue.toString())
+}
+
+/***
 * Things to be called every frame
 */
 function OnUpdate(){
   difficulty = global.Difficulty;
   CountReps();
-  UpdateVisual(script.target);
   UpdateCurrentDifficulty();
+  UpdateVisual(script.target);
 }
 
 /***
@@ -68,7 +98,25 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
-  currentDifficulty = script.baseDifficulty / ( 1 - difficulty);
+  var currentMinDifficulty;
+ 
+  if (isLeftDetectionOn && isRightDetectionOn ){
+    currentMinDifficulty = ((leftBaseExpressionValue + rightBaseExpressionValue)/2) + 0.05
+  }
+  
+  if (!isRightDetectionOn){
+    currentMinDifficulty = rightBaseExpressionValue + 0.05
+  }
+
+  if (!isLeftDetectionOn){
+    currentMinDifficulty = leftBaseExpressionValue + 0.05
+  }
+
+  currentDifficulty = currentMinDifficulty / ( 1 - difficulty);
+
+  // cannot be detected over 1
+  if (currentDifficulty > 1)
+    currentDifficulty = 1;
 }
 
 /***
@@ -76,22 +124,29 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
 
-  // stop counting when hit required reps
-  if (script.completedReps >= script.requiredReps){
-    Finished();
-    return;
-  }
+    //stop counting when hit required sets
+    if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
+        Finished();
+        return;
+    }
+    
     // Update rep count text
+    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
      pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
-
+    
      var rawWeight = GetRawExpressionWeight();
      //print("adjusted " + adjustedWeight)
      if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
         script.completedReps += 1
+        if (script.completedReps >= script.requiredReps){
+            script.completedSets += 1;
+            script.completedReps = 0;
+        }
+        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
         pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
      }
-
+    
      var rawWeight = GetRawExpressionWeight();
      //print("raw " + rawWeight)
      if (rawWeight <= currentDifficulty && midRep === true){
@@ -122,8 +177,8 @@ function SetBilateralDetection() {
 * i.e left = on, return right weight.
 */
 function GetRawExpressionWeight(){
-  var leftWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
-  var rightWeight = script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
+  var leftWeight = GetRawLeftWeight();
+  var rightWeight = GetRawRightWeight();
   var combinedWeight = (leftWeight + rightWeight) / 2
   DisplayDebug(leftWeight, rightWeight, combinedWeight)
 
@@ -142,11 +197,18 @@ function GetRawExpressionWeight(){
   return combinedWeight
 }
 
+function GetRawLeftWeight(){
+  return script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionLeft);
+}
+
+function GetRawRightWeight(){
+  return  script.faceMesh.mesh.control.getExpressionWeightByName(script.expressionRight);
+}
 /**
  * Display finished text
  */
 function Finished(){
-  if (script.completedReps >= script.requiredReps){
+  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }
@@ -184,9 +246,11 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
   {
     script.enabled = true;
     script.target.enabled = true;
+    script.completedSets = 0;
     script.completedReps = 0;
+    pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
-    Initialize();
+    StartExercise();
   }
   else
   {
