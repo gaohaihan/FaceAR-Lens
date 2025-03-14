@@ -9,13 +9,11 @@ function UnPause(){
   global.Pause = false;
 }
 
-
 /*SUBSCRIPTIONS*/
-pubSub.subscribe(pubSub.EVENTS.Pause, (data) => {
+pubSub.subscribe(pubSub.EVENTS.Pause, () => {
   Pause();
 });
 
-
-pubSub.subscribe(pubSub.EVENTS.UnPause, (data) => {
+pubSub.subscribe(pubSub.EVENTS.UnPause, () => {
   UnPause();
 });

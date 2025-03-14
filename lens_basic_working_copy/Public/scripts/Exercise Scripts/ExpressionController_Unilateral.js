@@ -61,6 +61,7 @@ function GetBaseExpressionValue() {
 /***
 * Start with a 3 second delay
 */
+// pass in which methods to delay
 function StartDelay(seconds){
    // Wait for 3 seconds before executing a function
    var delayedEvent = script.createEvent("DelayedCallbackEvent");
@@ -68,6 +69,7 @@ function StartDelay(seconds){
    {
      Initialize();
      SetEvents();
+     pubSub.publish(pubSub.EVENTS.UnPause);
    });
    delayedEvent.reset(seconds);
 }
@@ -200,3 +202,13 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = false;
   }
 });
+/**
+ * 
+ */
+pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
+  print("intit 2")
+  pubSub.publish(pubSub.EVENTS.Pause);
+  InitializeUserBaseExpressionValue();
+  //.publish(pubSub.EVENTS.UnPause);
+});
+
