@@ -24,7 +24,8 @@ script.target.enabled = false;
 * Called once when onAwake
 */
  function InitializeUserBaseExpressionValue(){
-  StartDelay(3);
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
+  StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
 }
 
@@ -45,9 +46,10 @@ function Initialize(){
 /***
 * Set functions to be called every frame
 */
-function SetEvents() {
+function BindFunctionToRunEveryUpdate(eventName, methodsToBind) {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
+
 }
 
 /***
@@ -62,16 +64,22 @@ function GetBaseExpressionValue() {
 * Start with a 3 second delay
 */
 // pass in which methods to delay
-function StartDelay(seconds){
+function StartDelay(seconds, functionList){
    // Wait for 3 seconds before executing a function
    var delayedEvent = script.createEvent("DelayedCallbackEvent");
    delayedEvent.bind(function(eventData)
    {
-     Initialize();
-     SetEvents();
-     pubSub.publish(pubSub.EVENTS.UnPause);
+    executeFunctions(eventData, functionList);
    });
    delayedEvent.reset(seconds);
+
+}
+
+/**
+ * function that executes all given functions
+ */
+function executeFunctions(eventData, functions) {
+  functions.forEach(func => func(eventData));
 }
 
 /***
@@ -202,13 +210,20 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = false;
   }
 });
+
 /**
- * 
+ * Pause exercise and reinit base expression value.
  */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  print("intit 2")
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
   pubSub.publish(pubSub.EVENTS.Pause);
-  InitializeUserBaseExpressionValue();
-  //.publish(pubSub.EVENTS.UnPause);
+
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+
+  function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 });
 
