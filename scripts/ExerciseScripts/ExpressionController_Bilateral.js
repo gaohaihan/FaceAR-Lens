@@ -37,7 +37,6 @@ function InitializeUserBaseExpressionValue() {
 function Initialize(){
   // Set initial values
   currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
-  print("test current" + currentDifficulty.toString());
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
@@ -69,10 +68,9 @@ function GetBaseExpressionValue() {
 }
 
 /***
-* Start with a 3 second delay
+* Start with a delay and invoke methods in list after delay complete
 */
 function StartDelay(seconds, functionList){
-  // Wait for 3 seconds before executing a function
   var delayedEvent = script.createEvent("DelayedCallbackEvent");
   delayedEvent.bind(function(eventData)
   {
@@ -125,7 +123,7 @@ function UpdateCurrentDifficulty(){
   if (isLeftDetectionOn && isRightDetectionOn ){
     currentMinDifficulty = ((leftBaseExpressionValue + rightBaseExpressionValue)/2) + 0.05
   }
-  
+
   if (!isRightDetectionOn){
     currentMinDifficulty = rightBaseExpressionValue + 0.05
   }
@@ -151,29 +149,28 @@ function CountReps() {
         Finished();
         return;
     }
-    
+
     // Update rep count text
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
-    
-     var rawWeight = GetRawExpressionWeight();
-     //print("adjusted " + adjustedWeight)
-     if (rawWeight > currentDifficulty && midRep !== true){
-        midRep = true;
-        script.completedReps += 1
-        if (script.completedReps >= script.requiredReps){
-            script.completedSets += 1;
-            script.completedReps = 0;
-        }
-        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
-     }
-    
-     var rawWeight = GetRawExpressionWeight();
-     //print("raw " + rawWeight)
-     if (rawWeight <= currentDifficulty && midRep === true){
-       midRep = false;
-     }
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
+
+    var rawWeight = GetRawExpressionWeight();
+    if (rawWeight > currentDifficulty && midRep !== true){
+      midRep = true;
+      script.completedReps += 1
+      if (script.completedReps >= script.requiredReps){
+          script.completedSets += 1;
+          script.completedReps = 0;
+      }
+      pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
+      pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString());
+    }
+
+    var rawWeight = GetRawExpressionWeight();
+    //print("raw " + rawWeight)
+    if (rawWeight <= currentDifficulty && midRep === true){
+      midRep = false;
+    }
  }
 
 /***
@@ -286,7 +283,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
 */
 pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
   isLeftDetectionOn = data
-  print("left is" + isLeftDetectionOn)
 });
 
 /***
@@ -294,7 +290,6 @@ pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
 */
 pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
   isRightDetectionOn = data
-  print("right is" + isRightDetectionOn)
 });
 
 

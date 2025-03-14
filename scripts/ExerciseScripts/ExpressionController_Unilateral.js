@@ -61,10 +61,9 @@ function GetBaseExpressionValue() {
 }
 
 /***
-* Start with a 3 second delay
+* Start with a delay and invoke methods in list after delay complete
 */
 function StartDelay(seconds, functionList){
-   // Wait for 3 seconds before executing a function
    var delayedEvent = script.createEvent("DelayedCallbackEvent");
    delayedEvent.bind(function(eventData)
    {
@@ -172,7 +171,6 @@ function Finished(){
   }
 }
 
-
 /**
  * Display value for debugging
  */
@@ -186,8 +184,8 @@ function DisplayDebug(weight){
 
 /*SUBSCRIPTIONS*/
 /***
-* Enable this script/exercise if the parameter matched the expressionIndex value. 
-* Initialize values
+* Enable this script/exercise if the parameter matched the expressionIndex value.
+* Initialize value
 * Disable/enable visuals
 * Start detecting on frame update
 * Always set reps back to 0 when leave a exercise
