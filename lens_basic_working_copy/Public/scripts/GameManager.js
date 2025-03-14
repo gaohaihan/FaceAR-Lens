@@ -47,6 +47,10 @@ script.api.Start = function(){
    EnableFirstExercise();
 }
 
+script.api.PauseUnPause = function(){
+   PauseUnPause();
+}
+
  /***
   * Go to the Next exercise in the sequence and en/disable the prev and next button.
   */
@@ -70,7 +74,7 @@ function GoToPreviousExercise() {
 
    TryEnableNext();
    TryEnablePrev();
-   
+
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -83,6 +87,18 @@ function EnableFirstExercise(){
    script.startButton.enabled = false;
 
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
+}
+
+/***
+  * Toggles pause and unpause by publishing pause events
+  */
+function PauseUnPause(){
+   if (global.Pause == true){
+      pubSub.publish(pubSub.EVENTS.UnPause), "";
+   }
+   else {
+      pubSub.publish(pubSub.EVENTS.Pause, "");
+   }
 }
 
 function TryEnableNext(){

@@ -28,23 +28,15 @@ script.target.enabled = false;
 /***
 * Called once when onAwake
 */
-function StartExercise() {
-  // Wait for 3 seconds before executing a function
-  var delayedEvent = script.createEvent("DelayedCallbackEvent");
-  delayedEvent.bind(function(eventData)
-  {
-    Initialize();
-    SetEvents();
-  });
-  // Start with a 3 second delay
-  delayedEvent.reset(3);
+function InitializeUserBaseExpressionValue() {
+  StartDelay(3);
   GetBaseExpressionValue();
 }
 
 function Initialize(){
   // Set initial values
   currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
-  print("test currnt" + currentDifficulty.toString());
+  print("test current" + currentDifficulty.toString());
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
@@ -76,10 +68,31 @@ function GetBaseExpressionValue() {
 }
 
 /***
+* Start with a 3 second delay
+*/
+function StartDelay(seconds){
+  // Wait for 3 seconds before executing a function
+  var delayedEvent = script.createEvent("DelayedCallbackEvent");
+  delayedEvent.bind(function(eventData)
+  {
+    Initialize();
+    SetEvents();
+  });
+  delayedEvent.reset(seconds);
+}
+
+/***
 * Things to be called every frame
 */
+// implememt some sort of pause to pause the detection / game while we re do base expression initalization.
+// global value pause controlled by pubsub pause and unpause , like difficutly
+//
 function OnUpdate(){
   difficulty = global.Difficulty;
+
+  if (global.Pause == true)
+    return;
+
   CountReps();
   UpdateCurrentDifficulty();
   UpdateVisual(script.target);
@@ -250,7 +263,7 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.completedReps = 0;
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
-    StartExercise();
+    InitializeUserBaseExpressionValue();
   }
   else
   {

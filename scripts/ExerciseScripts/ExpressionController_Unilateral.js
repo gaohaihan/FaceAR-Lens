@@ -23,16 +23,8 @@ script.target.enabled = false;
 /***
 * Called once when onAwake
 */
- function StartExercise() {
-  // Wait for 3 seconds before executing a function
-  var delayedEvent = script.createEvent("DelayedCallbackEvent");
-  delayedEvent.bind(function(eventData)
-  {
-    Initialize();
-    SetEvents();
-  });
-  // Start with a 3 second delay
-  delayedEvent.reset(3);
+ function InitializeUserBaseExpressionValue(){
+  StartDelay(3);
   GetBaseExpressionValue();
 }
 
@@ -67,10 +59,28 @@ function GetBaseExpressionValue() {
 }
 
 /***
+* Start with a 3 second delay
+*/
+function StartDelay(seconds){
+   // Wait for 3 seconds before executing a function
+   var delayedEvent = script.createEvent("DelayedCallbackEvent");
+   delayedEvent.bind(function(eventData)
+   {
+     Initialize();
+     SetEvents();
+   });
+   delayedEvent.reset(seconds);
+}
+
+/***
 * Things to be called every frame
 */
 function OnUpdate(){
   difficulty = global.Difficulty;
+
+  if (global.Pause == true)
+    return;
+
   CountReps();
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
@@ -182,7 +192,7 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.completedReps = 0;
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
-    StartExercise();
+    InitializeUserBaseExpressionValue();
   }
   else
   {
