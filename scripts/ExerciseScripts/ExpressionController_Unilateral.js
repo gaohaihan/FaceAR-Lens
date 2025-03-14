@@ -63,7 +63,6 @@ function GetBaseExpressionValue() {
 /***
 * Start with a 3 second delay
 */
-// pass in which methods to delay
 function StartDelay(seconds, functionList){
    // Wait for 3 seconds before executing a function
    var delayedEvent = script.createEvent("DelayedCallbackEvent");

@@ -29,7 +29,8 @@ script.target.enabled = false;
 * Called once when onAwake
 */
 function InitializeUserBaseExpressionValue() {
-  StartDelay(3);
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
+  StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
 }
 
@@ -51,7 +52,7 @@ function Initialize(){
 /***
 * Set functions to be called every frame
 */
-function SetEvents() {
+function BindFunctionToRunEveryUpdate() {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
 }
@@ -70,16 +71,24 @@ function GetBaseExpressionValue() {
 /***
 * Start with a 3 second delay
 */
-function StartDelay(seconds){
+function StartDelay(seconds, functionList){
   // Wait for 3 seconds before executing a function
   var delayedEvent = script.createEvent("DelayedCallbackEvent");
   delayedEvent.bind(function(eventData)
   {
-    Initialize();
-    SetEvents();
+   executeFunctions(eventData, functionList);
   });
   delayedEvent.reset(seconds);
+
 }
+
+/**
+* function that executes all given functions
+*/
+function executeFunctions(eventData, functions) {
+ functions.forEach(func => func(eventData));
+}
+
 
 /***
 * Things to be called every frame
@@ -286,4 +295,21 @@ pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Left, (data) => {
 pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
   isRightDetectionOn = data
   print("right is" + isRightDetectionOn)
+});
+
+
+/**
+ * Pause exercise and reinit base expression value.
+ */
+pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+
+  function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 });
