@@ -49,6 +49,12 @@ function handleResponse(hasError, json) {
                 script.gameManager.api.Next();
                 script.responseData.text = "next";
                 break;
+            case "setsAndReps":
+                const setAndReps = JSON.parse(parsedData.value);
+                global.requiredSets = setAndReps['sets'];
+                global.requiredReps = setAndReps['reps'];
+                script.responseData.text = "sets and reps";
+                break;
             default:
                 script.responseData.text = "Invalid request";
                 break;
@@ -60,4 +66,8 @@ function handleResponse(hasError, json) {
 
 script.api.makeRequest = function() {
   ApiModule.difficulty(handleResponse);
+};
+
+script.api.sendDataToSite = function(datatype, data) {
+    ApiModule.sendData(datatype, data);
 };

@@ -18,7 +18,7 @@ script.api.DifficultySlider = function(){
     if (sliderValue > 0.9){
       sliderValue = 0.9
     }
-    global.Difficulty = sliderValue;
+    //global.Difficulty = sliderValue;
  }
 
 // TODO use to determine user resting expression values.

@@ -14,7 +14,7 @@
             "uid": "1712508376759833:460563",
             "fileId": "1712508376757672:460555",
             "publicId": "1712508376761522:460568",
-            "expected_hash": "b4439e494a85c454462cad67a2a83f12"
+            "expected_hash": "e525708ac0bf6d2b6fb27162fecce594"
         },
         "IResourceManager": {
             "uid": "1712508376759833:460563",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/DifficultyManager.js",
-                "hash": "b4439e494a85c454462cad67a2a83f12"
+                "hash": "e525708ac0bf6d2b6fb27162fecce594"
             }
         }
     }
