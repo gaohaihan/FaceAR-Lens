@@ -15,34 +15,70 @@ const pubSub = require("../Exercise Scripts/PubSubModule");
 var color;
 var difficulty;
 var midRep;
-var currentDifficulty;
+var currentDifficulty = 0
+var BaseExpressionValue = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
 
 /***
 * Called once when onAwake
 */
-function Initialize() {
-  // Set initial values
-  currentDifficulty = script.baseDifficulty;
-  midRep = false;
-  color = script.target.getMaterial(0).getPass(0).baseColor;
-  difficulty = global.Difficulty;
+ function InitializeUserBaseExpressionValue(){
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+}
 
-  // Display prompt text
-  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
-  DisableBilateralDetection();
-  SetEvents();
+function Initialize(){
+   // Set initial values
+   currentDifficulty = BaseExpressionValue + 0.05;
+   midRep = false;
+   color = script.target.getMaterial(0).getPass(0).baseColor;
+   difficulty = global.Difficulty;
+   DisableBilateralDetection();
+
+   // Display prompt text
+   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
 }
 
 /***
 * Set functions to be called every frame
 */
-function SetEvents() {
+function BindFunctionToRunEveryUpdate(eventName, methodsToBind) {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
+
+}
+
+/***
+* Grab user base expression values
+*/
+function GetBaseExpressionValue() {
+  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
+  BaseExpressionValue = GetRawExpressionWeight();
+}
+
+/***
+* Start with a 3 second delay
+*/
+function StartDelay(seconds, functionList){
+   // Wait for 3 seconds before executing a function
+   var delayedEvent = script.createEvent("DelayedCallbackEvent");
+   delayedEvent.bind(function(eventData)
+   {
+    executeFunctions(eventData, functionList);
+   });
+   delayedEvent.reset(seconds);
+
+}
+
+/**
+ * function that executes all given functions
+ */
+function executeFunctions(eventData, functions) {
+  functions.forEach(func => func(eventData));
 }
 
 /***
@@ -50,6 +86,10 @@ function SetEvents() {
 */
 function OnUpdate(){
   difficulty = global.Difficulty;
+
+  if (global.Pause == true)
+    return;
+
   CountReps();
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
@@ -68,7 +108,12 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
-  currentDifficulty = script.baseDifficulty / ( 1 - difficulty);
+  var minDifficulty = BaseExpressionValue + 0.05
+  currentDifficulty = minDifficulty / ( 1 - difficulty);
+
+  // cannot be detected over 1
+  if (currentDifficulty > 1)
+    currentDifficulty = 1;
 }
 
 /**
@@ -80,11 +125,11 @@ function CountReps() {
         Finished();
         return;
     }
-    
+
     // Update rep count text
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-    
+
     var rawWeight = GetRawExpressionWeight();
     if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
@@ -97,7 +142,7 @@ function CountReps() {
         pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
         pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
     }
-    
+
     var rawWeight = GetRawExpressionWeight();
     if (rawWeight <= currentDifficulty && midRep === true){
         midRep = false;
@@ -148,7 +193,7 @@ function DisplayDebug(weight){
 * Always set reps back to 0 when leave a exercise
 */
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
-  if (data == script.expressionIndex)
+  if (data === script.expressionIndex)
   {
     script.enabled = true;
     script.target.enabled = true;
@@ -156,7 +201,7 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.completedReps = 0;
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
-    Initialize();
+    InitializeUserBaseExpressionValue();
   }
   else
   {
@@ -164,3 +209,20 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = false;
   }
 });
+
+/**
+ * Pause exercise and reinit base expression value.
+ */
+pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+
+  function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
+});
+

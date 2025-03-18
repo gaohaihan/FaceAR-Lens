@@ -7,6 +7,13 @@ const EVENTS = {
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',
 
+    // PAUSE
+    Pause: 'Pause',
+    UnPause: 'UnPause',
+
+    // MISC
+    ReInitializeBaseExpression:"ReInitializeBaseExpression",
+
     // DEBUG EVENTS
     SetLeftDebugText: 'SetLeftDebugText',
     SetRightDebugText: 'SetRightDebugText',

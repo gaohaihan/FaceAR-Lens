@@ -1,6 +1,9 @@
 // -----JS CODE-----
 // @input SceneObject difficultyUI
+// @input SceneObject countUI
+// @input SceneObject controlsUI
 // @input SceneObject bilateralUI
+// @input SceneObject debugUI
 // @input Component.ScriptComponent bilateralToggle_left
 // @input Component.ScriptComponent bilateralToggle_right
 
@@ -10,7 +13,32 @@ script.api.ToggleOn_Left = ToggleOnLeft;
 script.api.ToggleOn_Right = ToggleOnRight;
 script.api.ToggleOff_Left = ToggleOffLeft
 script.api.ToggleOff_Right = ToggleOffRight;
+script.api.ToggleUI = ToggleUI;
+script.api.ToggleDebugUI = ToggleDebugUI;
 
+
+/***
+ * Toggle UI
+ */
+function ToggleUI(){
+    script.difficultyUI.enabled = !script.difficultyUI.enabled;
+    script.controlsUI.enabled = !script.controlsUI.enabled;
+    script.countUI.enabled = !script.countUI.enabled;
+}
+
+/***
+ * Toggle debug UI
+ */
+function ToggleDebugUI(){
+    script.debugUI.enabled = !script.debugUI.enabled;
+}
+/***
+ * Publish bilateral controls being toggle on/off
+ */
+function ToggleDebug(){
+    pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, true);
+    script.bilateralToggle_left.api.toggleOn();
+}
 /***
  * Publish bilateral controls being toggle on/off
  */
