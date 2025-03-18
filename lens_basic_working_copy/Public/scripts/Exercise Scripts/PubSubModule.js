@@ -3,11 +3,16 @@ let subscribers = {};
 const EVENTS = {
     // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',
-    SetExpressionSetText: 'SetExpressionSetText',
-    SetExpressionRequiredSetText: 'SetExpressionRequiredSetText',
     SetExpressionRepText: 'SetExpressionRepText',
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',
+
+    // PAUSE
+    Pause: 'Pause',
+    UnPause: 'UnPause',
+
+    // MISC
+    ReInitializeBaseExpression:"ReInitializeBaseExpression",
 
     // DEBUG EVENTS
     SetLeftDebugText: 'SetLeftDebugText',

@@ -14,7 +14,7 @@
             "uid": "1728260632575097:87780",
             "fileId": "1728260632573346:87778",
             "publicId": "1728260632578413:87785",
-            "expected_hash": "f274c77a3d3975c32c6564af341c8d10"
+            "expected_hash": "dbffd4d4166d24a36de5242ee9436378"
         },
         "IResourceManager": {
             "uid": "1728260632575097:87780",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "scripts/RemoteServicesApi.js",
-                "hash": "f274c77a3d3975c32c6564af341c8d10"
+                "hash": "dbffd4d4166d24a36de5242ee9436378"
             }
         }
     }

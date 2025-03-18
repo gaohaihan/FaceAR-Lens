@@ -20,19 +20,3 @@ script.api.DifficultySlider = function(){
     }
     //global.Difficulty = sliderValue;
  }
-
-// TODO use to determine user resting expression values.
-  /***
-  * get the resting value for all expressions
-  */
- function GetExpressionMinValues(){
-   let expressionsInSequence = Object.values(pubSub.EXPRESSIONS)
-    expressionsInSequence.forEach(element => {
-      ExpressionMinValues[element] = script.faceMesh.mesh.control.getExpressionWeightByName(element);
-   });
-  // print(ExpressionMinValues[pubSub.EXPRESSIONS.BrowsUpCenter]);
- }
-
-pubSub.subscribe(pubSub.EVENTS.StartButtonClicked,
-   GetExpressionMinValues
-);
