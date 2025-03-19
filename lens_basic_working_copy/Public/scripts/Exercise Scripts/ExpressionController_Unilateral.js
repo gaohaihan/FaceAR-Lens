@@ -5,6 +5,7 @@
 // @input string displayText
 // @input string finishText
 // @input number completedSets
+// @input number requiredSets
 // @input number completedReps
 // @input number baseDifficulty
 // @input number expressionIndex
@@ -64,10 +65,9 @@ function GetBaseExpressionValue() {
 }
 
 /***
-* Start with a 3 second delay
+* Start with a delay and invoke methods in list after delay complete
 */
 function StartDelay(seconds, functionList){
-   // Wait for 3 seconds before executing a function
    var delayedEvent = script.createEvent("DelayedCallbackEvent");
    delayedEvent.bind(function(eventData)
    {
@@ -171,11 +171,10 @@ function GetRawExpressionWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
+  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }
-
 
 /**
  * Display value for debugging
@@ -190,8 +189,8 @@ function DisplayDebug(weight){
 
 /*SUBSCRIPTIONS*/
 /***
-* Enable this script/exercise if the parameter matched the expressionIndex value. 
-* Initialize values
+* Enable this script/exercise if the parameter matched the expressionIndex value.
+* Initialize value
 * Disable/enable visuals
 * Start detecting on frame update
 * Always set reps back to 0 when leave a exercise
