@@ -1,0 +1,24 @@
+{
+    "1716942684940646:32022": {
+        "IResourceController": {
+            "name": "Exercise Scripts",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1716942684941017:32023",
+            "resources": [
+                "1712507606166226:241546",
+                "1714343607183110:1650024",
+                "1721587662821012:375239"
+            ]
+        }
+    },
+    "1716942684941017:32023": {
+        "IResourceController": {
+            "public": {
+                "path": "scripts/Exercise Scripts"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1712510223406003:824626": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/Resources/Materials/Popup Fill Graph 2.lsmat",
+                "hash": "db2aa7788b7196eb3d7e1a1624a5478f"
+            }
+        }
+    },
+    "1712510223431717:824640": {
+        "IFileManager": {
+            "path": "Files/File_1712510223431717_824640"
+        }
+    },
+    "1712510223432378:824641": {
+        "IResourceController": {
+            "name": "Popup Fill Graph 2",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1712510223432382:824642",
+            "fileId": "1712510223431717:824640",
+            "originalId": "1712510223450655:824646",
+            "publicId": "1712510223406003:824626",
+            "expected_hash": "b313f60e0a026fe82533f93e710f1845"
+        },
+        "IResourceManager": {
+            "uid": "1712510223432382:824642",
+            "name": "Files/File_1712510223431717_824640",
+            "flags": 1
+        }
+    },
+    "1712510223450655:824646": {
+        "IFileManager": {
+            "path": "Files/File_1712510223450655_824646.lsmat"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "1742342322040420:19298": {
+        "IResourceController": {
+            "public": {
+                "path": "scripts/PauseManager.js",
+                "hash": "470896a9998f671c98a10a8fb566cd5f"
+            }
+        }
+    },
+    "1742342322040796:19299": {
+        "IFileManager": {
+            "path": "Files/File_1742342322040796_19299.js"
+        }
+    },
+    "1742342322041710:19300": {
+        "IResourceController": {
+            "name": "PauseManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1742342322041728:19301",
+            "fileId": "1742342322040796:19299",
+            "publicId": "1742342322040420:19298",
+            "expected_hash": "470896a9998f671c98a10a8fb566cd5f"
+        },
+        "IResourceManager": {
+            "uid": "1742342322041728:19301",
+            "name": "Files/File_1742342322040796_19299.js",
+            "flags": 1
+        }
+    },
+    "1742342322041728:19301": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "PubSubModule"
+            ]
+        }
+    }
+}
