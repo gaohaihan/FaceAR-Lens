@@ -54,6 +54,7 @@ function ToggleOnRight(){
 
 function ToggleOffLeft (){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, false);
+    script.bilateralToggle_left.api.toggleOff();
     // cannot turn of both side, if off right side detection is turned on
     if (!script.bilateralToggle_right.api.getToggleValue())
         ToggleOnRight();
@@ -61,6 +62,7 @@ function ToggleOffLeft (){
 
 function ToggleOffRight(){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Right, false);
+    script.bilateralToggle_right.api.toggleOff();
     // cannot turn of both side, if off left side detection is turned on
     if (!script.bilateralToggle_left.api.getToggleValue())
         ToggleOnLeft();

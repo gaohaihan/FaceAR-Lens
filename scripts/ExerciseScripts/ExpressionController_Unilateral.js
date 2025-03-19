@@ -7,11 +7,15 @@
 // @input number completedSets
 // @input number requiredSets
 // @input number completedReps
-// @input number requiredReps
 // @input number baseDifficulty
 // @input number expressionIndex
+// @input Component.ScriptComponent apiScript
 
 const pubSub = require("../Exercise Scripts/PubSubModule");
+
+global.requiredSets = 3;
+global.requiredReps = 5;
+
 var color;
 var difficulty;
 var midRep;
@@ -98,10 +102,10 @@ function OnUpdate(){
 * Update opacity of mask based on expression weight
 */
 function UpdateVisual(visualComponent) {
-     var alpha = GetRawExpressionWeight();
-     color = visualComponent.getMaterial(0).getPass(0).baseColor;
-     visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
- }
+  var alpha = GetRawExpressionWeight();
+  color = visualComponent.getMaterial(0).getPass(0).baseColor;
+  visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
+}
 
  /***
 * Set the current minimum value needed to count an expression display
@@ -133,6 +137,7 @@ function CountReps() {
     if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
         script.completedReps += 1
+        script.apiScript.api.sendDataToSite('completedReps', script.completedReps);
         // Increment sets when the current set is finished
         if (script.completedReps >= script.requiredReps){
             script.completedSets += 1;
@@ -152,8 +157,8 @@ function CountReps() {
 * Disable bilateral UI since it is not applicable to this exercise
 */
 function DisableBilateralDetection() {
-    pubSub.publish(pubSub.EVENTS.SetBilateralDetection, false);
-   }
+  pubSub.publish(pubSub.EVENTS.SetBilateralDetection, false);
+}
 
 
 function GetRawExpressionWeight(){

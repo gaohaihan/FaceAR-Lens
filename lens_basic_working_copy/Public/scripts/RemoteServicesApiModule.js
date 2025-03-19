@@ -75,4 +75,24 @@ ApiModule.prototype.difficulty = function(cb) {
     });
 };
 
+ApiModule.prototype.sendData = function(datatype, data, cb) {
+    var req = global.RemoteApiRequest.create();
+    req.endpoint = "sendDataFromLens";
+
+    // Define parameters object
+    var parameters = {};
+
+    // Set the parameter
+    setParameter(datatype, data, parameters, false);
+
+    // Attach parameters to request
+    req.parameters = parameters;
+    
+    this.remoteServiceModule.performApiRequest(req, function(response) {
+        if(cb) {
+            handleAPIResponse(response, cb);
+        }
+    });
+};
+
 module.exports.ApiModule = ApiModule;

@@ -8,11 +8,14 @@
 // @input number completedSets
 // @input number requiredSets
 // @input number completedReps
-// @input number requiredReps
 // @input number baseDifficulty
 // @input number expressionIndex
+// @input Component.ScriptComponent apiScript
 
 const pubSub = require("../Exercise Scripts/PubSubModule");
+
+global.requiredSets = 3;
+global.requiredReps = 5;
 
 var midRep;
 var color;
@@ -109,10 +112,10 @@ function OnUpdate(){
 * Update opacity of mask based on expression weight
 */
 function UpdateVisual(visualComponent) {
-     alpha = GetRawExpressionWeight();
-     color = visualComponent.getMaterial(0).getPass(0).baseColor;
-     visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
- }
+  alpha = GetRawExpressionWeight();
+  color = visualComponent.getMaterial(0).getPass(0).baseColor;
+  visualComponent.getMaterial(0).getPass(0).baseColor = new vec4(color.r, color.g, color.b, alpha);
+}
 
 /***
 * Set the current minimum value needed to count an expression display
@@ -143,6 +146,9 @@ function UpdateCurrentDifficulty(){
 * Count completed reps, expression must return to base line bf another rep is counted.
 */
 function CountReps() {
+  // Update sets and reps text during exercise if changed
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 
     //stop counting when hit required sets
     if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
@@ -158,6 +164,7 @@ function CountReps() {
     if (rawWeight > currentDifficulty && midRep !== true){
       midRep = true;
       script.completedReps += 1
+      script.apiScript.api.sendDataToSite('completedReps', script.completedReps);
       if (script.completedReps >= script.requiredReps){
           script.completedSets += 1;
           script.completedReps = 0;
@@ -177,7 +184,7 @@ function CountReps() {
 * Publish expressions values for bilateral detection so the UI reflects its values.
 */
 function SetBilateralDetection() {
-// set values to true for first time.
+  // set values to true for first time.
   if (isLeftDetectionOn == null)
     isLeftDetectionOn = true;
   if (isRightDetectionOn == null)
