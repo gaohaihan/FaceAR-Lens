@@ -1,0 +1,42 @@
+{
+    "1715542707457212:69788": {
+        "IFileManager": {
+            "path": "Files/File_1715542707457212_69788.pvr"
+        }
+    },
+    "1715542707457997:69789": {
+        "IResourceController": {
+            "name": "eye_2",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1715542707458105:69790",
+            "fileId": "1715542707457212:69788",
+            "originalId": "1715542707458533:69795",
+            "publicId": "1715542707464458:69801",
+            "expected_hash": "54a4b780d96157b21a5a33824b6177ed",
+            "additional": {
+                "originHash": "54a4b780d96157b21a5a33824b6177ed"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1715542707458105:69790",
+            "name": "Files/File_1715542707457212_69788.jpg",
+            "flags": 1
+        }
+    },
+    "1715542707458533:69795": {
+        "IFileManager": {
+            "path": "Files/File_1715542707458533_69795.pvr"
+        }
+    },
+    "1715542707464458:69801": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/Face Mask Opacity Textures Resources/eye_2.pvr",
+                "hash": "54a4b780d96157b21a5a33824b6177ed"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1718824940595056:920807": {
+        "IResourceController": {
+            "public": {
+                "path": "UI/My UI Scripts/FaceMesh/Face Mesh Default 15.lsmat",
+                "hash": "4ca7992aa55a267e27da27e788c90a51"
+            }
+        }
+    },
+    "1718824940629307:920873": {
+        "IFileManager": {
+            "path": "Files/File_1718824940629307_920873"
+        }
+    },
+    "1718824940630260:920876": {
+        "IResourceController": {
+            "name": "Face Mesh Default 15",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1718824940630264:920877",
+            "fileId": "1718824940629307:920873",
+            "originalId": "1718824940651600:920887",
+            "publicId": "1718824940595056:920807",
+            "expected_hash": "ec06d559fb890ed4094ccd2fcdc0012b"
+        },
+        "IResourceManager": {
+            "uid": "1718824940630264:920877",
+            "name": "Files/File_1718824940629307_920873",
+            "flags": 1
+        }
+    },
+    "1718824940651600:920887": {
+        "IFileManager": {
+            "path": "Files/File_1718824940651600_920887.lsmat"
+        }
+    }
+}
