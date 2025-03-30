@@ -7,7 +7,7 @@
 // this index should include 0
 // @input number maxIndex = 2;
 /**
- * TO CREATE A NEW EXPRESSION: 
+ * TO CREATE A NEW EXPRESSION:
  * Start by creating a new object with two child objects: a face mask and an ExpressionController script.(Choose between a bilateral or unilateral)
  * Apply Texture to Face Mesh: Assign an appropriate texture to the face mesh by setting the Texture variable. This determines the material displayed when the expression is detected.
  * Configure ExpressionController:
@@ -19,6 +19,10 @@
    * Currently, disregard the Min Expression Value parameter.
    * The Expression Index is an int value that starts at 0 and determines the order of the expression sequence.
  */
+
+//import module
+//const Module = require("./RemoteServicesApiModule");
+//const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 const pubSub = require("./PubSubModule");
 var currentIndex = 0;
@@ -39,6 +43,14 @@ script.api.Previous = function(){
 
 script.api.Start = function(){
    EnableFirstExercise();
+}
+
+script.api.PauseUnPause = function(){
+   PauseUnPause();
+}
+
+script.api.ReInit = function(){
+   ReInitBaseExpression();
 }
 
  /***
@@ -64,7 +76,7 @@ function GoToPreviousExercise() {
 
    TryEnableNext();
    TryEnablePrev();
-   
+
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -77,6 +89,23 @@ function EnableFirstExercise(){
    script.startButton.enabled = false;
 
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
+}
+
+/***
+  * Toggles pause and unpause by publishing pause events
+  */
+function PauseUnPause(){
+   if (global.Pause == true){
+      pubSub.publish(pubSub.EVENTS.UnPause);
+   }
+   else {
+      pubSub.publish(pubSub.EVENTS.Pause);
+   }
+}
+
+function ReInitBaseExpression(){
+   print("intit 1")
+   pubSub.publish(pubSub.EVENTS.ReInitializeBaseExpression);
 }
 
 function TryEnableNext(){
@@ -100,3 +129,9 @@ function TryEnablePrev(){
       script.prevButton.enabled = true;
    }
 }
+
+//make api request every frame
+// var event = script.createEvent("UpdateEvent");
+// event.bind(function(eventdata){
+//     script.apiScript.api.makeRequest()
+// });

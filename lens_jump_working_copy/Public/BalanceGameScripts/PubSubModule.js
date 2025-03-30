@@ -1,11 +1,35 @@
 let subscribers = {};
 
 const EVENTS = {
+    // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',
-    SetJumpAmount: "SetJumpAmount"
+
+    // PAUSE
+    Pause: 'Pause',
+    UnPause: 'UnPause',
+
+    // MISC
+    ReInitializeBaseExpression:"ReInitializeBaseExpression",
+
+    // DEBUG EVENTS
+    SetLeftDebugText: 'SetLeftDebugText',
+    SetRightDebugText: 'SetRightDebugText',
+    SetCombinedText: 'SetCombinedText',
+    SetMinExpressionWeightText: 'SetMinExpressionWeightText',
+
+    // BILATERAL EXERCISE EVENTS
+    ToggleBilateralDetection_Left: 'ToggleBilateralDetection_Left',
+    ToggleBilateralDetection_Right: 'ToggleBilateralDetection_Right',
+    SetBilateralDetection_Left: 'SetBilateralDetection_Left',
+    SetBilateralDetection_Right: ' SetBilateralDetection_Right',
+    SetBilateralDetection: 'SetBilateralDetection',
+
+    // EVENTS FOR BALANCE GAME
+    SetPlatformRotation: "SetPlatformRotation",
+
 };
 
 const EXPRESSIONS = {

@@ -1,5 +1,5 @@
 // -----JS CODE-----
-// Set sensitivity to value of slider when slider value is changed.
+// Set difficulty to value of slider when slider value is changed.
 // @input SceneObject button
 // @input SceneObject self
 

@@ -56,7 +56,7 @@ function UpdateVisual(visualComponent) {
 */
 function GetAdjustedWeight(){
   var weight = GetRawExpressionWeight();
-  var adjusted_weight = weight * global.Sensitivity;
+  var adjusted_weight = weight;
 
   return adjusted_weight;
 }

@@ -7,10 +7,10 @@ var started = false;
 var originalPos = script.ball.getTransform().getLocalPosition();
 var body = script.ball.getComponent("Physics.BodyComponent");
 var transform = script.ball.getTransform();
+// TODO add expression min detection; 
+var BaseExpressionValue = 0.02;
 
-// this number determins how difficult it is to make a jump, a higher number the easeir it will be
-// this number will need to adjust according to the needs of our users. 
-var sensitivityThrehold = 5;
+
 const pubSub = require("./PubSubModule");
 
 function Start(){
@@ -34,9 +34,22 @@ function SetEvents() {
    Respawn();
   }
 
-function Jump(amount){
-var jumpForce = amount * sensitivityThrehold;
-var pos = transform.getLocalPosition();
+  // Jump if raw expression weight is greater than current difficulty thresh hold.
+function Jump(rawWeight){
+  //print(rawWeight);
+
+  currentDifficulty = GetDifficulty();
+  var jumpForce = 0; 
+  if(rawWeight > currentDifficulty)
+  {
+    jumpForce = 5;
+  }
+  else{
+    jumpForce = 0; 
+  }
+
+
+  var pos = transform.getLocalPosition();
 
   // ball cannot go off screen
   if(started && pos.y > 10){
@@ -56,6 +69,17 @@ function Respawn(){
   }
 }
 
+// todo move this logic to a new compy of expressionController_balance called expressionController_jump
+function GetDifficulty(){
+  var minDifficulty = BaseExpressionValue + 0.05
+  currentDifficulty = minDifficulty / ( 1 - global.Difficulty);
+
+  // cannot be detected over 1
+  if (currentDifficulty > 1)
+    currentDifficulty = 1;
+
+  return currentDifficulty;
+}
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
   SetEvents();
   Start();
