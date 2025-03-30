@@ -18,5 +18,6 @@ script.api.DifficultySlider = function(){
     if (sliderValue > 0.9){
       sliderValue = 0.9
     }
-    //global.Difficulty = sliderValue;
+    // Uncomment for local development
+   // global.Difficulty = sliderValue;
  }

@@ -5,7 +5,6 @@
 // @input string displayText
 // @input string finishText
 // @input number completedSets
-// @input number requiredSets
 // @input number completedReps
 // @input number baseDifficulty
 // @input number expressionIndex
@@ -36,6 +35,7 @@ script.target.enabled = false;
 function Initialize(){
    // Set initial values
    currentDifficulty = BaseExpressionValue + 0.05;
+   print("debug" + currentDifficulty)
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
@@ -43,8 +43,8 @@ function Initialize(){
 
    // Display prompt text
    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
-   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
-   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
+   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 }
 
 /***
@@ -124,7 +124,7 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
     //stop counting when hit required sets
-    if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -139,7 +139,7 @@ function CountReps() {
         script.completedReps += 1
         script.apiScript.api.sendDataToSite('completedReps', script.completedReps);
         // Increment sets when the current set is finished
-        if (script.completedReps >= script.requiredReps){
+        if (script.completedReps >= global.requiredReps){
             script.completedSets += 1;
             script.completedReps = 0;
         }
@@ -171,7 +171,7 @@ function GetRawExpressionWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
+  if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }

@@ -1,6 +1,6 @@
 {
     "lens_id": "",
-    "document_id": "vUfXv9RDoViMMWAu3HXC",
+    "document_id": "fz3eB_NfWMvwpgQLf1ST",
     "original_document_id": "H3SEJrqi83UaeA7G3ARc",
     "version": "33",
     "preview": "icon.png",
@@ -237,8 +237,6 @@
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
-            "icon_hash": "56814dbefc6c60009fe6066406087653",
-            "icon_path": "icon.png",
             "hints": [
                 ""
             ],

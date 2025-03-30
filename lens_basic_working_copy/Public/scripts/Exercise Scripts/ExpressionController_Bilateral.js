@@ -6,7 +6,6 @@
 // @input string displayText
 // @input string finishText
 // @input number completedSets
-// @input number requiredSets
 // @input number completedReps
 // @input number baseDifficulty
 // @input number expressionIndex
@@ -46,8 +45,8 @@ function Initialize(){
   SetBilateralDetection();
 
   // Display prompt text
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  script.requiredSets.toString());
-  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  script.requiredReps.toString());
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
+  pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
 }
 
@@ -151,7 +150,7 @@ function CountReps() {
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 
     //stop counting when hit required sets
-    if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -165,7 +164,7 @@ function CountReps() {
       midRep = true;
       script.completedReps += 1
       script.apiScript.api.sendDataToSite('completedReps', script.completedReps);
-      if (script.completedReps >= script.requiredReps){
+      if (script.completedReps >= global.requiredReps){
           script.completedSets += 1;
           script.completedReps = 0;
       }
