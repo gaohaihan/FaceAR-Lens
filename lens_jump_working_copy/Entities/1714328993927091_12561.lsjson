@@ -3,7 +3,7 @@
         "IResourceController": {
             "public": {
                 "path": "GameManager.js",
-                "hash": "ab1f5898534f9c2911e6db551e9d5f15"
+                "hash": "be9e364d8051b8c95bd4016bf68e3f0b"
             }
         }
     },
@@ -22,7 +22,7 @@
             "uid": "1714328993927100:12562",
             "fileId": "1714328993926058:12560",
             "publicId": "1714328993925758:12559",
-            "expected_hash": "ab1f5898534f9c2911e6db551e9d5f15"
+            "expected_hash": "be9e364d8051b8c95bd4016bf68e3f0b"
         },
         "IResourceManager": {
             "uid": "1714328993927100:12562",
@@ -33,7 +33,6 @@
     "1714328993927100:12562": {
         "ScriptModulesController": {
             "dependent_module_names": [
-                "RemoteServicesApiModule",
                 "PubSubModule"
             ]
         }

@@ -1,0 +1,40 @@
+{
+    "1743379757392358:72678": {
+        "IFileManager": {
+            "path": "Files/File_1743379757392358_72678.js"
+        }
+    },
+    "1743379757393182:72679": {
+        "IResourceController": {
+            "name": "Sensitivity API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1743379757393192:72680",
+            "fileId": "1743379757392358:72678",
+            "publicId": "1743379757396690:72685",
+            "expected_hash": "1b76665a8adbea2c9242c8c42b897968"
+        },
+        "IResourceManager": {
+            "uid": "1743379757393192:72680",
+            "name": "Files/File_1743379757392358_72678.js",
+            "flags": 1
+        }
+    },
+    "1743379757393192:72680": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "Sensitivity API Module"
+            ]
+        }
+    },
+    "1743379757396690:72685": {
+        "IResourceController": {
+            "public": {
+                "path": "Sensitivity API.js",
+                "hash": "1b76665a8adbea2c9242c8c42b897968"
+            }
+        }
+    }
+}

@@ -313,7 +313,58 @@
             ]
         },
         "RemoteApi::ModelManager": {
-            "api_specs": ""
+            "api_specs": [
+                {
+                    "k": "1743379757363265:72664",
+                    "v": {
+                        "api_spec_id": "266d9e05-8d86-4975-9729-6313b25651bd",
+                        "name": "Sensitivity",
+                        "provider_name": "",
+                        "description": "",
+                        "host": "snap",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "sensitivity",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1743379765283246:76388",
+                    "v": {
+                        "api_spec_id": "266d9e05-8d86-4975-9729-6313b25651bd",
+                        "name": "Sensitivity",
+                        "provider_name": "",
+                        "description": "",
+                        "host": "snap",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "sensitivity",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                }
+            ]
         },
         "RenderOrderComponent": "",
         "WorldComponent": {

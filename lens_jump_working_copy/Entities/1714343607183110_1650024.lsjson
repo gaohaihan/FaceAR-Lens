@@ -14,7 +14,7 @@
             "uid": "1714343607183123:1650025",
             "fileId": "1714343607180704:1650023",
             "publicId": "1714343607186181:1650035",
-            "expected_hash": "34ace076f6fc43afc9cdfb874d4e4040"
+            "expected_hash": "942f86752d23aa9e5c0c0eef55619eef"
         },
         "IResourceManager": {
             "uid": "1714343607183123:1650025",
@@ -33,7 +33,7 @@
         "IResourceController": {
             "public": {
                 "path": "BalanceGameScripts/ExpressionController_Balance.js",
-                "hash": "34ace076f6fc43afc9cdfb874d4e4040"
+                "hash": "942f86752d23aa9e5c0c0eef55619eef"
             }
         }
     }

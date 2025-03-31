@@ -3,7 +3,7 @@
         "IResourceController": {
             "public": {
                 "path": "UI/My UI Scripts/ButtonUtils.js",
-                "hash": "baff07951ec84c29c60c0cf15eec7bb9"
+                "hash": "a62ad9b10463dbb182840820c5844c9f"
             }
         }
     },
@@ -22,7 +22,7 @@
             "uid": "1714328993707468:12454",
             "fileId": "1714328993706650:12452",
             "publicId": "1714328993706406:12451",
-            "expected_hash": "baff07951ec84c29c60c0cf15eec7bb9"
+            "expected_hash": "a62ad9b10463dbb182840820c5844c9f"
         },
         "IResourceManager": {
             "uid": "1714328993707468:12454",
