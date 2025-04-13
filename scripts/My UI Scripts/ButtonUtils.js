@@ -3,6 +3,6 @@
 // @input SceneObject button
 // @input SceneObject self
 
-script.api.ToggleButtons = function(){
+script.ToggleButtons = function(){
     script.button.enabled = !script.button.enabled;
 }
