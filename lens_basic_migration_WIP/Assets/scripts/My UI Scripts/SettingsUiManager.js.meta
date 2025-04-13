@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/0d0dd1f8-f113-45f0-ba66-0cdabd5e9df3>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 6f09cf87-722c-43da-b23c-6ccb57056572
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 6f09cf87-722c-43da-b23c-6ccb57056572
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 513d014d-7c02-46e3-a21c-99456a17d0ea
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/513d014d-7c02-46e3-a21c-99456a17d0ea>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 8644d2d0-3a76-4321-839c-cd73822bcb90
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    bilateralToggle_left: false
+    bilateralToggle_right: false
+    bilateralUI: false
+    controlsUI: false
+    countUI: false
+    debugUI: false
+    difficultyUI: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - difficultyUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      countUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      controlsUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bilateralUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      debugUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bilateralToggle_left: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      bilateralToggle_right: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
