@@ -797,9 +797,7 @@
   ScriptAsset: !<reference> af306e63-01b3-4e35-85a6-c621675f77fb
   ScriptInputsDefault:
     interactable: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -847,9 +845,9 @@
     "":
       interactable: true
       renderOrderOverride: 1
-      text: Button
+      text: Debug
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
@@ -1269,9 +1267,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -1316,9 +1312,9 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: Start
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
@@ -3524,9 +3520,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -3574,9 +3568,9 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: Pause
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
@@ -5570,9 +5564,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -5620,9 +5612,9 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: Next
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
@@ -6525,9 +6517,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -6575,9 +6565,9 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: Previous
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
@@ -8574,10 +8564,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
-    pressedColor: true
     disabledColor: true
     useTextures: true
     normalTexture: true
@@ -8624,10 +8611,10 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: Reinit
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
-      pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
+      pressedColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
       normalTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
@@ -9439,7 +9426,7 @@
   PrefabRemaps:
     []
   Name: Debug Toggle Button
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -15.000000, y: 8.000000, z: 0.000000}
@@ -9552,9 +9539,7 @@
   ScriptInputsDefault:
     interactable: true
     renderOrderOverride: true
-    text: true
     useColors: true
-    normalColor: true
     pressedColor: true
     disabledColor: true
     useTextures: true
@@ -9598,9 +9583,9 @@
     "":
       interactable: true
       renderOrderOverride: 0
-      text: Button
+      text: UI
       useColors: true
-      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      normalColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.500008}
       pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
       disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
       useTextures: false
