@@ -1178,12 +1178,12 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: -52.137466, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 4fe52d9d-a6b8-414b-bd52-f8ded891acd5
+    []
   Components:
     - !<own> a653fe6b-157c-4957-955b-0f024e8f227a
 - !<SceneObject/1b17bb31-c317-4910-8c1d-6a99ea991fc2>
@@ -3360,7 +3360,7 @@
   PrefabRemaps:
     []
   Name: Slider
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -6091,7 +6091,7 @@
   PrefabRemaps:
     []
   Name: Difficulty UI
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -52.137466, y: 0.000000, z: 0.000000}
@@ -6101,7 +6101,7 @@
   Children:
     - !<own> b71b3943-2e13-48c4-9f66-0069ebe89735
     - !<own> b0f8a996-af0c-48e3-af6a-0ea547bd601b
-    - !<own> 1af806f2-f37f-41c3-8534-0d6089bdbdd0
+    - !<own> 4fe52d9d-a6b8-414b-bd52-f8ded891acd5
     - !<own> bbcecc81-fa81-4bb4-8b42-6070d30029c1
   Components:
     - !<own> 37a3135a-80a7-465d-aff8-c58ba8acd0d3
@@ -7366,7 +7366,7 @@
   PrefabRemaps:
     []
   Name: Button Label 2
-  Enabled: true
+  Enabled: false
   Layers: 1048576
   LocalTransform:
     position: {x: 0.000000, y: -5.500000, z: 0.000000}
@@ -7439,6 +7439,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
+    - !<own> 1af806f2-f37f-41c3-8534-0d6089bdbdd0
     - !<own> 72edb74d-124a-4176-93bd-684fdade5ebd
     - !<own> 856079c9-92c6-4b20-9b4a-ead61a6d0079
     - !<own> f3ea8a1c-b7f8-408d-9be6-8ae2c75ab606
