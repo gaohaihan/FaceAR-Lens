@@ -65,11 +65,11 @@
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      value: {x: 0.488838, y: 0.497261, z: 0.497261, w: 0.500008}
     baseTex:
       typeIdx: 9
       value:
-        id: 7bf0ec8a-942c-4956-8717-4f544c459949
+        id: 5053a11c-8784-467a-a6ee-b91720fba0cb
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
