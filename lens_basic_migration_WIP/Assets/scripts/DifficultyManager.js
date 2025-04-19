@@ -18,5 +18,5 @@ script.DifficultySlider = SetDifficulty();
       sliderValue = 0.9
     }
     // Uncomment for local development
-   // global.Difficulty = sliderValue;
+   global.Difficulty = sliderValue;
  }
