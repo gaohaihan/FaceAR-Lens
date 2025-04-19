@@ -45,28 +45,36 @@ function ToggleDebug(){
  * Publish bilateral controls being toggle on/off
  */
 function ToggleOnLeft(){
+    print("left on")
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, true);
     script.bilateralToggle_left.toggleOn();
 }
 
 function ToggleOnRight(){
+    print("right on")
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Right, true);
     script.bilateralToggle_right.toggleOn();
 }
 
 function ToggleOffLeft (){
+    print("left off")
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, false);
     script.bilateralToggle_left.toggleOff();
+    print("toggle off left should turn on right")
     // cannot turn of both side, if off right side detection is turned on
     if (!script.bilateralToggle_right.getToggleValue())
+        print("toggle of left turn on right")
         ToggleOnRight();
 }
 
 function ToggleOffRight(){
+    print("right off")
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Right, false);
     script.bilateralToggle_right.toggleOff();
+    print("toggle of right should turn on left")
     // cannot turn of both side, if off left side detection is turned on
     if (!script.bilateralToggle_left.getToggleValue())
+        print("toggle of right turn on left")
         ToggleOnLeft();
 }
 
@@ -75,8 +83,10 @@ function ToggleOffRight(){
   */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Left, (data) => {
     if (data === true)
+        print("left on")
         script.bilateralToggle_left.toggleOn();
     if (data === false)
+        print("left off")
         script.bilateralToggle_left.toggleOff();
   });
 
@@ -85,8 +95,10 @@ pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Left, (data) => {
 */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Right, (data) => {
 if (data === true)
+    print("right on")
     script.bilateralToggle_right.toggleOn();
 if (data === false)
+    print("right off")
     script.bilateralToggle_right.toggleOff();
 });
 
