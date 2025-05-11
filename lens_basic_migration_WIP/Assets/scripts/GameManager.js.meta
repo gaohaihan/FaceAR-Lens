@@ -50,3 +50,5 @@
   ScriptTypes:
     -
       {}
+  SetupScript:
+    code: ""

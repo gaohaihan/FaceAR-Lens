@@ -36,3 +36,5 @@
   ScriptTypes:
     -
       {}
+  SetupScript:
+    code: ""

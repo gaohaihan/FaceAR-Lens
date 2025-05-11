@@ -4,6 +4,8 @@ const EVENTS = {
     // GENERAL EVENTS
     SetExpressionPromptText: 'SetExpressionPromptText',
     SetExpressionRepText: 'SetExpressionRepText',
+    SetExpressionSetText: 'SetExpressionSetText',
+    SetExpressionRequiredSetText:'SetExpressionRequiredSetText',
     SetExpressionRequiredRepText: 'SetExpressionRequiredRepText',
     ExpressionIndexEnabled: 'ExpressionIndexEnabled',
 

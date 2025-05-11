@@ -34,6 +34,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<FaceMaskVisual/0d1d0827-0c78-4bef-ba38-20d1d873783f>
   PrefabRemaps:
     []
@@ -201,6 +202,7 @@
     - {x: 0.797056, y: 0.155939}
     - {x: 0.921123, y: 0.254877}
   FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
   OriginalFaceIndex: 0
   UseTextureFacePosition: false
   UseOriginalTexCoords: false
@@ -652,6 +654,7 @@
     - {x: 0.797056, y: 0.155939}
     - {x: 0.921123, y: 0.254877}
   FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
   OriginalFaceIndex: 0
   UseTextureFacePosition: false
   UseOriginalTexCoords: false
@@ -992,6 +995,7 @@
     - {x: 0.797056, y: 0.155939}
     - {x: 0.921123, y: 0.254877}
   FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
   OriginalFaceIndex: 0
   UseTextureFacePosition: false
   UseOriginalTexCoords: false

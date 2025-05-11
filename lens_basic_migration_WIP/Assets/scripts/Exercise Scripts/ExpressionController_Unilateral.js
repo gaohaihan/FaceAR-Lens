@@ -110,8 +110,11 @@ function UpdateVisual(visualComponent) {
 * Set the current minimum value needed to count an expression display
 */
 function UpdateCurrentDifficulty(){
+
   var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
+
+  print("difficutly" + global.Difficulty);
 
   // cannot be detected over 1
   if (currentDifficulty > 1)

@@ -35,14 +35,8 @@
   DefaultScriptInputs:
     - sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      expressionTitleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      UiParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      startButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      prevButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      maxIndex: !<float> 2.000000
-      remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
+  SetupScript:
+    code: ""

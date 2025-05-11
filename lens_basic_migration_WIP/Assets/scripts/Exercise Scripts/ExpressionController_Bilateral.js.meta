@@ -1,27 +1,29 @@
-- !<AssetImportMetadata/8d8b161e-43d8-4c75-8e93-02e1b83bab59>
+- !<AssetImportMetadata/c7140eb1-1ec4-4df8-926b-d32188de7e9c>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 64f43090-296e-4764-8f96-15d9d36a45e5
+    JavaScriptAsset: !<reference> da3bceb1-1976-4064-8f04-9754aad539bd
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 64f43090-296e-4764-8f96-15d9d36a45e5
+  PrimaryAsset: !<reference> da3bceb1-1976-4064-8f04-9754aad539bd
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> d64db990-728e-4bd9-b41b-d228d68c0d7b
+    JavaScriptAsset: !<own> c47e3617-51b6-462b-afde-1eb2818e576e
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/d64db990-728e-4bd9-b41b-d228d68c0d7b>
+- !<ScriptAssetData/c47e3617-51b6-462b-afde-1eb2818e576e>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 519d7cdd-ba08-47e2-a32d-851cec14497d
+  ComponentUid: 45887480-5946-420a-a26e-c3a948d267b1
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable

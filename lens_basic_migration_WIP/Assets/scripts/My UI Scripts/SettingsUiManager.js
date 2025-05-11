@@ -30,7 +30,6 @@ function ToggleUI(){
  * Toggle debug UI
  */
 function ToggleDebugUI(){
-    print("1")
     script.debugUI.enabled = !script.debugUI.enabled;
 }
 /***
@@ -107,13 +106,17 @@ if (data === false)
   */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection, (data) => {
     if (data === true){
-        script.bilateralToggle_left.enableInteractable();
-        script.bilateralToggle_right.enableInteractable();
+        script.bilateralToggle_left.enabled = true;
+        script.bilateralToggle_right.enabled = true;
+        // script.bilateralToggle_left.enableInteractable();
+        // script.bilateralToggle_right.enableInteractable();
     }
 
     if (data === false){
-        script.bilateralToggle_left.disableInteractable();
-        script.bilateralToggle_right.disableInteractable();
+        // script.bilateralToggle_left.getComponent("ButtonComponent").enabled = false;
+        // script.bilateralToggle_right.getComponent("ButtonComponent").enabled = false;
+        script.bilateralToggle_left.enabled = false;
+        script.bilateralToggle_right.enabled = false;
     }
 
   });
