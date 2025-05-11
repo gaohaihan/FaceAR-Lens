@@ -114,8 +114,6 @@ function UpdateCurrentDifficulty(){
   var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
 
-  print("difficutly" + global.Difficulty);
-
   // cannot be detected over 1
   if (currentDifficulty > 1)
     currentDifficulty = 1;
