@@ -1,27 +1,29 @@
-- !<AssetImportMetadata/b437c4c0-9324-4f99-b4e4-5d00f40668d1>
+- !<AssetImportMetadata/ca82c1d9-1a10-4792-a81d-dbd4431ed3a5>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> b1d17af1-dfca-4769-ab4f-d458a5ea35a2
+    JavaScriptAsset: !<reference> e2ef61e4-b8f3-4e9b-bd1b-f8eee99e3b7f
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> b1d17af1-dfca-4769-ab4f-d458a5ea35a2
+  PrimaryAsset: !<reference> e2ef61e4-b8f3-4e9b-bd1b-f8eee99e3b7f
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> be93a91f-f036-4721-a77b-72110149cb47
+    JavaScriptAsset: !<own> c19f3eeb-d064-41d2-9a2b-5e53c393e198
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/be93a91f-f036-4721-a77b-72110149cb47>
+- !<ScriptAssetData/c19f3eeb-d064-41d2-9a2b-5e53c393e198>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 1decf6a0-fad4-4f0c-84c5-655466f67f2a
+  ComponentUid: 3866819b-5efd-4812-b31a-ddf4a8dee350
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -29,16 +31,18 @@
     displayExpression: false
     displayRepCount: false
     displayRequiredRepCount: false
+    displayRequiredSetCount: false
+    displaySetCount: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - displayExpression: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      displaySetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      displayRequiredSetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
       displayRepCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
       displayRequiredRepCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      displaySetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      displayRequiredSetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

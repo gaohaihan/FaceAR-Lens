@@ -44,6 +44,7 @@
   DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/0291069f-1758-47f2-baa4-12489bc12e5f>
   PrefabRemaps:
     []
@@ -254,6 +255,7 @@
   TeethFixAlpha: 1.000000
   MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
   LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/25b55f47-9456-4441-ba1d-975130b3d85e>
   PrefabRemaps:
     []
@@ -463,6 +465,7 @@
   TeethFixAlpha: 1.000000
   MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
   LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/277e81e3-b836-4fd9-a807-974233ddca74>
   PrefabRemaps:
     []
@@ -702,6 +705,7 @@
   TeethFixAlpha: 1.000000
   MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
   LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
 - !<RenderMeshVisual/5f3a2d72-96a9-4c28-a521-4d1db5f34100>
   PrefabRemaps:
     []
