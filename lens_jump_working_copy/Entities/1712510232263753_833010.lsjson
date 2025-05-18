@@ -1,0 +1,38 @@
+{
+    "1712510232262643:833009": {
+        "IFileManager": {
+            "path": "Files/File_1712510232262643_833009.js"
+        }
+    },
+    "1712510232263753:833010": {
+        "IResourceController": {
+            "name": "PubSubModule",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1712510232263765:833011",
+            "fileId": "1712510232262643:833009",
+            "publicId": "1712510232265275:833016",
+            "expected_hash": "90bbb7eeb45b5bd26d9b79782c75614e"
+        },
+        "IResourceManager": {
+            "uid": "1712510232263765:833011",
+            "name": "Files/File_1712510232262643_833009.js",
+            "flags": 1
+        }
+    },
+    "1712510232263765:833011": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1712510232265275:833016": {
+        "IResourceController": {
+            "public": {
+                "path": "BalanceGameScripts/PubSubModule.js",
+                "hash": "90bbb7eeb45b5bd26d9b79782c75614e"
+            }
+        }
+    }
+}
