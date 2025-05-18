@@ -463,13 +463,12 @@
   ScriptAsset: !<reference> d12a12d1-4554-45d7-90ec-81f1210afe8d
   ScriptInputsDefault:
     sliderScript: true
-    faceMesh: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      faceMesh: !<reference.RenderMeshVisual> b47805b4-25c4-4a85-ac74-43188cef3af0
   ScriptTypes:
     "":
       {}
