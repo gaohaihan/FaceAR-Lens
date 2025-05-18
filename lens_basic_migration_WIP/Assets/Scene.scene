@@ -7051,7 +7051,7 @@
     []
   Name: UI Panel
   Enabled: true
-  Layers: 1048576
+  Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
