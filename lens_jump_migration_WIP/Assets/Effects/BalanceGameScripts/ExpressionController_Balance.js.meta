@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/215358ea-9beb-43a7-8aa9-2765eed0834c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 11c5d7fe-e2ba-45a7-9b8d-4ac07631708e
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 11c5d7fe-e2ba-45a7-9b8d-4ac07631708e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> b5e1a80b-37e4-42d1-b42d-758140c7d018
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/b5e1a80b-37e4-42d1-b42d-758140c7d018>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7d375e31-bec6-4ba0-937e-383934f118b9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    completedReps: false
+    displayText: false
+    expression: false
+    expressionIndex: false
+    faceMesh: false
+    finishText: false
+    minExpressionValue: false
+    requiredReps: false
+    target: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - target: !<reference.FaceMaskVisual> 00000000-0000-0000-0000-000000000000
+      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      expression: ""
+      displayText: ""
+      finishText: ""
+      completedReps: !<float> 0.000000
+      requiredReps: !<float> 0.000000
+      minExpressionValue: !<float> 0.000000
+      expressionIndex: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
