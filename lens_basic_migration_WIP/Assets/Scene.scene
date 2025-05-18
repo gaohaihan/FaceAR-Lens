@@ -1499,8 +1499,8 @@
   Enabled: true
   Layers: 1048576
   LocalTransform:
-    position: {x: -0.077555, y: -4.513690, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -3858,13 +3858,13 @@
   Enabled: true
   ScriptAsset: !<reference> adf9ce7f-72c7-47f9-a954-69f8bbddfd4c
   ScriptInputsDefault:
-    {}
+    faceMesh: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       sliderScript: !<reference.ScriptComponent> 8747d547-aa6a-4cc8-af3b-afd3aff1a102
-      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
+      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -4732,9 +4732,6 @@
   ScriptInputsDefault:
     editDebugSettings: true
     printDebugStatements: true
-    printWarningStatements: true
-    interactable: true
-    blockTouches: true
     renderOrder: true
     orientation: true
     startValue: true
@@ -4743,41 +4740,38 @@
     stepValue: true
     counterEnabled: true
     fractionDigits: true
-    trackBar: true
     _trackBarColor: true
     eventCallbacks: true
-    callbackType: true
     onValueChangedBehaviors: true
-    onValueChangedCustomTriggers: true
-    onValueChangedFunctions: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       editDebugSettings: false
       printDebugStatements: false
-      printWarningStatements: true
-      interactable: true
-      blockTouches: true
+      printWarningStatements: false
+      interactable: false
+      blockTouches: false
       renderOrder: 0
       orientation: 0
       startValue: !<float> 0.000000
       endValue: !<float> 1.000000
-      startSliderValue: !<float> 1.000000
+      startSliderValue: 0.100000
       stepEnabled: false
       stepValue: !<float> 0.000000
       counterEnabled: false
       fractionDigits: 0
-      trackBar: false
+      trackBar: true
       _trackBarColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
       eventCallbacks: false
-      callbackType: 0
+      callbackType: 1
       onValueChangedBehaviors: !<reference.ScriptComponent[]>
         []
       onValueChangedCustomTriggers: !<string[]>
-        []
+        - ""
       onValueChangedFunctions:
-        []
+        - script: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+          function: ""
   ScriptTypes:
     "":
       {}
@@ -6552,8 +6546,8 @@
   Enabled: true
   Layers: 1048576
   LocalTransform:
-    position: {x: -0.077555, y: -4.513690, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
