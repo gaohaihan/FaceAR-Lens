@@ -1,0 +1,110 @@
+- !<AssetImportMetadata/2b043a59-aff4-426c-95e1-853df3e569d4>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 07bab915-c2ae-49a5-8c74-8f62ec46809c
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 07bab915-c2ae-49a5-8c74-8f62ec46809c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 967f3dc1-25af-41e0-b44c-7b0efec46f8f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/967f3dc1-25af-41e0-b44c-7b0efec46f8f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: eb5e3e42-8e1c-4e32-b77f-62e54b659480
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    backgroundObject: false
+    brightness: false
+    buttonObject: false
+    callbackType: false
+    colorEnd: false
+    colorParameterName: false
+    colorRecipient: false
+    colorStart: false
+    colorVisualObject: false
+    customFunctionScript: false
+    disableTouchEvents: false
+    editAdvancedOptions: false
+    editConnections: false
+    editEventCallbacks: false
+    editProperties: false
+    emptyColor: false
+    fillColor: false
+    initialPosition: false
+    interactable: false
+    onColorChangedBehaviors: false
+    onColorChangedFunctionNames: false
+    onColorChangedGlobalBehaviors: false
+    onSliderValueChangedBehaviors: false
+    onSliderValueChangedFunctionNames: false
+    onSliderValueChangedGlobalBehaviors: false
+    paletteObject: false
+    paletteType: false
+    popupObject: false
+    printDebugStatements: false
+    printWarningStatements: false
+    saturation: false
+    storeName: false
+    storeValue: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - interactable: true
+      colorRecipient: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      colorParameterName: baseColor
+      editProperties: false
+      initialPosition: 0.500000
+      paletteType: 0
+      brightness: !<float> 1.000000
+      saturation: !<float> 1.000000
+      colorStart: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      colorEnd: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      fillColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      emptyColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      editEventCallbacks: false
+      callbackType: 0
+      onColorChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onSliderValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onColorChangedGlobalBehaviors: !<string[]>
+        []
+      onSliderValueChangedGlobalBehaviors: !<string[]>
+        []
+      customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onColorChangedFunctionNames: !<string[]>
+        []
+      onSliderValueChangedFunctionNames: !<string[]>
+        []
+      editAdvancedOptions: false
+      storeValue: false
+      storeName: ""
+      printDebugStatements: false
+      printWarningStatements: true
+      disableTouchEvents: false
+      editConnections: false
+      backgroundObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      paletteObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      colorVisualObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      popupObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
