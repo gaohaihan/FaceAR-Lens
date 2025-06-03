@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/215358ea-9beb-43a7-8aa9-2765eed0834c>
+- !<AssetImportMetadata/c3fe7d6f-097c-4c09-8ba8-c874e1ca36cd>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 11c5d7fe-e2ba-45a7-9b8d-4ac07631708e
+    JavaScriptAsset: !<reference> 670023e3-56a5-4012-a52d-812a5b6d7cf9
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 11c5d7fe-e2ba-45a7-9b8d-4ac07631708e
+  PrimaryAsset: !<reference> 670023e3-56a5-4012-a52d-812a5b6d7cf9
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> b5e1a80b-37e4-42d1-b42d-758140c7d018
+    JavaScriptAsset: !<own> 83573ae6-c4f4-4b3d-a194-ddf8b5ed4358
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/b5e1a80b-37e4-42d1-b42d-758140c7d018>
+- !<ScriptAssetData/83573ae6-c4f4-4b3d-a194-ddf8b5ed4358>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -23,34 +23,20 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 7d375e31-bec6-4ba0-937e-383934f118b9
+  ComponentUid: fd11481e-b447-4b2a-8230-22b2451e01e6
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    completedReps: false
-    displayText: false
-    expression: false
-    expressionIndex: false
     faceMesh: false
-    finishText: false
-    minExpressionValue: false
-    requiredReps: false
-    target: false
+    sliderScript: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - target: !<reference.FaceMaskVisual> 00000000-0000-0000-0000-000000000000
+    - sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      expression: ""
-      displayText: ""
-      finishText: ""
-      completedReps: !<float> 0.000000
-      requiredReps: !<float> 0.000000
-      minExpressionValue: !<float> 0.000000
-      expressionIndex: !<float> 0.000000
   ScriptTypes:
     -
       {}

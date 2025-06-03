@@ -6,8 +6,6 @@
 // @input SceneObject nextButton
 // this index should include 0
 // @input number maxIndex = 2;
-// @input Asset.RemoteServiceModule remoteServiceModule
-// @input Component.ScriptComponent apiScript
 /**
  * TO CREATE A NEW EXPRESSION:
  * Start by creating a new object with two child objects: a face mask and an ExpressionController script.(Choose between a bilateral or unilateral)
@@ -23,7 +21,7 @@
  */
 
 //import module
-const Module = require("./RemoteServicesApiModule");
+//const Module = require("./RemoteServicesApiModule");
 //const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
 const pubSub = require("./PubSubModule");
@@ -31,12 +29,29 @@ var currentIndex = 0;
 script.prevButton.enabled = false;
 script.nextButton.enabled = false;
 
-script.CompleteExercise = GoToNextExercise;
-script.Next = GoToNextExercise;
-script.Previous = GoToPreviousExercise;
-script.Start = EnableFirstExercise;
-script.PauseUnPause = PauseUnPause;
-script.ReInit = ReInitBaseExpression;
+script.api.CompleteExercise = function(){
+   GoToNextExercise();
+}
+
+script.api.Next = function(){
+   GoToNextExercise();
+}
+
+script.api.Previous = function(){
+   GoToPreviousExercise();
+}
+
+script.api.Start = function(){
+   EnableFirstExercise();
+}
+
+script.api.PauseUnPause = function(){
+   PauseUnPause();
+}
+
+script.api.ReInit = function(){
+   ReInitBaseExpression();
+}
 
  /***
   * Go to the Next exercise in the sequence and en/disable the prev and next button.
@@ -115,8 +130,8 @@ function TryEnablePrev(){
    }
 }
 
-// make api request every frame
+//make api request every frame
 // var event = script.createEvent("UpdateEvent");
 // event.bind(function(eventdata){
-//     script.apiScript.makeRequest()
+//     script.apiScript.api.makeRequest()
 // });
