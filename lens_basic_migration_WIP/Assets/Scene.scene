@@ -729,6 +729,39 @@
   Components:
     - !<own> 46bf9dca-65dd-4a78-962b-f965d0ce60d7
     - !<own> 921fde65-01d4-4e0f-8b55-373872fc2853
+- !<ScreenTransform/0fd4b9d2-9ada-450e-86a6-4d17ac66cf85>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<SceneObject/11deb369-d1d1-4cfb-affe-5fd417c98bf6>
   PrefabRemaps:
     []
@@ -1061,6 +1094,58 @@
     []
   Components:
     - !<own> a72a28fb-8326-4c40-abf5-8caea669588b
+- !<ScriptComponent/1b46b2fc-c97b-4df9-ac0c-0ee53543d204>
+  PrefabRemaps:
+    []
+  Name: Slider
+  Enabled: true
+  ScriptAsset: !<reference> 9ca85c27-7b28-4752-aec5-936dca7a2bae
+  ScriptInputsDefault:
+    printWarningStatements: true
+    interactable: true
+    blockTouches: true
+    renderOrder: true
+    orientation: true
+    endValue: true
+    stepEnabled: true
+    stepValue: true
+    counterEnabled: true
+    fractionDigits: true
+    trackBar: true
+    _trackBarColor: true
+    onValueChangedBehaviors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      editDebugSettings: true
+      printDebugStatements: true
+      printWarningStatements: true
+      interactable: true
+      blockTouches: true
+      renderOrder: 0
+      orientation: 0
+      startValue: 0.100000
+      endValue: !<float> 1.000000
+      startSliderValue: !<float> 1.000000
+      stepEnabled: false
+      stepValue: !<float> 0.000000
+      counterEnabled: false
+      fractionDigits: 0
+      trackBar: false
+      _trackBarColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
+      eventCallbacks: true
+      callbackType: 3
+      onValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onValueChangedCustomTriggers: !<string[]>
+        - ""
+      onValueChangedFunctions:
+        - script: !<reference.ScriptComponent> 6537265d-159c-4891-be8c-edaa9df51b2d
+          function: SetDifficulty
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/1c3514ff-5ce5-42d9-ba0a-07ce2dd7c79c>
   PrefabRemaps:
     []
@@ -3492,6 +3577,39 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScreenTransform/579b4462-3b61-4b57-8d1e-f45d25eac9e4>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<ScreenTransform/58c7dfee-6641-47e4-b315-9084b441c46f>
   PrefabRemaps:
     []
@@ -3878,13 +3996,13 @@
   Enabled: true
   ScriptAsset: !<reference> adf9ce7f-72c7-47f9-a954-69f8bbddfd4c
   ScriptInputsDefault:
-    faceMesh: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      sliderScript: !<reference.ScriptComponent> 8747d547-aa6a-4cc8-af3b-afd3aff1a102
-      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      sliderScript: !<reference.ScriptComponent> 1b46b2fc-c97b-4df9-ac0c-0ee53543d204
+      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
   ScriptTypes:
     "":
       {}
@@ -3951,6 +4069,22 @@
   Components:
     - !<own> a8298c7c-bfaa-4e7f-b6d2-5c85759c610d
     - !<own> 8cf39788-8c78-4050-972b-f7979f6bf381
+- !<SceneObject/687c4008-017c-4ccd-8e3e-123e7d2d2447>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0fd4b9d2-9ada-450e-86a6-4d17ac66cf85
+    - !<own> 1b46b2fc-c97b-4df9-ac0c-0ee53543d204
 - !<SceneObject/6b00ee0d-7039-43b5-9001-00e85219c039>
   PrefabRemaps:
     []
@@ -4744,58 +4878,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/8747d547-aa6a-4cc8-af3b-afd3aff1a102>
-  PrefabRemaps:
-    []
-  Name: Slider
-  Enabled: true
-  ScriptAsset: !<reference> 1ac1f9e9-4227-452d-a5b1-9c41e18eb8b6
-  ScriptInputsDefault:
-    editDebugSettings: true
-    printDebugStatements: true
-    renderOrder: true
-    orientation: true
-    startValue: true
-    endValue: true
-    stepEnabled: true
-    stepValue: true
-    counterEnabled: true
-    fractionDigits: true
-    _trackBarColor: true
-    eventCallbacks: true
-    onValueChangedBehaviors: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      editDebugSettings: false
-      printDebugStatements: false
-      printWarningStatements: false
-      interactable: false
-      blockTouches: false
-      renderOrder: 0
-      orientation: 0
-      startValue: !<float> 0.000000
-      endValue: !<float> 1.000000
-      startSliderValue: 0.100000
-      stepEnabled: false
-      stepValue: !<float> 0.000000
-      counterEnabled: false
-      fractionDigits: 0
-      trackBar: true
-      _trackBarColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
-      eventCallbacks: false
-      callbackType: 1
-      onValueChangedBehaviors: !<reference.ScriptComponent[]>
-        []
-      onValueChangedCustomTriggers: !<string[]>
-        - ""
-      onValueChangedFunctions:
-        - script: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-          function: ""
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/880d4eb4-511e-45b0-a943-271c1fc80453>
   PrefabRemaps:
     []
@@ -4862,21 +4944,6 @@
     - !<own> 5166316f-87df-4389-bb44-b55c42a49f2d
   Components:
     - !<own> aab6c303-4f6b-46b2-9acf-fd14d780467e
-- !<SceneObject/8a560cd2-be60-49de-bc84-78b698be175e>
-  PrefabRemaps:
-    []
-  Name: Slider
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 8747d547-aa6a-4cc8-af3b-afd3aff1a102
 - !<ScreenTransform/8b44f055-a217-4000-9a9b-44ee9473c2b0>
   PrefabRemaps:
     []
@@ -5868,8 +5935,8 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
+    - !<own> d157fa1e-9e5b-4a0a-963b-053a7b05806c
     - !<own> b0f8a996-af0c-48e3-af6a-0ea547bd601b
-    - !<own> 8a560cd2-be60-49de-bc84-78b698be175e
   Components:
     - !<own> 37a3135a-80a7-465d-aff8-c58ba8acd0d3
 - !<SceneObject/9de9bc44-91e4-4d52-ac9d-d6ba02c609ce>
@@ -6720,6 +6787,13 @@
     []
   Components:
     - !<own> a9a5ec2c-f397-4ed5-a9fb-7bafb16ebfb7
+- !<ScreenRegionComponent/b2114655-23ad-42ec-9929-926f5c5a1ee4>
+  PrefabRemaps:
+    []
+  Name: Screen Region
+  Enabled: true
+  ScreenRegionType: FullFrame
+  ResizeWithKeyboard: false
 - !<SceneObject/b2e31ae4-4e20-4e2a-86c3-d87216737a30>
   PrefabRemaps:
     []
@@ -7530,6 +7604,22 @@
   Components:
     - !<own> 4e33b1da-5d56-47dc-bac9-6c3efd2cd967
     - !<own> b5ec73ad-a0e5-459a-9146-44da389bb7f1
+- !<SceneObject/d157fa1e-9e5b-4a0a-963b-053a7b05806c>
+  PrefabRemaps:
+    []
+  Name: Full Frame Region
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -0.135400, z: 80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 687c4008-017c-4ccd-8e3e-123e7d2d2447
+  Components:
+    - !<own> 579b4462-3b61-4b57-8d1e-f45d25eac9e4
+    - !<own> b2114655-23ad-42ec-9929-926f5c5a1ee4
 - !<ScreenTransform/d25a0e7f-50ae-4ac3-922a-fac3be0ca335>
   PrefabRemaps:
     []

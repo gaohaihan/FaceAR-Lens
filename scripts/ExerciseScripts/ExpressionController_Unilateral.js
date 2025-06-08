@@ -38,6 +38,7 @@ function Initialize(){
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
+   print("difficulty" +global.Difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
@@ -113,6 +114,8 @@ function UpdateCurrentDifficulty(){
 
   var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
+  print("Difficulty" + difficulty)
+  print("minDifficulty" + currentDifficulty)
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
