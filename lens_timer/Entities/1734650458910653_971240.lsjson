@@ -1,0 +1,38 @@
+{
+    "1734650458907311:971239": {
+        "IFileManager": {
+            "path": "Files/File_1734650458907311_971239.js"
+        }
+    },
+    "1734650458910653:971240": {
+        "IResourceController": {
+            "name": "Continue Script",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1734650458910688:971241",
+            "fileId": "1734650458907311:971239",
+            "publicId": "1734650458914047:971246",
+            "expected_hash": "03d8ee3dd67343b6c044d0ec7eff02f8"
+        },
+        "IResourceManager": {
+            "uid": "1734650458910688:971241",
+            "name": "Files/File_1734650458907311_971239.js",
+            "flags": 1
+        }
+    },
+    "1734650458910688:971241": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1734650458914047:971246": {
+        "IResourceController": {
+            "public": {
+                "path": "Continue Script.js",
+                "hash": "03d8ee3dd67343b6c044d0ec7eff02f8"
+            }
+        }
+    }
+}

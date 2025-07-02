@@ -1,0 +1,42 @@
+{
+    "1734650330850177:938397": {
+        "IFileManager": {
+            "path": "Files/File_1734650330850177_938397.webp"
+        }
+    },
+    "1734650330865743:938398": {
+        "IResourceController": {
+            "name": "continue",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1734650330872523:938399",
+            "fileId": "1734650330850177:938397",
+            "originalId": "1734650330873358:938404",
+            "publicId": "1734650330897158:938405",
+            "expected_hash": "7e692df11116e54f0b46a7ca6fd23b42",
+            "additional": {
+                "originHash": "7e692df11116e54f0b46a7ca6fd23b42"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1734650330872523:938399",
+            "name": "Files/File_1734650330850177_938397.webp",
+            "flags": 1
+        }
+    },
+    "1734650330873358:938404": {
+        "IFileManager": {
+            "path": "Files/File_1734650330873358_938404.webp"
+        }
+    },
+    "1734650330897158:938405": {
+        "IResourceController": {
+            "public": {
+                "path": "continue.webp",
+                "hash": "7e692df11116e54f0b46a7ca6fd23b42"
+            }
+        }
+    }
+}

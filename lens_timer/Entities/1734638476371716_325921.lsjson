@@ -1,0 +1,38 @@
+{
+    "1734638476367777:325920": {
+        "IFileManager": {
+            "path": "Files/File_1734638476367777_325920.js"
+        }
+    },
+    "1734638476371716:325921": {
+        "IResourceController": {
+            "name": "Select Exercises Script",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1734638476371752:325922",
+            "fileId": "1734638476367777:325920",
+            "publicId": "1734638476384187:325927",
+            "expected_hash": "cfce8f1434fd36ad14c680626592b5f3"
+        },
+        "IResourceManager": {
+            "uid": "1734638476371752:325922",
+            "name": "Files/File_1734638476367777_325920.js",
+            "flags": 1
+        }
+    },
+    "1734638476371752:325922": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1734638476384187:325927": {
+        "IResourceController": {
+            "public": {
+                "path": "Select Exercises Script.js",
+                "hash": "cfce8f1434fd36ad14c680626592b5f3"
+            }
+        }
+    }
+}

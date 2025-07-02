@@ -22,6 +22,7 @@ var currentDifficulty = 0
 var BaseExpressionValue = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
+global.timerUpdate = 0;
 
 /***
 * Called once when onAwake
@@ -93,7 +94,11 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
-  CountReps();
+  if(global.isTimer == true) {
+    HoldExpression();
+  } else {
+    CountReps();
+  }  
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
 }
@@ -156,6 +161,40 @@ function CountReps() {
     }
 }
 
+function HoldExpression() {
+
+  // stop counting when hit required reps
+  if (global.complete == 1){
+    Finished();
+    return;
+  }
+    // Update rep count text
+    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
+
+    var rawWeight = GetRawExpressionWeight();
+     //print("adjusted " + adjustedWeight)
+    if (rawWeight > currentDifficulty && midRep !== true){
+        midRep = true;
+        script.completedReps += 1
+        global.timerUpdate = 1;
+        if (script.completedReps >= global.requiredReps){
+            script.completedSets += 1;
+            script.completedReps = 0;
+        }
+        //insert timer here somehow
+        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
+        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
+         }
+
+     var rawWeight = GetRawExpressionWeight();
+     // print("raw " + rawWeight)
+    if (rawWeight <= currentDifficulty && midRep === true){
+        midRep = false;
+        global.timerUpdate = 2;
+
+     }
+ }
 /***
 * Disable bilateral UI since it is not applicable to this exercise
 */
@@ -174,11 +213,16 @@ function GetRawExpressionWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+  if(global.isTimer == true) {
+         if (global.complete == 1){
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
+    } else {
+         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+        }
+    } 
 }
-
 /**
  * Display value for debugging
  */
