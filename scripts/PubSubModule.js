@@ -29,7 +29,7 @@ const EVENTS = {
     SetBilateralDetection_Right: ' SetBilateralDetection_Right',
     SetBilateralDetection: 'SetBilateralDetection',
 
-    // EVENTS FOR BALANCE GAME
+    // EVENTS FOR GAME
     SetPlatformRotation: "SetPlatformRotation",
 
 };

@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/bf990225-eef7-4b01-b85e-4e8d8e7da7e3>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 39795ffb-edd6-4c11-8e5d-01669812c2dc
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 39795ffb-edd6-4c11-8e5d-01669812c2dc
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> e4941b05-3184-4177-b815-90ccf4e87e6a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/e4941b05-3184-4177-b815-90ccf4e87e6a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 26c59fe5-a39f-44c3-ad27-583f45e96b3b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    maxRot: false
+    minRot: false
+    moveSpeed: false
+    platform: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - platform: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      moveSpeed: !<float> 0.000000
+      minRot: !<float> 0.000000
+      maxRot: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
