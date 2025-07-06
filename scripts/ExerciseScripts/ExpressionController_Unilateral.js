@@ -27,10 +27,21 @@ global.timerUpdate = 0;
 /***
 * Called once when onAwake
 */
- function InitializeUserBaseExpressionValue(){
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
+/***
+* Called once when onAwake
+*/
+function InitializeUserBaseExpressionValue() {
+  
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
   StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
+
+   function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 }
 
 function Initialize(){
@@ -101,6 +112,7 @@ function OnUpdate(){
   }  
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
+  DetermineJump();
 }
 
 /***
@@ -234,6 +246,16 @@ function DisplayDebug(weight){
 
 }
 
+/**
+ * Calculate jump amount based on sensitivity
+ * Send jump to sphere controller 
+ */
+function DetermineJump(){
+  var weight = GetRawExpressionWeight();
+  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight); 
+}
+
+
 /*SUBSCRIPTIONS*/
 /***
 * Enable this script/exercise if the parameter matched the expressionIndex value.
@@ -263,16 +285,11 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
 /**
  * Pause exercise and reinit base expression value.
  */
+
+/**
+ * Pause exercise and reinit base expression value.
+ */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
-  pubSub.publish(pubSub.EVENTS.Pause);
-
-  StartDelay(3, functionsToCallAfterDelay);
-  GetBaseExpressionValue();
-
-  function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
+  InitializeUserBaseExpressionValue();
 });
 
