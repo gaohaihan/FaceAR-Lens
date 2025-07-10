@@ -31,7 +31,7 @@ global.timerUpdate = 0;
 * Called once when onAwake
 */
 function InitializeUserBaseExpressionValue() {
-  
+
   var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
 
   pubSub.publish(pubSub.EVENTS.Pause);
@@ -233,7 +233,7 @@ function Finished(){
          if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
         }
-    } 
+    }
 }
 /**
  * Display value for debugging
@@ -248,11 +248,12 @@ function DisplayDebug(weight){
 
 /**
  * Calculate jump amount based on sensitivity
- * Send jump to sphere controller 
+ * Send jump to sphere controller
  */
 function DetermineJump(){
   var weight = GetRawExpressionWeight();
-  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight); 
+   //  Listened to by sphereController
+  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight);
 }
 
 
