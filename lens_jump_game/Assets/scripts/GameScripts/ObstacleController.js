@@ -16,15 +16,6 @@ filter.onlyColliders = [script.ball.getComponent("Physics.ColliderComponent")];
 
 function Start(){
   obstacle = createObjectFromPrefab();
-  print("created");
-  body = obstacle.getComponent("Physics.BodyComponent");
-
-  colliding = false
-  collider = obstacle.getComponent("Physics.ColliderComponent");
-  collider.overlapFilter = filter;
-
-  body.dynamic = false;
-  SetColliderFilter();
 }
 
 /***
@@ -41,20 +32,9 @@ function SetEvents() {
 */
 function OnUpdate(){
   print("Pause" + global.Pause)
-  if(global.Pause == false)
+  if(global.Pause == false){
     Move();
-}
-
-function SetColliderFilter(){
-  if(collider){
-    collider.onOverlapEnter.add(function (e) {
-      print("overlap")
-      colliding = true;
-    })
-
-    collider.onOverlapExit.add(function (e) {
-      colliding = false;
-  })
+    DestroyAndSpawn()
   }
 }
 
@@ -67,6 +47,17 @@ function Move(amount){
   }
 }
 
+function DestroyAndSpawn(){
+ if (obstacle != undefined){
+    var pos = obstacle.getTransform().getWorldPosition();
+    if(pos.x < -30.0){
+      obstacle.destroy();
+      createObjectFromPrefab();
+    }
+
+ }
+}
+
 function createObjectFromPrefab() {
   if (script.prefab) {
     print("SPAWN")
@@ -74,9 +65,30 @@ function createObjectFromPrefab() {
     obstacle = script.prefab.instantiate(script.getSceneObject());
     obstacle.getTransform().setWorldPosition(pos);
 
+    body = obstacle.getComponent("Physics.BodyComponent");
+    body.dynamic = false;
+
+    colliding = false
+    collider = obstacle.getComponent("Physics.ColliderComponent");
+    collider.overlapFilter = filter;
+    SetColliderFilter();
+
     return obstacle;
   } else {
     return undefined;
+  }
+}
+
+function SetColliderFilter(){
+  if(collider){
+    collider.onOverlapEnter.add(function (e) {
+      print("overlap")
+      colliding = true;
+    })
+
+    collider.onOverlapExit.add(function (e) {
+      colliding = false;
+  })
   }
 }
 

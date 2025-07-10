@@ -350,6 +350,24 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/0d2ef3e1-dbca-48f6-a3c6-98533b3914df>
+  PrefabRemaps:
+    []
+  Name: ObstacleController
+  Enabled: true
+  ScriptAsset: !<reference> 7cf6de78-7916-4df6-936e-a7f49453f9bf
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      prefab: !<reference.ObjectPrefab> 9a922dd4-034c-416e-a641-3cfe2904d5f9
+      moveSpeed: 0.100000
+      ball: !<reference.SceneObject> 0ed42dcd-9525-4684-933b-efcbef802330
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/0db2aa79-7f0f-4335-9301-e025e75782fb>
   PrefabRemaps:
     []
@@ -2452,6 +2470,21 @@
     bottom: -0.500000
     right: 1.150000
     top: 0.500000
+- !<SceneObject/3fa5f05d-d931-442e-864e-472948b7f9f6>
+  PrefabRemaps:
+    []
+  Name: obstacle controller
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 3.000000, y: -3.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0d2ef3e1-dbca-48f6-a3c6-98533b3914df
 - !<SceneObject/40260e34-e35f-4942-8c17-b2308d452181>
   PrefabRemaps:
     []
@@ -3765,7 +3798,7 @@
   Children:
     - !<own> 0ed42dcd-9525-4684-933b-efcbef802330
     - !<own> db2b98d4-56c7-4928-a4e2-2a43e6cf23b3
-    - !<own> 6bcc82f4-b357-4974-a727-cc41121283ac
+    - !<own> 3fa5f05d-d931-442e-864e-472948b7f9f6
   Components:
     - !<own> ad5fefac-2202-4d05-9376-3538de182146
 - !<ScreenTransform/5bf16f2a-3fd0-45d3-8a9a-6105b79d05cf>
@@ -4183,24 +4216,6 @@
     []
   Components:
     - !<own> ea01cc7a-e4b3-4390-8606-488633746622
-- !<SceneObject/6bcc82f4-b357-4974-a727-cc41121283ac>
-  PrefabRemaps:
-    []
-  Name: obstacle
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 20.000000, y: -3.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 0.200000, y: 0.200000, z: 0.100000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 779c2b9d-ac41-4cf8-bf55-91069e76b39a
-    - !<own> c17b378b-66ae-477b-a88f-cfc97593e549
-    - !<own> e82dab3c-c06f-46e2-974b-9cebf974187c
-    - !<own> 7251d679-5b6d-476b-ad81-d78a76bbf03f
 - !<SceneObject/6d10217e-0ece-41a7-92b3-9c2dad483ea0>
   PrefabRemaps:
     []
@@ -4373,24 +4388,6 @@
     bottom: -0.000000
     right: 0.000000
     top: -0.000000
-- !<ScriptComponent/7251d679-5b6d-476b-ad81-d78a76bbf03f>
-  PrefabRemaps:
-    []
-  Name: ObstacleController
-  Enabled: true
-  ScriptAsset: !<reference> 7cf6de78-7916-4df6-936e-a7f49453f9bf
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      obstacle: !<reference.SceneObject> 6bcc82f4-b357-4974-a727-cc41121283ac
-      moveSpeed: 0.100000
-      ball: !<reference.SceneObject> 0ed42dcd-9525-4684-933b-efcbef802330
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/727d88be-d1b7-4ec1-a733-e72696572dba>
   PrefabRemaps:
     []
@@ -4506,29 +4503,6 @@
   Components:
     - !<own> 5a6b1513-f4f4-4cdc-8f0c-06b36dab43fc
     - !<own> 936d4132-76f7-4e32-a04b-3cb775427e2c
-- !<BodyComponent/779c2b9d-ac41-4cf8-bf55-91069e76b39a>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Box>
-    FitVisual: false
-    Size: {x: 15.000000, y: 15.000000, z: 500.000000}
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: false
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
 - !<SceneObject/7813582e-1304-4444-8c28-c21a7033001a>
   PrefabRemaps:
     []
@@ -7413,24 +7387,6 @@
   ScriptTypes:
     "":
       {}
-- !<ColliderComponent/c17b378b-66ae-477b-a88f-cfc97593e549>
-  PrefabRemaps:
-    []
-  Name: Physics Collider
-  Enabled: true
-  Shape: !<Box>
-    FitVisual: true
-    Size: {x: 15.000000, y: 15.000000, z: 500.000000}
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
 - !<SceneObject/c18e2d8e-dc18-4427-8ea1-6a909a9aac2f>
   PrefabRemaps:
     []
@@ -8337,26 +8293,6 @@
   Components:
     - !<own> e080f6c0-1f7d-4fbe-bdba-730e9743d32e
     - !<own> ebadff9d-1234-44d3-8018-00242c940827
-- !<RenderMeshVisual/e82dab3c-c06f-46e2-974b-9cebf974187c>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 81ed294b-bda2-4cb1-bafd-0d2d30e525b3
-  Mesh: !<reference> 243f278f-5d14-449d-827a-c24dbb779f25
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/e928a3f3-bf70-40df-9b73-508a7ed05b96>
   PrefabRemaps:
     []

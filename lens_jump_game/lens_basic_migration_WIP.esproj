@@ -33,6 +33,7 @@ metaInfo:
   lensClientCompatibilities:
     - Mobile
     - Web
+    - CameraKit
   platformBundlesEnabled: false
   iconHash: ""
   videoPreviewHash: ""
