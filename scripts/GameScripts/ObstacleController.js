@@ -1,32 +1,31 @@
 // -----JS CODE-----
-// @input SceneObject obstacle
+// @input Asset.ObjectPrefab prefab
 // @input float moveSpeed
 // @input SceneObject ball
 
 const pubSub = require("../PubSubModule");
-var body = script.obstacle.getComponent("Physics.BodyComponent");
-var transform = script.obstacle.getTransform();
+var body;
 var colliding = false
-var collider = script.obstacle.getComponent("Physics.ColliderComponent");
+var collider;
 
 // Filter to only detect collisions with ball.
 var filter = Physics.Filter.create();
 filter.skipLayers = LayerSet.fromNumber(101);
 filter.onlyColliders = [script.ball.getComponent("Physics.ColliderComponent")];
-collider.overlapFilter = filter;
+
 
 function Start(){
+  obstacle = createObjectFromPrefab();
+  print("created");
+  body = obstacle.getComponent("Physics.BodyComponent");
+
+  colliding = false
+  collider = obstacle.getComponent("Physics.ColliderComponent");
+  collider.overlapFilter = filter;
+
   body.dynamic = false;
+  SetColliderFilter();
 }
-
-collider.onOverlapEnter.add(function (e) {
-  print("overlap")
-  colliding = true;
-})
-
-collider.onOverlapExit.add(function (e) {
-  colliding = false;
-})
 
 /***
 * Set functions to be called every frame
@@ -35,6 +34,7 @@ function SetEvents() {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
 }
+
 
 /***
 * Things to be called every frame
@@ -45,16 +45,42 @@ function OnUpdate(){
     Move();
 }
 
+function SetColliderFilter(){
+  if(collider){
+    collider.onOverlapEnter.add(function (e) {
+      print("overlap")
+      colliding = true;
+    })
+
+    collider.onOverlapExit.add(function (e) {
+      colliding = false;
+  })
+  }
+}
+
 function Move(amount){
-  if(colliding === false)
+  if(colliding === false && obstacle != undefined)
   {
-    var pos = transform.getLocalPosition();
+    var pos = obstacle.getTransform().getLocalPosition();
     pos.x -= script.moveSpeed;
-    transform.setLocalPosition(pos);
+    obstacle.getTransform().setLocalPosition(pos);
+  }
+}
+
+function createObjectFromPrefab() {
+  if (script.prefab) {
+    print("SPAWN")
+    var pos = script.getTransform().getWorldPosition();
+    obstacle = script.prefab.instantiate(script.getSceneObject());
+    obstacle.getTransform().setWorldPosition(pos);
+
+    return obstacle;
+  } else {
+    return undefined;
   }
 }
 
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
-  SetEvents();
   Start();
+  SetEvents();
 });

@@ -30,13 +30,13 @@
   ScriptInputsHidden:
     ball: false
     moveSpeed: false
-    obstacle: false
+    prefab: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - obstacle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - prefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       moveSpeed: !<float> 0.000000
       ball: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:

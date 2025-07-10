@@ -72,9 +72,9 @@ function BindFunctionToRunEveryUpdate() {
 function GetBaseExpressionValue() {
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   leftBaseExpressionValue = GetRawLeftWeight();
-  print("test left" + leftBaseExpressionValue.toString())
+  //print("test left" + leftBaseExpressionValue.toString())
   rightBaseExpressionValue = GetRawRightWeight();
-  print("test right" + rightBaseExpressionValue.toString())
+  //print("test right" + rightBaseExpressionValue.toString())
 }
 
 /***

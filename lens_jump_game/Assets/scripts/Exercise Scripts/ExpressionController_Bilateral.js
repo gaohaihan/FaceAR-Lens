@@ -31,7 +31,7 @@ script.target.enabled = false;
 * Called once when onAwake
 */
 function InitializeUserBaseExpressionValue() {
-  
+
   var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
 
   pubSub.publish(pubSub.EVENTS.Pause);
@@ -72,9 +72,9 @@ function BindFunctionToRunEveryUpdate() {
 function GetBaseExpressionValue() {
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   leftBaseExpressionValue = GetRawLeftWeight();
-  print("test left" + leftBaseExpressionValue.toString())
+  //print("test left" + leftBaseExpressionValue.toString())
   rightBaseExpressionValue = GetRawRightWeight();
-  print("test right" + rightBaseExpressionValue.toString())
+  //print("test right" + rightBaseExpressionValue.toString())
 }
 
 /***
@@ -182,7 +182,6 @@ function CountReps() {
     }
 
     var rawWeight = GetRawExpressionWeight();
-    //print("raw " + rawWeight)
     if (rawWeight <= currentDifficulty && midRep === true){
       midRep = false;
     }
@@ -268,11 +267,12 @@ function DisplayDebug(leftWeight, rightWeight, combinedWeight){
 
 /**
  * Calculate jump amount based on sensitivity
- * Send jump to sphere controller 
+ * Send jump to sphere controller
  */
 function DetermineJump(){
   var weight = GetRawExpressionWeight();
-  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight); 
+  //  Listened to by sphereController
+  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight);
 }
 
 
