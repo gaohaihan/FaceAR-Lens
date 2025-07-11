@@ -60,7 +60,6 @@ function DestroyAndSpawn(){
 
 function createObjectFromPrefab() {
   if (script.prefab) {
-    print("SPAWN")
     var pos = script.getTransform().getWorldPosition();
     obstacle = script.prefab.instantiate(script.getSceneObject());
     obstacle.getTransform().setWorldPosition(pos);

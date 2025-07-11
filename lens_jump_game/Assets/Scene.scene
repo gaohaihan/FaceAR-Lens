@@ -924,7 +924,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "sets:"
+  Text: "jumps:"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2371,7 +2371,7 @@
   PrefabRemaps:
     []
   Name: RepCount
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 10.000000, y: 3.646000, z: -40.000000}
@@ -2477,7 +2477,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 3.000000, y: -3.000000, z: 0.000000}
+    position: {x: 30.000000, y: -3.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -2741,9 +2741,9 @@
   ForceBasic: true
   Anchor:
     left: -1.000000
-    bottom: -0.532200
+    bottom: -1.000000
     right: 1.000000
-    top: 0.803000
+    top: 1.000000
   Offset:
     left: 0.000000
     bottom: 0.000000
@@ -4699,7 +4699,7 @@
   PrefabRemaps:
     []
   Name: Text 2
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 3.000000, y: 0.000000, z: 0.000000}
@@ -5021,7 +5021,7 @@
   PrefabRemaps:
     []
   Name: Text 3
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 2.000000, y: 0.000000, z: 0.000000}

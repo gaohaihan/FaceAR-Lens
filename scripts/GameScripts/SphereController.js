@@ -36,8 +36,6 @@ function SetEvents() {
 
   // Jump if raw expression weight is greater than current difficulty thresh hold.
 function Jump(rawWeight){
-
-
   currentDifficulty = GetDifficulty();
   var jumpForce = 0; 
   if(rawWeight > currentDifficulty)
