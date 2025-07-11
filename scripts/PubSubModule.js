@@ -31,7 +31,8 @@ const EVENTS = {
 
     // EVENTS FOR GAME
     SetPlatformRotation: "SetPlatformRotation",
-    SetJumpAmount:"SetJumpAmount"
+    SetJumpAmount:"SetJumpAmount",
+    SetJumpCountText: 'SetJumpCountText',
 
 };
 

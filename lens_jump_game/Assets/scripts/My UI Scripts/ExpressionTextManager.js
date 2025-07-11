@@ -4,12 +4,14 @@
 // @input Component.Text displayRequiredRepCount
 // @input Component.Text displaySetCount
 // @input Component.Text displayRequiredSetCount
+// @input Component.Text displayJumpCount
 
 const pubSub = require("../PubSubModule");
 
 // PROMPT
 function SetPromptText(text){
-    script.displayExpression.text = text;
+    if (script.displayExpression != undefined)
+        script.displayExpression.text = text;
 }
 
 pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
@@ -20,7 +22,8 @@ pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
 
  // SETS
  function SetSetsText(text){
-    script.displaySetCount.text = text;
+   if (script.displaySetCount != undefined)
+        script.displaySetCount.text = text;
 }
 
  pubSub.subscribe(pubSub.EVENTS.SetExpressionSetText,
@@ -30,7 +33,8 @@ pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
  );
 
  function SetRequiredSetsText(text){
-    script.displayRequiredSetCount.text = text;
+     if (script.displayRequiredSetCount != undefined)
+        script.displayRequiredSetCount.text = text;
 }
 
  pubSub.subscribe(pubSub.EVENTS.SetExpressionRequiredSetText,
@@ -42,7 +46,8 @@ pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
 
  // REPS
  function SetRepText(text){
-    script.displayRepCount.text = text;
+    if (script.displayRepCount != undefined)
+        script.displayRepCount.text = text;
 }
 
  pubSub.subscribe(pubSub.EVENTS.SetExpressionRepText,
@@ -52,11 +57,24 @@ pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
  );
 
  function SetRequiredRepText(text){
-    script.displayRequiredRepCount.text = text;
+    if (script.displayRequiredRepCount != undefined)
+        script.displayRequiredRepCount.text = text;
 }
 
  pubSub.subscribe(pubSub.EVENTS.SetExpressionRequiredRepText,
     data => {
         SetRequiredRepText(data);
+      }
+ );
+
+ // Jumps
+function SetJumpText(text){
+    if (script.displayJumpCount != undefined)
+        script.displayJumpCount.text = text;
+}
+
+pubSub.subscribe(pubSub.EVENTS.SetJumpCountText,
+    data => {
+        SetJumpText(data);
       }
  );

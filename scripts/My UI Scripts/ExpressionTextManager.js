@@ -4,6 +4,7 @@
 // @input Component.Text displayRequiredRepCount
 // @input Component.Text displaySetCount
 // @input Component.Text displayRequiredSetCount
+// @input Component.Text displayJumpCount
 
 const pubSub = require("../PubSubModule");
 
@@ -63,5 +64,17 @@ pubSub.subscribe(pubSub.EVENTS.SetExpressionPromptText,
  pubSub.subscribe(pubSub.EVENTS.SetExpressionRequiredRepText,
     data => {
         SetRequiredRepText(data);
+      }
+ );
+
+ // Jumps
+function SetJumpText(text){
+    if (script.displayJumpCount != undefined)
+        script.displayJumpCount.text = text;
+}
+
+pubSub.subscribe(pubSub.EVENTS.SetJumpCountText,
+    data => {
+        SetJumpText(data);
       }
  );

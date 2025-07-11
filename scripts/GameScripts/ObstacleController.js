@@ -7,6 +7,8 @@ const pubSub = require("../PubSubModule");
 var body;
 var colliding = false
 var collider;
+var counted = false;
+var count = 0;
 
 // Filter to only detect collisions with ball.
 var filter = Physics.Filter.create();
@@ -34,8 +36,9 @@ function OnUpdate(){
   print("Pause" + global.Pause)
   if(global.Pause == false){
     Move();
-    DestroyAndSpawn()
-  }
+    DestroyAndSpawn();
+    CountJump();
+  };
 }
 
 function Move(amount){
@@ -58,6 +61,19 @@ function DestroyAndSpawn(){
  }
 }
 
+
+function CountJump(){
+ if (obstacle != undefined){
+    var pos = obstacle.getTransform().getWorldPosition();
+    if(pos.x < 0 && counted == false ){
+      counted = true;
+      count += 1;
+        pubSub.publish(pubSub.EVENTS.SetJumpCountText,  count.toString() );
+    }
+
+ }
+}
+
 function createObjectFromPrefab() {
   if (script.prefab) {
     var pos = script.getTransform().getWorldPosition();
@@ -71,6 +87,8 @@ function createObjectFromPrefab() {
     collider = obstacle.getComponent("Physics.ColliderComponent");
     collider.overlapFilter = filter;
     SetColliderFilter();
+
+    counted = false;
 
     return obstacle;
   } else {

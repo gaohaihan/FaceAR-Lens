@@ -29,6 +29,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     displayExpression: false
+    displayJumpCount: false
     displayRepCount: false
     displayRequiredRepCount: false
     displayRequiredSetCount: false
@@ -43,6 +44,7 @@
       displayRequiredRepCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
       displaySetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
       displayRequiredSetCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      displayJumpCount: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
