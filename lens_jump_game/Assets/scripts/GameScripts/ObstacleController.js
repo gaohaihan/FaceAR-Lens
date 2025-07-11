@@ -4,6 +4,7 @@
 // @input SceneObject ball
 
 const pubSub = require("../PubSubModule");
+var obstacle;
 var body;
 var colliding = false
 var collider;
@@ -110,6 +111,9 @@ function SetColliderFilter(){
 }
 
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
+  if (obstacle != undefined){
+    obstacle.destroy();
+  }
   Start();
   SetEvents();
 });
