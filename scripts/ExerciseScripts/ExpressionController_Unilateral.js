@@ -46,11 +46,12 @@ function InitializeUserBaseExpressionValue() {
 
 function Initialize(){
    // Set initial values
-   currentDifficulty = BaseExpressionValue + 0.05;
+   currentDifficulty = BaseExpressionValue + 0.01;
+   
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
-   //print("difficulty" +global.Difficulty);
+   print("difficulty" + difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
@@ -129,7 +130,7 @@ function UpdateVisual(visualComponent) {
 */
 function UpdateCurrentDifficulty(){
 
-  var minDifficulty = BaseExpressionValue + 0.05
+  var minDifficulty = BaseExpressionValue + 0.01
   currentDifficulty = minDifficulty / ( 1 - difficulty);
   //print("Difficulty" + difficulty)
   //print("minDifficulty" + currentDifficulty)

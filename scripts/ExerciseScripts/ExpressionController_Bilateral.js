@@ -46,7 +46,7 @@ function InitializeUserBaseExpressionValue() {
 
 function Initialize(){
   // Set initial values
-  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
+  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.01;
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
@@ -136,11 +136,11 @@ function UpdateCurrentDifficulty(){
   }
 
   if (!isRightDetectionOn){
-    currentMinDifficulty = rightBaseExpressionValue + 0.05
+    currentMinDifficulty = rightBaseExpressionValue + 0.01
   }
 
   if (!isLeftDetectionOn){
-    currentMinDifficulty = leftBaseExpressionValue + 0.05
+    currentMinDifficulty = leftBaseExpressionValue + 0.01
   }
 
   currentDifficulty = currentMinDifficulty / ( 1 - difficulty);
