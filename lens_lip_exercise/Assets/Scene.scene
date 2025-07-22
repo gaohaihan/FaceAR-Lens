@@ -863,7 +863,7 @@
       faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
       expressionRight: MouthSmileRight
       expressionLeft: MouthSmileLeft
-      displayText: Smiel
+      displayText: smile
       finishText: "You're Finished! "
       completedSets: !<float> 0.000000
       completedReps: !<float> 0.000000
@@ -3245,7 +3245,7 @@
       startButton: !<reference.SceneObject> 31805c08-1738-409a-a0e1-f272d9610b83
       prevButton: !<reference.SceneObject> 55eab32c-7dff-4183-8561-7933317c9351
       nextButton: !<reference.SceneObject> 17ec285a-58dd-49eb-b7c8-d2c22ab785b4
-      maxIndex: !<float> 3.000000
+      maxIndex: !<float> 4.000000
       remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
       apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
