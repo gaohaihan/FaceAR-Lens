@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> cfa14d5a-59df-4a40-a7d3-09d2ca7365d1
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> 69f229b2-d3b0-4ba5-8ec8-d056a3e7775f
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/69f229b2-d3b0-4ba5-8ec8-d056a3e7775f>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -29,12 +25,10 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     DifficultyText: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - DifficultyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    -
-      {}
+    - {}
