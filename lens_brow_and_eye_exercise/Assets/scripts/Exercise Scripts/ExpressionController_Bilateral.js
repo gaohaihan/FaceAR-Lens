@@ -52,6 +52,9 @@ function Initialize(){
   difficulty = global.Difficulty;
   SetBilateralDetection();
 
+  print("init currentDifficulty : " + currentDifficulty)
+  print("init difficulty : " + difficulty)
+
   // Display prompt text
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
@@ -72,9 +75,9 @@ function BindFunctionToRunEveryUpdate() {
 function GetBaseExpressionValue() {
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   leftBaseExpressionValue = GetRawLeftWeight();
-  //print("test left" + leftBaseExpressionValue.toString())
+  print("left init" + leftBaseExpressionValue.toString())
   rightBaseExpressionValue = GetRawRightWeight();
-  //print("test right" + rightBaseExpressionValue.toString())
+  print("right init" + rightBaseExpressionValue.toString())
 }
 
 /***
@@ -132,7 +135,7 @@ function UpdateCurrentDifficulty(){
   var currentMinDifficulty;
  
   if (isLeftDetectionOn && isRightDetectionOn ){
-    currentMinDifficulty = ((leftBaseExpressionValue + rightBaseExpressionValue)/2) + 0.05
+    currentMinDifficulty = ((leftBaseExpressionValue + rightBaseExpressionValue)/2) + 0.01
   }
 
   if (!isRightDetectionOn){
@@ -144,6 +147,9 @@ function UpdateCurrentDifficulty(){
   }
 
   currentDifficulty = currentMinDifficulty / ( 1 - difficulty);
+
+  print("update currentDifficulty : " + currentDifficulty)
+  print("update difficulty : " + difficulty)
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
@@ -159,7 +165,7 @@ function CountReps() {
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -196,9 +202,6 @@ function SetBilateralDetection() {
     isLeftDetectionOn = true;
   if (isRightDetectionOn == null)
     isRightDetectionOn = true;
-
-  print("Left" + isLeftDetectionOn);
-  print("right" + isRightDetectionOn);
 
   // enable bilateral controls
   pubSub.publish(pubSub.EVENTS.SetBilateralDetection, true);
@@ -244,7 +247,7 @@ function GetRawRightWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets){
+  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }
