@@ -145,7 +145,7 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -231,7 +231,7 @@ function Finished(){
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
     } else {
-         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
+         if (script.completedSets >= global.requiredSets) {
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
         }
     }
