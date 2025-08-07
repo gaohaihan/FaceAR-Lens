@@ -287,10 +287,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
 /**
  * Pause exercise and reinit base expression value.
  */
-
-/**
- * Pause exercise and reinit base expression value.
- */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
   InitializeUserBaseExpressionValue();
 });
