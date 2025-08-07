@@ -22,23 +22,36 @@ var currentDifficulty = 0
 var BaseExpressionValue = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
+global.timerUpdate = 0;
 
 /***
 * Called once when onAwake
 */
- function InitializeUserBaseExpressionValue(){
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
+/***
+* Called once when onAwake
+*/
+function InitializeUserBaseExpressionValue() {
+
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
   StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
+
+   function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 }
 
 function Initialize(){
    // Set initial values
-   currentDifficulty = BaseExpressionValue + 0.05;
+   currentDifficulty = BaseExpressionValue + 0.01;
+   
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
-   print("difficulty" +global.Difficulty);
+   print("difficulty" + difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
@@ -93,9 +106,14 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
-  CountReps();
+  if(global.isTimer == true) {
+    HoldExpression();
+  } else {
+    CountReps();
+  }  
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
+  DetermineJump();
 }
 
 /***
@@ -112,10 +130,10 @@ function UpdateVisual(visualComponent) {
 */
 function UpdateCurrentDifficulty(){
 
-  var minDifficulty = BaseExpressionValue + 0.05
+  var minDifficulty = BaseExpressionValue + 0.01
   currentDifficulty = minDifficulty / ( 1 - difficulty);
-  print("Difficulty" + difficulty)
-  print("minDifficulty" + currentDifficulty)
+  //print("Difficulty" + difficulty)
+  //print("minDifficulty" + currentDifficulty)
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
@@ -127,7 +145,7 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -156,6 +174,40 @@ function CountReps() {
     }
 }
 
+function HoldExpression() {
+
+  // stop counting when hit required reps
+  if (global.complete == 1){
+    Finished();
+    return;
+  }
+    // Update rep count text
+    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
+    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
+
+    var rawWeight = GetRawExpressionWeight();
+     //print("adjusted " + adjustedWeight)
+    if (rawWeight > currentDifficulty && midRep !== true){
+        midRep = true;
+        script.completedReps += 1
+        global.timerUpdate = 1;
+        if (script.completedReps >= global.requiredReps){
+            script.completedSets += 1;
+            script.completedReps = 0;
+        }
+        //insert timer here somehow
+        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
+        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
+         }
+
+     var rawWeight = GetRawExpressionWeight();
+     // print("raw " + rawWeight)
+    if (rawWeight <= currentDifficulty && midRep === true){
+        midRep = false;
+        global.timerUpdate = 2;
+
+     }
+ }
 /***
 * Disable bilateral UI since it is not applicable to this exercise
 */
@@ -174,11 +226,16 @@ function GetRawExpressionWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+  if(global.isTimer == true) {
+         if (global.complete == 1){
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
+    } else {
+         if (script.completedSets >= global.requiredSets) {
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+        }
+    }
 }
-
 /**
  * Display value for debugging
  */
@@ -189,6 +246,17 @@ function DisplayDebug(weight){
   pubSub.publish(pubSub.EVENTS.SetRightDebugText, "null");
 
 }
+
+/**
+ * Calculate jump amount based on sensitivity
+ * Send jump to sphere controller
+ */
+function DetermineJump(){
+  var weight = GetRawExpressionWeight();
+   //  Listened to by sphereController
+  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight);
+}
+
 
 /*SUBSCRIPTIONS*/
 /***
@@ -220,15 +288,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
  * Pause exercise and reinit base expression value.
  */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
-  pubSub.publish(pubSub.EVENTS.Pause);
-
-  StartDelay(3, functionsToCallAfterDelay);
-  GetBaseExpressionValue();
-
-  function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
+  InitializeUserBaseExpressionValue();
 });
 

@@ -5,14 +5,19 @@
   PrimaryAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData: {}
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 22bf8889-e1c2-4997-a390-d379f23643a7
-  DependentFiles: []
-  ImporterSettings: !<AssetImporterSettings> {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/22bf8889-e1c2-4997-a390-d379f23643a7>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   VersionMajor: 0
   VersionMinor: 0
@@ -30,7 +35,8 @@
     prevButton: false
     remoteServiceModule: false
     startButton: false
-  ScriptTypesHidden: {}
+  ScriptTypesHidden:
+    {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -43,6 +49,5 @@
       remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
       apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    - {}
-  SetupScript:
-    code: ""
+    -
+      {}

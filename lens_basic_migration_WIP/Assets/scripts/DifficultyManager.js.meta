@@ -5,14 +5,19 @@
   PrimaryAsset: !<reference> adf9ce7f-72c7-47f9-a954-69f8bbddfd4c
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData: {}
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> cc01676c-4d1f-4687-9036-90fcfa5a521c
-  DependentFiles: []
-  ImporterSettings: !<AssetImporterSettings> {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/cc01676c-4d1f-4687-9036-90fcfa5a521c>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   VersionMajor: 0
   VersionMinor: 0
@@ -24,13 +29,13 @@
   ScriptInputsHidden:
     faceMesh: false
     sliderScript: false
-  ScriptTypesHidden: {}
+  ScriptTypesHidden:
+    {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    - {}
-  SetupScript:
-    code: ""
+    -
+      {}
