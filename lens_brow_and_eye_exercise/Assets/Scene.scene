@@ -4428,25 +4428,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<Image/6fb7d27d-b8e9-48eb-9e95-60e5b3d31703>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 0e9fe980-de8f-448a-81a7-7e4182d5047b
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<Head/700ee3c4-b511-4a26-a1c1-5618ec0c4d9c>
   PrefabRemaps:
     []
@@ -5801,7 +5782,6 @@
     []
   Components:
     - !<own> 4243286f-ce4e-4f50-a6d1-2a5d2e15f64b
-    - !<own> 6fb7d27d-b8e9-48eb-9e95-60e5b3d31703
 - !<ScreenTransform/9548ff73-171b-4077-b81c-4af244118d6a>
   PrefabRemaps:
     []
@@ -8086,7 +8066,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 0e3ff43b-b470-4f28-a563-fd5ccb7aeb40
+    - !<reference> 2e3c6c50-cff5-45f1-8e2a-c48d44e975da
   TextureCoordinates:
     - {x: 0.022359, y: 0.428859}
     - {x: 0.038912, y: 0.520056}
