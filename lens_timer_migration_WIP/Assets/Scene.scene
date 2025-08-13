@@ -1139,7 +1139,7 @@
       orientation: 0
       startValue: 0.100000
       endValue: !<float> 1.000000
-      startSliderValue: !<float> 1.000000
+      startSliderValue: 0.100000
       stepEnabled: false
       stepValue: !<float> 0.000000
       prefabSlider: !<reference.ObjectPrefab> 8d8166c8-2136-4567-9223-d7f42e1d144b
@@ -1624,7 +1624,7 @@
       faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
       expressionRight: EyeBlinkRight
       expressionLeft: EyeBlinkLeft
-      displayText: Blink!
+      displayText: Scrunch your eyes!
       finishText: Nice! You can go to the next exercise
       completedSets: !<float> 0.000000
       completedReps: !<float> 0.000000
@@ -7127,7 +7127,7 @@
   PrefabRemaps:
     []
   Name: Debug
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7326,7 +7326,7 @@
 - !<ScriptComponent/c1be5ca1-bdc7-4829-abf6-d18d3ea279a8>
   PrefabRemaps:
     []
-  Name: timer
+  Name: timer copy
   Enabled: true
   ScriptAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
   ScriptInputsDefault:
@@ -7349,7 +7349,7 @@
       columns: !<reference.Image[]>
         - !<reference> f2c12d41-3bcc-442e-8a0b-20877087f6e4
         - !<reference> a303a50a-5f84-4a1f-ad8f-46eea98a7775
-      time: 27
+      time: 10
   ScriptTypes:
     "":
       {}

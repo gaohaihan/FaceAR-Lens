@@ -45,10 +45,12 @@ function GoToNextExercise() {
    previousIndex = currentIndex;
    currentIndex += 1;
 
+   // Publish timer reset event instead of setting global.timerUpdate
+   pubSub.publish(pubSub.EVENTS.TimerReset);
+
    TryEnableNext();
    TryEnablePrev();
 
- //  print("current is " + currentIndex);
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -58,6 +60,8 @@ function GoToNextExercise() {
 function GoToPreviousExercise() {
    previousIndex = currentIndex;
    currentIndex -= 1;
+   // Publish timer reset event instead of setting global.timerUpdate
+   pubSub.publish(pubSub.EVENTS.TimerReset);
 
    TryEnableNext();
    TryEnablePrev();
@@ -73,6 +77,9 @@ function EnableFirstExercise(){
    TryEnableNext();
    script.startButton.enabled = false;
 
+   // Publish timer reset event instead of setting global.timerUpdate
+   pubSub.publish(pubSub.EVENTS.TimerReset);
+
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
@@ -82,14 +89,20 @@ function EnableFirstExercise(){
 function PauseUnPause(){
    if (global.Pause == true){
       pubSub.publish(pubSub.EVENTS.UnPause);
+      // Publish timer start event instead of setting global.timerUpdate
+      pubSub.publish(pubSub.EVENTS.TimerStart);
    }
    else {
       pubSub.publish(pubSub.EVENTS.Pause);
+      // Publish timer stop event instead of setting global.timerUpdate
+      pubSub.publish(pubSub.EVENTS.TimerStop);
    }
 }
 
 function ReInitBaseExpression(){
-   print("intit 1")
+   pubSub.publish(pubSub.EVENTS.TimerReset);
+        pubSub.publish(pubSub.EVENTS.TimerHide);
+
    pubSub.publish(pubSub.EVENTS.ReInitializeBaseExpression);
 }
 

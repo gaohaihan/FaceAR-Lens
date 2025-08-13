@@ -31,6 +31,15 @@ const EVENTS = {
 
     // EVENTS FOR BALANCE GAME
     SetPlatformRotation: "SetPlatformRotation",
+    
+    TimerStart: "TimerStart",
+        TimerContinue: "TimerContinue",
+    TimerStop: "TimerStop",
+    TimerReset: "TimerReset",
+    TimerTick: "TimerTick",
+    TimerComplete: "TimerComplete",
+    HideTimer: "HideTimer",
+    ShowTimer: "ShowTimer"
 
 };
 

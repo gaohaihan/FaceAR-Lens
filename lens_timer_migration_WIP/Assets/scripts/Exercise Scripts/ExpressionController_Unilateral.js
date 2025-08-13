@@ -40,14 +40,16 @@ function Initialize(){
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
    global.timerUpdate = 0;
-   global.complete = 0;
-   print("difficulty" +global.Difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
+
+    print("now");
+   pubSub.publish(pubSub.EVENTS.TimerStart);
+
 }
 
 /***
@@ -56,13 +58,13 @@ function Initialize(){
 function BindFunctionToRunEveryUpdate(eventName, methodsToBind) {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
-
 }
 
 /***
 * Grab user base expression values
 */
 function GetBaseExpressionValue() {
+        global.timerEnabled = false;
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   BaseExpressionValue = GetRawExpressionWeight();
 }
@@ -96,7 +98,6 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
-   // print(global.isTimer);
   if(global.isTimer == true) {
     HoldExpression();
   } else {
@@ -165,42 +166,25 @@ function CountReps() {
 }
 
 function HoldExpression() {
-
+    // Publish timer start event
+    global.timerEnabled = true;
   // stop counting when hit required reps
   if (global.complete == 1){
-    Finished();
-    return;
+        Finished();
+        return;
   }
-    // Update rep count text
-    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-
     var rawWeight = GetRawExpressionWeight();
-
-  //  print(rawWeight);
-  //  print("rawWeight");
-  //  print(currentDifficulty);
-  //  print("currentDifficulty");
 
     if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
-        script.completedReps += 1
-        global.timerUpdate = 1;
-        if (script.completedReps >= global.requiredReps){
-            script.completedSets += 1;
-            script.completedReps = 0;
+        pubSub.publish(pubSub.EVENTS.TimerContinue);
         }
-        //insert timer here somehow
-        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-         }
 
      var rawWeight = GetRawExpressionWeight();
      // print("raw " + rawWeight)
     if (rawWeight <= currentDifficulty && midRep === true){
         midRep = false;
-        global.timerUpdate = 2;
-
+        pubSub.publish(pubSub.EVENTS.TimerStop);
      }
  }
 /***
@@ -257,6 +241,11 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = true;
     script.completedSets = 0;
     script.completedReps = 0;
+        pubSub.publish(pubSub.EVENTS.HideTimer);
+    // Publish timer reset event
+    pubSub.publish(pubSub.EVENTS.TimerReset);
+    pubSub.publish(pubSub.EVENTS.TimerHide);
+
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
     InitializeUserBaseExpressionValue();
@@ -265,6 +254,8 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
   {
     script.enabled = false;
     script.target.enabled = false;
+    // Publish timer stop event
+    pubSub.publish(pubSub.EVENTS.TimerStop);
   }
 });
 
@@ -274,6 +265,7 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
   var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
 
+  // Publish timer reset event
   pubSub.publish(pubSub.EVENTS.Pause);
 
   StartDelay(3, functionsToCallAfterDelay);

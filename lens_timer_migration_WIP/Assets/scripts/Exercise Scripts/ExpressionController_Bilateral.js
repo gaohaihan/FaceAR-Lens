@@ -26,6 +26,7 @@ var isLeftDetectionOn;
 var currentDifficulty = 0;
 // face mask visual disabled by default
 script.target.enabled = false;
+global.timerUpdate = 0;
 
 /***
 * Called once when onAwake
@@ -43,11 +44,16 @@ function Initialize(){
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
   SetBilateralDetection();
+  global.timerUpdate = 0;
 
-  // Display prompt text
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
+
+  // Publish timer reset event
+  pubSub.publish(pubSub.EVENTS.TimerReset);
+  pubSub.publish(pubSub.EVENTS.TimerStart);
+
 }
 
 /***
@@ -56,17 +62,20 @@ function Initialize(){
 function BindFunctionToRunEveryUpdate() {
   var updateEvent = script.createEvent("UpdateEvent");
   updateEvent.bind(OnUpdate);
+  global.timerUpdate = 0;
+  global.complete = 0;
 }
 
 /***
 * Grab user base expression values
 */
 function GetBaseExpressionValue() {
+  global.timerEnabled = false;
+    print("bilat false");
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   leftBaseExpressionValue = GetRawLeftWeight();
-  print("test left" + leftBaseExpressionValue.toString())
+
   rightBaseExpressionValue = GetRawRightWeight();
-  print("test right" + rightBaseExpressionValue.toString())
 }
 
 /***
@@ -102,7 +111,11 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
-  CountReps();
+  if(global.isTimer == true) {
+    HoldExpression();
+  } else {
+    CountReps();
+  } 
   UpdateCurrentDifficulty();
   UpdateVisual(script.target);
 }
@@ -139,6 +152,31 @@ function UpdateCurrentDifficulty(){
   // cannot be detected over 1
   if (currentDifficulty > 1)
     currentDifficulty = 1;
+}
+
+function HoldExpression() {
+
+
+  global.timerEnabled = true;
+  // stop counting when hit required reps
+  if (global.complete == 1){
+    Finished();
+    return;
+  }
+
+    var rawWeight = GetRawExpressionWeight();
+     //print("adjusted " + adjustedWeight)
+    if (rawWeight > currentDifficulty && midRep !== true){
+        midRep = true;
+        pubSub.publish(pubSub.EVENTS.TimerContinue);
+      }
+
+     var rawWeight = GetRawExpressionWeight();
+     // print("raw " + rawWeight)
+    if (rawWeight <= currentDifficulty && midRep === true){
+        midRep = false;
+        pubSub.publish(pubSub.EVENTS.TimerStop);
+     }
 }
 
 /***
@@ -233,9 +271,15 @@ function GetRawRightWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+  if(global.isTimer == true) {
+         if (global.complete == 1){
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
+    } else {
+         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
+            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
+        }
+    } 
 }
 
 /**
@@ -273,6 +317,12 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = true;
     script.completedSets = 0;
     script.completedReps = 0;
+
+        pubSub.publish(pubSub.EVENTS.HideTimer);
+    // Publish timer reset event
+    pubSub.publish(pubSub.EVENTS.TimerReset);
+    pubSub.publish(pubSub.EVENTS.TimerHide);
+
     pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
     InitializeUserBaseExpressionValue();
@@ -281,6 +331,8 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
   {
     script.enabled = false;
     script.target.enabled = false;
+    // Publish timer stop event
+    pubSub.publish(pubSub.EVENTS.TimerStop);
   }
 });
 
@@ -304,6 +356,7 @@ pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
  */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
   var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
 
   pubSub.publish(pubSub.EVENTS.Pause);
 

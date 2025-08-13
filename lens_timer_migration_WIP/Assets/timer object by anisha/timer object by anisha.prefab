@@ -73,7 +73,7 @@
 - !<ScriptComponent/cf097b19-771c-4e1e-b5c7-f1bc4d4cb350>
   PrefabRemaps:
     []
-  Name: timer
+  Name: timer copy
   Enabled: true
   ScriptAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
   ScriptInputsDefault:

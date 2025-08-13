@@ -11,31 +11,34 @@ var secondsTens = 0
 var secondsOnes = 0
 global.complete = 0;
 global.isTimer = true;
+global.timerEnabled = true;
 var timeLeft = script.time;
 var timer = script.createEvent("UpdateEvent");
 
+const pubSub = require("scripts/PubSubModule");
+
 timer.bind(function(eventData){
     
-  //  print(global.timerUpdate);
+    if(global.timerEnabled == false) {
+        script.columns[0].enabled = false;
+        script.columns[1].enabled = false;
 
-   // print(timeLeft);
+    } else {
+        script.columns[0].enabled = true;
+        script.columns[1].enabled = true;
+    }
+
     if(global.timerUpdate == 0) {
         global.complete = 0;
         timeLeft = script.time;
-        
         if(timeLeft < 10) {
-         //   secondsOnes = Number(String(timeLeft).charAt(0));
-          //  secondsTens = 0;
             var intTime = Math.floor(timeLeft);
-secondsTens = Math.floor(intTime / 10);
-secondsOnes = intTime % 10;
+            secondsTens = Math.floor(intTime / 10);
+            secondsOnes = intTime % 10;
         } else if(timeLeft >= 10) {
-         //   secondsOnes = Number(String(timeLeft).charAt(1));
-         //  print(secondsOnes);
-          //  secondsTens = Number(String(timeLeft).charAt(0));
             var intTime = Math.floor(timeLeft);
-secondsTens = Math.floor(intTime / 10);
-secondsOnes = intTime % 10;
+            secondsTens = Math.floor(intTime / 10);
+            secondsOnes = intTime % 10;
         }
         DisplayTime();
     }
@@ -43,20 +46,16 @@ secondsOnes = intTime % 10;
     else if(global.timerUpdate == 1) {
         
         if (timeLeft >= 10) {
-         //  secondsOnes = Number(String(timeLeft).charAt(1));
-         //  secondsTens = Number(String(timeLeft).charAt(0));
-          var intTime = Math.floor(timeLeft);
+            var intTime = Math.floor(timeLeft);
             secondsTens = Math.floor(intTime / 10);
             secondsOnes = intTime % 10;
             timeLeft -= eventData.getDeltaTime();
-           DisplayTime();
+            DisplayTime();
             
         } else if(timeLeft > 0){
-         //   secondsOnes = Number(String(timeLeft).charAt(0));
-           // secondsTens = 0;
-var intTime = Math.floor(timeLeft);
-secondsTens = Math.floor(intTime / 10);
-secondsOnes = intTime % 10;            
+            var intTime = Math.floor(timeLeft);
+            secondsTens = Math.floor(intTime / 10);
+            secondsOnes = intTime % 10;            
             timeLeft -= eventData.getDeltaTime();
             DisplayTime();
             
@@ -71,9 +70,18 @@ secondsOnes = intTime % 10;
 });
 
 
+pubSub.subscribe(pubSub.EVENTS.HideTimer, (data) => {
+    if(global.timerEnabled == false) {
+        script.columns[0].enabled = false;
+        script.columns[1].enabled = false;
+
+    } else {
+        script.columns[0].enabled = true;
+        script.columns[1].enabled = true;
+    }
+});
+
 function DisplayTime() {
-    print("Tens: " + secondsTens + " → Texture index " + secondsTens);
-    print("Ones: " + secondsOnes + " → Texture index " + secondsOnes);
 
    script.columns[0].mainPass.baseTex = script.timerTextures[secondsTens];
    script.columns[1].mainPass.baseTex = script.timerTextures[secondsOnes]; 
