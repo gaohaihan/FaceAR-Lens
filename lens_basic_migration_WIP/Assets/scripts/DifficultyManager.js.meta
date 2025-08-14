@@ -16,8 +16,9 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/cc01676c-4d1f-4687-9036-90fcfa5a521c>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -38,5 +39,3 @@
   ScriptTypes:
     -
       {}
-  SetupScript:
-    code: ""

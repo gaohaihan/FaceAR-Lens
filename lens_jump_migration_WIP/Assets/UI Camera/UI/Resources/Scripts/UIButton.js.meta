@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> 07fe74a4-cab0-48d9-8075-136965ceade5
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> 4cb8c052-049b-48fe-90e4-3ea75243db16
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/4cb8c052-049b-48fe-90e4-3ea75243db16>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -75,8 +71,7 @@
     transformType: false
     useColors: false
     useTextures: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -110,33 +105,22 @@
       disabledTween: ""
       editEventCallbacks: false
       callbackType: 0
-      onPressDownBehaviors: !<reference.ScriptComponent[]>
-        []
-      onPressUpBehaviors: !<reference.ScriptComponent[]>
-        []
-      onPressBehaviors: !<reference.ScriptComponent[]>
-        []
-      onPressDownGlobalBehaviors: !<string[]>
-        []
-      onPressUpGlobalBehaviors: !<string[]>
-        []
-      onPressGlobalBehaviors: !<string[]>
-        []
+      onPressDownBehaviors: !<reference.ScriptComponent[]> []
+      onPressUpBehaviors: !<reference.ScriptComponent[]> []
+      onPressBehaviors: !<reference.ScriptComponent[]> []
+      onPressDownGlobalBehaviors: !<string[]> []
+      onPressUpGlobalBehaviors: !<string[]> []
+      onPressGlobalBehaviors: !<string[]> []
       customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      onPressDownFunctionNames: !<string[]>
-        []
-      onPressUpFunctionNames: !<string[]>
-        []
-      onPressFunctionNames: !<string[]>
-        []
+      onPressDownFunctionNames: !<string[]> []
+      onPressUpFunctionNames: !<string[]> []
+      onPressFunctionNames: !<string[]> []
       editAdvancedOptions: false
       printDebugStatements: false
       printWarningStatements: true
       disableTouchEvents: false
       editConnections: false
       backgroundObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      extraColorReceivers: !<reference.MaterialMeshVisual[]>
-        []
+      extraColorReceivers: !<reference.MaterialMeshVisual[]> []
   ScriptTypes:
-    -
-      {}
+    - {}

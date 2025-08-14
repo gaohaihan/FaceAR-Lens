@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> 9c7182ed-a128-496e-b865-6b9d737aca3e
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> 6667f023-6c41-471c-ab69-26ba5a54083d
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/6667f023-6c41-471c-ab69-26ba5a54083d>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -38,8 +34,7 @@
     minExpressionValue: false
     requiredReps: false
     target: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -54,5 +49,4 @@
       minExpressionValue: !<float> 0.000000
       expressionIndex: !<float> 0.000000
   ScriptTypes:
-    -
-      {}
+    - {}

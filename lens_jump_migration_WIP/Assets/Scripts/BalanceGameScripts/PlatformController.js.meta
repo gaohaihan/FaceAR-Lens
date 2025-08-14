@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> e7bea17f-57e2-49b7-9053-bbc6255a6330
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> 4cbe8f51-955c-4563-a2c2-eaef65266eda
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/4cbe8f51-955c-4563-a2c2-eaef65266eda>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -31,8 +27,7 @@
     ball: false
     moveSpeed: false
     obstacle: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -40,5 +35,4 @@
       moveSpeed: !<float> 0.000000
       ball: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    -
-      {}
+    - {}

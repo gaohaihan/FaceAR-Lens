@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/dd3f921b-7176-4485-a316-111eb3c006f8>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 59347da7-4cdd-448c-8217-d5c0830c0bd1
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 59347da7-4cdd-448c-8217-d5c0830c0bd1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 31d6c76d-cff2-40a6-81d9-89ec214dbebb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/31d6c76d-cff2-40a6-81d9-89ec214dbebb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4de9c3e1-bd05-4d3f-b55b-9e87dc17895a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    remoteServiceModule: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

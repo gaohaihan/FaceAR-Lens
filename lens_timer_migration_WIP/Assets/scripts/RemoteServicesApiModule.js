@@ -67,7 +67,7 @@ function setParameter(paramKey, paramValue, parameters, isOptional) {
 
 ApiModule.prototype.difficulty = function(cb) {
     var req = global.RemoteApiRequest.create();
-    req.endpoint = "sensitivity";
+    req.endpoint = "difficulty";
     this.remoteServiceModule.performApiRequest(req, function(response) {
         if(cb) {
             handleAPIResponse(response, cb);
@@ -77,7 +77,7 @@ ApiModule.prototype.difficulty = function(cb) {
 
 ApiModule.prototype.sendData = function(datatype, data, cb) {
     var req = global.RemoteApiRequest.create();
-    req.endpoint = "sendDataFromLens";
+    req.endpoint = "start_button_pressed";
 
     // Define parameters object
     var parameters = {};

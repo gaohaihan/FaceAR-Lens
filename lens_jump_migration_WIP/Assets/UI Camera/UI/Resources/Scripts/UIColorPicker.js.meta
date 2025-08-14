@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> 557e4981-5b6a-4fe2-aedc-b95cb315a1eb
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> cd53dd7f-f31e-4adc-99ef-c4dc2dd82da2
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/cd53dd7f-f31e-4adc-99ef-c4dc2dd82da2>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -61,8 +57,7 @@
     saturation: false
     storeName: false
     storeValue: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -80,19 +75,13 @@
       emptyColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
       editEventCallbacks: false
       callbackType: 0
-      onColorChangedBehaviors: !<reference.ScriptComponent[]>
-        []
-      onSliderValueChangedBehaviors: !<reference.ScriptComponent[]>
-        []
-      onColorChangedGlobalBehaviors: !<string[]>
-        []
-      onSliderValueChangedGlobalBehaviors: !<string[]>
-        []
+      onColorChangedBehaviors: !<reference.ScriptComponent[]> []
+      onSliderValueChangedBehaviors: !<reference.ScriptComponent[]> []
+      onColorChangedGlobalBehaviors: !<string[]> []
+      onSliderValueChangedGlobalBehaviors: !<string[]> []
       customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      onColorChangedFunctionNames: !<string[]>
-        []
-      onSliderValueChangedFunctionNames: !<string[]>
-        []
+      onColorChangedFunctionNames: !<string[]> []
+      onSliderValueChangedFunctionNames: !<string[]> []
       editAdvancedOptions: false
       storeValue: false
       storeName: ""
@@ -106,5 +95,4 @@
       colorVisualObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       popupObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    -
-      {}
+    - {}

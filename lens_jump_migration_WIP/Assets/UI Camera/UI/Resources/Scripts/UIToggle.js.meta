@@ -5,21 +5,17 @@
   PrimaryAsset: !<reference> 34944653-77c4-4690-afb7-b1634dd6e2f8
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> e9a4fa55-2630-4b57-b381-28a0b330b1a3
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/e9a4fa55-2630-4b57-b381-28a0b330b1a3>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -61,8 +57,7 @@
     toggleTouchEvent: false
     useColors: false
     useTextures: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -81,25 +76,16 @@
       disabledTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       editEventCallbacks: false
       callbackType: 0
-      onToggleOffBehaviors: !<reference.ScriptComponent[]>
-        []
-      onToggleOnBehaviors: !<reference.ScriptComponent[]>
-        []
-      onToggleBehaviors: !<reference.ScriptComponent[]>
-        []
-      onToggleOffGlobalBehaviors: !<string[]>
-        []
-      onToggleOnGlobalBehaviors: !<string[]>
-        []
-      onToggleGlobalBehaviors: !<string[]>
-        []
+      onToggleOffBehaviors: !<reference.ScriptComponent[]> []
+      onToggleOnBehaviors: !<reference.ScriptComponent[]> []
+      onToggleBehaviors: !<reference.ScriptComponent[]> []
+      onToggleOffGlobalBehaviors: !<string[]> []
+      onToggleOnGlobalBehaviors: !<string[]> []
+      onToggleGlobalBehaviors: !<string[]> []
       customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      onToggleOffFunctionNames: !<string[]>
-        []
-      onToggleOnFunctionNames: !<string[]>
-        []
-      onToggleFunctionNames: !<string[]>
-        []
+      onToggleOffFunctionNames: !<string[]> []
+      onToggleOnFunctionNames: !<string[]> []
+      onToggleFunctionNames: !<string[]> []
       editAdvancedOptions: false
       printDebugStatements: false
       printWarningStatements: true
@@ -109,5 +95,4 @@
       buttonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       toggleTouchEvent: TouchStartEvent
   ScriptTypes:
-    -
-      {}
+    - {}
