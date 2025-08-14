@@ -36,6 +36,7 @@ function SetEvents() {
 function OnUpdate(){
   print("Pause" + global.Pause)
   if(global.Pause == false){
+    script.moveSpeed = global.Speed;
     Move();
     DestroyAndSpawn();
     CountJump();

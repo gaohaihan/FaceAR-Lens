@@ -2,21 +2,21 @@
 // @input Component.ScriptComponent sliderScript
 // @input Component.RenderMeshVisual faceMesh
 
-const pubSub = require("./PubSubModule");
-global.Difficulty = 0.2;
+const pubSub = require("../PubSubModule");
+global.Speed = 0.5
 
-script.SetDifficulty = SetDifficulty;
+script.SetSpeed = SetSpeed;
 
   /***
   * Set value of global Difficulty to value of slider when changed.
   */
-  function SetDifficulty(){
+  function SetSpeed(){
     var sliderValue = script.sliderScript.sliderValue;
-    print("difficulty slider value " + sliderValue);
+    print("speed slider value " + sliderValue);
     // Dont allow to go to 1 bc then the slider says inf and cannot be displayed.
-    if (sliderValue > 0.9){
-      sliderValue = 0.9
-    }
+    // if (sliderValue > 0.9){
+    //   sliderValue = 0.9
+    // }
     // Uncomment for local development
-   global.Difficulty = sliderValue;
+   global.Speed = sliderValue;
  }
