@@ -5,19 +5,15 @@
   PrimaryAsset: !<reference> c1acc4f2-b399-42c1-8c72-22c5d6523c50
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> ec182ba0-1eaa-4da2-81b6-00fe7e1d7163
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/ec182ba0-1eaa-4da2-81b6-00fe7e1d7163>
   SvgIcon: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -30,8 +26,7 @@
     remoteServiceModule: false
     responseData: false
     settingUI: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -40,7 +35,6 @@
       gameManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       settingUI: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    -
-      {}
+    - {}
   SetupScript:
     code: ""

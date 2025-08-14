@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/b1f4d8bd-d111-47f4-a6ea-a41a6ce2ee4c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> abbbe9da-dcc8-484a-990c-8b8bdafb7f4a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> abbbe9da-dcc8-484a-990c-8b8bdafb7f4a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 3791563a-d6b8-45cb-80f3-240d2d8e4a29
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/3791563a-d6b8-45cb-80f3-240d2d8e4a29>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c9c0b5c2-3878-45c4-9002-b514c7175bf4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    apiScript: false
+    baseDifficulty: false
+    completedReps: false
+    completedSets: false
+    displayText: false
+    expression: false
+    expressionIndex: false
+    faceMesh: false
+    finishText: false
+    target: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - target: !<reference.FaceMaskVisual> 00000000-0000-0000-0000-000000000000
+      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      expression: ""
+      displayText: ""
+      finishText: ""
+      completedSets: !<float> 0.000000
+      completedReps: !<float> 0.000000
+      baseDifficulty: !<float> 0.000000
+      expressionIndex: !<float> 0.000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
