@@ -46,6 +46,7 @@ function Initialize(){
    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.displayText);
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
+    pubSub.publish(pubSub.EVENTS.TimerShow);
 
     print("now");
    pubSub.publish(pubSub.EVENTS.TimerStart);
@@ -64,7 +65,7 @@ function BindFunctionToRunEveryUpdate(eventName, methodsToBind) {
 * Grab user base expression values
 */
 function GetBaseExpressionValue() {
-        global.timerEnabled = false;
+  global.timerEnabled = false;
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   BaseExpressionValue = GetRawExpressionWeight();
 }
@@ -166,9 +167,8 @@ function CountReps() {
 }
 
 function HoldExpression() {
-    // Publish timer start event
+
     global.timerEnabled = true;
-  // stop counting when hit required reps
   if (global.complete == 1){
         Finished();
         return;

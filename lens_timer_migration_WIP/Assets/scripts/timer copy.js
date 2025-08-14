@@ -28,8 +28,8 @@ global.complete = 0;
 pubSub.subscribe(TIMER_EVENTS.Start, () => {
     timerActive = true;
     global.complete = 0;
-    pubSub.publish(TIMER_EVENTS.Show)    
     pubSub.publish(TIMER_EVENTS.Reset, timeLeft);
+    pubSub.publish(TIMER_EVENTS.Show)    
 });
 
 pubSub.subscribe(TIMER_EVENTS.Stop, () => {

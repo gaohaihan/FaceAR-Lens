@@ -156,7 +156,6 @@ function UpdateCurrentDifficulty(){
 
 function HoldExpression() {
 
-
   global.timerEnabled = true;
   // stop counting when hit required reps
   if (global.complete == 1){

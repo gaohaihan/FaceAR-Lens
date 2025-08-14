@@ -206,6 +206,22 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/07d7048a-9a0d-4c48-8b47-29637634b261>
+  PrefabRemaps:
+    []
+  Name: PuckerLips
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 48b13e11-3352-4516-bfc7-dbb483d60725
+    - !<own> c0467709-e2e7-4126-ae6c-b875d0a6161e
+  Components:
+    []
 - !<SceneObject/08b7efaf-5501-4d72-91c8-325be3c9543f>
   PrefabRemaps:
     []
@@ -822,6 +838,22 @@
     bottom: -0.500000
     right: 1.000000
     top: 0.500000
+- !<SceneObject/1597c593-9cf0-4fa4-a17e-378a703042ff>
+  PrefabRemaps:
+    []
+  Name: Puff
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 6433bdd3-65c5-42ae-aeaf-56f527d8cd02
+    - !<own> b1a9c080-2cd9-4b94-a47a-566780271139
+  Components:
+    []
 - !<SceneObject/16179ac4-d1a1-41bb-a406-f13119681191>
   PrefabRemaps:
     []
@@ -860,7 +892,7 @@
       expressionRight: MouthSmileRight
       expressionLeft: MouthSmileLeft
       displayText: Smiel
-      finishText: "You're Finished! "
+      finishText: Nice! You can go to the next exercise
       completedSets: !<float> 0.000000
       completedReps: !<float> 0.000000
       baseDifficulty: 0.060000
@@ -1026,6 +1058,33 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/194462df-cc61-4288-a05b-359b6ed8e15e>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_Unilateral
+  Enabled: true
+  ScriptAsset: !<reference> 832601d1-c899-4e9e-92a5-2f51f0375be7
+  ScriptInputsDefault:
+    completedSets: true
+    completedReps: true
+    apiScript: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      target: !<reference.FaceMaskVisual> 3afe1210-6675-4d85-8c3c-5c9962f109eb
+      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
+      expression: BrowsUpCenter
+      displayText: Raise Your Eyebrows
+      finishText: Nice! You can go to the next exercise
+      completedSets: !<float> 0.000000
+      completedReps: !<float> 0.000000
+      baseDifficulty: 0.200000
+      expressionIndex: !<float> 4.000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/197bd0af-2b19-4003-b1c6-eed233a63c1d>
   PrefabRemaps:
     []
@@ -2293,6 +2352,183 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<FaceMaskVisual/3afe1210-6675-4d85-8c3c-5c9962f109eb>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 76343751-3b3f-4984-8593-e8af884c478a
+  TextureCoordinates:
+    - {x: 0.022359, y: 0.428859}
+    - {x: 0.038912, y: 0.520056}
+    - {x: 0.069156, y: 0.608923}
+    - {x: 0.103054, y: 0.694590}
+    - {x: 0.146609, y: 0.776744}
+    - {x: 0.211221, y: 0.850212}
+    - {x: 0.295138, y: 0.910292}
+    - {x: 0.392008, y: 0.955910}
+    - {x: 0.499150, y: 0.969398}
+    - {x: 0.607138, y: 0.956481}
+    - {x: 0.705427, y: 0.911737}
+    - {x: 0.790459, y: 0.851405}
+    - {x: 0.855267, y: 0.777200}
+    - {x: 0.898026, y: 0.694038}
+    - {x: 0.930776, y: 0.607171}
+    - {x: 0.960242, y: 0.517661}
+    - {x: 0.976673, y: 0.425927}
+    - {x: 0.096477, y: 0.346422}
+    - {x: 0.152171, y: 0.316336}
+    - {x: 0.240865, y: 0.298106}
+    - {x: 0.305155, y: 0.308868}
+    - {x: 0.391805, y: 0.343796}
+    - {x: 0.611292, y: 0.342473}
+    - {x: 0.695622, y: 0.307911}
+    - {x: 0.760870, y: 0.297987}
+    - {x: 0.849638, y: 0.317450}
+    - {x: 0.905159, y: 0.348887}
+    - {x: 0.498969, y: 0.414373}
+    - {x: 0.499569, y: 0.488354}
+    - {x: 0.499384, y: 0.558751}
+    - {x: 0.499291, y: 0.628313}
+    - {x: 0.420274, y: 0.672695}
+    - {x: 0.458381, y: 0.682815}
+    - {x: 0.499528, y: 0.690117}
+    - {x: 0.540688, y: 0.682941}
+    - {x: 0.578700, y: 0.673326}
+    - {x: 0.172821, y: 0.419241}
+    - {x: 0.227034, y: 0.391132}
+    - {x: 0.297492, y: 0.392763}
+    - {x: 0.351119, y: 0.426176}
+    - {x: 0.293618, y: 0.440451}
+    - {x: 0.227190, y: 0.438480}
+    - {x: 0.645251, y: 0.427159}
+    - {x: 0.700148, y: 0.393844}
+    - {x: 0.770865, y: 0.392132}
+    - {x: 0.824990, y: 0.419424}
+    - {x: 0.770552, y: 0.438534}
+    - {x: 0.703871, y: 0.440612}
+    - {x: 0.335569, y: 0.772755}
+    - {x: 0.394680, y: 0.750300}
+    - {x: 0.446801, y: 0.733636}
+    - {x: 0.497864, y: 0.737254}
+    - {x: 0.550244, y: 0.733735}
+    - {x: 0.603079, y: 0.750833}
+    - {x: 0.662001, y: 0.772959}
+    - {x: 0.600074, y: 0.802325}
+    - {x: 0.550835, y: 0.829056}
+    - {x: 0.497124, y: 0.835622}
+    - {x: 0.445902, y: 0.828956}
+    - {x: 0.397376, y: 0.802293}
+    - {x: 0.423436, y: 0.772297}
+    - {x: 0.450686, y: 0.762170}
+    - {x: 0.498922, y: 0.752300}
+    - {x: 0.546549, y: 0.762298}
+    - {x: 0.573476, y: 0.772551}
+    - {x: 0.548347, y: 0.782296}
+    - {x: 0.498922, y: 0.792294}
+    - {x: 0.448263, y: 0.782056}
+    - {x: 0.023051, y: 0.139220}
+    - {x: 0.097239, y: 0.027189}
+    - {x: 0.229744, y: -0.011640}
+    - {x: 0.500000, y: -0.040268}
+    - {x: 0.773460, y: -0.010932}
+    - {x: 0.905924, y: 0.028242}
+    - {x: 0.977354, y: 0.140463}
+  MaskCoordinates:
+    - {x: 0.073706, y: 0.487153}
+    - {x: 0.080785, y: 0.560045}
+    - {x: 0.097254, y: 0.620651}
+    - {x: 0.121210, y: 0.698092}
+    - {x: 0.159849, y: 0.771647}
+    - {x: 0.212539, y: 0.823793}
+    - {x: 0.281121, y: 0.864801}
+    - {x: 0.360761, y: 0.906846}
+    - {x: 0.505500, y: 0.936027}
+    - {x: 0.651094, y: 0.906202}
+    - {x: 0.731432, y: 0.863246}
+    - {x: 0.798964, y: 0.821252}
+    - {x: 0.849093, y: 0.768013}
+    - {x: 0.885037, y: 0.693912}
+    - {x: 0.907038, y: 0.617186}
+    - {x: 0.922623, y: 0.557976}
+    - {x: 0.929542, y: 0.486209}
+    - {x: 0.176687, y: 0.410229}
+    - {x: 0.225535, y: 0.373617}
+    - {x: 0.296287, y: 0.364039}
+    - {x: 0.367767, y: 0.373869}
+    - {x: 0.433904, y: 0.397551}
+    - {x: 0.565579, y: 0.397301}
+    - {x: 0.632911, y: 0.373824}
+    - {x: 0.705550, y: 0.364259}
+    - {x: 0.777265, y: 0.374349}
+    - {x: 0.826665, y: 0.411556}
+    - {x: 0.500528, y: 0.449956}
+    - {x: 0.500177, y: 0.495004}
+    - {x: 0.499794, y: 0.522222}
+    - {x: 0.499353, y: 0.558485}
+    - {x: 0.444626, y: 0.599369}
+    - {x: 0.471634, y: 0.604367}
+    - {x: 0.499352, y: 0.609457}
+    - {x: 0.527251, y: 0.604827}
+    - {x: 0.554210, y: 0.600117}
+    - {x: 0.251307, y: 0.464182}
+    - {x: 0.290232, y: 0.444464}
+    - {x: 0.343609, y: 0.445275}
+    - {x: 0.388640, y: 0.465640}
+    - {x: 0.342435, y: 0.479420}
+    - {x: 0.292040, y: 0.478717}
+    - {x: 0.609089, y: 0.465181}
+    - {x: 0.655053, y: 0.444535}
+    - {x: 0.708250, y: 0.444337}
+    - {x: 0.746406, y: 0.464153}
+    - {x: 0.705204, y: 0.478168}
+    - {x: 0.655020, y: 0.478252}
+    - {x: 0.321834, y: 0.703704}
+    - {x: 0.385165, y: 0.672839}
+    - {x: 0.457629, y: 0.654321}
+    - {x: 0.497949, y: 0.672839}
+    - {x: 0.538753, y: 0.654580}
+    - {x: 0.611452, y: 0.673443}
+    - {x: 0.675077, y: 0.704232}
+    - {x: 0.615712, y: 0.746423}
+    - {x: 0.555154, y: 0.767117}
+    - {x: 0.497426, y: 0.766554}
+    - {x: 0.440112, y: 0.766554}
+    - {x: 0.380224, y: 0.745230}
+    - {x: 0.418662, y: 0.711683}
+    - {x: 0.461407, y: 0.703251}
+    - {x: 0.498001, y: 0.701235}
+    - {x: 0.535036, y: 0.703511}
+    - {x: 0.577079, y: 0.712245}
+    - {x: 0.534382, y: 0.726131}
+    - {x: 0.497687, y: 0.726018}
+    - {x: 0.461407, y: 0.726018}
+    - {x: 0.081534, y: 0.255373}
+    - {x: 0.205652, y: 0.156383}
+    - {x: 0.339052, y: 0.113173}
+    - {x: 0.500065, y: 0.104531}
+    - {x: 0.662180, y: 0.112894}
+    - {x: 0.797056, y: 0.155939}
+    - {x: 0.921123, y: 0.254877}
+  FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+  OriginalFaceIndex: 1
+  UseTextureFacePosition: false
+  UseOriginalTexCoords: false
+  DrawMouth: false
+  EnabledLipsFix: true
+  EnabledTeethFix: true
+  TeethFixAlpha: 1.000000
+  MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
+  LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScreenTransform/3b09a38b-3a10-4640-8864-46d2707f8a03>
   PrefabRemaps:
     []
@@ -2363,6 +2599,183 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<FaceMaskVisual/3babb92a-eb63-477e-8222-022f26e81fef>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 76343751-3b3f-4984-8593-e8af884c478a
+  TextureCoordinates:
+    - {x: 0.022359, y: 0.428859}
+    - {x: 0.038912, y: 0.520056}
+    - {x: 0.069156, y: 0.608923}
+    - {x: 0.103054, y: 0.694590}
+    - {x: 0.146609, y: 0.776744}
+    - {x: 0.211221, y: 0.850212}
+    - {x: 0.295138, y: 0.910292}
+    - {x: 0.392008, y: 0.955910}
+    - {x: 0.499150, y: 0.969398}
+    - {x: 0.607138, y: 0.956481}
+    - {x: 0.705427, y: 0.911737}
+    - {x: 0.790459, y: 0.851405}
+    - {x: 0.855267, y: 0.777200}
+    - {x: 0.898026, y: 0.694038}
+    - {x: 0.930776, y: 0.607171}
+    - {x: 0.960242, y: 0.517661}
+    - {x: 0.976673, y: 0.425927}
+    - {x: 0.096477, y: 0.346422}
+    - {x: 0.152171, y: 0.316336}
+    - {x: 0.240865, y: 0.298106}
+    - {x: 0.305155, y: 0.308868}
+    - {x: 0.391805, y: 0.343796}
+    - {x: 0.611292, y: 0.342473}
+    - {x: 0.695622, y: 0.307911}
+    - {x: 0.760870, y: 0.297987}
+    - {x: 0.849638, y: 0.317450}
+    - {x: 0.905159, y: 0.348887}
+    - {x: 0.498969, y: 0.414373}
+    - {x: 0.499569, y: 0.488354}
+    - {x: 0.499384, y: 0.558751}
+    - {x: 0.499291, y: 0.628313}
+    - {x: 0.420274, y: 0.672695}
+    - {x: 0.458381, y: 0.682815}
+    - {x: 0.499528, y: 0.690117}
+    - {x: 0.540688, y: 0.682941}
+    - {x: 0.578700, y: 0.673326}
+    - {x: 0.172821, y: 0.419241}
+    - {x: 0.227034, y: 0.391132}
+    - {x: 0.297492, y: 0.392763}
+    - {x: 0.351119, y: 0.426176}
+    - {x: 0.293618, y: 0.440451}
+    - {x: 0.227190, y: 0.438480}
+    - {x: 0.645251, y: 0.427159}
+    - {x: 0.700148, y: 0.393844}
+    - {x: 0.770865, y: 0.392132}
+    - {x: 0.824990, y: 0.419424}
+    - {x: 0.770552, y: 0.438534}
+    - {x: 0.703871, y: 0.440612}
+    - {x: 0.335569, y: 0.772755}
+    - {x: 0.394680, y: 0.750300}
+    - {x: 0.446801, y: 0.733636}
+    - {x: 0.497864, y: 0.737254}
+    - {x: 0.550244, y: 0.733735}
+    - {x: 0.603079, y: 0.750833}
+    - {x: 0.662001, y: 0.772959}
+    - {x: 0.600074, y: 0.802325}
+    - {x: 0.550835, y: 0.829056}
+    - {x: 0.497124, y: 0.835622}
+    - {x: 0.445902, y: 0.828956}
+    - {x: 0.397376, y: 0.802293}
+    - {x: 0.423436, y: 0.772297}
+    - {x: 0.450686, y: 0.762170}
+    - {x: 0.498922, y: 0.752300}
+    - {x: 0.546549, y: 0.762298}
+    - {x: 0.573476, y: 0.772551}
+    - {x: 0.548347, y: 0.782296}
+    - {x: 0.498922, y: 0.792294}
+    - {x: 0.448263, y: 0.782056}
+    - {x: 0.023051, y: 0.139220}
+    - {x: 0.097239, y: 0.027189}
+    - {x: 0.229744, y: -0.011640}
+    - {x: 0.500000, y: -0.040268}
+    - {x: 0.773460, y: -0.010932}
+    - {x: 0.905924, y: 0.028242}
+    - {x: 0.977354, y: 0.140463}
+  MaskCoordinates:
+    - {x: 0.073706, y: 0.487153}
+    - {x: 0.080785, y: 0.560045}
+    - {x: 0.097254, y: 0.620651}
+    - {x: 0.121210, y: 0.698092}
+    - {x: 0.159849, y: 0.771647}
+    - {x: 0.212539, y: 0.823793}
+    - {x: 0.281121, y: 0.864801}
+    - {x: 0.360761, y: 0.906846}
+    - {x: 0.505500, y: 0.936027}
+    - {x: 0.651094, y: 0.906202}
+    - {x: 0.731432, y: 0.863246}
+    - {x: 0.798964, y: 0.821252}
+    - {x: 0.849093, y: 0.768013}
+    - {x: 0.885037, y: 0.693912}
+    - {x: 0.907038, y: 0.617186}
+    - {x: 0.922623, y: 0.557976}
+    - {x: 0.929542, y: 0.486209}
+    - {x: 0.176687, y: 0.410229}
+    - {x: 0.225535, y: 0.373617}
+    - {x: 0.296287, y: 0.364039}
+    - {x: 0.367767, y: 0.373869}
+    - {x: 0.433904, y: 0.397551}
+    - {x: 0.565579, y: 0.397301}
+    - {x: 0.632911, y: 0.373824}
+    - {x: 0.705550, y: 0.364259}
+    - {x: 0.777265, y: 0.374349}
+    - {x: 0.826665, y: 0.411556}
+    - {x: 0.500528, y: 0.449956}
+    - {x: 0.500177, y: 0.495004}
+    - {x: 0.499794, y: 0.522222}
+    - {x: 0.499353, y: 0.558485}
+    - {x: 0.444626, y: 0.599369}
+    - {x: 0.471634, y: 0.604367}
+    - {x: 0.499352, y: 0.609457}
+    - {x: 0.527251, y: 0.604827}
+    - {x: 0.554210, y: 0.600117}
+    - {x: 0.251307, y: 0.464182}
+    - {x: 0.290232, y: 0.444464}
+    - {x: 0.343609, y: 0.445275}
+    - {x: 0.388640, y: 0.465640}
+    - {x: 0.342435, y: 0.479420}
+    - {x: 0.292040, y: 0.478717}
+    - {x: 0.609089, y: 0.465181}
+    - {x: 0.655053, y: 0.444535}
+    - {x: 0.708250, y: 0.444337}
+    - {x: 0.746406, y: 0.464153}
+    - {x: 0.705204, y: 0.478168}
+    - {x: 0.655020, y: 0.478252}
+    - {x: 0.321834, y: 0.703704}
+    - {x: 0.385165, y: 0.672839}
+    - {x: 0.457629, y: 0.654321}
+    - {x: 0.497949, y: 0.672839}
+    - {x: 0.538753, y: 0.654580}
+    - {x: 0.611452, y: 0.673443}
+    - {x: 0.675077, y: 0.704232}
+    - {x: 0.615712, y: 0.746423}
+    - {x: 0.555154, y: 0.767117}
+    - {x: 0.497426, y: 0.766554}
+    - {x: 0.440112, y: 0.766554}
+    - {x: 0.380224, y: 0.745230}
+    - {x: 0.418662, y: 0.711683}
+    - {x: 0.461407, y: 0.703251}
+    - {x: 0.498001, y: 0.701235}
+    - {x: 0.535036, y: 0.703511}
+    - {x: 0.577079, y: 0.712245}
+    - {x: 0.534382, y: 0.726131}
+    - {x: 0.497687, y: 0.726018}
+    - {x: 0.461407, y: 0.726018}
+    - {x: 0.081534, y: 0.255373}
+    - {x: 0.205652, y: 0.156383}
+    - {x: 0.339052, y: 0.113173}
+    - {x: 0.500065, y: 0.104531}
+    - {x: 0.662180, y: 0.112894}
+    - {x: 0.797056, y: 0.155939}
+    - {x: 0.921123, y: 0.254877}
+  FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+  OriginalFaceIndex: 1
+  UseTextureFacePosition: false
+  UseOriginalTexCoords: false
+  DrawMouth: false
+  EnabledLipsFix: true
+  EnabledTeethFix: true
+  TeethFixAlpha: 1.000000
+  MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
+  LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScreenTransform/3bbe653d-301f-4a49-b276-a4d9fef69a28>
   PrefabRemaps:
     []
@@ -2396,6 +2809,22 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/3c193178-6921-4e33-9c9a-2a1571a3f2d7>
+  PrefabRemaps:
+    []
+  Name: RaiseEyebrows
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> aef6f5dc-513e-4dd1-9f98-8c74c1187c34
+    - !<own> 4b048afc-8362-4a8f-8a34-53fdf52cf549
+  Components:
+    []
 - !<ScreenTransform/3d7d7888-e985-4c2b-bedd-82042559284d>
   PrefabRemaps:
     []
@@ -2493,6 +2922,33 @@
   Components:
     - !<own> b5b7ace7-b575-44a2-8f9c-75893f1bfca0
     - !<own> a0f5e415-f5ca-42bb-b88f-c5e691352ba4
+- !<ScriptComponent/42f4ac4f-803b-43b7-a95f-720c884fa8b7>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_Unilateral
+  Enabled: true
+  ScriptAsset: !<reference> 832601d1-c899-4e9e-92a5-2f51f0375be7
+  ScriptInputsDefault:
+    completedSets: true
+    completedReps: true
+    apiScript: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      target: !<reference.FaceMaskVisual> ba729221-4c50-45ec-86de-e1a87d236c19
+      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
+      expression: Puff
+      displayText: Suck in Your Cheeks
+      finishText: Nice! You can go to the next exercise
+      completedSets: !<float> 0.000000
+      completedReps: !<float> 0.000000
+      baseDifficulty: 0.200000
+      expressionIndex: !<float> 3.000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<Text/443bd4cf-af6d-402b-be2b-bc0e4c84858b>
   PrefabRemaps:
     []
@@ -2757,6 +3213,21 @@
     bottom: -0.000000
     right: 0.500000
     top: -0.000000
+- !<SceneObject/48b13e11-3352-4516-bfc7-dbb483d60725>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3babb92a-eb63-477e-8222-022f26e81fef
 - !<Text/4937af65-7f9b-4caf-9eee-8d837917f2fb>
   PrefabRemaps:
     []
@@ -2878,6 +3349,21 @@
     - !<own> b802a781-b117-4196-836e-57a376674f30
   Components:
     []
+- !<SceneObject/4b048afc-8362-4a8f-8a34-53fdf52cf549>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_JawOpen
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 194462df-cc61-4288-a05b-359b6ed8e15e
 - !<Text/4b355f77-c92e-4629-aa65-3a7fd4311099>
   PrefabRemaps:
     []
@@ -3217,7 +3703,6 @@
   Enabled: true
   ScriptAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
   ScriptInputsDefault:
-    maxIndex: true
     remoteServiceModule: true
     apiScript: true
   ScriptTypesDefault:
@@ -3229,7 +3714,7 @@
       startButton: !<reference.SceneObject> 31805c08-1738-409a-a0e1-f272d9610b83
       prevButton: !<reference.SceneObject> 55eab32c-7dff-4183-8561-7933317c9351
       nextButton: !<reference.SceneObject> 17ec285a-58dd-49eb-b7c8-d2c22ab785b4
-      maxIndex: !<float> 2.000000
+      maxIndex: !<float> 5.000000
       remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
       apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -4003,6 +4488,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/6433bdd3-65c5-42ae-aeaf-56f527d8cd02>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ba729221-4c50-45ec-86de-e1a87d236c19
 - !<SceneObject/64ceb8d8-406e-41df-9317-0c9627baffdd>
   PrefabRemaps:
     []
@@ -6789,6 +7289,21 @@
     - !<own> 11deb369-d1d1-4cfb-affe-5fd417c98bf6
   Components:
     []
+- !<SceneObject/aef6f5dc-513e-4dd1-9f98-8c74c1187c34>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3afe1210-6675-4d85-8c3c-5c9962f109eb
 - !<SceneObject/b07a240a-bfc0-415c-b932-8da9436db2ea>
   PrefabRemaps:
     []
@@ -6821,6 +7336,21 @@
     - !<own> ca00c741-ff65-44c6-abc9-91e7b24b7b08
   Components:
     []
+- !<SceneObject/b1a9c080-2cd9-4b94-a47a-566780271139>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_JawOpen
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 42f4ac4f-803b-43b7-a95f-720c884fa8b7
 - !<SceneObject/b1f7ffb2-02b1-4a7a-a75b-92327b4dcf0c>
   PrefabRemaps:
     []
@@ -7215,6 +7745,183 @@
     - !<own> e0d9239f-78aa-4197-b7df-53dd2afbdb9d
     - !<own> fade1d82-5d97-4a84-9a37-432271033dcf
     - !<own> c0534cc7-4f24-4d28-8ea5-55d6e884ecf6
+- !<FaceMaskVisual/ba729221-4c50-45ec-86de-e1a87d236c19>
+  PrefabRemaps:
+    []
+  Name: Face Mask
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 76343751-3b3f-4984-8593-e8af884c478a
+  TextureCoordinates:
+    - {x: 0.022359, y: 0.428859}
+    - {x: 0.038912, y: 0.520056}
+    - {x: 0.069156, y: 0.608923}
+    - {x: 0.103054, y: 0.694590}
+    - {x: 0.146609, y: 0.776744}
+    - {x: 0.211221, y: 0.850212}
+    - {x: 0.295138, y: 0.910292}
+    - {x: 0.392008, y: 0.955910}
+    - {x: 0.499150, y: 0.969398}
+    - {x: 0.607138, y: 0.956481}
+    - {x: 0.705427, y: 0.911737}
+    - {x: 0.790459, y: 0.851405}
+    - {x: 0.855267, y: 0.777200}
+    - {x: 0.898026, y: 0.694038}
+    - {x: 0.930776, y: 0.607171}
+    - {x: 0.960242, y: 0.517661}
+    - {x: 0.976673, y: 0.425927}
+    - {x: 0.096477, y: 0.346422}
+    - {x: 0.152171, y: 0.316336}
+    - {x: 0.240865, y: 0.298106}
+    - {x: 0.305155, y: 0.308868}
+    - {x: 0.391805, y: 0.343796}
+    - {x: 0.611292, y: 0.342473}
+    - {x: 0.695622, y: 0.307911}
+    - {x: 0.760870, y: 0.297987}
+    - {x: 0.849638, y: 0.317450}
+    - {x: 0.905159, y: 0.348887}
+    - {x: 0.498969, y: 0.414373}
+    - {x: 0.499569, y: 0.488354}
+    - {x: 0.499384, y: 0.558751}
+    - {x: 0.499291, y: 0.628313}
+    - {x: 0.420274, y: 0.672695}
+    - {x: 0.458381, y: 0.682815}
+    - {x: 0.499528, y: 0.690117}
+    - {x: 0.540688, y: 0.682941}
+    - {x: 0.578700, y: 0.673326}
+    - {x: 0.172821, y: 0.419241}
+    - {x: 0.227034, y: 0.391132}
+    - {x: 0.297492, y: 0.392763}
+    - {x: 0.351119, y: 0.426176}
+    - {x: 0.293618, y: 0.440451}
+    - {x: 0.227190, y: 0.438480}
+    - {x: 0.645251, y: 0.427159}
+    - {x: 0.700148, y: 0.393844}
+    - {x: 0.770865, y: 0.392132}
+    - {x: 0.824990, y: 0.419424}
+    - {x: 0.770552, y: 0.438534}
+    - {x: 0.703871, y: 0.440612}
+    - {x: 0.335569, y: 0.772755}
+    - {x: 0.394680, y: 0.750300}
+    - {x: 0.446801, y: 0.733636}
+    - {x: 0.497864, y: 0.737254}
+    - {x: 0.550244, y: 0.733735}
+    - {x: 0.603079, y: 0.750833}
+    - {x: 0.662001, y: 0.772959}
+    - {x: 0.600074, y: 0.802325}
+    - {x: 0.550835, y: 0.829056}
+    - {x: 0.497124, y: 0.835622}
+    - {x: 0.445902, y: 0.828956}
+    - {x: 0.397376, y: 0.802293}
+    - {x: 0.423436, y: 0.772297}
+    - {x: 0.450686, y: 0.762170}
+    - {x: 0.498922, y: 0.752300}
+    - {x: 0.546549, y: 0.762298}
+    - {x: 0.573476, y: 0.772551}
+    - {x: 0.548347, y: 0.782296}
+    - {x: 0.498922, y: 0.792294}
+    - {x: 0.448263, y: 0.782056}
+    - {x: 0.023051, y: 0.139220}
+    - {x: 0.097239, y: 0.027189}
+    - {x: 0.229744, y: -0.011640}
+    - {x: 0.500000, y: -0.040268}
+    - {x: 0.773460, y: -0.010932}
+    - {x: 0.905924, y: 0.028242}
+    - {x: 0.977354, y: 0.140463}
+  MaskCoordinates:
+    - {x: 0.073706, y: 0.487153}
+    - {x: 0.080785, y: 0.560045}
+    - {x: 0.097254, y: 0.620651}
+    - {x: 0.121210, y: 0.698092}
+    - {x: 0.159849, y: 0.771647}
+    - {x: 0.212539, y: 0.823793}
+    - {x: 0.281121, y: 0.864801}
+    - {x: 0.360761, y: 0.906846}
+    - {x: 0.505500, y: 0.936027}
+    - {x: 0.651094, y: 0.906202}
+    - {x: 0.731432, y: 0.863246}
+    - {x: 0.798964, y: 0.821252}
+    - {x: 0.849093, y: 0.768013}
+    - {x: 0.885037, y: 0.693912}
+    - {x: 0.907038, y: 0.617186}
+    - {x: 0.922623, y: 0.557976}
+    - {x: 0.929542, y: 0.486209}
+    - {x: 0.176687, y: 0.410229}
+    - {x: 0.225535, y: 0.373617}
+    - {x: 0.296287, y: 0.364039}
+    - {x: 0.367767, y: 0.373869}
+    - {x: 0.433904, y: 0.397551}
+    - {x: 0.565579, y: 0.397301}
+    - {x: 0.632911, y: 0.373824}
+    - {x: 0.705550, y: 0.364259}
+    - {x: 0.777265, y: 0.374349}
+    - {x: 0.826665, y: 0.411556}
+    - {x: 0.500528, y: 0.449956}
+    - {x: 0.500177, y: 0.495004}
+    - {x: 0.499794, y: 0.522222}
+    - {x: 0.499353, y: 0.558485}
+    - {x: 0.444626, y: 0.599369}
+    - {x: 0.471634, y: 0.604367}
+    - {x: 0.499352, y: 0.609457}
+    - {x: 0.527251, y: 0.604827}
+    - {x: 0.554210, y: 0.600117}
+    - {x: 0.251307, y: 0.464182}
+    - {x: 0.290232, y: 0.444464}
+    - {x: 0.343609, y: 0.445275}
+    - {x: 0.388640, y: 0.465640}
+    - {x: 0.342435, y: 0.479420}
+    - {x: 0.292040, y: 0.478717}
+    - {x: 0.609089, y: 0.465181}
+    - {x: 0.655053, y: 0.444535}
+    - {x: 0.708250, y: 0.444337}
+    - {x: 0.746406, y: 0.464153}
+    - {x: 0.705204, y: 0.478168}
+    - {x: 0.655020, y: 0.478252}
+    - {x: 0.321834, y: 0.703704}
+    - {x: 0.385165, y: 0.672839}
+    - {x: 0.457629, y: 0.654321}
+    - {x: 0.497949, y: 0.672839}
+    - {x: 0.538753, y: 0.654580}
+    - {x: 0.611452, y: 0.673443}
+    - {x: 0.675077, y: 0.704232}
+    - {x: 0.615712, y: 0.746423}
+    - {x: 0.555154, y: 0.767117}
+    - {x: 0.497426, y: 0.766554}
+    - {x: 0.440112, y: 0.766554}
+    - {x: 0.380224, y: 0.745230}
+    - {x: 0.418662, y: 0.711683}
+    - {x: 0.461407, y: 0.703251}
+    - {x: 0.498001, y: 0.701235}
+    - {x: 0.535036, y: 0.703511}
+    - {x: 0.577079, y: 0.712245}
+    - {x: 0.534382, y: 0.726131}
+    - {x: 0.497687, y: 0.726018}
+    - {x: 0.461407, y: 0.726018}
+    - {x: 0.081534, y: 0.255373}
+    - {x: 0.205652, y: 0.156383}
+    - {x: 0.339052, y: 0.113173}
+    - {x: 0.500065, y: 0.104531}
+    - {x: 0.662180, y: 0.112894}
+    - {x: 0.797056, y: 0.155939}
+    - {x: 0.921123, y: 0.254877}
+  FaceIndex: 0
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+  OriginalFaceIndex: 1
+  UseTextureFacePosition: false
+  UseOriginalTexCoords: false
+  DrawMouth: false
+  EnabledLipsFix: true
+  EnabledTeethFix: true
+  TeethFixAlpha: 1.000000
+  MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
+  LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/bbc418f4-7bf4-4aa0-9520-52ce2edab261>
   PrefabRemaps:
     []
@@ -7247,6 +7954,21 @@
   Components:
     - !<own> 9ab976bc-1510-4482-9415-254156e86477
     - !<own> 16221c1b-98ec-4da8-8e01-e3d4a6413092
+- !<SceneObject/c0467709-e2e7-4126-ae6c-b875d0a6161e>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_JawOpen
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f73075d4-62df-4a3d-9a99-af5d6bfa2cf7
 - !<ScriptComponent/c0534cc7-4f24-4d28-8ea5-55d6e884ecf6>
   PrefabRemaps:
     []
@@ -8600,6 +9322,9 @@
     - !<own> 7d889e0d-5d0e-4a2e-88c9-49fe9bcb7df2
     - !<own> 4b6be486-a7e2-4040-a8f4-b407c25aed60
     - !<own> 4c797df7-1e2d-4546-9465-95f9ff211fc4
+    - !<own> 1597c593-9cf0-4fa4-a17e-378a703042ff
+    - !<own> 3c193178-6921-4e33-9c9a-2a1571a3f2d7
+    - !<own> 07d7048a-9a0d-4c48-8b47-29637634b261
   Components:
     []
 - !<Image/f2c12d41-3bcc-442e-8a0b-20877087f6e4>
@@ -8889,6 +9614,33 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/f73075d4-62df-4a3d-9a99-af5d6bfa2cf7>
+  PrefabRemaps:
+    []
+  Name: ExpressionController_Unilateral
+  Enabled: true
+  ScriptAsset: !<reference> 832601d1-c899-4e9e-92a5-2f51f0375be7
+  ScriptInputsDefault:
+    completedSets: true
+    completedReps: true
+    apiScript: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      target: !<reference.FaceMaskVisual> 3babb92a-eb63-477e-8222-022f26e81fef
+      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
+      expression: LipsPucker
+      displayText: Pucker Your Lips
+      finishText: "You're Finished! "
+      completedSets: !<float> 0.000000
+      completedReps: !<float> 0.000000
+      baseDifficulty: 0.200000
+      expressionIndex: !<float> 5.000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f847bbed-4fa2-401b-8b6f-1745b73d2755>
   PrefabRemaps:
     []
