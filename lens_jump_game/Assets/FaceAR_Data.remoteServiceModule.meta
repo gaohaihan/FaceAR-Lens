@@ -1,8 +1,8 @@
-- !<AssetImportMetadata/d15a9c4d-fa40-49b5-b806-ac0d4e2f6096>
+- !<AssetImportMetadata/c919b42c-0e50-43d2-a727-a173a0cc3453>
   ImportedAssetIds:
-    Texture: !<reference> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
-  ImporterName: DeviceCameraTextureImporter
-  PrimaryAsset: !<reference> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+    RemoteServiceModule: !<reference> c4043d3b-96de-458f-ba1d-5dbca316a3f3
+  ImporterName: RemoteServiceModuleImporter
+  PrimaryAsset: !<reference> c4043d3b-96de-458f-ba1d-5dbca316a3f3
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:

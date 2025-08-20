@@ -5,7 +5,8 @@
   LazyLoading: false
   RetainAssets: true
 - !<ColliderComponent/061350f0-837b-44ff-acf7-3913546da030>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Physics Collider
   Enabled: true
   Shape: !<Box>
@@ -22,7 +23,8 @@
   Intangible: false
   ShowCollider: false
 - !<SceneObject/1e5c3e58-b5c2-4bed-a2b9-7bf400f66cb0>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: obstacle
   Enabled: true
   Layers: 1
@@ -31,13 +33,15 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 0.200000, y: 0.200000, z: 0.100000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> bc6e7775-934f-44fa-94b0-ea58135523d1
     - !<own> 061350f0-837b-44ff-acf7-3913546da030
     - !<own> 3981523d-a831-4c75-b77c-46b4e9b5bf2b
 - !<RenderMeshVisual/3981523d-a831-4c75-b77c-46b4e9b5bf2b>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Render Mesh Visual
   Enabled: true
   RenderOrder: 0
@@ -53,9 +57,11 @@
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
-  BlendShapes: {}
+  BlendShapes:
+    {}
 - !<BodyComponent/bc6e7775-934f-44fa-94b0-ea58135523d1>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Physics Body
   Enabled: true
   Shape: !<Box>
