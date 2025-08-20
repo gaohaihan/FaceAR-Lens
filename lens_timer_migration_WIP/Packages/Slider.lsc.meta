@@ -3,21 +3,18 @@
     .hidden/Button_mat: !<reference> 7de5b3e0-d3db-4ae4-bccf-b6225e4073ec
     .hidden/Slider_mat: !<reference> 688112a9-fe1b-4e9d-a0c1-3904e2bdcadb
     .hidden/empty: !<reference> a5bf148a-c031-4027-baee-a5d9d9abd8d9
-    0a35f85fd86e1d5c: !<reference> 3d462f80-280b-49b1-bf85-66d777eb8d31
-    0b339d8f4de6b7ba: !<reference> 2af75343-defa-4386-9dfe-69f0bc005a68
-    26c76d09b3d0b2c3: !<reference> b51a8a74-fdb1-422a-929d-41912c9607da
-    438a262d4a1c7dab: !<reference> 3174da62-88cc-4681-896f-ced3b1a4624e
-    47caf937bd33c49b: !<reference> 486c9a73-9451-4cc1-a777-2738d6f3fc5c
-    49783a775e6f546d: !<reference> 8a27036c-67ec-43b7-a9b5-5c74433d44e9
-    55f79b6e3d5f6662: !<reference> ea0a343f-c1ed-4a7c-b74a-538289985205
-    57667092fc9a8239: !<reference> fab686df-0bdd-4aa9-bf65-a12cf8dc0fb5
-    5b75349f7ac2a07b: !<reference> e49e7d18-3a7f-43c9-9dd5-0be425791801
-    6e4c49523b912a73: !<reference> 9fdcbbb4-9666-4190-826a-b569a35bfbb0
-    72f37eed377857e5: !<reference> 40f7ab7a-5249-44fc-94fd-00e336025cdd
-    7ef7ce3d0c2420d4: !<reference> d54e2339-6157-40a2-aaa0-c4fe09cd238c
-    8d78c416d2c50a14: !<reference> 30552ea4-9560-44a4-b863-5783d93ab0e5
-    8e840d43ce3d85a7: !<reference> e86d0da7-5759-4286-b31e-3a9fa0a24a4e
-    93b786636fa8474c: !<reference> d02871f8-5dc9-4f62-ac99-1c0da64adc29
+    06938ea7431c4280: !<reference> 07a5c19e-d9db-41b5-b57b-13471fd020ed
+    1391e2a76d95708c: !<reference> b603b892-98b7-4fc1-9c37-93c9682c5d27
+    149a157cb5badced: !<reference> ad1d4e0b-41e8-4299-b200-90c892599159
+    2e22f760b1969adc: !<reference> ae1a5533-4b20-4433-a0f2-75f2e614c9a6
+    3b3c1e118ebf3c89: !<reference> 465b5554-d341-4b43-a556-9210f31b3d68
+    3e62446a7d4ecc98: !<reference> 599ae6b7-6d50-4c3d-82b0-1004f63b5301
+    6a886aaa273af03d: !<reference> e153370f-8156-4f6b-b5b4-347ff4352991
+    822502095354ea99: !<reference> 5c5a1f71-802b-42bb-b090-c67ec03ae6ff
+    84672c2214759757: !<reference> 91be83db-0f04-4d1d-a611-b97bab718777
+    8b2f79a530a99c57: !<reference> 8d23c4c9-6171-4c75-87a8-7f957ba8c651
+    8c97f090b7da6f4b: !<reference> d9db543b-edb9-4d20-baf7-845fedb9aa26
+    9aae6dc4775fec92: !<reference> 3f77089e-6622-4647-8f73-9e9b295ca09f
     BaseSlider: !<reference> 3286fe03-8c84-491a-9845-23905d0fe5f4
     Modules/BehaviorSupport/EventCallbacks: !<reference> dec357a1-2c69-4d7a-a473-dc97c62fb905
     Modules/Debug/ComponentWithPrintOptions: !<reference> 86b990e8-fd72-4869-aaa6-8e704ceb9c48
@@ -50,12 +47,15 @@
     TypeScriptAsset7: !<reference> a38000d5-3f2a-4ffa-aba5-e31b2009418d
     TypeScriptAsset8: !<reference> 89d09ae1-6730-4388-b0f1-35bac50ce515
     TypeScriptAsset9: !<reference> 95c1b075-5ec7-4df0-a34b-7c07b2081282
-    ad39285eb141a525: !<reference> 68a37363-429c-4440-941d-08c606f57e33
-    c5627b1d0cb63085: !<reference> 2875a19d-33b4-4527-a10e-dd13887ca953
-    cb828a7bc3ed5c7d: !<reference> 3fd4d324-e2ee-40dd-9130-63d9fa158cc2
-    e6920c873930e324: !<reference> 88df9d29-9c41-4f13-8410-749a1a014830
-    f061ad4f65f200fb: !<reference> cbb7b4bf-14a6-47cb-b57f-a5d8e442fc66
-    ff521b8790276361: !<reference> 8a5d7992-db19-4c1d-9666-8e7cd2b3ecbe
+    aca6f44da864024f: !<reference> 701b823e-3302-489a-8050-c5a34dc7e83b
+    ae4c550a70469ce3: !<reference> fe6eeb5a-eb07-4111-889e-9af8d34eba93
+    c2acd70d26e810bc: !<reference> 50b43b17-2f58-4985-ad2e-27322210da84
+    ca041a484027e696: !<reference> 0c08d892-800b-432a-adf2-1af3167bf1a9
+    d8476cee34420625: !<reference> 38429ed7-e5e3-44ea-a508-8ce655c6ee9a
+    d9f33cfb19a16160: !<reference> 8b4a9c06-7d2d-4058-98f3-186192734c80
+    f88edf0d3d1d1553: !<reference> ac64b38a-1813-4bfa-8921-011d26087cc8
+    fc4990ee577f265c: !<reference> f320f1ed-98a5-4d55-832d-bd013fd835be
+    fcad221891d7bf9b: !<reference> 0ecc66ed-ac6e-424e-a78c-bce50d86859b
   ImporterName: LensCoreImporter
   PrimaryAsset: !<reference> 9ca85c27-7b28-4752-aec5-936dca7a2bae
   PackageType: LegacyPackage
@@ -127,11 +127,11 @@
   Name: TouchZone
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -214,11 +214,11 @@
   Name: Button Extents
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> afb1f242-164f-458e-8fbb-6877dc21a79f
   Components:
@@ -230,11 +230,11 @@
   Name: Slider_Button
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 58b12e2a-5cb7-4128-ac03-ae4c33ae97db
   Components:
@@ -296,11 +296,11 @@
   Name: "[Slider counter]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -312,11 +312,11 @@
   Name: Slider_BG
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -381,11 +381,11 @@
   Name: TouchZoneSpare
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -622,11 +622,11 @@
   Name: Screen Transform Slider
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -2.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -2.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> b2f702e7-8434-4100-b297-72646874c578
     - !<own> 617c60c2-0d84-4321-8819-b195ca45c09f

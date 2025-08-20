@@ -1,14 +1,11 @@
 studioVersion:
   major: 5
   minor: 12
-  patch: 0
-  build: 25072306
+  patch: 1
+  build: 25080420
   type: Public
-  buildFlavor: release
-  timestamp: 1753251770000
-  commit: ee0490d1fcdc2c72cff410afe81aa9200ec23020
-coreVersion: 309
-clientVersion: 13.380000
+coreVersion: 321
+clientVersion: 13.500000
 updateCheckpoint: 68
 sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
 viewConfig:
@@ -21,15 +18,18 @@ viewConfig:
     output: Live
     stereoOutputEye: Center
     deviceTypeOverride: Unknown
-  cameraType: Back
+    tint: true
+    screenshot: false
+    videoScreenRecord: false
+  cameraType: Front
 metaInfo:
   hints:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: jump_game
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
@@ -38,7 +38,7 @@ metaInfo:
     - Web
     - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 38701ae713d36a0b51630d876c33055e
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906
@@ -55,3 +55,5 @@ metaInfo:
     minor: 0
     patch: 0
     build: 0
+  documentId: fbec8ff9-6d78-4141-9075-e2a447672145
+  originalDocumentId: fbec8ff9-6d78-4141-9075-e2a447672145

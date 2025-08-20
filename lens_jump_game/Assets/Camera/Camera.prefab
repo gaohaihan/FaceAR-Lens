@@ -5,7 +5,8 @@
   LazyLoading: false
   RetainAssets: true
 - !<Camera/0c1e2ff8-df83-4f54-b6ba-ff5e2284b61b>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Camera
   Enabled: true
   renderLayer: 1
@@ -35,7 +36,8 @@
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
   DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
 - !<FaceMaskVisual/0d1d0827-0c78-4bef-ba38-20d1d873783f>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Face Mask
   Enabled: true
   RenderOrder: 2
@@ -211,7 +213,8 @@
   MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
   LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/1c82fbc3-167b-4361-83fa-6b5bcd5a713b>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Head Binding 0
   Enabled: true
   Layers: 1
@@ -225,7 +228,8 @@
   Components:
     - !<own> 865da9d5-0dad-4dfd-b013-136da5361d64
 - !<SceneObject/1e4bf490-8f6b-404c-8e46-a236b755b84b>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: SensitivityManager
   Enabled: true
   Layers: 1
@@ -234,11 +238,13 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> bd7ebca8-e53d-4b59-933f-39ca7044d831
 - !<SceneObject/2b132b87-8ec6-4230-8ea4-0fc81572ba6a>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_EyeBlink
   Enabled: true
   Layers: 1
@@ -247,11 +253,13 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> d17795f0-0f35-41aa-97d5-e5e961c8786b
 - !<SceneObject/2f1e5d4e-4a7c-431b-a406-e22e740eb8b9>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Face Mesh
   Enabled: true
   Layers: 1
@@ -260,26 +268,30 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> 488a64aa-12c3-4d81-a9f9-bc0a97210cb6
 - !<SceneObject/39b18a05-1b23-4674-b1cb-eb3ce4c7e596>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Controller
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> ae09de14-c822-43fa-aec7-efd189e5e481
     - !<own> 40244900-8f90-4214-ae6b-9dfc9129655f
     - !<own> 1e4bf490-8f6b-404c-8e46-a236b755b84b
-  Components: []
+  Components:
+    []
 - !<SceneObject/40244900-8f90-4214-ae6b-9dfc9129655f>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: GameManager
   Enabled: true
   Layers: 1
@@ -288,11 +300,13 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> 85f95a59-06f9-49eb-9743-8bb8927c8ad6
 - !<SceneObject/456b983d-e08f-4192-bef7-4ffd3f138725>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Mask_Smile
   Enabled: true
   Layers: 1
@@ -301,11 +315,13 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> 8bbd5a1d-5380-47b2-b69c-186185cf19c9
 - !<RenderMeshVisual/488a64aa-12c3-4d81-a9f9-bc0a97210cb6>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Render Mesh Visual
   Enabled: true
   RenderOrder: 0
@@ -321,9 +337,11 @@
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
-  BlendShapes: {}
+  BlendShapes:
+    {}
 - !<SceneObject/54763129-d039-48dd-99a3-675e08c1eb44>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Effects
   Enabled: true
   Layers: 1
@@ -338,9 +356,11 @@
     - !<own> ccb96e8f-d24b-442a-bf6b-149af6c02431
     - !<own> 87ce1840-43b0-460c-9a02-a3c8fc260400
     - !<own> 6097ff51-cadd-4500-8b99-2d84a155dfc8
-  Components: []
+  Components:
+    []
 - !<SceneObject/585aaee2-8519-4a58-9f45-2b739b7d2f43>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_Smile
   Enabled: true
   Layers: 1
@@ -349,25 +369,29 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> 82d39782-5624-4a86-b6b9-291c35d6f3f5
 - !<SceneObject/6097ff51-cadd-4500-8b99-2d84a155dfc8>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Smile
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 585aaee2-8519-4a58-9f45-2b739b7d2f43
     - !<own> 456b983d-e08f-4192-bef7-4ffd3f138725
-  Components: []
+  Components:
+    []
 - !<SceneObject/7f8ed625-a978-466a-8528-4e76ffaf7549>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Mask_JawOpen
   Enabled: true
   Layers: 1
@@ -376,18 +400,21 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> e9dd7483-8aab-4f56-a757-23b5dcc59d0d
 - !<ScriptComponent/82d39782-5624-4a86-b6b9-291c35d6f3f5>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_Bilateral
   Enabled: true
   ScriptAsset: !<reference> 64f43090-296e-4764-8f96-15d9d36a45e5
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-  ScriptTypesDefault: {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
     "":
       target: !<reference.FaceMaskVisual> 8bbd5a1d-5380-47b2-b69c-186185cf19c9
@@ -402,15 +429,18 @@
       expressionIndex: !<float> 2.000000
       apiScript: !<reference.ScriptComponent> 000623d8-0915-9603-0000-0000000156eb
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<ScriptComponent/85f95a59-06f9-49eb-9743-8bb8927c8ad6>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: GameManager
   Enabled: true
   ScriptAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
   ScriptInputsDefault:
     maxIndex: true
-  ScriptTypesDefault: {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
     "":
       expressionTitleText: !<reference.Text> 00061586-24ec-10e3-0000-00000024a6f8
@@ -422,9 +452,11 @@
       remoteServiceModule: !<reference.RemoteServiceModule> 71692066-c17c-4d64-a5b5-e7adce62fa76
       apiScript: !<reference.ScriptComponent> 000623d8-0915-9603-0000-0000000156eb
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<Head/865da9d5-0dad-4dfd-b013-136da5361d64>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Head Binding
   Enabled: true
   AttachmentPointType: HeadCenter
@@ -440,21 +472,24 @@
       - 0.000000
   TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/87ce1840-43b0-460c-9a02-a3c8fc260400>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: EyeBlink
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 2b132b87-8ec6-4230-8ea4-0fc81572ba6a
     - !<own> 96fe71b9-7357-4053-9eba-872eb3a167b3
-  Components: []
+  Components:
+    []
 - !<FaceMaskVisual/8bbd5a1d-5380-47b2-b69c-186185cf19c9>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Face Mask
   Enabled: true
   RenderOrder: 3
@@ -630,7 +665,8 @@
   MaskOnMouthClosed: !<reference> 00000000-0000-0000-0000-000000000000
   LastNonOriginalTexture: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/96fe71b9-7357-4053-9eba-872eb3a167b3>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Mask_EyeBlink
   Enabled: true
   Layers: 1
@@ -639,17 +675,19 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> 0d1d0827-0c78-4bef-ba38-20d1d873783f
 - !<SceneObject/a76ff77f-0e27-404d-a92b-1d04efa018a3>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Camera
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 40.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -657,7 +695,8 @@
   Components:
     - !<own> 0c1e2ff8-df83-4f54-b6ba-ff5e2284b61b
 - !<SceneObject/ae09de14-c822-43fa-aec7-efd189e5e481>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Pause Manager
   Enabled: true
   Layers: 1
@@ -666,37 +705,47 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> b79876d9-6278-4547-b1e7-88add9890775
 - !<ScriptComponent/b79876d9-6278-4547-b1e7-88add9890775>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: PauseManager
   Enabled: true
   ScriptAsset: !<reference> c024e194-aa99-4eb4-9c10-f52fbf3a78ea
-  ScriptInputsDefault: {}
-  ScriptTypesDefault: {}
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
-    "": {}
+    "":
+      {}
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<ScriptComponent/bd7ebca8-e53d-4b59-933f-39ca7044d831>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: DifficultyManager
   Enabled: true
   ScriptAsset: !<reference> adf9ce7f-72c7-47f9-a954-69f8bbddfd4c
   ScriptInputsDefault:
     sliderScript: true
     faceMesh: true
-  ScriptTypesDefault: {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
     "":
       sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<ScriptComponent/c4938687-3262-4c48-ae83-0ff75836ad6d>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_Unilateral
   Enabled: true
   ScriptAsset: !<reference> 6d63b195-3d86-4c57-8751-6c2124dcc5b7
@@ -704,7 +753,8 @@
     completedSets: true
     completedReps: true
     expressionIndex: true
-  ScriptTypesDefault: {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
     "":
       target: !<reference.FaceMaskVisual> e9dd7483-8aab-4f56-a757-23b5dcc59d0d
@@ -718,30 +768,35 @@
       expressionIndex: !<float> 0.000000
       apiScript: !<reference.ScriptComponent> 000623d8-0915-9603-0000-0000000156eb
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<SceneObject/ccb96e8f-d24b-442a-bf6b-149af6c02431>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: JawOpen
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> dbbdd049-390b-4b77-a047-c8e63bbc7307
     - !<own> 7f8ed625-a978-466a-8528-4e76ffaf7549
-  Components: []
+  Components:
+    []
 - !<ScriptComponent/d17795f0-0f35-41aa-97d5-e5e961c8786b>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_Bilateral
   Enabled: true
   ScriptAsset: !<reference> 64f43090-296e-4764-8f96-15d9d36a45e5
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-  ScriptTypesDefault: {}
+  ScriptTypesDefault:
+    {}
   ScriptInputs:
     "":
       target: !<reference.FaceMaskVisual> 0d1d0827-0c78-4bef-ba38-20d1d873783f
@@ -756,9 +811,11 @@
       expressionIndex: !<float> 1.000000
       apiScript: !<reference.ScriptComponent> 000623d8-0915-9603-0000-0000000156eb
   ScriptTypes:
-    "": {}
+    "":
+      {}
 - !<SceneObject/dbbdd049-390b-4b77-a047-c8e63bbc7307>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: ExpressionController_JawOpen
   Enabled: true
   Layers: 1
@@ -767,11 +824,13 @@
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
-  Children: []
+  Children:
+    []
   Components:
     - !<own> c4938687-3262-4c48-ae83-0ff75836ad6d
 - !<FaceMaskVisual/e9dd7483-8aab-4f56-a757-23b5dcc59d0d>
-  PrefabRemaps: []
+  PrefabRemaps:
+    []
   Name: Face Mask
   Enabled: true
   RenderOrder: 1

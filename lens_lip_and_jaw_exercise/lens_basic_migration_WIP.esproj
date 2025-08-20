@@ -21,7 +21,7 @@ viewConfig:
     tint: true
     screenshot: false
     videoScreenRecord: false
-  cameraType: Back
+  cameraType: Front
 metaInfo:
   hints:
     []
@@ -29,15 +29,16 @@ metaInfo:
     []
   lensName: lip_exercise
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
+    - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: d11a159996ae42b16d492e542199499a
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906
