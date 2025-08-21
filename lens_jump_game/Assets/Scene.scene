@@ -2105,13 +2105,12 @@
   Enabled: true
   ScriptAsset: !<reference> c6eef20f-9a93-48ed-8771-20b0c39ac90b
   ScriptInputsDefault:
-    faceMesh: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       sliderScript: !<reference.ScriptComponent> a635860f-b0bb-4d2e-8a3d-283c9cd77c75
-      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -4869,8 +4868,6 @@
   Enabled: true
   ScriptAsset: !<reference> 741a1787-d2c3-4f7e-80ee-15453026de78
   ScriptInputsDefault:
-    completedSets: true
-    completedReps: true
     expressionIndex: true
     apiScript: true
   ScriptTypesDefault:
@@ -4880,8 +4877,6 @@
       target: !<reference.FaceMaskVisual> 373906f4-7e31-4a73-910d-0def48672b41
       faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
       finishText: Done!
-      completedSets: !<float> 0.000000
-      completedReps: !<float> 0.000000
       baseDifficulty: 0.020000
       expressionIndex: !<float> 0.000000
       apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
@@ -5324,34 +5319,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/825badbb-1736-48a8-b29a-4cf9a1b46771>
-  PrefabRemaps:
-    []
-  Name: ExpressionController_Unilateral
-  Enabled: false
-  ScriptAsset: !<reference> 832601d1-c899-4e9e-92a5-2f51f0375be7
-  ScriptInputsDefault:
-    completedSets: true
-    completedReps: true
-    expressionIndex: true
-    apiScript: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      target: !<reference.FaceMaskVisual> 373906f4-7e31-4a73-910d-0def48672b41
-      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
-      expression: "null"
-      displayText: "null"
-      finishText: Done
-      completedSets: !<float> 0.000000
-      completedReps: !<float> 0.000000
-      baseDifficulty: 0.200000
-      expressionIndex: !<float> 0.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/83b81756-dde9-4f84-b9c6-9793407f80dd>
   PrefabRemaps:
     []
@@ -6605,7 +6572,6 @@
   Children:
     []
   Components:
-    - !<own> 825badbb-1736-48a8-b29a-4cf9a1b46771
     - !<own> 73da9f41-a3d6-4180-8bfd-18cc2df3707d
 - !<SceneObject/9cc75250-a167-4d73-894c-35d0eb82022f>
   PrefabRemaps:
@@ -7494,13 +7460,12 @@
   Enabled: true
   ScriptAsset: !<reference> 5500d47a-898b-4d3b-aa0c-b92ce2b6e0c4
   ScriptInputsDefault:
-    altBall: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       ball: !<reference.SceneObject> 0ed42dcd-9525-4684-933b-efcbef802330
-      altBall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

@@ -21,7 +21,7 @@ viewConfig:
     tint: true
     screenshot: false
     videoScreenRecord: false
-  cameraType: Back
+  cameraType: Front
 metaInfo:
   hints:
     []

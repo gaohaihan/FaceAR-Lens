@@ -27,7 +27,6 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    altBall: false
     ball: false
   ScriptTypesHidden:
     {}
@@ -35,7 +34,6 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - ball: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      altBall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
