@@ -29,8 +29,6 @@
   ScriptInputsHidden:
     apiScript: false
     baseDifficulty: false
-    completedReps: false
-    completedSets: false
     expressionIndex: false
     faceMesh: false
     finishText: false
@@ -43,8 +41,6 @@
     - target: !<reference.FaceMaskVisual> 00000000-0000-0000-0000-000000000000
       faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
       finishText: ""
-      completedSets: !<float> 0.000000
-      completedReps: !<float> 0.000000
       baseDifficulty: !<float> 0.000000
       expressionIndex: !<float> 0.000000
       apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000

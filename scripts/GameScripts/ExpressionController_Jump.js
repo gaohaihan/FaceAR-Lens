@@ -2,8 +2,6 @@
 // @input Component.FaceMaskVisual target
 // @input Component.RenderMeshVisual faceMesh
 // @input string finishText
-// @input number completedSets
-// @input number completedReps
 // @input number baseDifficulty
 // @input number expressionIndex
 // @input Component.ScriptComponent apiScript
@@ -56,8 +54,6 @@ function Initialize(){
 
     // Display prompt text
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, displayText);
-    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredSetText,  global.requiredSets.toString());
-    pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 }
 
 /***
@@ -106,11 +102,6 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
-  if(global.isTimer == true) {
-    HoldExpression();
-  } else {
-    CountReps();
-  }  
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
   DetermineJump();
@@ -132,82 +123,12 @@ function UpdateCurrentDifficulty(){
 
   var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
-  //print("Difficulty" + difficulty)
-  //print("minDifficulty" + currentDifficulty)
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
     currentDifficulty = 1;
 }
 
-/**
-* Count completed reps, expression must return to base line bf another rep is counted.
-*/
-function CountReps() {
-    //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
-        Finished();
-        return;
-    }
-
-    // Update rep count text
-    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-
-    var rawWeight = GetRawExpressionWeight();
-    if (rawWeight > currentDifficulty && midRep !== true){
-        midRep = true;
-        script.completedReps += 1
-       // script.apiScript.sendDataToSite('completedReps', script.completedReps);
-        // Increment sets when the current set is finished
-        if (script.completedReps >= global.requiredReps){
-            script.completedSets += 1;
-            script.completedReps = 0;
-        }
-        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-    }
-
-    var rawWeight = GetRawExpressionWeight();
-    if (rawWeight <= currentDifficulty && midRep === true){
-        midRep = false;
-    }
-}
-
-function HoldExpression() {
-
-  // stop counting when hit required reps
-  if (global.complete == 1){
-    Finished();
-    return;
-  }
-    // Update rep count text
-    pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-
-    var rawWeight = GetRawExpressionWeight();
-     //print("adjusted " + adjustedWeight)
-    if (rawWeight > currentDifficulty && midRep !== true){
-        midRep = true;
-        script.completedReps += 1
-        global.timerUpdate = 1;
-        if (script.completedReps >= global.requiredReps){
-            script.completedSets += 1;
-            script.completedReps = 0;
-        }
-        //insert timer here somehow
-        pubSub.publish(pubSub.EVENTS.SetExpressionSetText,  script.completedSets.toString() );
-        pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
-         }
-
-     var rawWeight = GetRawExpressionWeight();
-     // print("raw " + rawWeight)
-    if (rawWeight <= currentDifficulty && midRep === true){
-        midRep = false;
-        global.timerUpdate = 2;
-
-     }
- }
 /***
 * Disable bilateral UI since it is not applicable to this exercise
 */
@@ -222,20 +143,6 @@ function GetRawExpressionWeight(){
   return weight;
 }
 
-/**
- * Display finished text
- */
-function Finished(){
-  if(global.isTimer == true) {
-         if (global.complete == 1){
-            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
-  }
-    } else {
-         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
-            pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
-        }
-    }
-}
 /**
  * Display value for debugging
  */
@@ -271,10 +178,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
   {
     script.enabled = true;
     script.target.enabled = true;
-    script.completedSets = 0;
-    script.completedReps = 0;
-    pubSub.publish(pubSub.EVENTS.SetExpressionSetText, script.completedSets.toString());
-    pubSub.publish(pubSub.EVENTS.SetExpressionRepText, script.completedReps.toString());
     InitializeUserBaseExpressionValue();
   }
   else
@@ -283,10 +186,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
     script.target.enabled = false;
   }
 });
-
-/**
- * Pause exercise and reinit base expression value.
- */
 
 /**
  * Pause exercise and reinit base expression value.
