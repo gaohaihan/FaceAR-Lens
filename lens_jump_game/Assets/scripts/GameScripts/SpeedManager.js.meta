@@ -27,7 +27,6 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    faceMesh: false
     sliderScript: false
   ScriptTypesHidden:
     {}
@@ -35,7 +34,6 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - sliderScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

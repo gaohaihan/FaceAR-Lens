@@ -11,6 +11,6 @@ script.SetSpeed = SetSpeed;
   */
   function SetSpeed(){
     var sliderValue = script.sliderScript.sliderValue;
-    print("speed slider value " + sliderValue);
+   // print("speed slider value " + sliderValue);
     global.Speed = sliderValue;
  }
