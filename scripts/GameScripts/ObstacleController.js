@@ -102,18 +102,6 @@ function SetColliderFilter(){
         print("overlap")
       colliding = true;
     })
-      collider.onCollisionEnter.add(function (e) {
-        print("collider")
-      colliding = true;
-    })
-    collider.onCollisionStay.add(function (e) {
-       print("stay")
-     colliding = true;
-    })
-    collider.onCollisionExit.add(function (e) {
-     colliding = false;
-      print("collider exit")
-    })
     collider.onOverlapExit.add(function (e) {
        print("overlap exit")
       colliding = false;
