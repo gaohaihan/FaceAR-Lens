@@ -4,7 +4,7 @@
   ImporterName: NativePackageImporter
   PrimaryAsset: !<reference> d91c66e1-3292-4c01-a6f5-04ee11d237e6
   PackageType: PackedNativePackageRoot
-  PackagePolicy: CanBeUnpackedTransparent
+  LegacyPackagePolicy: ~
   ExtraData:
     AssetLibraryId: 5XyFG5FUWczwqiCRpc2Qlf
   AssetDataMap:

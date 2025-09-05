@@ -4,7 +4,7 @@
   ImporterName: ObjectPrefabImporter
   PrimaryAsset: !<reference> 9a922dd4-034c-416e-a641-3cfe2904d5f9
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -99,7 +99,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
-  Intangible: false
+  Intangible: true
   ShowCollider: false
   Dynamic: false
   BodySetting: Density
