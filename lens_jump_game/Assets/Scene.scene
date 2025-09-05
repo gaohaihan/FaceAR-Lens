@@ -1631,6 +1631,39 @@
     - !<own> 64ceb8d8-406e-41df-9317-0c9627baffdd
   Components:
     - !<own> 26e169e6-a868-45e8-81fb-d16e90caad34
+- !<ScreenTransform/20b5f70e-bd2c-4789-bca9-a4862b7b1dd0>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<ScreenTransform/22271344-5e53-446c-a3c6-ff973d602fcf>
   PrefabRemaps:
     []
@@ -3145,6 +3178,59 @@
     []
   Components:
     - !<own> 4b355f77-c92e-4629-aa65-3a7fd4311099
+- !<ScriptComponent/46298575-16ca-4a3e-8a1d-3f9fee43ea79>
+  PrefabRemaps:
+    []
+  Name: Slider
+  Enabled: true
+  ScriptAsset: !<reference> 9ca85c27-7b28-4752-aec5-936dca7a2bae
+  ScriptInputsDefault:
+    printWarningStatements: true
+    interactable: true
+    blockTouches: true
+    renderOrder: true
+    orientation: true
+    stepEnabled: true
+    stepValue: true
+    prefabSlider: true
+    counterEnabled: true
+    fractionDigits: true
+    trackBar: true
+    _trackBarColor: true
+    onValueChangedBehaviors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      editDebugSettings: true
+      printDebugStatements: true
+      printWarningStatements: true
+      interactable: true
+      blockTouches: true
+      renderOrder: 0
+      orientation: 0
+      startValue: 0.010000
+      endValue: 1.500000
+      startSliderValue: 0.750000
+      stepEnabled: false
+      stepValue: !<float> 0.000000
+      prefabSlider: !<reference.ObjectPrefab> 8d8166c8-2136-4567-9223-d7f42e1d144b
+      counterEnabled: false
+      fractionDigits: 0
+      trackBar: false
+      _trackBarColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
+      eventCallbacks: true
+      callbackType: 3
+      onValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onValueChangedCustomTriggers: !<string[]>
+        - ""
+      onValueChangedFunctions:
+        - script: !<reference.ScriptComponent> 32e9f695-d843-4ad5-97a7-50e86c908283
+          function: SetSpeed
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/46bf9dca-65dd-4a78-962b-f965d0ce60d7>
   PrefabRemaps:
     []
@@ -4002,6 +4088,18 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<Canvas/55929df9-a282-4fdc-bc45-1a01e27b951c>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -15.000000
+    bottom: -20.000000
+    right: 15.000000
+    top: 20.000000
 - !<SceneObject/55eab32c-7dff-4183-8561-7933317c9351>
   PrefabRemaps:
     []
@@ -4656,7 +4754,7 @@
   PrefabRemaps:
     []
   Name: difficulty slider
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -6134,6 +6232,39 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
+- !<ScreenTransform/91197ca8-d324-43a9-9739-aef1ecdd0916>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<ScreenRegionComponent/921fde65-01d4-4e0f-8b55-373872fc2853>
   PrefabRemaps:
     []
@@ -6329,6 +6460,23 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/94fb4b90-a083-40b9-af89-74ed5871db45>
+  PrefabRemaps:
+    []
+  Name: Full Frame Region 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> abffaa83-5ef5-4447-8078-8a94d3022107
+    - !<own> e1a45b45-ee29-48d4-b8d8-1873ede16326
+  Components:
+    - !<own> e21fc75f-a364-4cc5-923a-3d53917dd17b
+    - !<own> 9acd5ffc-49a2-451f-94c2-04b11da549e0
 - !<ScreenTransform/9548ff73-171b-4077-b81c-4af244118d6a>
   PrefabRemaps:
     []
@@ -6509,6 +6657,13 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScreenRegionComponent/9acd5ffc-49a2-451f-94c2-04b11da549e0>
+  PrefabRemaps:
+    []
+  Name: Screen Region
+  Enabled: true
+  ScreenRegionType: FullFrame
+  ResizeWithKeyboard: false
 - !<SceneObject/9b5d317e-e457-4865-af60-002c70512d4a>
   PrefabRemaps:
     []
@@ -6701,6 +6856,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> d157fa1e-9e5b-4a0a-963b-053a7b05806c
+    - !<own> 94fb4b90-a083-40b9-af89-74ed5871db45
     - !<own> b0f8a996-af0c-48e3-af6a-0ea547bd601b
   Components:
     - !<own> 37a3135a-80a7-465d-aff8-c58ba8acd0d3
@@ -7564,6 +7720,22 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/abffaa83-5ef5-4447-8078-8a94d3022107>
+  PrefabRemaps:
+    []
+  Name: difficulty slider
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 91197ca8-d324-43a9-9739-aef1ecdd0916
+    - !<own> f7334779-5140-45a0-8f94-a1d336d33795
 - !<Image/ac51bd21-35df-437a-8fa5-1dd19dd5ab8d>
   PrefabRemaps:
     []
@@ -8220,6 +8392,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/b8f4a3ba-ea2a-473b-94e5-6d0bb085e576>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 55929df9-a282-4fdc-bc45-1a01e27b951c
 - !<SceneObject/ba39eee0-e37f-4beb-90f7-bd800e56961f>
   PrefabRemaps:
     []
@@ -9050,6 +9237,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
+    - !<own> b8f4a3ba-ea2a-473b-94e5-6d0bb085e576
     - !<own> 687c4008-017c-4ccd-8e3e-123e7d2d2447
     - !<own> a3a134f3-00fb-4dda-9316-1b2fbd7cdd94
   Components:
@@ -9747,6 +9935,55 @@
   Components:
     - !<own> 10c434a3-ca09-41aa-95d3-bb6d41c3978c
     - !<own> 406c1396-6e74-49fd-a9a2-3c58fc2a7f55
+- !<SceneObject/e1a45b45-ee29-48d4-b8d8-1873ede16326>
+  PrefabRemaps:
+    []
+  Name: speed slider
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 20b5f70e-bd2c-4789-bca9-a4862b7b1dd0
+    - !<own> 46298575-16ca-4a3e-8a1d-3f9fee43ea79
+- !<ScreenTransform/e21fc75f-a364-4cc5-923a-3d53917dd17b>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<SceneObject/e2b662f0-b7fa-4036-bf63-7d475a443d14>
   PrefabRemaps:
     []
@@ -10288,6 +10525,60 @@
   Components:
     - !<own> d35eacbd-206e-4e0f-8450-14c27a0cc60a
     - !<own> bf197755-6f58-446a-b2d9-dbe08f94ed44
+- !<ScriptComponent/f7334779-5140-45a0-8f94-a1d336d33795>
+  PrefabRemaps:
+    []
+  Name: Slider
+  Enabled: true
+  ScriptAsset: !<reference> 9ca85c27-7b28-4752-aec5-936dca7a2bae
+  ScriptInputsDefault:
+    printWarningStatements: true
+    interactable: true
+    blockTouches: true
+    renderOrder: true
+    orientation: true
+    endValue: true
+    stepEnabled: true
+    stepValue: true
+    prefabSlider: true
+    counterEnabled: true
+    fractionDigits: true
+    trackBar: true
+    _trackBarColor: true
+    onValueChangedBehaviors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      editDebugSettings: true
+      printDebugStatements: true
+      printWarningStatements: true
+      interactable: true
+      blockTouches: true
+      renderOrder: 0
+      orientation: 0
+      startValue: 0.100000
+      endValue: !<float> 1.000000
+      startSliderValue: !<float> 1.000000
+      stepEnabled: false
+      stepValue: !<float> 0.000000
+      prefabSlider: !<reference.ObjectPrefab> 8d8166c8-2136-4567-9223-d7f42e1d144b
+      counterEnabled: false
+      fractionDigits: 0
+      trackBar: false
+      _trackBarColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.000000}
+      eventCallbacks: true
+      callbackType: 3
+      onValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onValueChangedCustomTriggers: !<string[]>
+        - ""
+      onValueChangedFunctions:
+        - script: !<reference.ScriptComponent> 6537265d-159c-4891-be8c-edaa9df51b2d
+          function: SetDifficulty
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f847bbed-4fa2-401b-8b6f-1745b73d2755>
   PrefabRemaps:
     []
