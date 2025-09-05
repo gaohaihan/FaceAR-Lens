@@ -13,12 +13,6 @@ var xPos;
 const pubSub = require("../PubSubModule");
 
 function Start(){
-   body.dynamic = true;          // Keep dynamic so gravity affects it
-    body.lockTranslationX = true; // Prevent movement along X axis
-    body.lockTranslationZ = false; // Z can move if needed
-    body.lockTranslationY = false; // Y is free for gravity
-    body.lockRotationX = true;     // optional: prevent rotation on X
-    body.lockRotationZ = true;   
   body.dynamic = true;
   started = true;
 }
@@ -41,13 +35,13 @@ function SetEvents() {
   // Jump if raw expression weight is greater than current difficulty thresh hold.
 function Jump(rawWeight){
   currentDifficulty = GetDifficulty();
-  var jumpForce = 0; 
+  var jumpForce = 0;
   if(rawWeight > currentDifficulty)
   {
     jumpForce = 5;
   }
   else{
-    jumpForce = 0; 
+    jumpForce = 0;
   }
 
 
