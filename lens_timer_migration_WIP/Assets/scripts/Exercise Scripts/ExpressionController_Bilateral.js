@@ -31,24 +31,14 @@ script.target.enabled = false;
 * Called once when onAwake
 */
 function InitializeUserBaseExpressionValue() {
-
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
-  pubSub.publish(pubSub.EVENTS.Pause);
-
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
   StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
-
-   function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
 }
 
 function Initialize(){
   // Set initial values
-  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.01;
-  script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
-
+  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
@@ -74,9 +64,9 @@ function BindFunctionToRunEveryUpdate() {
 function GetBaseExpressionValue() {
   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
   leftBaseExpressionValue = GetRawLeftWeight();
-  //print("test left" + leftBaseExpressionValue.toString())
+  print("test left" + leftBaseExpressionValue.toString())
   rightBaseExpressionValue = GetRawRightWeight();
-  //print("test right" + rightBaseExpressionValue.toString())
+  print("test right" + rightBaseExpressionValue.toString())
 }
 
 /***
@@ -115,7 +105,6 @@ function OnUpdate(){
   CountReps();
   UpdateCurrentDifficulty();
   UpdateVisual(script.target);
-  DetermineJump();
 }
 
 /***
@@ -138,11 +127,11 @@ function UpdateCurrentDifficulty(){
   }
 
   if (!isRightDetectionOn){
-    currentMinDifficulty = rightBaseExpressionValue + 0.01
+    currentMinDifficulty = rightBaseExpressionValue + 0.05
   }
 
   if (!isLeftDetectionOn){
-    currentMinDifficulty = leftBaseExpressionValue + 0.01
+    currentMinDifficulty = leftBaseExpressionValue + 0.05
   }
 
   currentDifficulty = currentMinDifficulty / ( 1 - difficulty);
@@ -161,7 +150,7 @@ function CountReps() {
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -184,6 +173,7 @@ function CountReps() {
     }
 
     var rawWeight = GetRawExpressionWeight();
+    //print("raw " + rawWeight)
     if (rawWeight <= currentDifficulty && midRep === true){
       midRep = false;
     }
@@ -198,9 +188,6 @@ function SetBilateralDetection() {
     isLeftDetectionOn = true;
   if (isRightDetectionOn == null)
     isRightDetectionOn = true;
-
-  print("Left" + isLeftDetectionOn);
-  print("right" + isRightDetectionOn);
 
   // enable bilateral controls
   pubSub.publish(pubSub.EVENTS.SetBilateralDetection, true);
@@ -246,7 +233,7 @@ function GetRawRightWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets){
+  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }
@@ -269,17 +256,6 @@ function DisplayDebug(leftWeight, rightWeight, combinedWeight){
   pubSub.publish(pubSub.EVENTS.SetRightDebugText, leftWeight.toFixed(3).toString());
 
 }
-
-/**
- * Calculate jump amount based on sensitivity
- * Send jump to sphere controller
- */
-function DetermineJump(){
-  var weight = GetRawExpressionWeight();
-  //  Listened to by sphereController
-  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight);
-}
-
 
 /*SUBSCRIPTIONS*/
 
@@ -327,5 +303,14 @@ pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
  * Pause exercise and reinit base expression value.
  */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  InitializeUserBaseExpressionValue();
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+
+  function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 });

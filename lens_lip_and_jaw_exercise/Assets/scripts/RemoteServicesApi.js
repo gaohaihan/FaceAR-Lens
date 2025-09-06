@@ -65,13 +65,9 @@ function handleResponse(hasError, json) {
 }
 
 script.makeRequest = function() {
-  ApiModule.getBasicLensInfo(handleResponse);
+  ApiModule.difficulty(handleResponse);
 };
 
 script.sendDataToSite = function(datatype, data) {
     ApiModule.sendData(datatype, data);
-};
-
-script.sendDifficultyToSite = function(difficulty) {
-    ApiModule.sendData("sensitivity", difficulty);
 };

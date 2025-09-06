@@ -27,32 +27,21 @@ global.timerUpdate = 0;
 /***
 * Called once when onAwake
 */
-/***
-* Called once when onAwake
-*/
-function InitializeUserBaseExpressionValue() {
-
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
-  pubSub.publish(pubSub.EVENTS.Pause);
-
+ function InitializeUserBaseExpressionValue(){
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate]
   StartDelay(3, functionsToCallAfterDelay);
   GetBaseExpressionValue();
-
-   function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
 }
 
 function Initialize(){
    // Set initial values
-   currentDifficulty = BaseExpressionValue + 0.01;
-   script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
-   
+   currentDifficulty = BaseExpressionValue + 0.05;
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
-   print("difficulty" + difficulty);
+   global.timerUpdate = 0;
+   global.complete = 0;
+   print("difficulty" +global.Difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
@@ -107,6 +96,7 @@ function OnUpdate(){
   if (global.Pause == true)
     return;
 
+   // print(global.isTimer);
   if(global.isTimer == true) {
     HoldExpression();
   } else {
@@ -114,7 +104,6 @@ function OnUpdate(){
   }  
   UpdateVisual(script.target);
   UpdateCurrentDifficulty();
-  DetermineJump();
 }
 
 /***
@@ -131,10 +120,10 @@ function UpdateVisual(visualComponent) {
 */
 function UpdateCurrentDifficulty(){
 
-  var minDifficulty = BaseExpressionValue + 0.01
+  var minDifficulty = BaseExpressionValue + 0.05
   currentDifficulty = minDifficulty / ( 1 - difficulty);
-  //print("Difficulty" + difficulty)
-  //print("minDifficulty" + currentDifficulty)
+ // print("Difficulty" + difficulty)
+ // print("minDifficulty" + currentDifficulty)
 
   // cannot be detected over 1
   if (currentDifficulty > 1)
@@ -146,7 +135,7 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -187,7 +176,12 @@ function HoldExpression() {
     pubSub.publish(pubSub.EVENTS.SetExpressionRepText,  script.completedReps.toString() );
 
     var rawWeight = GetRawExpressionWeight();
-     //print("adjusted " + adjustedWeight)
+
+  //  print(rawWeight);
+  //  print("rawWeight");
+  //  print(currentDifficulty);
+  //  print("currentDifficulty");
+
     if (rawWeight > currentDifficulty && midRep !== true){
         midRep = true;
         script.completedReps += 1
@@ -232,10 +226,10 @@ function Finished(){
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
     } else {
-         if (script.completedSets >= global.requiredSets) {
+         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
         }
-    }
+    } 
 }
 /**
  * Display value for debugging
@@ -247,17 +241,6 @@ function DisplayDebug(weight){
   pubSub.publish(pubSub.EVENTS.SetRightDebugText, "null");
 
 }
-
-/**
- * Calculate jump amount based on sensitivity
- * Send jump to sphere controller
- */
-function DetermineJump(){
-  var weight = GetRawExpressionWeight();
-   //  Listened to by sphereController
-  pubSub.publish(pubSub.EVENTS.SetJumpAmount, weight);
-}
-
 
 /*SUBSCRIPTIONS*/
 /***
@@ -289,6 +272,15 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
  * Pause exercise and reinit base expression value.
  */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  InitializeUserBaseExpressionValue();
+  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
+
+  pubSub.publish(pubSub.EVENTS.Pause);
+
+  StartDelay(3, functionsToCallAfterDelay);
+  GetBaseExpressionValue();
+
+  function UnPause(){
+    pubSub.publish(pubSub.EVENTS.UnPause)
+  }
 });
 

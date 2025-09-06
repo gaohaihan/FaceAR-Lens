@@ -4,7 +4,6 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> ab036d47-476a-4dfd-b723-f7adb1a76dbb
     - !<own> 9221a016-678f-445d-952a-59edca15331d
-    - !<own> f8405c36-e6ec-49ad-bf4f-27b80e250275
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -836,6 +835,7 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
+    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -850,7 +850,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.060000
       expressionIndex: !<float> 2.000000
-      apiScript: !<reference.ScriptComponent> 39b69335-810a-4e21-8c6f-26c00f3c6da9
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -1600,6 +1600,7 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
+    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1614,7 +1615,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 1.000000
-      apiScript: !<reference.ScriptComponent> 39b69335-810a-4e21-8c6f-26c00f3c6da9
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -2277,25 +2278,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/39b69335-810a-4e21-8c6f-26c00f3c6da9>
-  PrefabRemaps:
-    []
-  Name: RemoteServicesApi
-  Enabled: true
-  ScriptAsset: !<reference> c1acc4f2-b399-42c1-8c72-22c5d6523c50
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      remoteServiceModule: !<reference.RemoteServiceModule> 8e3df2a7-1600-4388-bc33-b3a07490d6f1
-      responseData: !<reference.Text> 993c87c7-6763-4208-8e08-57ea7b3fcea2
-      gameManager: !<reference.ScriptComponent> 508a9868-09fd-484d-a710-68c682f40632
-      settingUI: !<reference.ScriptComponent> a72a28fb-8326-4c40-abf5-8caea669588b
-  ScriptTypes:
-    "":
-      {}
 - !<ScreenTransform/3b09a38b-3a10-4640-8864-46d2707f8a03>
   PrefabRemaps:
     []
@@ -3221,6 +3203,8 @@
   ScriptAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
   ScriptInputsDefault:
     maxIndex: true
+    remoteServiceModule: true
+    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3231,8 +3215,8 @@
       prevButton: !<reference.SceneObject> 55eab32c-7dff-4183-8561-7933317c9351
       nextButton: !<reference.SceneObject> 17ec285a-58dd-49eb-b7c8-d2c22ab785b4
       maxIndex: !<float> 2.000000
-      remoteServiceModule: !<reference.RemoteServiceModule> 8e3df2a7-1600-4388-bc33-b3a07490d6f1
-      apiScript: !<reference.ScriptComponent> 39b69335-810a-4e21-8c6f-26c00f3c6da9
+      remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -4664,6 +4648,7 @@
     completedSets: true
     completedReps: true
     expressionIndex: true
+    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4677,7 +4662,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 0.000000
-      apiScript: !<reference.ScriptComponent> 39b69335-810a-4e21-8c6f-26c00f3c6da9
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -8769,21 +8754,6 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
-- !<SceneObject/f8405c36-e6ec-49ad-bf4f-27b80e250275>
-  PrefabRemaps:
-    []
-  Name: RemoteServicesApi
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.135400, z: -40.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 39b69335-810a-4e21-8c6f-26c00f3c6da9
 - !<SceneObject/f847bbed-4fa2-401b-8b6f-1745b73d2755>
   PrefabRemaps:
     []
