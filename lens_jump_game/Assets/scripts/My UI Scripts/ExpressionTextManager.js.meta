@@ -5,7 +5,6 @@
   PrimaryAsset: !<reference> e2ef61e4-b8f3-4e9b-bd1b-f8eee99e3b7f
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
-  PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:

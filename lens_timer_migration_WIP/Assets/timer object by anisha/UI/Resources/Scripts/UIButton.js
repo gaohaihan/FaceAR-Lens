@@ -11,46 +11,46 @@
 // Valid Event Types: "onEnableInteractable", "onDisableInteractable", "onPressDown", "onPressUp", "onPress"
 //
 // Manually enable interactable
-// script.enableInteractable()
+// script.api.enableInteractable()
 //
 // Manually disable interactable
-// script.disableInteractable()
+// script.api.disableInteractable()
 //
 // True if interactable
-// script.isInteractable()
+// script.api.isInteractable()
 //
 // Add callback function to event
-// script.addCallback(eventType, callback)
+// script.api.addCallback(eventType, callback)
 //
 // Remove callback function from event
-// script.removeCallback(eventType, callback)
+// script.api.removeCallback(eventType, callback)
 //
 // True if pressed
-// script.isPressed()
+// script.api.isPressed()
 //
 // Enable touch events
-// script.enableTouchEvents()
+// script.api.enableTouchEvents()
 //
 // Disable touch events
-// script.disableTouchEvents()
+// script.api.disableTouchEvents()
 //
 // Manually trigger Press Down (call only when touch events are disabled)
-// script.pressDown()
+// script.api.pressDown()
 //
 // Manually trigger Press Up (call only when touch events are disabled)
-// script.pressUp()
+// script.api.pressUp()
 //
 // Change this button's animation type to a newType ("Bounce", "Squish", "Tween", "AnchorPosition", "OffsetPosition", "Rotation", or "Scale")
-// script.changeAnimationType(newType)
+// script.api.changeAnimationType(newType)
 //
 // Set the value of one of this UI Button’s transition types ("Color", "Texture", "Tween", "AnchorPosition", "OffsetPosition", "Rotation", or "Scale") for when it switches to a different state ("normal", "pressed", or "disabled")
-// script.changeStateValue(state, type, newValue)
+// script.api.changeStateValue(state, type, newValue)
 //
 // Get the current color of the Button's Background
-// script.getColor()
+// script.api.getColor()
 //
 // Get the current texture of the Button's Background
-// script.getTexture()
+// script.api.getTexture()
 //
 // -----------------
 
@@ -145,38 +145,38 @@
 var callbackTracker = new global.CallbackTracker(script);
 
 // Local API
-script.pressDown = pressDown;
-script.pressUp = pressUp;
-script.enableInteractable = enableInteractable;
-script.disableInteractable = disableInteractable;
-script.isPressed = isPressed;
-script.isInteractable = isInteractable;
-script.enableTouchEvents = enableTouchEvents;
-script.disableTouchEvents = disableTouchEvents;
-script.changeAnimationType = changeAnimationType;
-script.changeStateValue = changeStateValue;
-script.getStateValue = getStateValue;
-script.getColor = getColor;
-script.getTexture = getTexture;
-script.initialized = false;
-script.widgetType = global.WidgetTypes.UIButton;
+script.api.pressDown = pressDown;
+script.api.pressUp = pressUp;
+script.api.enableInteractable = enableInteractable;
+script.api.disableInteractable = disableInteractable;
+script.api.isPressed = isPressed;
+script.api.isInteractable = isInteractable;
+script.api.enableTouchEvents = enableTouchEvents;
+script.api.disableTouchEvents = disableTouchEvents;
+script.api.changeAnimationType = changeAnimationType;
+script.api.changeStateValue = changeStateValue;
+script.api.getStateValue = getStateValue;
+script.api.getColor = getColor;
+script.api.getTexture = getTexture;
+script.api.initialized = false;
+script.api.widgetType = global.WidgetTypes.UIButton;
 
-script.addCallback = callbackTracker.addCallback.bind(callbackTracker);
-script.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
+script.api.addCallback = callbackTracker.addCallback.bind(callbackTracker);
+script.api.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
 
-script.getMainRenderOrder = getMainRenderOrder;
-script.claimTouchStart = claimTouchStart;
+script.api.getMainRenderOrder = getMainRenderOrder;
+script.api.claimTouchStart = claimTouchStart;
 
-script.setAutoResetEnabled = setAutoResetEnabled;
+script.api.setAutoResetEnabled = setAutoResetEnabled;
 
-script.ownerScript = null;
+script.api.ownerScript = null;
 
 // Touch Event callbacks
-script.onTouchStart = onTouchStart;
-script.onTouchEnd = onTouchEnd;
-script.onTouchMove = onTouchMove;
+script.api.onTouchStart = onTouchStart;
+script.api.onTouchEnd = onTouchEnd;
+script.api.onTouchMove = onTouchMove;
 
-script.allowTouchEvents = !script.disableTouchEvents;
+script.api.allowTouchEvents = !script.disableTouchEvents;
 
 var sceneObject = script.getSceneObject();
 
@@ -214,8 +214,8 @@ var initialTrigger = false;
 
 var refreshHelper = new global.RefreshHelper(initParams);
 
-script.setOwner = setOwner;
-script.notifyOnInitialize = notifyOnInitialize;
+script.api.setOwner = setOwner;
+script.api.notifyOnInitialize = notifyOnInitialize;
 
 initParams();
 
@@ -229,7 +229,7 @@ function notifyOnInitialize(callback) {
 
 // Initialize all parameters
 function initParams() {	
-    if (script.initialized) {
+    if (script.api.initialized) {
         return;
     }
     if (!initButton() || 
@@ -244,7 +244,7 @@ function initParams() {
     global.answerPoliteCalls(script, "notifyOnInitialize");
     checkOwner();
 
-    script.initialized = true;
+    script.api.initialized = true;
 }
 
 function claimTouchStart(touchPosition) {
@@ -259,20 +259,20 @@ function getMainRenderOrder() {
 
 function seekOwner() {
     global.findScriptUpwards(sceneObject, "acceptChildWidget", function(scr) {
-        return scr.acceptChildWidget(script);
+        return scr.api.acceptChildWidget(script);
     });
 }
 
 function setOwner(ownerScript) {
-    script.ownerScript = ownerScript;
+    script.api.ownerScript = ownerScript;
     refresh();
 }
 
 function checkOwner() {
-    if (!script.ownerScript) {
+    if (!script.api.ownerScript) {
         seekOwner();
     }
-    return !!script.ownerScript;
+    return !!script.api.ownerScript;
 }
 
 function setAutoResetEnabled(enabled) {
@@ -420,13 +420,13 @@ function initInteractable() {
 
 // Remove all Touch Events
 function disableTouchEvents() {
-    script.allowTouchEvents = false;
+    script.api.allowTouchEvents = false;
     script.disableTouchEvents = true;
 }
 
 // Enable touch event
 function enableTouchEvents() {
-    script.allowTouchEvents = true;
+    script.api.allowTouchEvents = true;
     script.disableTouchEvents = false;
 }
 

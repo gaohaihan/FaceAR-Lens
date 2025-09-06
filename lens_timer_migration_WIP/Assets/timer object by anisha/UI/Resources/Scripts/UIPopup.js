@@ -9,19 +9,19 @@
 // ----- LOCAL API USAGE -----
 //
 // Initialize this Popup at screenTransform's position
-// script.initPopupState(screenTransform)
+// script.api.initPopupState(screenTransform)
 //
 // Set the color of this Popup's color visual
-// script.setColor(color)
+// script.api.setColor(color)
 //
 // Move this Popup to match screenTransform's position
-// script.movePopup(screenTransform)
+// script.api.movePopup(screenTransform)
 //
 // Start the Popup's scale up animation
-// script.scaleUp()
+// script.api.scaleUp()
 //
 // Start the Popup's scale down animation
-// script.scaleDown()
+// script.api.scaleDown()
 //
 // -----------------
 
@@ -48,16 +48,16 @@ var popupImage = null;
 var animationTime = .05;
 var initialScale = null;
 
-script.initialized = false;
-script.setOwner = setOwner;
-script.widgetType = global.WidgetTypes.UIPopup;
-script.notifyOnInitialize = notifyOnInitialize;
+script.api.initialized = false;
+script.api.setOwner = setOwner;
+script.api.widgetType = global.WidgetTypes.UIPopup;
+script.api.notifyOnInitialize = notifyOnInitialize;
 
-script.initPopupState = initPopupState;
-script.setColor = setColor;
-script.movePopup = movePopup;
-script.scaleUp = scaleUp;
-script.scaleDown = scaleDown;
+script.api.initPopupState = initPopupState;
+script.api.setColor = setColor;
+script.api.movePopup = movePopup;
+script.api.scaleUp = scaleUp;
+script.api.scaleDown = scaleDown;
 
 var sceneObject = script.getSceneObject();
 
@@ -78,7 +78,7 @@ function notifyOnInitialize(callback) {
 
 // Initialize all parameters
 function initParams() {	
-    if (script.initialized) {
+    if (script.api.initialized) {
         return;
     }
     if (!initPopup() || 
@@ -93,28 +93,28 @@ function initParams() {
     global.answerPoliteCalls(script, "notifyOnInitialize");
     checkOwner();
 
-    script.initialized = true;
+    script.api.initialized = true;
 }
 
 function seekOwner() {
     global.findScriptUpwards(sceneObject, "acceptChildWidget", function(scr) {
-        return scr.acceptChildWidget(script);
+        return scr.api.acceptChildWidget(script);
     });
 }
 
 function setOwner(ownerScript) {
-    if (script.ownerScript) {
+    if (script.api.ownerScript) {
         printWarning("owner has already been set!");
     }
-    script.ownerScript = ownerScript;
+    script.api.ownerScript = ownerScript;
     refresh();
 }
 
 function checkOwner() {
-    if (!script.ownerScript) {
+    if (!script.api.ownerScript) {
         seekOwner();
     }
-    return !!script.ownerScript;
+    return !!script.api.ownerScript;
 }
 
 // Initialize this Popup parameters

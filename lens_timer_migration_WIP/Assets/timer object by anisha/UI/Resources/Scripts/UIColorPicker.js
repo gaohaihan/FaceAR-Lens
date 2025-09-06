@@ -13,34 +13,34 @@
 // Valid Event Types: "onEnableInteractable", "onDisableInteractable", "onColorChanged", "onSliderValueChanged"
 //
 // Manually enable interactable
-// script.enableInteractable()
+// script.api.enableInteractable()
 //
 // Manually disable interactable
-// script.disableInteractable()
+// script.api.disableInteractable()
 //
 // Add callback function to event
-// script.addCallback(eventType, callback)
+// script.api.addCallback(eventType, callback)
 //
 // Remove callback function from event
-// script.removeCallback(eventType, callback)
+// script.api.removeCallback(eventType, callback)
 //
 // True if interactable
-// script.isInteractable()
+// script.api.isInteractable()
 //
 // Enable touch events
-// script.enableTouchEvents()
+// script.api.enableTouchEvents()
 //
 // Disable touch events
-// script.disableTouchEvents()
+// script.api.disableTouchEvents()
 //
 // Get the current color selected on this Color Picker
-// script.getColor()
+// script.api.getColor()
 //
 // Get the current value (0-1) of this Color Picker's slider
-// script.getSliderValue()
+// script.api.getSliderValue()
 //
 // Manually set the value (0-1) of this Color Picker's slider
-// script.setSliderValue(value)
+// script.api.setSliderValue(value)
 // -----------------
 
 //@input bool interactable = true
@@ -106,33 +106,33 @@
 var callbackTracker = new global.CallbackTracker(script);
 
 // Local API
-script.enableInteractable = enableInteractable;
-script.disableInteractable = disableInteractable;
-script.isInteractable = isInteractable;
-script.enableTouchEvents = enableTouchEvents;
-script.disableTouchEvents = disableTouchEvents;
-script.getColor = getColor;
-script.getSliderValue = getSliderValue;
-script.setSliderValue = setSliderValue;
-script.initialized = false;
-script.widgetType = global.WidgetTypes.UIColorPicker;
-script.acceptChildWidget = acceptChildWidget;
+script.api.enableInteractable = enableInteractable;
+script.api.disableInteractable = disableInteractable;
+script.api.isInteractable = isInteractable;
+script.api.enableTouchEvents = enableTouchEvents;
+script.api.disableTouchEvents = disableTouchEvents;
+script.api.getColor = getColor;
+script.api.getSliderValue = getSliderValue;
+script.api.setSliderValue = setSliderValue;
+script.api.initialized = false;
+script.api.widgetType = global.WidgetTypes.UIColorPicker;
+script.api.acceptChildWidget = acceptChildWidget;
 
-script.addCallback = callbackTracker.addCallback.bind(callbackTracker);
-script.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
+script.api.addCallback = callbackTracker.addCallback.bind(callbackTracker);
+script.api.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
 
 // Touch Event callbacks
-script.onTouchStart = onTouchStart;
-script.onTouchEnd = onTouchEnd;
-script.onTouchMove = onTouchMove;
+script.api.onTouchStart = onTouchStart;
+script.api.onTouchEnd = onTouchEnd;
+script.api.onTouchMove = onTouchMove;
 
-script.allowTouchEvents = !script.disableTouchEvents;
+script.api.allowTouchEvents = !script.disableTouchEvents;
 
-script.setOwner = setOwner;
-script.notifyOnInitialize = notifyOnInitialize;
+script.api.setOwner = setOwner;
+script.api.notifyOnInitialize = notifyOnInitialize;
 
-script.claimTouchStart = claimTouchStart;
-script.getMainRenderOrder = getMainRenderOrder;
+script.api.claimTouchStart = claimTouchStart;
+script.api.getMainRenderOrder = getMainRenderOrder;
 
 // Is this widget interactable?
 var interactable = script.interactable;
@@ -193,10 +193,10 @@ function getMainRenderOrder() {
 }
 
 function acceptChildWidget(widget) {
-    var api = widget;
+    var api = widget.api;
     if (acceptPopupWidget(widget)) {
         return true;
-    } else if (!widget.ownerScript && api.widgetType >= 0) {
+    } else if (!widget.api.ownerScript && api.widgetType >= 0) {
         global.politeCall(widget, "setOwner", [script]);
         refresh();
         return true;
@@ -210,7 +210,7 @@ function notifyOnInitialize(callback) {
 
 // Initialize all parameters
 function initParams() {
-    if (script.initialized) {
+    if (script.api.initialized) {
         return;
     }
 
@@ -229,25 +229,25 @@ function initParams() {
     global.answerPoliteCalls(script, "notifyOnInitialize");
     checkOwner();
 
-    script.initialized = true;
+    script.api.initialized = true;
 }
 
 function seekOwner() {
     global.findScriptUpwards(sceneObject, "acceptChildWidget", function(scr) {
-        return scr.acceptChildWidget(script);
+        return scr.api.acceptChildWidget(script);
     });
 }
 
 function setOwner(ownerScript) {
-    script.ownerScript = ownerScript;
+    script.api.ownerScript = ownerScript;
     refresh();
 }
 
 function checkOwner() {
-    if (!script.ownerScript) {
+    if (!script.api.ownerScript) {
         seekOwner();
     }
-    return !!script.ownerScript;
+    return !!script.api.ownerScript;
 }
 
 // Initialize Color Picker parameters
@@ -342,7 +342,7 @@ function initBackground() {
 }
 
 function acceptButtonWidget(widget) {
-    var api = widget;
+    var api = widget.api;
     if (!buttonScript && !api.ownerScript && api.widgetType == global.WidgetTypes.UIButton) {
         global.politeCall(widget, "setOwner", [script]);
         buttonScript = widget;
@@ -387,26 +387,26 @@ function initButton() {
 }
 
 function acceptPopupWidget(widget) {
-    var api = widget;
+    var api = widget.api;
     if (!popupWidget && !api.ownerScript && api.widgetType == global.WidgetTypes.UIPopup) {
         global.politeCall(widget, "setOwner", [script]);
         popupWidget = widget;
 
-        script.addCallback("onPaletteTouchStart", function() {
-            popupWidget.scaleUp();
+        script.api.addCallback("onPaletteTouchStart", function() {
+            popupWidget.api.scaleUp();
         });
 
-        script.addCallback("onTouchEnd", function() {
-            popupWidget.scaleDown();
+        script.api.addCallback("onTouchEnd", function() {
+            popupWidget.api.scaleDown();
         });
 
-        script.addCallback("onColorChanged", function(newColor) {
-            popupWidget.setColor(newColor);
-            popupWidget.movePopup(buttonScreenTransform);
+        script.api.addCallback("onColorChanged", function(newColor) {
+            popupWidget.api.setColor(newColor);
+            popupWidget.api.movePopup(buttonScreenTransform);
         });
 
-        popupWidget.initPopupState(buttonScreenTransform);
-        popupWidget.scaleDown(buttonScreenTransform);
+        popupWidget.api.initPopupState(buttonScreenTransform);
+        popupWidget.api.scaleDown(buttonScreenTransform);
 
         refresh();
         return true;
@@ -470,13 +470,13 @@ function initLocalScreenPos() {
 
 // Disable touch event
 function disableTouchEvents() {
-    script.allowTouchEvents = false;
+    script.api.allowTouchEvents = false;
     script.disableTouchEvents = true;
 }
 
 // Enable touch event
 function enableTouchEvents() {
-    script.allowTouchEvents = true;
+    script.api.allowTouchEvents = true;
     script.disableTouchEvents = false;
 }
 
@@ -640,9 +640,9 @@ function isInteractable() {
 function updateWidgetInteractable(widget) {
     if (widget) {
         if (interactable) {
-            widget.enableInteractable();
+            widget.api.enableInteractable();
         } else {
-            widget.disableInteractable();
+            widget.api.disableInteractable();
         }
     }
 }

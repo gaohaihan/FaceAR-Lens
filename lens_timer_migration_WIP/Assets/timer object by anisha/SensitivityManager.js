@@ -6,14 +6,14 @@ const pubSub = require("./PubSubModule");
 global.Sensitivity = 0.5;
 global.ExpressionMinValues = {};
 
-script.SensitivitySlider = function(){
+script.api.SensitivitySlider = function(){
     SetSensitivity();
  }
 
   /***
   * Toggle setting controls visibility
   */
- script.SettingsToggle = function(){
+ script.api.SettingsToggle = function(){
       script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
       script.bilateralUI.enabled = !script.bilateralUI.enabled;
   }
@@ -22,7 +22,7 @@ script.SensitivitySlider = function(){
   * Set value of global sensitivity to value of slider when changed.
   */
   function SetSensitivity(){
-    var sliderValue = script.sliderScript.getSliderValue();
+    var sliderValue = script.sliderScript.api.getSliderValue();
     if (sliderValue > 0.9){
       sliderValue = 0.9
     }

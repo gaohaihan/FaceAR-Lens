@@ -5,7 +5,6 @@
   PrimaryAsset: !<reference> d888c7e8-cc39-4dc8-aab6-e6f5ccea5f94
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
-  PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
@@ -26,8 +25,6 @@
   ComponentUid: ca33a268-cc66-4822-ad11-4f2d309be52e
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
   ScriptInputsHidden:
     {}
   ScriptTypesHidden:

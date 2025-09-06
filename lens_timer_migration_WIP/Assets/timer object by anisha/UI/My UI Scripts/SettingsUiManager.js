@@ -6,15 +6,15 @@
 
 const pubSub = require("./PubSubModule");
 
-script.ToggleOn_Left = ToggleOnLeft;
-script.ToggleOn_Right = ToggleOnRight;
-script.ToggleOff_Left = ToggleOffLeft
-script.ToggleOff_Right = ToggleOffRight;
+script.api.ToggleOn_Left = ToggleOnLeft;
+script.api.ToggleOn_Right = ToggleOnRight;
+script.api.ToggleOff_Left = ToggleOffLeft
+script.api.ToggleOff_Right = ToggleOffRight;
 
 /***
  * Toggle setting controls visibility
  */
-script.SettingsToggle = function(){
+script.api.SettingsToggle = function(){
         script.sensitivityUI.enabled = !script.sensitivityUI.enabled;
         script.bilateralUI.enabled = !script.bilateralUI.enabled;
 }
@@ -24,25 +24,25 @@ script.SettingsToggle = function(){
  */
 function ToggleOnLeft(){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, true);
-    script.bilateralToggle_left.toggleOn();
+    script.bilateralToggle_left.api.toggleOn();
 }
 
 function ToggleOnRight(){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Right, true);
-    script.bilateralToggle_right.toggleOn();
+    script.bilateralToggle_right.api.toggleOn();
 }
 
 function ToggleOffLeft (){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Left, false);
     // cannot turn of both side, if off right side detection is turned on
-    if (!script.bilateralToggle_right.getToggleValue())
+    if (!script.bilateralToggle_right.api.getToggleValue())
         ToggleOnRight();
 }
 
 function ToggleOffRight(){
     pubSub.publish(pubSub.EVENTS.ToggleBilateralDetection_Right, false);
     // cannot turn of both side, if off left side detection is turned on
-    if (!script.bilateralToggle_left.getToggleValue())
+    if (!script.bilateralToggle_left.api.getToggleValue())
         ToggleOnLeft();
 }
 
@@ -51,9 +51,9 @@ function ToggleOffRight(){
   */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Left, (data) => {
     if (data === true)
-        script.bilateralToggle_left.toggleOn();
+        script.bilateralToggle_left.api.toggleOn();
     if (data === false)
-        script.bilateralToggle_left.toggleOff();
+        script.bilateralToggle_left.api.toggleOff();
   });
 
 /***
@@ -61,9 +61,9 @@ pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Left, (data) => {
 */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Right, (data) => {
 if (data === true)
-    script.bilateralToggle_right.toggleOn();
+    script.bilateralToggle_right.api.toggleOn();
 if (data === false)
-    script.bilateralToggle_right.toggleOff();
+    script.bilateralToggle_right.api.toggleOff();
 });
 
 /***
@@ -71,13 +71,13 @@ if (data === false)
   */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection, (data) => {
     if (data === true){
-        script.bilateralToggle_left.enableInteractable();
-        script.bilateralToggle_right.enableInteractable();
+        script.bilateralToggle_left.api.enableInteractable();
+        script.bilateralToggle_right.api.enableInteractable();
     }
 
     if (data === false){
-        script.bilateralToggle_left.disableInteractable();
-        script.bilateralToggle_right.disableInteractable();
+        script.bilateralToggle_left.api.disableInteractable();
+        script.bilateralToggle_right.api.disableInteractable();
     }
 
   });
