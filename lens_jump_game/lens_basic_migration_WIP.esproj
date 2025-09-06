@@ -1,12 +1,12 @@
 studioVersion:
   major: 5
-  minor: 13
+  minor: 12
   patch: 1
-  build: 25090323
+  build: 25080420
   type: Public
-coreVersion: 325
-clientVersion: 13.550000
-updateCheckpoint: 73
+coreVersion: 321
+clientVersion: 13.500000
+updateCheckpoint: 68
 sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
 viewConfig:
   simulation:
@@ -27,9 +27,9 @@ metaInfo:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: jump_game
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
@@ -38,7 +38,7 @@ metaInfo:
     - Web
     - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 38701ae713d36a0b51630d876c33055e
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906
@@ -55,5 +55,10 @@ metaInfo:
     minor: 0
     patch: 0
     build: 0
+<<<<<<< HEAD
   documentId: d82b4efd-0b92-483c-96b6-3ae4e47500e1
   originalDocumentId: d82b4efd-0b92-483c-96b6-3ae4e47500e1
+=======
+  documentId: fbec8ff9-6d78-4141-9075-e2a447672145
+  originalDocumentId: fbec8ff9-6d78-4141-9075-e2a447672145
+>>>>>>> main

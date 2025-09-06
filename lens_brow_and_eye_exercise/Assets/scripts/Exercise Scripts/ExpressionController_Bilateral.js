@@ -47,6 +47,8 @@ function InitializeUserBaseExpressionValue() {
 function Initialize(){
   // Set initial values
   currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.01;
+  script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
+
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;

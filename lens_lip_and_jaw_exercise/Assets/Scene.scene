@@ -4,6 +4,7 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> ab036d47-476a-4dfd-b723-f7adb1a76dbb
     - !<own> 9221a016-678f-445d-952a-59edca15331d
+    - !<own> 9bdcd877-35c7-434e-83cf-3f20406dad8c
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -1749,7 +1750,6 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1764,7 +1764,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 4.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -3352,7 +3352,6 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3366,7 +3365,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 3.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -3377,8 +3376,7 @@
   Enabled: true
   ScriptAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
   ScriptInputsDefault:
-    remoteServiceModule: true
-    apiScript: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3389,8 +3387,8 @@
       prevButton: !<reference.SceneObject> 55eab32c-7dff-4183-8561-7933317c9351
       nextButton: !<reference.SceneObject> 17ec285a-58dd-49eb-b7c8-d2c22ab785b4
       maxIndex: !<float> 4.000000
-      remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      remoteServiceModule: !<reference.RemoteServiceModule> 1d7925e8-a291-451d-97f6-81deba79659b
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -4152,7 +4150,6 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4166,7 +4163,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 2.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -4751,7 +4748,6 @@
     completedSets: true
     completedReps: true
     expressionIndex: true
-    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -4765,7 +4761,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.100000
       expressionIndex: !<float> 0.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -5068,7 +5064,6 @@
   ScriptInputsDefault:
     completedSets: true
     completedReps: true
-    apiScript: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -5082,7 +5077,7 @@
       completedReps: !<float> 0.000000
       baseDifficulty: 0.200000
       expressionIndex: !<float> 1.000000
-      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 8d3086cb-a557-4038-a133-98c5a9134d11
   ScriptTypes:
     "":
       {}
@@ -5473,6 +5468,25 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/8d3086cb-a557-4038-a133-98c5a9134d11>
+  PrefabRemaps:
+    []
+  Name: RemoteServicesApi
+  Enabled: true
+  ScriptAsset: !<reference> c1acc4f2-b399-42c1-8c72-22c5d6523c50
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      remoteServiceModule: !<reference.RemoteServiceModule> 1d7925e8-a291-451d-97f6-81deba79659b
+      responseData: !<reference.Text> 993c87c7-6763-4208-8e08-57ea7b3fcea2
+      gameManager: !<reference.ScriptComponent> 508a9868-09fd-484d-a710-68c682f40632
+      settingUI: !<reference.ScriptComponent> a72a28fb-8326-4c40-abf5-8caea669588b
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/8d9006d0-5dfa-43fe-9641-c1138faa1d3b>
   PrefabRemaps:
     []
@@ -6249,6 +6263,21 @@
     bottom: -0.500000
     right: 0.500000
     top: 0.500000
+- !<SceneObject/9bdcd877-35c7-434e-83cf-3f20406dad8c>
+  PrefabRemaps:
+    []
+  Name: RemoteServicesApi
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8d3086cb-a557-4038-a133-98c5a9134d11
 - !<Text/9bec35b8-c79e-4994-855f-fc627e333439>
   PrefabRemaps:
     []
