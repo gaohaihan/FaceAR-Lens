@@ -1,22 +1,20 @@
 // -----JS CODE-----
 // @input SceneObject ball
-// @input SceneObject altBall
 var reSpawnThreshhold = -50.00;
-var jumpCount = 0;
 var started = false;
 var originalPos = script.ball.getTransform().getLocalPosition();
 var body = script.ball.getComponent("Physics.BodyComponent");
 var transform = script.ball.getTransform();
-// TODO add expression min detection; 
+// TODO add expression min detection;
 var BaseExpressionValue = 0.02;
+var xPos;
 
 
 const pubSub = require("../PubSubModule");
 
 function Start(){
-    // enable physics
-   body.dynamic = true;
-   started = true;
+  body.dynamic = true;
+  started = true;
 }
 
 /***
@@ -36,16 +34,14 @@ function SetEvents() {
 
   // Jump if raw expression weight is greater than current difficulty thresh hold.
 function Jump(rawWeight){
-
-
   currentDifficulty = GetDifficulty();
-  var jumpForce = 0; 
+  var jumpForce = 0;
   if(rawWeight > currentDifficulty)
   {
     jumpForce = 5;
   }
   else{
-    jumpForce = 0; 
+    jumpForce = 0;
   }
 
 
@@ -67,6 +63,10 @@ function Respawn(){
   if (pos.y < reSpawnThreshhold){
     transform.setLocalPosition(originalPos);
   }
+  if (pos.x > xPos){
+    print("x off")
+     transform.setLocalPosition(xPos, pos.y, pos.z);
+  }
 }
 
 // todo move this logic to a new compy of expressionController_balance called expressionController_jump
@@ -80,6 +80,7 @@ function GetDifficulty(){
 
   return currentDifficulty;
 }
+
 pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, () => {
   SetEvents();
   Start();

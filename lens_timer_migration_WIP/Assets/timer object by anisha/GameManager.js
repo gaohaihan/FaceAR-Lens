@@ -13,19 +13,19 @@ var currentIndex = 0;
 script.prevButton.enabled = false;
 script.nextButton.enabled = false;
 
-script.CompleteExercise = function(){
+script.api.CompleteExercise = function(){
     GoToNextExercise();
 }
 
-script.Next = function(){
+script.api.Next = function(){
    GoToNextExercise();
 }
 
-script.Previous = function(){
+script.api.Previous = function(){
    GoToPreviousExercise();
 }
 
-script.Start = function(){
+script.api.Start = function(){
     EnableFirstExercise();
 }
 

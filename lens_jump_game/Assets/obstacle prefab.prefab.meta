@@ -4,7 +4,7 @@
   ImporterName: ObjectPrefabImporter
   PrimaryAsset: !<reference> 9a922dd4-034c-416e-a641-3cfe2904d5f9
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -54,7 +54,7 @@
   Name: Physics Collider
   Enabled: true
   Shape: !<Box>
-    FitVisual: true
+    FitVisual: false
     Size: {x: 15.000000, y: 15.000000, z: 500.000000}
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -64,7 +64,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
-  Intangible: false
+  Intangible: true
   ShowCollider: false
 - !<SceneObject/af8bb4f5-87cc-44cf-9827-32536e447e29>
   PrefabRemaps:
@@ -99,7 +99,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
-  Intangible: false
+  Intangible: true
   ShowCollider: false
   Dynamic: false
   BodySetting: Density

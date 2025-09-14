@@ -10,7 +10,7 @@
   Name: Physics Collider
   Enabled: true
   Shape: !<Box>
-    FitVisual: true
+    FitVisual: false
     Size: {x: 15.000000, y: 15.000000, z: 500.000000}
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20,7 +20,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
-  Intangible: false
+  Intangible: true
   ShowCollider: false
 - !<SceneObject/1e5c3e58-b5c2-4bed-a2b9-7bf400f66cb0>
   PrefabRemaps:
@@ -75,7 +75,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   ForceCompound: false
-  Intangible: false
+  Intangible: true
   ShowCollider: false
   Dynamic: false
   BodySetting: Density

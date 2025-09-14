@@ -2,7 +2,6 @@
 // @input Asset.ObjectPrefab prefab
 // @input float moveSpeed
 // @input SceneObject ball
-
 const pubSub = require("../PubSubModule");
 var obstacle;
 var body;
@@ -10,6 +9,7 @@ var colliding = false
 var collider;
 var counted = false;
 var count = 0;
+
 
 // Filter to only detect collisions with ball.
 var filter = Physics.Filter.create();
@@ -34,8 +34,8 @@ function SetEvents() {
 * Things to be called every frame
 */
 function OnUpdate(){
-  print("Pause" + global.Pause)
   if(global.Pause == false){
+    script.moveSpeed = global.Speed;
     Move();
     DestroyAndSpawn();
     CountJump();
@@ -90,7 +90,6 @@ function createObjectFromPrefab() {
     SetColliderFilter();
 
     counted = false;
-
     return obstacle;
   } else {
     return undefined;
@@ -100,11 +99,11 @@ function createObjectFromPrefab() {
 function SetColliderFilter(){
   if(collider){
     collider.onOverlapEnter.add(function (e) {
-      print("overlap")
+        print("overlap")
       colliding = true;
     })
-
     collider.onOverlapExit.add(function (e) {
+       print("overlap exit")
       colliding = false;
   })
   }

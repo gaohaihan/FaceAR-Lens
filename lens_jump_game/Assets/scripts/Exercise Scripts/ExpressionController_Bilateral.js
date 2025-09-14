@@ -46,9 +46,7 @@ function InitializeUserBaseExpressionValue() {
 
 function Initialize(){
   // Set initial values
-  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.01;
-  script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
-
+  currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.05;
   midRep = false;
   color = script.target.getMaterial(0).getPass(0).baseColor;
   difficulty = global.Difficulty;
@@ -138,11 +136,11 @@ function UpdateCurrentDifficulty(){
   }
 
   if (!isRightDetectionOn){
-    currentMinDifficulty = rightBaseExpressionValue + 0.01
+    currentMinDifficulty = rightBaseExpressionValue + 0.05
   }
 
   if (!isLeftDetectionOn){
-    currentMinDifficulty = leftBaseExpressionValue + 0.01
+    currentMinDifficulty = leftBaseExpressionValue + 0.05
   }
 
   currentDifficulty = currentMinDifficulty / ( 1 - difficulty);
@@ -161,7 +159,7 @@ function CountReps() {
   pubSub.publish(pubSub.EVENTS.SetExpressionRequiredRepText,  global.requiredReps.toString());
 
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -198,9 +196,6 @@ function SetBilateralDetection() {
     isLeftDetectionOn = true;
   if (isRightDetectionOn == null)
     isRightDetectionOn = true;
-
-  print("Left" + isLeftDetectionOn);
-  print("right" + isRightDetectionOn);
 
   // enable bilateral controls
   pubSub.publish(pubSub.EVENTS.SetBilateralDetection, true);
@@ -246,7 +241,7 @@ function GetRawRightWeight(){
  * Display finished text
  */
 function Finished(){
-  if (script.completedSets >= global.requiredSets){
+  if (script.completedSets >= script.requiredSets && script.completedSets >= script.requiredSets){
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
 }

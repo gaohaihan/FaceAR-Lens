@@ -116,7 +116,7 @@ function TryEnablePrev(){
 }
 
 // make api request every frame
-var event = script.createEvent("UpdateEvent");
-event.bind(function(eventdata){
-    script.apiScript.makeRequest()
-});
+// var event = script.createEvent("UpdateEvent");
+// event.bind(function(eventdata){
+//     script.apiScript.makeRequest()
+// });

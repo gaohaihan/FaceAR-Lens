@@ -21,24 +21,23 @@ viewConfig:
     tint: true
     screenshot: false
     videoScreenRecord: false
-  cameraType: Front
+  cameraType: Back
 metaInfo:
   hints:
     []
   tags:
     []
-  lensName: basic
+  lensName: Untitled
   lensDescriptors:
-    - GEN_AI_ICON
+    []
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
-    - CameraKit
   platformBundlesEnabled: false
-  iconHash: aa85f424785240c78cbbbc91f4adb5f3
+  iconHash: ""
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906

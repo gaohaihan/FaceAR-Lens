@@ -12,37 +12,37 @@
 // Valid Event Types: "onEnableInteractable", "onDisableInteractable", "onToggle", "onToggleOn", "onToggleOff"
 //
 // Manually enable interactable
-// script.enableInteractable()
+// script.api.enableInteractable()
 //
 // Manually disable interactable
-// script.disableInteractable()
+// script.api.disableInteractable()
 //
 // Add callback function to event
-// script.addCallback(eventType, callback)
+// script.api.addCallback(eventType, callback)
 //
 // Remove callback function from event
-// script.removeCallback(eventType, callback)
+// script.api.removeCallback(eventType, callback)
 //
 // True if interactable
-// script.isInteractable()
+// script.api.isInteractable()
 //
 // Enable touch events
-// script.enableTouchEvents()
+// script.api.enableTouchEvents()
 //
 // Disable touch events
-// script.disableTouchEvents()
+// script.api.disableTouchEvents()
 //
 // Returns true if toggle is in "On" state, false if toggle is in "Off" state
-// script.getToggleValue()
+// script.api.getToggleValue()
 //
 // Manually switch off
-// script.toggleOff()
+// script.api.toggleOff()
 //
 // Manually switch on
-// script.toggleOn()
+// script.api.toggleOn()
 //
 // Manually switch to the opposite state
-// script.toggle()
+// script.api.toggle()
 //
 // -----------------
 
@@ -114,36 +114,36 @@
 var callbackTracker = new global.CallbackTracker(script);
 
 // Local API
-script.toggleOff = toggleOff;
-script.toggleOn = toggleOn;
-script.toggle = toggle;
-script.getToggleValue = getToggleValue;
-script.enableInteractable = enableInteractable;
-script.disableInteractable = disableInteractable;
-script.isInteractable = isInteractable;
-script.enableTouchEvents = enableTouchEvents;
-script.disableTouchEvents = disableTouchEvents;
-script.initialized = false;
-script.widgetType = global.WidgetTypes.UIToggle;
+script.api.toggleOff = toggleOff;
+script.api.toggleOn = toggleOn;
+script.api.toggle = toggle;
+script.api.getToggleValue = getToggleValue;
+script.api.enableInteractable = enableInteractable;
+script.api.disableInteractable = disableInteractable;
+script.api.isInteractable = isInteractable;
+script.api.enableTouchEvents = enableTouchEvents;
+script.api.disableTouchEvents = disableTouchEvents;
+script.api.initialized = false;
+script.api.widgetType = global.WidgetTypes.UIToggle;
 
-script.addCallback = callbackTracker.addCallback.bind(callbackTracker);
-script.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
+script.api.addCallback = callbackTracker.addCallback.bind(callbackTracker);
+script.api.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
 
-script.ownerScript = null;
+script.api.ownerScript = null;
 
 // Touch Event callbacks
-script.onTouchStart = onTouchStart;
-script.onTouchEnd = onTouchEnd;
-script.onTouchMove = onTouchMove;
+script.api.onTouchStart = onTouchStart;
+script.api.onTouchEnd = onTouchEnd;
+script.api.onTouchMove = onTouchMove;
 
-script.allowTouchEvents = !script.disableTouchEvents;
+script.api.allowTouchEvents = !script.disableTouchEvents;
 
-script.acceptChildWidget = acceptChildWidget;
-script.setOwner = setOwner;
-script.notifyOnInitialize = notifyOnInitialize;
+script.api.acceptChildWidget = acceptChildWidget;
+script.api.setOwner = setOwner;
+script.api.notifyOnInitialize = notifyOnInitialize;
 
-script.claimTouchStart = claimTouchStart;
-script.getMainRenderOrder = getMainRenderOrder;
+script.api.claimTouchStart = claimTouchStart;
+script.api.getMainRenderOrder = getMainRenderOrder;
 
 // Is this widget interactable?
 var interactable = script.interactable;
@@ -177,7 +177,7 @@ function getMainRenderOrder() {
 }
 
 function acceptChildWidget(widget) {
-    var widgetApi = widget;
+    var widgetApi = widget.api;
     if (!buttonScript && !widgetApi.ownerScript && widgetApi.widgetType == global.WidgetTypes.UIButton) {
         global.politeCall(widget, "setOwner", [script]);
         buttonScript = widget;
@@ -192,7 +192,7 @@ function acceptChildWidget(widget) {
 
 // Initialize all parameters
 function initParams() {
-    if (script.initialized) {
+    if (script.api.initialized) {
         return;
     }
     if (!initBackground() ||
@@ -204,26 +204,26 @@ function initParams() {
     global.answerPoliteCalls(script, "notifyOnInitialize");
     checkOwner();
 
-    script.initialized = true;
+    script.api.initialized = true;
     
 }
 
 function seekOwner() {
     global.findScriptUpwards(sceneObject, "acceptChildWidget", function(scr) {
-        return scr.acceptChildWidget(script);
+        return scr.api.acceptChildWidget(script);
     });
 }
 
 function setOwner(ownerScript) {
-    script.ownerScript = ownerScript;
+    script.api.ownerScript = ownerScript;
     refresh();
 }
 
 function checkOwner() {
-    if (!script.ownerScript) {
+    if (!script.api.ownerScript) {
         seekOwner();
     }
-    return !!script.ownerScript;
+    return !!script.api.ownerScript;
 }
 
 function notifyOnInitialize(callback) {
@@ -302,10 +302,10 @@ function initButtonAnimations() {
     var startPoint = new vec2(script.startEndpoint, 0.0);
     var endPoint = new vec2(script.endEndpoint, 0.0);
 
-    buttonScript.changeAnimationType("AnchorPosition");
-    buttonScript.changeStateValue("normal", "AnchorPosition", startPoint);
-    buttonScript.changeStateValue("pressed", "AnchorPosition", endPoint);
-    buttonScript.changeStateValue("disabled", "AnchorPosition", backgroundScreenTransform.anchors.getCenter());
+    buttonScript.api.changeAnimationType("AnchorPosition");
+    buttonScript.api.changeStateValue("normal", "AnchorPosition", startPoint);
+    buttonScript.api.changeStateValue("pressed", "AnchorPosition", endPoint);
+    buttonScript.api.changeStateValue("disabled", "AnchorPosition", backgroundScreenTransform.anchors.getCenter());
 }
 
 // Initialize this Interactable
@@ -315,22 +315,22 @@ function initInteractable() {
     if (!interactable) {
         updateWidgetInteractable(buttonScript);
     } else if (toggleValue) {
-        buttonScript.pressDown();
+        buttonScript.api.pressDown();
     } else {
-        buttonScript.pressUp();
+        buttonScript.api.pressUp();
     }
     return true;
 }
 
 // Disable touch event
 function disableTouchEvents() {
-    script.allowTouchEvents = false;
+    script.api.allowTouchEvents = false;
     script.disableTouchEvents = true;
 }
 
 // Enable touch event
 function enableTouchEvents() {
-    script.allowTouchEvents = true;
+    script.api.allowTouchEvents = true;
     script.disableTouchEvents = false;
 }
 
@@ -386,7 +386,7 @@ function toggleOff() {
 
     changeBackgroundVisuals("toggleOff");
 
-    buttonScript.pressUp();
+    buttonScript.api.pressUp();
 
     printDebug("Toggle Off Event!");
 }
@@ -403,7 +403,7 @@ function toggleOn() {
 
     changeBackgroundVisuals("toggleOn");
 
-    buttonScript.pressDown();
+    buttonScript.api.pressDown();
 
     printDebug("Toggle On Event!");
 }
@@ -415,18 +415,18 @@ function toggle() {
     }
 
     if (!toggleValue) {
-        script.toggleOn();
+        script.api.toggleOn();
     } else {
-        script.toggleOff();
+        script.api.toggleOff();
     }
 }
 
 function updateWidgetInteractable(widget) {
     if (widget) {
         if (interactable) {
-            widget.enableInteractable();
+            widget.api.enableInteractable();
         } else {
-            widget.disableInteractable();
+            widget.api.disableInteractable();
         }
     }
 }

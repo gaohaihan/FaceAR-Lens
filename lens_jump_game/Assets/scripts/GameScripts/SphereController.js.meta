@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 5500d47a-898b-4d3b-aa0c-b92ce2b6e0c4
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -24,10 +24,8 @@
   VersionPatch: 0
   ComponentUid: 5ad63b49-aab4-4a57-ae4f-5528756eb2c3
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    altBall: false
     ball: false
   ScriptTypesHidden:
     {}
@@ -35,7 +33,6 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - ball: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      altBall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
