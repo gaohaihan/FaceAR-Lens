@@ -1,0 +1,104 @@
+- !<AssetImportMetadata/5dfec56a-c1a1-059e-5dfd-0f8a97e9c8dc>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 46d8fc2a-dfa2-4335-b528-c4c36daf6cdd
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 46d8fc2a-dfa2-4335-b528-c4c36daf6cdd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 5XyFG5FUWczwqiCRpc2Qlf
+  AssetDataMap:
+    JavaScriptAsset: !<own> 9f5042fe-fd94-4142-b6af-8aa185481abd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/9f5042fe-fd94-4142-b6af-8aa185481abd>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d9292fb4-1a4e-420b-9f8d-9092a1a3a37e
+  ExportUid: 0006136a-20f6-3f2d-0000-0000000109c5
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    hideModalOnTapConfirmButton: false
+    hideModalOnTapSecondButton: false
+    inputModal: false
+    onConfirmCallAPIFunctionName: false
+    onConfirmCallAPIScriptComponent: false
+    onConfirmEventType: false
+    onConfirmMessagePrefix: false
+    onConfirmSetAPIPropertyPropertyName: false
+    onConfirmSetAPIPropertyScriptComponent: false
+    onConfirmSetTextTarget: false
+    onConfirmValidationFunctionName: false
+    onConfirmValidationScript: false
+    onHideCallAPIFunctionFunctionName: false
+    onHideCallAPIFunctionScript: false
+    onHideEventType: false
+    onHideMessagePrefix: false
+    onHideSetAPIPropertyPropertyName: false
+    onHideSetAPIPropertyScriptComponent: false
+    onHideSetTextTarget: false
+    onSecondTapCallAPIFunctionName: false
+    onSecondTapCallAPIScriptComponent: false
+    onSecondTapEventType: false
+    onSecondTapMessagePrefix: false
+    onSecondTapSetAPIPropertyPropertyName: false
+    onSecondTapSetAPIPropertyScriptComponent: false
+    onSecondTapSetTextTarget: false
+    onShowCallAPIFunctionFunctionName: false
+    onShowCallAPIFunctionScript: false
+    onShowEventType: false
+    onShowMessagePrefix: false
+    onShowSetAPIPropertyPropertyName: false
+    onShowSetAPIPropertyScriptComponent: false
+    onShowSetTextTarget: false
+    useValidation: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - inputModal: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      useValidation: false
+      onConfirmValidationScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onConfirmValidationFunctionName: ""
+      onConfirmEventType: 0
+      onConfirmCallAPIScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onConfirmCallAPIFunctionName: ""
+      onConfirmSetTextTarget: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      hideModalOnTapConfirmButton: true
+      onConfirmSetAPIPropertyScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onConfirmSetAPIPropertyPropertyName: ""
+      onConfirmMessagePrefix: ""
+      onSecondTapEventType: 0
+      onSecondTapCallAPIScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onSecondTapCallAPIFunctionName: ""
+      onSecondTapSetTextTarget: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      onSecondTapSetAPIPropertyScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onSecondTapSetAPIPropertyPropertyName: ""
+      onSecondTapMessagePrefix: ""
+      hideModalOnTapSecondButton: false
+      onShowEventType: 0
+      onShowCallAPIFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onShowCallAPIFunctionFunctionName: ""
+      onShowSetTextTarget: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      onShowSetAPIPropertyScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onShowSetAPIPropertyPropertyName: ""
+      onShowMessagePrefix: ""
+      onHideEventType: 0
+      onHideCallAPIFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onHideCallAPIFunctionFunctionName: ""
+      onHideSetTextTarget: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      onHideSetAPIPropertyScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onHideSetAPIPropertyPropertyName: ""
+      onHideMessagePrefix: ""
+  ScriptTypes:
+    -
+      {}
