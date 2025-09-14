@@ -4,7 +4,7 @@
   ImporterName: SceneImporter
   PrimaryAsset: !<reference> f16a560d-25ec-485b-837b-b77e018820ab
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
