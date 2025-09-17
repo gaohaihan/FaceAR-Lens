@@ -1066,7 +1066,7 @@
   PrefabRemaps:
     []
   Name: SettingUiManager
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -52.137466, y: 0.000000, z: 0.000000}
@@ -2102,7 +2102,7 @@
   PrefabRemaps:
     []
   Name: Previous Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -4.000000, y: -5.000000, z: 0.000000}
@@ -4575,7 +4575,7 @@
   PrefabRemaps:
     []
   Name: ReInit
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -3.000000, y: -8.000000, z: 0.000000}
@@ -6472,7 +6472,7 @@
   PrefabRemaps:
     []
   Name: Difficulty UI
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7208,7 +7208,7 @@
   PrefabRemaps:
     []
   Name: Pause
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 3.000000, y: -8.000000, z: 0.000000}
@@ -7644,7 +7644,7 @@
   PrefabRemaps:
     []
   Name: Debug
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8430,7 +8430,7 @@
   PrefabRemaps:
     []
   Name: Next  Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 4.000000, y: -5.000000, z: 0.000000}
