@@ -1,0 +1,33 @@
+- !<NativePackageDescriptor/27165ec6-fb75-4cf0-a8c3-9aad6df5a229>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 13
+    patch: 1
+    build: 25090323
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: Input Modal is a drag and drop UI element designed to gather user text input.
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 73
+  ExportUid: 6fe75326-da44-4543-87ea-9867dc2f2d92
+  ComponentUid: d605f3cb-db33-4139-a73e-925c7cbb79f4
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

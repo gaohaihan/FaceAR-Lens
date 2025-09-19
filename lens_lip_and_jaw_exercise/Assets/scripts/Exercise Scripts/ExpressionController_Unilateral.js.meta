@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 832601d1-c899-4e9e-92a5-2f51f0375be7
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -24,8 +24,7 @@
   VersionPatch: 0
   ComponentUid: cb1ebe60-58b0-417c-880d-29d8a76ff6aa
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     apiScript: false
     baseDifficulty: false

@@ -4,7 +4,7 @@
   ImporterName: FaceMeshImporter
   PrimaryAsset: !<reference> 21438401-ccf4-4cfa-97db-8f291128578e
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:

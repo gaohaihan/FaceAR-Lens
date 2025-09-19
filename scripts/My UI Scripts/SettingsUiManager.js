@@ -72,33 +72,39 @@ function ToggleOffRight(){
   * Set left button on/off based on data
   */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Left, (data) => {
-    switch(data){
-        case true:
-            script.bilateralToggle_left.toggleOn();
-            break;
-        case false:
-            script.bilateralToggle_left.toggleOff();
-            break;
-        default:
-            print("ERROR")
-            break;
+
+    if(script.bilateralToggle_left){
+        print("toggle on")
+        switch(data){
+            case true:
+                script.bilateralToggle_left.toggleOn();
+                break;
+            case false:
+                script.bilateralToggle_left.toggleOff();
+                break;
+            default:
+                print("ERROR")
+                break;
+        }
     }
-  });
+});
 
 /***
 * Set right button on/off based on data
 */
 pubSub.subscribe(pubSub.EVENTS.SetBilateralDetection_Right, (data) => {
-    switch(data){
-        case true:
-           script.bilateralToggle_right.toggleOn();
-           break;
-        case false:
-             script.bilateralToggle_right.toggleOff();
-             break;
-        default:
-            print("ERROR")
+    if(script.bilateralToggle_right.enabled){
+        switch(data){
+            case true:
+            script.bilateralToggle_right.toggleOn();
             break;
+            case false:
+                script.bilateralToggle_right.toggleOff();
+                break;
+            default:
+                print("ERROR")
+                break;
+        }
     }
 });
 

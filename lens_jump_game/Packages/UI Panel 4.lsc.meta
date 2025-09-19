@@ -6,8 +6,14 @@
     4b4abd0f-8993-4261-bea3-699e49a3f779: !<reference> e573d68e-05e2-4875-9bb0-639e6462cdde
     c702c7db-150c-4653-bb4a-98b8b745a384: !<reference> a557785a-6a11-4c27-8dd9-84c729905326
     ec2bd7aa-126d-4608-87a5-dd8f79b9c128: !<reference> 4f511177-3b50-4e65-b55d-531857b90404
+    48263242-ad74-4aa9-9489-321926fd2a2f: !<reference> a82f1301-a7ed-4ad5-b073-8460647d2397
+    5e2054a2-fdff-4742-9a42-3f976439d75a: !<reference> 362ce57e-19e0-47d2-a910-961d600f1ffe
+    67200b10-685d-4521-a3a8-32de5fdeaffd: !<reference> 1f17e825-81c1-46ee-81b0-45c44bc4af78
+    4b73d155-d690-427b-bb49-5e4f5bb6be4c: !<reference> e8c44a5a-d7c6-42db-b1a2-1f9ad15bd7be
+    15bbdf97-40f9-4197-a448-c40643796e63: !<reference> 2734a036-736f-413f-9518-222a767301e1
+    75a9d2d9-39e8-423f-ab5e-f4cdf05d88c4: !<reference> d34a726f-2674-4b9a-92a8-7a6506a16bef
   ImporterName: NativePackageImporter
-  PrimaryAsset: !<reference> 15bbdf97-40f9-4197-a448-c40643796e63
+  PrimaryAsset: !<reference> 2734a036-736f-413f-9518-222a767301e1
   PackageType: PackedNativePackageRoot
   LegacyPackagePolicy: ~
   ExtraData:
