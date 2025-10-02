@@ -1,0 +1,73 @@
+// @input Asset.RemoteServiceModule remoteServiceModule
+// @input Component.Text responseData
+// @input Component.ScriptComponent gameManager
+// @input Component.ScriptComponent settingUI
+
+// Import module
+const Module = require("./RemoteServicesApiModule");
+const ApiModule = new Module.ApiModule(script.remoteServiceModule);
+
+// Access functions defined in ApiModule like this:
+//ApiModule.(function name)
+function handleResponse(hasError, json) {
+    // print(`received from app, has error: ${hasError}`)
+    // print(`json: ${json}`);
+    try{
+        const parsedData = json;
+        switch (parsedData.elementName) {
+            case "sensitivity" :
+                global.Difficulty = parseFloat(parsedData.value);
+                script.responseData.text = parsedData.value;
+                break;
+            case "startButton" :
+                script.gameManager.Start();
+                script.responseData.text = "started";
+                break;
+            case "leftSwitch" :
+                if (parsedData.pressed){
+                    script.settingUI.ToggleOn_Left();
+                }
+                else{
+                    script.settingUI.ToggleOff_Left();
+                }
+                script.responseData.text = "left";
+                break;
+            case "rightSwitch" :
+                if (parsedData.pressed){
+                    script.settingUI.ToggleOn_Right();
+                }
+                else{
+                    script.settingUI.ToggleOff_Right();
+                }
+                script.responseData.text = "right";
+                break;
+            case "prevButton" :
+                script.gameManager.Previous();
+                script.responseData.text = "prev";
+                break
+            case "nextButton" :
+                script.gameManager.Next();
+                script.responseData.text = "next";
+                break;
+            case "setsAndReps":
+                const setAndReps = JSON.parse(parsedData.value);
+                global.requiredSets = setAndReps['sets'];
+                global.requiredReps = setAndReps['reps'];
+                script.responseData.text = "sets and reps";
+                break;
+            default:
+                script.responseData.text = "Invalid request";
+                break;
+        }
+    } catch (hasError){
+        script.responseData.text = "Error: " + hasError;
+    }
+}
+
+script.makeRequest = function() {
+  ApiModule.difficulty(handleResponse);
+};
+
+script.sendDataToSite = function(datatype, data) {
+    ApiModule.sendData(datatype, data);
+};

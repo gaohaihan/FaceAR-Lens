@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/8a416c24-cde8-4ee7-8219-e0c9ba22c7fb>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 18ee3dd2-aef0-4393-b3da-6b28992f0035
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 22bf8889-e1c2-4997-a390-d379f23643a7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/22bf8889-e1c2-4997-a390-d379f23643a7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7e459ac1-f95c-423b-8950-a7b4289b4382
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    UiParent: false
+    apiScript: false
+    expressionTitleText: false
+    maxIndex: false
+    nextButton: false
+    prevButton: false
+    remoteServiceModule: false
+    startButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - expressionTitleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      UiParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      prevButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      maxIndex: !<float> 2.000000
+      remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
+      apiScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
