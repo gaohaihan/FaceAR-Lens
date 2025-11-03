@@ -27,17 +27,18 @@ metaInfo:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: eyebrow
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
+    - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 9bdca335ca40c4a75076bb768825b2cc
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906

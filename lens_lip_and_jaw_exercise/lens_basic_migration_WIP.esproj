@@ -29,15 +29,16 @@ metaInfo:
     []
   lensName: lip_exercise
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
+    - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: f2431fdb27209f93c86a1e156e676d3a
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906
