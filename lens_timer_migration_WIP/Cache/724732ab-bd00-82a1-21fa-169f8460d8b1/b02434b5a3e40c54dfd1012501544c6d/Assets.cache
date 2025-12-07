@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    4f79dae7-db84-4848-a3f4-fa2baea855c2: 724732ab-bd00-82a1-21fa-169f8460d8b1/b02434b5a3e40c54dfd1012501544c6d/Data/Button_10X.png
+  Assets:
+    - !<FileTexture/4f79dae7-db84-4848-a3f4-fa2baea855c2>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 320
+        Height: 320
+  SourceHash: b02434b5a3e40c54dfd1012501544c6d
+  FileHash: 18893fe8ae74607fc6cfff3c190b5533
+  NativePackageItems:
+    []

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "LENSCORE_FACETRACKING_EYEBALLS_FITTER_V3",
+        "request_timing": "required",
+        "type": "device_dependent_asset"
+    },
+    {
+        "id": "LENSCORE_FACETRACKING_FACE_MESH_FITTER_V3",
+        "request_timing": "required",
+        "type": "device_dependent_asset"
+    },
+    {
+        "id": "LENSCORE_FACETRACKING_FACE_MESH_MODEL_V3",
+        "request_timing": "required",
+        "type": "device_dependent_asset"
+    },
+    {
+        "id": "LENSCORE_FACETRACKING_PIPELINE_XML",
+        "request_timing": "required",
+        "type": "device_dependent_asset"
+    }
+]

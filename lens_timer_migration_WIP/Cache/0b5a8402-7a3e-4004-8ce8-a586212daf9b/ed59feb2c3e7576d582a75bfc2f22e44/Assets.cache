@@ -1,0 +1,841 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: ed59feb2c3e7576d582a75bfc2f22e44
+  FileHash: f543d060ca6880b6ba6f17c61ddb953b
+  NativePackageItems:
+    - !<own> c9885690-21a5-9c5d-a5d7-659bc2d37be8
+    - !<own> 7c76ca3b-d26c-829f-7b64-908024cdaaef
+    - !<own> 643d784c-2716-c1f0-117e-d9c6f962b81c
+    - !<own> e080d1c8-7bad-22bc-51de-f17b951b75ac
+    - !<own> 4689246d-283c-4842-73cc-ea8098e57ed5
+    - !<own> 907e92bc-c14f-9606-31e8-3dd275323964
+    - !<own> 47c54862-02b6-31af-8a2f-5f891dc51293
+    - !<own> 4404c3ae-ee9a-4f12-8360-834ff233fcb9
+    - !<own> 1aeeffc6-2965-a5a5-0e84-3458633f80ae
+    - !<own> 537b1fb1-484e-8aa6-3ddf-18a947312bb3
+    - !<own> 3830b67f-d227-6b5a-2b85-8ac9e7e34f12
+    - !<own> fc1945a4-5470-a302-f8f6-c23b943fce09
+    - !<own> df092f18-73f9-7f22-eeac-e63ff624c43b
+    - !<own> b49f551b-2b87-d56b-a86b-c1b7f92e0d7e
+    - !<own> 7f08a04b-673c-c764-a392-76382fbd09d3
+- !<ScreenTransform/02302baa-688c-456f-a665-47ad35093a1e>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<AssetImportMetadata/1aeeffc6-2965-a5a5-0e84-3458633f80ae>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 79c67787-bfd3-4edb-a168-c66661fe427f
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 79c67787-bfd3-4edb-a168-c66661fe427f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 64e93b5d-53d8-4a16-8748-72d89e73d06d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefab/32084e2f-293a-43af-90ef-7d8908791f3d>
+  PackagePath: Default Prefabs/Button Foreground 2
+  objects:
+    - !<own> 74d621f0-ace6-47c1-8117-f361f94a3489
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptAssetData/3723c877-9d49-4783-8fce-a12a260ed6a9>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4fd6e44a-a2f9-46b6-8f02-324692286f12
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/3830b67f-d227-6b5a-2b85-8ac9e7e34f12>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 8ccd8270-a1e0-4e57-9dcb-b8b33ad9b2c4
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 8ccd8270-a1e0-4e57-9dcb-b8b33ad9b2c4
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> ca2c4ac4-c642-4d3d-8683-36ad1fb49810
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/4404c3ae-ee9a-4f12-8360-834ff233fcb9>
+  ImportedAssetIds:
+    Font: !<reference> a48b3dd7-8a57-4047-b80b-1635328bd28f
+  ImporterName: FontImporter
+  PrimaryAsset: !<reference> a48b3dd7-8a57-4047-b80b-1635328bd28f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/4689246d-283c-4842-73cc-ea8098e57ed5>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 77b30868-f378-4847-85f0-2aca1dadf63f
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 77b30868-f378-4847-85f0-2aca1dadf63f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 943f125d-4c10-4b2d-bc39-7e12dadb2c86
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/47c54862-02b6-31af-8a2f-5f891dc51293>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> eb0ebb80-65fb-4df6-9cb1-670d8f0b8793
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> eb0ebb80-65fb-4df6-9cb1-670d8f0b8793
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/537b1fb1-484e-8aa6-3ddf-18a947312bb3>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 4208d6b1-1bff-45a1-9c66-87291e21aa25
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 4208d6b1-1bff-45a1-9c66-87291e21aa25
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 97ba9636-9342-4856-9ec2-62709d2202ef
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<SceneObject/62058b3f-ca37-46fb-bea5-b811bbffb390>
+  PrefabRemaps:
+    []
+  Name: Button Background
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8fb5e18b-591a-4642-840a-c5f5fa4f62c7
+    - !<own> 6ffd2964-97d2-4308-a890-66ce5356c8ba
+- !<AssetImportMetadata/643d784c-2716-c1f0-117e-d9c6f962b81c>
+  ImportedAssetIds:
+    Material: !<reference> a41829a2-a448-4c53-9d85-1f5c4601d7e2
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> a41829a2-a448-4c53-9d85-1f5c4601d7e2
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefabAssetData/64e93b5d-53d8-4a16-8748-72d89e73d06d>
+  SourceRemaps:
+    - 75ebfde4-3e1f-45b2-8bc4-3f3fe0490745: f8dfba99-752f-4d2a-87d0-63bd386ab642
+    - 79c67787-bfd3-4edb-a168-c66661fe427f: f0b77456-1155-4dd6-b061-320ef1f94efa
+    - 939811f5-9fda-4422-bb65-0ba0cd9d61a6: 7d7d9f82-9085-4f09-993a-e161e7a0c5c2
+    - fa23f69c-d7ac-4005-96dc-a03fbdcb5610: 9a4678ce-5dae-48a5-b9af-accc927731ef
+  SourceState: !<own> f0b77456-1155-4dd6-b061-320ef1f94efa
+- !<ScreenTransform/6ffd2964-97d2-4308-a890-66ce5356c8ba>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/74d621f0-ace6-47c1-8117-f361f94a3489>
+  PrefabRemaps:
+    []
+  Name: Button Foreground
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c0a0d5c0-578b-41e4-a188-b45ad5bd8e92
+    - !<own> 02302baa-688c-456f-a665-47ad35093a1e
+- !<AssetImportMetadata/7c76ca3b-d26c-829f-7b64-908024cdaaef>
+  ImportedAssetIds:
+    Texture: !<reference> 1f1ac974-0e10-4238-ac9a-125da415d995
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 1f1ac974-0e10-4238-ac9a-125da415d995
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+  ExtraData:
+    {}
+- !<Text/7d7d9f82-9085-4f09-993a-e161e7a0c5c2>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: ""
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 300
+  Font: !<reference> a48b3dd7-8a57-4047-b80b-1635328bd28f
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Shrink
+  OverflowHorizontal: Ellipsis
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: true
+  TwoSided: false
+- !<AssetImportMetadata/7f08a04b-673c-c764-a392-76382fbd09d3>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> f2da4cb5-f444-4f95-9482-1020e3292e91
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> f2da4cb5-f444-4f95-9482-1020e3292e91
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> f92c59b6-a8f8-45b2-878b-222a583d76c0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<Image/8fb5e18b-591a-4642-840a-c5f5fa4f62c7>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a41829a2-a448-4c53-9d85-1f5c4601d7e2
+  FlipX: false
+  FlipY: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  RotationAngle: 0
+- !<AssetImportMetadata/907e92bc-c14f-9606-31e8-3dd275323964>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 0843a19e-83e3-49af-a0a5-39438ac7e70c
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 0843a19e-83e3-49af-a0a5-39438ac7e70c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ScriptAssetData/943f125d-4c10-4b2d-bc39-7e12dadb2c86>
+  SvgIcon: |
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16.5" cy="16.5" r="11.5" stroke="#D0DAE6" stroke-width="2"/>
+    <circle cx="16.5" cy="16.5" r="7.5" fill="#D0DAE6"/>
+    </svg>
+
+  Description: |-
+    UI Button - Trigger events and behaviors by switching on and off.
+    
+    Add callback function to event when button was pressed down
+    // script.onPressDown.add(callback)
+    //
+    // Remove callback function from event when button was pressed down
+    // script.onPressDown.remove(callback)
+    //
+    // Add callback function to event when button was pressed up
+    // script.onPressUp.add(callback)
+    //
+    // Remove callback function from  event when button was pressed up
+    // script.onPressUp.remove(callback)
+    //
+    // Add callback function to event when button is pressed
+    // script.onPress.add(callback)
+    //
+    // Remove callback function from event
+    // script.onPress.remove(callback)
+    
+    // Manually enable interactable
+    // script.enableInteractable()
+    //
+    // Manually disable interactable
+    // script.disableInteractable()
+    //
+    // True if interactable
+    // script.isInteractable()
+    //
+    // True if pressed
+    // script.isPressed()
+    //
+    // Enable touch events
+    // script.enableTouchEvents()
+    //
+    // Disable touch events
+    // script.disableTouchEvents()
+    //
+    // Manually trigger Press Down (call only when touch events are disabled)
+    // script.pressDown()
+    //
+    // Manually trigger Press Up (call only when touch events are disabled)
+    // script.pressUp()
+    //
+    // Change this button's animation type to a newType ("Bounce", "Squish", "Tween", "AnchorPosition", "OffsetPosition", "Rotation", or "Scale")
+    // script.changeAnimationType(newType)
+    //
+    // Set the value of one of this UI Button’s transition types ("Color", "Texture", "Tween", "AnchorPosition", "OffsetPosition", "Rotation", or "Scale") for when it switches to a different state ("normal", "pressed", or "disabled")
+    // script.changeStateValue(state, type, newValue)
+    //
+    // Get the current color of the Button's Background
+    // script.getColor()
+    //
+    // Get the current texture of the Button's Background
+    // script.getTexture()
+    //
+    // Get the text component of this button
+    // script.getTextComponent()
+    //
+  InternalVersion: 12
+  VersionMajor: 10
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0005ec0c-8f52-724f-0000-00000000b2fd
+  ExportUid: a46c1ea4-3053-4edc-95a0-2b516f4b33d7
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    animation: false
+    backgroundPrefab: false
+    callbackType: false
+    customFunctionScript: false
+    disableTouchEventsInput: false
+    disabledAnchorPosition: false
+    disabledColor: false
+    disabledOffsetPosition: false
+    disabledRotation: false
+    disabledScale: false
+    disabledTexture: false
+    disabledTween: false
+    editAnimations: false
+    editConnections: false
+    editDebugSettings: false
+    editEventCallbacks: false
+    foregroundPrefab: false
+    interactable: false
+    normalAnchorPosition: false
+    normalColor: false
+    normalOffsetPosition: false
+    normalRotation: false
+    normalScale: false
+    normalTexture: false
+    normalTween: false
+    onPressBehaviors: false
+    onPressDownBehaviors: false
+    onPressDownFunctionNames: false
+    onPressDownGlobalBehaviors: false
+    onPressFunctionNames: false
+    onPressGlobalBehaviors: false
+    onPressUpBehaviors: false
+    onPressUpFunctionNames: false
+    onPressUpGlobalBehaviors: false
+    pressedAnchorPosition: false
+    pressedColor: false
+    pressedOffsetPosition: false
+    pressedRotation: false
+    pressedScale: false
+    pressedTexture: false
+    pressedTween: false
+    printDebugStatements: false
+    printWarningStatements: false
+    renderOrderOverride: false
+    sceneObjectWithTweens: false
+    text: false
+    textPrefab: false
+    transformType: false
+    useColors: false
+    useTextures: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - interactable: true
+      renderOrderOverride: 0
+      text: Button
+      useColors: true
+      normalColor: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      pressedColor: !<Vec4> {x: 0.664225, y: 0.664240, z: 0.664225, w: 1.000000}
+      disabledColor: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      useTextures: false
+      normalTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      pressedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      disabledTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      editAnimations: false
+      animation: 0
+      transformType: OffsetPosition
+      normalAnchorPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      pressedAnchorPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      disabledAnchorPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      normalOffsetPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      pressedOffsetPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      disabledOffsetPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      normalRotation: !<float> 0.000000
+      pressedRotation: !<float> 0.000000
+      disabledRotation: !<float> 0.000000
+      normalScale: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      pressedScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      disabledScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      sceneObjectWithTweens: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      normalTween: ""
+      pressedTween: ""
+      disabledTween: ""
+      editEventCallbacks: false
+      callbackType: 0
+      onPressDownBehaviors: !<reference.ScriptComponent[]>
+        []
+      onPressUpBehaviors: !<reference.ScriptComponent[]>
+        []
+      onPressBehaviors: !<reference.ScriptComponent[]>
+        []
+      onPressDownGlobalBehaviors: !<string[]>
+        []
+      onPressUpGlobalBehaviors: !<string[]>
+        []
+      onPressGlobalBehaviors: !<string[]>
+        []
+      customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onPressDownFunctionNames: !<string[]>
+        []
+      onPressUpFunctionNames: !<string[]>
+        []
+      onPressFunctionNames: !<string[]>
+        []
+      editConnections: false
+      backgroundPrefab: !<reference.ObjectPrefab> 4208d6b1-1bff-45a1-9c66-87291e21aa25
+      foregroundPrefab: !<reference.ObjectPrefab> 8ccd8270-a1e0-4e57-9dcb-b8b33ad9b2c4
+      textPrefab: !<reference.ObjectPrefab> 79c67787-bfd3-4edb-a168-c66661fe427f
+      editDebugSettings: false
+      printDebugStatements: false
+      printWarningStatements: false
+      disableTouchEventsInput: false
+  ScriptTypes:
+    -
+      {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/97ba9636-9342-4856-9ec2-62709d2202ef>
+  SourceRemaps:
+    - 03f4fcaa-8813-4575-ab76-f9a8766217fe: 62058b3f-ca37-46fb-bea5-b811bbffb390
+    - 4208d6b1-1bff-45a1-9c66-87291e21aa25: d3412f6e-8984-45c3-bf62-fdd890f5e007
+    - 4f88f665-2d99-498c-9324-f6cc62f5d47c: 6ffd2964-97d2-4308-a890-66ce5356c8ba
+    - 891a749b-effb-4891-908c-7cbf5ef199b1: 8fb5e18b-591a-4642-840a-c5f5fa4f62c7
+  SourceState: !<own> d3412f6e-8984-45c3-bf62-fdd890f5e007
+- !<SceneObject/9a4678ce-5dae-48a5-b9af-accc927731ef>
+  PrefabRemaps:
+    []
+  Name: Button Text
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f8dfba99-752f-4d2a-87d0-63bd386ab642
+    - !<own> 7d7d9f82-9085-4f09-993a-e161e7a0c5c2
+- !<AssetImportMetadata/b49f551b-2b87-d56b-a86b-c1b7f92e0d7e>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> b045e36c-f033-47f5-99d1-da59e2be3541
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> b045e36c-f033-47f5-99d1-da59e2be3541
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> fe0a8ea8-51b5-44c9-a88e-62afbc8f7cfd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<Image/c0a0d5c0-578b-41e4-a188-b45ad5bd8e92>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> bf2ac9e5-a07b-41d9-afd7-2c7a2809e357
+  FlipX: false
+  FlipY: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  RotationAngle: 0
+- !<AssetImportMetadata/c9885690-21a5-9c5d-a5d7-659bc2d37be8>
+  ImportedAssetIds:
+    Texture: !<reference> e2175dc5-ef7e-4e0a-891c-8ba8192147f9
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> e2175dc5-ef7e-4e0a-891c-8ba8192147f9
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+  ExtraData:
+    {}
+- !<ObjectPrefabAssetData/ca2c4ac4-c642-4d3d-8683-36ad1fb49810>
+  SourceRemaps:
+    - 3fef8297-5741-4bfd-9821-0b05c742a1ac: 02302baa-688c-456f-a665-47ad35093a1e
+    - 8ccd8270-a1e0-4e57-9dcb-b8b33ad9b2c4: 32084e2f-293a-43af-90ef-7d8908791f3d
+    - a6010ad5-113e-4bca-9919-4a9b43f5eb07: 74d621f0-ace6-47c1-8117-f361f94a3489
+    - e6cad28a-d8f3-4551-8ad7-ef1cad080ab2: c0a0d5c0-578b-41e4-a188-b45ad5bd8e92
+  SourceState: !<own> 32084e2f-293a-43af-90ef-7d8908791f3d
+- !<ObjectPrefab/d3412f6e-8984-45c3-bf62-fdd890f5e007>
+  PackagePath: Default Prefabs/Button Background 2
+  objects:
+    - !<own> 62058b3f-ca37-46fb-bea5-b811bbffb390
+  LazyLoading: false
+  RetainAssets: true
+- !<AssetImportMetadata/df092f18-73f9-7f22-eeac-e63ff624c43b>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 35eb4f4e-6874-4139-9020-9b2a6a0ee4db
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 35eb4f4e-6874-4139-9020-9b2a6a0ee4db
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 3723c877-9d49-4783-8fce-a12a260ed6a9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/e080d1c8-7bad-22bc-51de-f17b951b75ac>
+  ImportedAssetIds:
+    Material: !<reference> bf2ac9e5-a07b-41d9-afd7-2c7a2809e357
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> bf2ac9e5-a07b-41d9-afd7-2c7a2809e357
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefab/f0b77456-1155-4dd6-b061-320ef1f94efa>
+  PackagePath: ""
+  objects:
+    - !<own> 9a4678ce-5dae-48a5-b9af-accc927731ef
+  LazyLoading: false
+  RetainAssets: true
+- !<ScreenTransform/f8dfba99-752f-4d2a-87d0-63bd386ab642>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -0.750000
+    right: 1.000000
+    top: 0.750000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<ScriptAssetData/f92c59b6-a8f8-45b2-878b-222a583d76c0>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 20b7519d-4275-4113-aa29-ee082b14fc9e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/fc1945a4-5470-a302-f8f6-c23b943fce09>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> daf9008e-775b-47da-ad6f-b34003e9ef18
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> daf9008e-775b-47da-ad6f-b34003e9ef18
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/fe0a8ea8-51b5-44c9-a88e-62afbc8f7cfd>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 49d57bce-d315-4f4c-80a1-e4994c42bb38
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

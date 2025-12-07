@@ -1,0 +1,167 @@
+- !<AssetImportMetadata/df33554b-12b8-4b03-9df9-0d4a722b2efb>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 598dbe74-c108-4405-b8c8-e57c8f604db7
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 598dbe74-c108-4405-b8c8-e57c8f604db7
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 9bdf26c6-d9bd-4bd8-b360-0e1b8d38871b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/0e05e6a9-bc9f-4927-a8dc-10e08e835ad9>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/9bdf26c6-d9bd-4bd8-b360-0e1b8d38871b>
+  SvgIcon: |
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="8" width="26" height="16" rx="8" stroke="#D0DAE6" stroke-width="2"/>
+    <circle cx="21" cy="16" r="6" fill="#D0DAE6"/>
+    </svg>
+
+  Description: |-
+    UIToggle - Trigger events and behaviors by switching on and off.
+    
+    // Add or remove callback function to onEnableInteractable event
+    // script.onEnableInteractable.add(callback);
+    // script.onEnableInteractable.remove(callback);
+    //
+    // Add or remove callback function to onDisableInteractable event
+    // script.onDisableInteractable.add(callback);
+    // script.onDisableInteractable.remove(callback);
+    //
+    // Add or remove callback function to onToggleOn event
+    // script.onToggleOn.add(callback);
+    // script.onToggleOn.remove(callback);
+    //
+    // Add or remove callback function to onToggleOff event
+    // script.onToggleOff.add(callback);
+    // script.onToggleOff.remove(callback);
+    //
+    // Add or remove callback function to onToggle event
+    // script.onToggle.add(callback);
+    // script.onToggle.remove(callback);
+    
+    
+    // Api functions:
+    //
+    // Manually enable interactable
+    // script.enableInteractable()
+    //
+    // Manually disable interactable
+    // script.disableInteractable()
+    
+    // True if interactable
+    // script.isInteractable()
+    //
+    // Enable touch events
+    // script.enableTouchEvents()
+    //
+    // Disable touch events
+    // script.disableTouchEvents()
+    //
+    // Returns true if toggle is in "On" state, false if toggle is in "Off" state
+    // script.getToggleValue()
+    //
+    // Manually switch off
+    // script.toggleOff()
+    //
+    // Manually switch on
+    // script.toggleOn()
+    //
+    // Manually switch to the opposite state
+    // script.toggle()
+  InternalVersion: 6
+  VersionMajor: 5
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0005ebe5-e217-36b3-0000-00000000ba1e
+  ExportUid: 5ad8cad9-9248-47bf-bf9b-bb3f0ea83079
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    backgroundPrefab: false
+    buttonPrefab: false
+    callbackType: false
+    customFunctionScript: false
+    disableTouchEventsInput: false
+    disabledColor: false
+    disabledTexture: false
+    editConnections: false
+    editDebugSettings: false
+    editEventCallbacks: false
+    editProperties: false
+    endEndpoint: false
+    initialToggleValue: false
+    interactable: false
+    onToggleBehaviors: false
+    onToggleFunctionNames: false
+    onToggleGlobalBehaviors: false
+    onToggleOffBehaviors: false
+    onToggleOffFunctionNames: false
+    onToggleOffGlobalBehaviors: false
+    onToggleOnBehaviors: false
+    onToggleOnFunctionNames: false
+    onToggleOnGlobalBehaviors: false
+    printDebugStatements: false
+    printWarningStatements: false
+    renderOrderOverride: false
+    startEndpoint: false
+    toggleOffColor: false
+    toggleOffTexture: false
+    toggleOnColor: false
+    toggleOnTexture: false
+    toggleTouchEvent: false
+    useColors: false
+    useTextures: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - interactable: true
+      renderOrderOverride: 0
+      initialToggleValue: false
+      editProperties: false
+      startEndpoint: -0.400000
+      endEndpoint: 0.400000
+      useColors: true
+      toggleOnColor: !<Vec4> {x: 0.901991, y: 0.897826, z: 0.913725, w: 1.000000}
+      toggleOffColor: !<Vec4> {x: 0.574151, y: 0.574166, z: 0.574151, w: 1.000000}
+      disabledColor: !<Vec4> {x: 0.574151, y: 0.574166, z: 0.574151, w: 1.000000}
+      useTextures: false
+      toggleOnTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      toggleOffTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      disabledTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      editEventCallbacks: false
+      callbackType: 0
+      onToggleOffBehaviors: !<reference.ScriptComponent[]>
+        []
+      onToggleOnBehaviors: !<reference.ScriptComponent[]>
+        []
+      onToggleBehaviors: !<reference.ScriptComponent[]>
+        []
+      onToggleOffGlobalBehaviors: !<string[]>
+        []
+      onToggleOnGlobalBehaviors: !<string[]>
+        []
+      onToggleGlobalBehaviors: !<string[]>
+        []
+      customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onToggleOffFunctionNames: !<string[]>
+        []
+      onToggleOnFunctionNames: !<string[]>
+        []
+      onToggleFunctionNames: !<string[]>
+        []
+      editConnections: false
+      backgroundPrefab: !<reference.ObjectPrefab> b31312d8-4d99-4068-a42d-74ac1f876f82
+      buttonPrefab: !<reference.ObjectPrefab> 2cfeeb3f-6618-464f-8895-f1bb0639e70e
+      toggleTouchEvent: TouchStartEvent
+      editDebugSettings: false
+      printDebugStatements: false
+      printWarningStatements: false
+      disableTouchEventsInput: false
+  ScriptTypes:
+    -
+      {}

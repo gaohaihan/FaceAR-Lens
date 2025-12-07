@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    a4eaa24f-a4eb-41a4-955f-28ad434075c5: 10c056e0-89e1-4168-ae65-c5c1709f1282/fe0d23329c63a128a7be6f1f7d11d93f/Data/eye_1.pvr
+  Assets:
+    - !<FileTexture/a4eaa24f-a4eb-41a4-955f-28ad434075c5>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 379
+        Height: 512
+  SourceHash: fe0d23329c63a128a7be6f1f7d11d93f
+  FileHash: a84b773fae95530aaed0c2830b7cf84f
+  NativePackageItems:
+    []

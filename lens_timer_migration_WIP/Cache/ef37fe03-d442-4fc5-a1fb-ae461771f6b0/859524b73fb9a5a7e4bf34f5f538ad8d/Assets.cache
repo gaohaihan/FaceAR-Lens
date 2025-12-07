@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    060e6a02-78b7-4097-916f-c922d04c4f6a: ef37fe03-d442-4fc5-a1fb-ae461771f6b0/859524b73fb9a5a7e4bf34f5f538ad8d/Data/full_no_lips.pvr
+  Assets:
+    - !<FileTexture/060e6a02-78b7-4097-916f-c922d04c4f6a>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 379
+        Height: 512
+  SourceHash: 859524b73fb9a5a7e4bf34f5f538ad8d
+  FileHash: b84dc1811ecbd7f522128a9a0a8ce95a
+  NativePackageItems:
+    []

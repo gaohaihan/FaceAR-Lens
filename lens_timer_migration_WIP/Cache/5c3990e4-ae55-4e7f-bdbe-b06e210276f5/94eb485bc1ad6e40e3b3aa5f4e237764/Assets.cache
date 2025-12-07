@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    452af41d-4c20-4694-854d-8a9c6feec261: 5c3990e4-ae55-4e7f-bdbe-b06e210276f5/94eb485bc1ad6e40e3b3aa5f4e237764/Data/half_circle.pvr
+  Assets:
+    - !<FileTexture/452af41d-4c20-4694-854d-8a9c6feec261>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 32
+        Height: 64
+  SourceHash: 94eb485bc1ad6e40e3b3aa5f4e237764
+  FileHash: a3e5740005d54dba0fc44e5a8394e007
+  NativePackageItems:
+    []

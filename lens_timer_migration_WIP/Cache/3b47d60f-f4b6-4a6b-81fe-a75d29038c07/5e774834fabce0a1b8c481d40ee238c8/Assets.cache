@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    135e7019-a17a-4abf-822a-11da4d798352: 3b47d60f-f4b6-4a6b-81fe-a75d29038c07/5e774834fabce0a1b8c481d40ee238c8/Data/cheeks.pvr
+  Assets:
+    - !<FileTexture/135e7019-a17a-4abf-822a-11da4d798352>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 379
+        Height: 512
+  SourceHash: 5e774834fabce0a1b8c481d40ee238c8
+  FileHash: 4b2b7b88bc77daa091b4564af833cc05
+  NativePackageItems:
+    []

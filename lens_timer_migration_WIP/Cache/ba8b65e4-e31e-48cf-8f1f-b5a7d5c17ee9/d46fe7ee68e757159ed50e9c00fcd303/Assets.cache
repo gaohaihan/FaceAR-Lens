@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    0b0ca3d5-e3ce-4f6f-9363-3adffc4c97dc: ba8b65e4-e31e-48cf-8f1f-b5a7d5c17ee9/d46fe7ee68e757159ed50e9c00fcd303/Data/colorpicker_background.pvr
+  Assets:
+    - !<FileTexture/0b0ca3d5-e3ce-4f6f-9363-3adffc4c97dc>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 30
+        Height: 300
+  SourceHash: d46fe7ee68e757159ed50e9c00fcd303
+  FileHash: 2b883ef7cb25c4092c7709e68d66b0d4
+  NativePackageItems:
+    []

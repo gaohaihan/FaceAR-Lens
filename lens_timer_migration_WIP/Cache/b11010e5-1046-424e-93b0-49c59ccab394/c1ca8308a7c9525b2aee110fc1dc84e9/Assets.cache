@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    65662826-ab99-4860-99d6-b365a4becc4c: b11010e5-1046-424e-93b0-49c59ccab394/c1ca8308a7c9525b2aee110fc1dc84e9/Data/forehead_3.pvr
+  Assets:
+    - !<FileTexture/65662826-ab99-4860-99d6-b365a4becc4c>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 379
+        Height: 512
+  SourceHash: c1ca8308a7c9525b2aee110fc1dc84e9
+  FileHash: 37db7cac9786683e893913b9422fa706
+  NativePackageItems:
+    []

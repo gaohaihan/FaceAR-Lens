@@ -1,0 +1,30 @@
+- !<NativePackageDescriptor/620a4898-4a34-40af-8aa5-ad43052f7763>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 11
+    patch: 0
+    build: 25062600
+    type: Unset
+  Description: "UIColorPicker - Choose a color from a color palette and apply it to a Mesh Visual. \nCan also be configured as slider\n// Manually enable interactable\n// script.enableInteractable()\n//\n// Manually disable interactable\n// script.disableInteractable()\n\n// Add or remove callback function to onColorChanged event, vec4 color parameter will be passed in to callback\n// script.onColorChanged.add(callback)\n// script.onColorChanged.remove(callback)\n\n// Add or remove callback function to onValueChanged event, float value parameter will be passed in to callback\n// script.onValueChanged.add(callback)\n// script.onValueChanged.remove(callback)\n\n// Add or remove callback function to onEnableInteractable event\n// script.onEnableInteractable.add(callback)\n// script.onEnableInteractable.remove(callback)\n\n// Add or remove callback function to onEnableInteractable event\n// script.onDisableInteractable.add(callback)\n// script.onDisableInteractable.remove(callback)\n//\n// True if interactable\n// script.isInteractable()\n//\n// Enable touch events\n// script.enableTouchEvents()\n//\n// Disable touch events\n// script.disableTouchEvents()\n//\n// Get the current color selected on this Color Picker\n// script.getColor()\n//\n// Get the current value (0-1) of this Color Picker's slider\n// script.getSliderValue()\n//\n// Manually set the value (0-1) of this Color Picker's slider\n// script.setSliderValue(value)\n\n// Manually set direction\n// script.isVertical = value\n// -----------------\n"
+  SvgIcon: "<svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"22\" cy=\"16\" r=\"5\" fill=\"#D0DAE6\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M27.6586 18C27.8797 17.3744 28 16.7013 28 16C28 15.2987 27.8797 14.6256 27.6586 14H29C30.1046 14 31 14.8954 31 16C31 17.1046 30.1046 18 29 18H27.6586ZM16.3414 18H4C2.89543 18 2 17.1046 2 16C2 14.8954 2.89543 14 4 14H16.3414C16.1203 14.6256 16 15.2987 16 16C16 16.7013 16.1203 17.3744 16.3414 18Z\" fill=\"url(#paint0_linear_12_27)\"/>\n<defs>\n<linearGradient id=\"paint0_linear_12_27\" x1=\"4.27506\" y1=\"16\" x2=\"30.5\" y2=\"16\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#EDDA64\"/>\n<stop offset=\"1\" stop-color=\"#CB5468\"/>\n</linearGradient>\n</defs>\n</svg>\n"
+  VersionMajor: 7
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 64
+  ExportUid: 9429d6d1-6818-4eed-afd5-6cfad169cc68
+  ComponentUid: 0005ee8c-0e22-511b-0000-000000476385
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  Instantiable: !<reference> bb75dba3-32e2-4013-a201-251c4332d166
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: UI Color Picker
+    AssetId: 4M0Rl6MTTFZfXCjfEtnNca
+    Hash: 38cf38ae5da4575cc8092740287984ee
+    Version:
+      major: 7
+      minor: 0
+      patch: 0
+      build: 0
+  coreVersion: 317
+  clientVersion: 13.46

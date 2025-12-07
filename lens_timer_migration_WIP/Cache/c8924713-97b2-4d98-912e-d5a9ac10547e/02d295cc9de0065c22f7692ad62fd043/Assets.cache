@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    baa5f195-b3a9-48e5-948a-b4a27a699aa4: c8924713-97b2-4d98-912e-d5a9ac10547e/02d295cc9de0065c22f7692ad62fd043/Data/greensquare.jpg
+  Assets:
+    - !<FileTexture/baa5f195-b3a9-48e5-948a-b4a27a699aa4>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 474
+        Height: 474
+  SourceHash: 02d295cc9de0065c22f7692ad62fd043
+  FileHash: ab92373ec12a56618cf82ad693653a96
+  NativePackageItems:
+    []

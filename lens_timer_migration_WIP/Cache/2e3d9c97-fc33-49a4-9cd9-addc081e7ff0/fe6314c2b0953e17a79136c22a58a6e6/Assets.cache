@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    78c42848-958a-47a1-b4aa-6330eb6fbc0e: 2e3d9c97-fc33-49a4-9cd9-addc081e7ff0/fe6314c2b0953e17a79136c22a58a6e6/Data/colorPicker_popup.pvr
+  Assets:
+    - !<FileTexture/78c42848-958a-47a1-b4aa-6330eb6fbc0e>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 106
+        Height: 89
+  SourceHash: fe6314c2b0953e17a79136c22a58a6e6
+  FileHash: ffbe8a20df8608d2087501c0c2efc1e5
+  NativePackageItems:
+    []

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    470e5d4c-eb19-48cf-b4b3-2137e8d01951: d029f32f-f9ff-4825-b313-a4769174381b/449dc08929db3ddaf699c886b56cfe8c/Data/timer_0003_6.png
+  Assets:
+    - !<FileTexture/470e5d4c-eb19-48cf-b4b3-2137e8d01951>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 195
+        Height: 477
+  SourceHash: 449dc08929db3ddaf699c886b56cfe8c
+  FileHash: 0300ea94adb63e9155ae2ed9af163760
+  NativePackageItems:
+    []

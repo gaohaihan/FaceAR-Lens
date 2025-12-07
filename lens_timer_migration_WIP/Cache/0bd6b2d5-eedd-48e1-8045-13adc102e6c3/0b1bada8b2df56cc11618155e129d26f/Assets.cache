@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    4bf016b1-007d-475d-ad8b-3aa06fb64845: 0bd6b2d5-eedd-48e1-8045-13adc102e6c3/0b1bada8b2df56cc11618155e129d26f/Data/full_no_eye.pvr
+  Assets:
+    - !<FileTexture/4bf016b1-007d-475d-ad8b-3aa06fb64845>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 691
+  SourceHash: 0b1bada8b2df56cc11618155e129d26f
+  FileHash: 7a6100fea36758327fdc802a00f4000a
+  NativePackageItems:
+    []

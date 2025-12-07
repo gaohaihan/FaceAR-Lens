@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    c81f1623-1a68-4e04-a3d0-13c835ea5c0a: 423f8495-4111-495b-85e9-e26ec48a93eb/000458bdbbda7593a8e1691d920b9b6e/Data/palette_background.pvr
+  Assets:
+    - !<FileTexture/c81f1623-1a68-4e04-a3d0-13c835ea5c0a>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 20
+        Height: 290
+  SourceHash: 000458bdbbda7593a8e1691d920b9b6e
+  FileHash: 24e2f69dd1c764ad528cd51c89d8120d
+  NativePackageItems:
+    []

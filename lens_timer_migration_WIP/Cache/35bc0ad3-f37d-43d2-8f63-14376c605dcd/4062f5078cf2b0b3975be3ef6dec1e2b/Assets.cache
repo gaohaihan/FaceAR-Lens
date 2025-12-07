@@ -1,0 +1,282 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: 4062f5078cf2b0b3975be3ef6dec1e2b
+  FileHash: e7f67eb94552dcd6f41285d704f97289
+  NativePackageItems:
+    - !<own> 0301402c-e1ef-f2ee-5aee-9a96492e54f9
+    - !<own> b861a0bf-8618-df40-8503-d1498936f656
+    - !<own> 62b37125-6fc4-3d7f-f47a-5286e509c3c3
+    - !<own> d6d69ff2-f34e-f32f-51c9-27541bcb8fe3
+    - !<own> f4a2d383-8041-a739-6b84-d05ef9ed05b1
+    - !<own> edb74785-3cc2-84f1-7b2b-e9c25053256c
+    - !<own> 0c6c1b1a-b727-49aa-826e-be9b184dc637
+    - !<own> 19890ad9-03cd-1443-ee53-ef929a82a8d3
+- !<AssetImportMetadata/0301402c-e1ef-f2ee-5aee-9a96492e54f9>
+  ImportedAssetIds:
+    Texture: !<reference> 69dfb0c7-779b-4659-ad59-ff71a44c45e3
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 69dfb0c7-779b-4659-ad59-ff71a44c45e3
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/0c6c1b1a-b727-49aa-826e-be9b184dc637>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> b8aef13f-d8fd-4b3a-907a-335ad7b456ce
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> b8aef13f-d8fd-4b3a-907a-335ad7b456ce
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 21bf2dd6-da32-4fb3-ab87-f6bb01fa3c31
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/1912e5d1-2f99-4e78-87f2-1ab76d513fb1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 310452b7-b47b-4eb9-9d0d-e03a3bcd656e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+- !<AssetImportMetadata/19890ad9-03cd-1443-ee53-ef929a82a8d3>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 1fcb3c89-a9e8-44a5-ba91-c87bb4028146
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 1fcb3c89-a9e8-44a5-ba91-c87bb4028146
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 1912e5d1-2f99-4e78-87f2-1ab76d513fb1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/21bf2dd6-da32-4fb3-ab87-f6bb01fa3c31>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4481d27f-ad51-4c24-9b93-7787ba625d0c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+- !<ScriptAssetData/325a1f1e-bbe3-483f-8d67-bcb47bc20085>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d737b695-034c-453d-b0cb-faa8150cc916
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+- !<AssetImportMetadata/62b37125-6fc4-3d7f-f47a-5286e509c3c3>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> b7099acf-b525-4cd2-ae3a-c4e1bceec0a1
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> b7099acf-b525-4cd2-ae3a-c4e1bceec0a1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> a8c1feb8-7737-495a-9289-5b2957d5385d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/a8c1feb8-7737-495a-9289-5b2957d5385d>
+  SvgIcon: |
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="6" width="26" height="20" rx="6" stroke="#D0DAE6" stroke-width="2"/>
+    <circle cx="23" cy="12" r="3" stroke="#D0DAE6" stroke-width="2"/>
+    </svg>
+
+  SetupScript:
+    code: ""
+  Description: |-
+    
+    UI Panel Widget is used as a container for other UI Widgets such as UIButton, UI Toggle and UI Color Picker. It allows to modify their interactivity all together 
+    Api : 
+    
+    // Manually enable interactable
+    // script.enableInteractable()
+    //
+    // Manually disable interactable
+    // script.disableInteractable()
+    //
+    // True if interactable
+    // script.isInteractable()
+    //
+    // Add callback function to event
+    // script.onEnableInteractable.add(callback)
+    // script.onDisableInteractable.add(callback)
+    //
+    // Remove callback function from event
+    // script.onEnableInteractable.remove(callback)
+    // script.onDisableInteractable.remove(callback)
+    //
+    // Enable touch events
+    // script.enableTouchEvents()
+    //
+    // Disable touch events
+    // script.disableTouchEvents()
+  VersionMajor: 2
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0005eade-b487-8ea3-0000-0000000ecf7c
+  ExportUid: 8e779a8a-57f1-4191-9519-69923a0b44a0
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    disableTouchEventsInput: false
+    editAdvancedOptions: false
+    interactable: false
+    panelMaterial: true
+    printDebugStatements: false
+    printWarningStatements: false
+    renderOrderOverride: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - interactable: true
+      renderOrderOverride: 0
+      editAdvancedOptions: false
+      printDebugStatements: false
+      printWarningStatements: false
+      disableTouchEventsInput: false
+      panelMaterial: !<reference.Material> f16dc87f-2e18-491e-bafe-d02c5d728413
+  ScriptTypes:
+    -
+      {}
+- !<AssetImportMetadata/b861a0bf-8618-df40-8503-d1498936f656>
+  ImportedAssetIds:
+    Material: !<reference> f16dc87f-2e18-491e-bafe-d02c5d728413
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> f16dc87f-2e18-491e-bafe-d02c5d728413
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/d6d69ff2-f34e-f32f-51c9-27541bcb8fe3>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 0267e916-3db7-4338-aad4-6b556531d331
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 0267e916-3db7-4338-aad4-6b556531d331
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/edb74785-3cc2-84f1-7b2b-e9c25053256c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 01daf6f8-86c9-4cd8-b788-a3729472515d
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 01daf6f8-86c9-4cd8-b788-a3729472515d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 325a1f1e-bbe3-483f-8d67-bcb47bc20085
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/f4a2d383-8041-a739-6b84-d05ef9ed05b1>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 0480a515-6bdd-4b62-97d2-e512892810e1
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 0480a515-6bdd-4b62-97d2-e512892810e1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

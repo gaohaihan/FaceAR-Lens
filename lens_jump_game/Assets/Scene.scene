@@ -2214,7 +2214,7 @@
     {}
   ScriptInputs:
     "":
-      remoteServiceModule: !<reference.RemoteServiceModule> c4043d3b-96de-458f-ba1d-5dbca316a3f3
+      remoteServiceModule: !<reference.RemoteServiceModule> a0258a21-7bfa-402c-89a1-a212a875c3f5
       responseData: !<reference.Text> 993c87c7-6763-4208-8e08-57ea7b3fcea2
       gameManager: !<reference.ScriptComponent> 508a9868-09fd-484d-a710-68c682f40632
       settingUI: !<reference.ScriptComponent> a72a28fb-8326-4c40-abf5-8caea669588b
@@ -2241,7 +2241,7 @@
   PrefabRemaps:
     []
   Name: Start
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -6.000000, z: 0.000000}
@@ -3968,7 +3968,7 @@
       prevButton: !<reference.SceneObject> 55eab32c-7dff-4183-8561-7933317c9351
       nextButton: !<reference.SceneObject> 17ec285a-58dd-49eb-b7c8-d2c22ab785b4
       maxIndex: !<float> 2.000000
-      remoteServiceModule: !<reference.RemoteServiceModule> c4043d3b-96de-458f-ba1d-5dbca316a3f3
+      remoteServiceModule: !<reference.RemoteServiceModule> a0258a21-7bfa-402c-89a1-a212a875c3f5
       apiScript: !<reference.ScriptComponent> 2f394c03-57b5-4f97-a5de-7388a8544704
   ScriptTypes:
     "":
@@ -4305,7 +4305,6 @@
     orientation: true
     startValue: true
     endValue: true
-    startSliderValue: true
     stepEnabled: true
     stepValue: true
     prefabSlider: true
@@ -4328,7 +4327,7 @@
       orientation: 0
       startValue: !<float> 0.000000
       endValue: !<float> 1.000000
-      startSliderValue: !<float> 0.000000
+      startSliderValue: 0.500000
       stepEnabled: false
       stepValue: !<float> 0.000000
       prefabSlider: !<reference.ObjectPrefab> 8d8166c8-2136-4567-9223-d7f42e1d144b
@@ -5196,7 +5195,7 @@
   PrefabRemaps:
     []
   Name: ReInit
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -3.000000, y: -8.000000, z: 0.000000}
@@ -7804,7 +7803,7 @@
   PrefabRemaps:
     []
   Name: Pause
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 3.000000, y: -8.000000, z: 0.000000}
@@ -9727,7 +9726,7 @@
     - e2d9c6ac-9b9c-4e8f-b00a-e691d5f02e03: 462dc1c9-9bc4-4504-8616-c6f3f4ee1dda
     - fc88622e-d918-4a5a-997b-3d5022a90c32: 5836e92f-8378-46d4-8c43-6d97447a7e76
   Name: Input Modal Set
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -13.000000, y: 0.000000, z: 0.000000}

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    873f3bfb-1c4d-4822-9cb9-a02578692fc3: 906c1f90-935e-4e09-920f-9d354e9c2ee9/3751135fdb1e5aa51f16d9c4368f7377/Data/Face Mask Opacity1.jpg
+  Assets:
+    - !<FileTexture/873f3bfb-1c4d-4822-9cb9-a02578692fc3>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 500
+        Height: 667
+  SourceHash: 3751135fdb1e5aa51f16d9c4368f7377
+  FileHash: 5727a3ec4e3da66f62f2db15a1c69996
+  NativePackageItems:
+    []

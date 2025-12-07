@@ -1,0 +1,22 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 16
+    values:
+      - .hidden
+      - 2.hidden
+      - Camera
+      - FaceAR_Data API.js
+      - FaceAR_Data.remoteServiceModule
+      - FaceMesh
+      - Materials
+      - Textures
+      - UI
+      - scripts/Exercise Scripts/ExpressionController_Bilateral.js
+      - scripts/Exercise Scripts/ExpressionController_Unilateral.js
+      - scripts/GameManager.js
+      - scripts/My UI Scripts
+      - scripts/RemoteServicesApi.js
+      - scripts/RemoteServicesApiModule.js
+      - timer object by anisha
+  options: 4

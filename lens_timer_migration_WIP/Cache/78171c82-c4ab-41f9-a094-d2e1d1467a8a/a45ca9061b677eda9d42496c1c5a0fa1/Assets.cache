@@ -1,0 +1,617 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: a45ca9061b677eda9d42496c1c5a0fa1
+  FileHash: e61d0e3f844e1c74d6e7bbe34c9a6211
+  NativePackageItems:
+    - !<own> 92b243e4-7667-3a73-301e-01475000e4cf
+    - !<own> 93596993-1e3f-3aaf-2af4-7718ce75128e
+    - !<own> 48a2a801-f280-f224-584d-2fff8fbb59f1
+    - !<own> 013ade58-830e-e5c9-6cc7-a7d8bf20ff96
+    - !<own> e6f578e7-4156-6f90-84ca-2bbe342cfd6d
+    - !<own> e5db1002-b5ae-362a-e8ec-6ecdd49bef83
+    - !<own> 80c8cd6f-db5d-5d27-1f33-a99157706ffe
+    - !<own> 98da1d25-0f9b-7adf-e439-1886ec98c862
+    - !<own> 05052235-300b-da1e-2a41-56327be1c145
+    - !<own> 97f32f71-f4bc-17e2-93f2-a30e17077aa0
+    - !<own> 3fef384a-2249-597f-58c3-2112be243231
+    - !<own> d7c3746f-b8b2-ae1f-7bee-ad250c566161
+    - !<own> 4f224127-938b-b448-a6e4-efe4701f677a
+- !<AssetImportMetadata/013ade58-830e-e5c9-6cc7-a7d8bf20ff96>
+  ImportedAssetIds:
+    Material: !<reference> 99e327b3-dc09-4e74-b19a-b37451f1a3d0
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 99e327b3-dc09-4e74-b19a-b37451f1a3d0
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<Image/024e88d3-da84-4b0c-a27e-a49f54819ea3>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 99e327b3-dc09-4e74-b19a-b37451f1a3d0
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/05052235-300b-da1e-2a41-56327be1c145>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 3fa4e4d5-5c4c-40f4-b514-29fb5f0e12e3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/1929b0cf-73b0-49e1-873a-c176d1af13d1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b8d52e35-d6ec-4a0f-8b4f-40a8127070e2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+- !<SceneObject/34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce>
+  PrefabRemaps:
+    []
+  Name: Color PIcker Cursor
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> cc116c30-dd99-4f57-a349-132d2978d885
+    - !<own> 68975fd5-6eb0-4205-98fb-80f9bd554adf
+- !<ObjectPrefabAssetData/3fa4e4d5-5c4c-40f4-b514-29fb5f0e12e3>
+  SourceRemaps:
+    - 4ade39a9-8efd-47f0-880d-54a0ef76d336: 888bc769-cdec-4f65-a7b1-783f720e3f3d
+    - 75060a03-0ab9-499b-ae8f-d9f14822cc5a: 024e88d3-da84-4b0c-a27e-a49f54819ea3
+    - 83a4b0ef-8eb9-4ece-88b3-f69f300eca02: ed2aaa93-0fe9-4300-bda1-e89fb93d871d
+    - 8b7f17c1-2b82-4f2e-871c-5b86d24d584c: 9d2110e7-2cac-4e6d-923e-c74f33f8c7e9
+  SourceState: !<own> ed2aaa93-0fe9-4300-bda1-e89fb93d871d
+- !<AssetImportMetadata/3fef384a-2249-597f-58c3-2112be243231>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> dba0e80a-7db6-4a13-add5-6f6134760b1f
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> dba0e80a-7db6-4a13-add5-6f6134760b1f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 1929b0cf-73b0-49e1-873a-c176d1af13d1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/48a2a801-f280-f224-584d-2fff8fbb59f1>
+  ImportedAssetIds:
+    Material: !<reference> 8bdc0049-0711-44ca-84ed-17b00b7bb057
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 8bdc0049-0711-44ca-84ed-17b00b7bb057
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/4f224127-938b-b448-a6e4-efe4701f677a>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 21044a4a-8d8a-455d-a353-6b77f0a64560
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 21044a4a-8d8a-455d-a353-6b77f0a64560
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 6654ba5e-1cd0-4b18-8efd-fedccaeda9f7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/6654ba5e-1cd0-4b18-8efd-fedccaeda9f7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 348dcdb4-3087-4378-bccb-5754c4a02ea3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+- !<Image/68975fd5-6eb0-4205-98fb-80f9bd554adf>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8bdc0049-0711-44ca-84ed-17b00b7bb057
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/6e6f2b0d-37c6-410a-91e5-b2586c473486>
+  SvgIcon: |
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="16" r="5" fill="#D0DAE6"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.6586 18C27.8797 17.3744 28 16.7013 28 16C28 15.2987 27.8797 14.6256 27.6586 14H29C30.1046 14 31 14.8954 31 16C31 17.1046 30.1046 18 29 18H27.6586ZM16.3414 18H4C2.89543 18 2 17.1046 2 16C2 14.8954 2.89543 14 4 14H16.3414C16.1203 14.6256 16 15.2987 16 16C16 16.7013 16.1203 17.3744 16.3414 18Z" fill="url(#paint0_linear_12_27)"/>
+    <defs>
+    <linearGradient id="paint0_linear_12_27" x1="4.27506" y1="16" x2="30.5" y2="16" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#EDDA64"/>
+    <stop offset="1" stop-color="#CB5468"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
+  SetupScript:
+    code: ""
+  Description: |
+    UIColorPicker - Choose a color from a color palette and apply it to a Mesh Visual. 
+    Can also be configured as slider
+    // Manually enable interactable
+    // script.enableInteractable()
+    //
+    // Manually disable interactable
+    // script.disableInteractable()
+    
+    // Add or remove callback function to onColorChanged event, vec4 color parameter will be passed in to callback
+    // script.onColorChanged.add(callback)
+    // script.onColorChanged.remove(callback)
+    
+    // Add or remove callback function to onValueChanged event, float value parameter will be passed in to callback
+    // script.onValueChanged.add(callback)
+    // script.onValueChanged.remove(callback)
+    
+    // Add or remove callback function to onEnableInteractable event
+    // script.onEnableInteractable.add(callback)
+    // script.onEnableInteractable.remove(callback)
+    
+    // Add or remove callback function to onEnableInteractable event
+    // script.onDisableInteractable.add(callback)
+    // script.onDisableInteractable.remove(callback)
+    //
+    // True if interactable
+    // script.isInteractable()
+    //
+    // Enable touch events
+    // script.enableTouchEvents()
+    //
+    // Disable touch events
+    // script.disableTouchEvents()
+    //
+    // Get the current color selected on this Color Picker
+    // script.getColor()
+    //
+    // Get the current value (0-1) of this Color Picker's slider
+    // script.getSliderValue()
+    //
+    // Manually set the value (0-1) of this Color Picker's slider
+    // script.setSliderValue(value)
+    
+    // Manually set direction
+    // script.isVertical = value
+    // -----------------
+
+  VersionMajor: 7
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0005ee8c-0e22-511b-0000-000000476385
+  ExportUid: 9429d6d1-6818-4eed-afd5-6cfad169cc68
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    brightness: false
+    callbackType: false
+    colorEnd: false
+    colorParameterName: false
+    colorRecipient: false
+    colorStart: false
+    cursorPrefab: false
+    customFunctionScript: false
+    disableTouchEventsInput: false
+    editAdvancedOptions: false
+    editConnections: false
+    editEventCallbacks: false
+    editPalette: false
+    editProperties: false
+    emptyColor: false
+    fillColor: false
+    initialPosition: false
+    interactable: false
+    onColorChangedBehaviors: false
+    onColorChangedFunctionNames: false
+    onColorChangedGlobalBehaviors: false
+    onValueChangedBehaviors: false
+    onValueChangedFunctionNames: false
+    onValueChangedGlobalBehaviors: false
+    orientation: false
+    palettePrefab: false
+    paletteType: false
+    printDebugStatements: false
+    printWarningStatements: false
+    renderOrderOverride: false
+    saturation: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - interactable: true
+      renderOrderOverride: 0
+      colorRecipient: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      colorParameterName: baseColor
+      editProperties: true
+      initialPosition: 0.500000
+      orientation: horizontal
+      editPalette: true
+      paletteType: 0
+      brightness: !<float> 1.000000
+      saturation: !<float> 1.000000
+      colorStart: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      colorEnd: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      fillColor: !<Vec4> {x: 0.937285, y: 0.933318, z: 0.941161, w: 1.000000}
+      emptyColor: !<Vec4> {x: 0.937285, y: 0.933318, z: 0.941161, w: 0.450004}
+      editEventCallbacks: false
+      callbackType: 0
+      onColorChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onColorChangedGlobalBehaviors: !<string[]>
+        []
+      onValueChangedGlobalBehaviors: !<string[]>
+        []
+      customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onColorChangedFunctionNames: !<string[]>
+        []
+      onValueChangedFunctionNames: !<string[]>
+        []
+      editConnections: false
+      cursorPrefab: !<reference.ObjectPrefab> f6b7621a-f723-40bc-a433-fcded4a6d08b
+      palettePrefab: !<reference.ObjectPrefab> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+      editAdvancedOptions: false
+      printDebugStatements: false
+      printWarningStatements: false
+      disableTouchEventsInput: false
+  ScriptTypes:
+    -
+      {}
+- !<ObjectPrefabAssetData/7cdf2802-addc-4d40-80a0-9e2544b33b47>
+  SourceRemaps:
+    - 87dd8346-aa5e-47be-9311-8d0e29748ecc: cc116c30-dd99-4f57-a349-132d2978d885
+    - 9b66061b-1aba-40c1-a65f-eff83876248c: 68975fd5-6eb0-4205-98fb-80f9bd554adf
+    - ef378b0f-cec0-458c-a0fd-01e245ffb14c: 34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce
+    - f6b7621a-f723-40bc-a433-fcded4a6d08b: c6614eee-c765-452f-a3d1-8ab3621b2fc5
+  SourceState: !<own> c6614eee-c765-452f-a3d1-8ab3621b2fc5
+- !<AssetImportMetadata/80c8cd6f-db5d-5d27-1f33-a99157706ffe>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 38e3fb80-cf64-46fc-87d2-df9003afdcd5
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 38e3fb80-cf64-46fc-87d2-df9003afdcd5
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScreenTransform/888bc769-cdec-4f65-a7b1-783f720e3f3d>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<AssetImportMetadata/92b243e4-7667-3a73-301e-01475000e4cf>
+  ImportedAssetIds:
+    Texture: !<reference> 7bab684f-59df-43e5-ad64-30da04e09eef
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 7bab684f-59df-43e5-ad64-30da04e09eef
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/93596993-1e3f-3aaf-2af4-7718ce75128e>
+  ImportedAssetIds:
+    Texture: !<reference> 55bbe85c-0e6f-49a2-82a8-84960c60129e
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 55bbe85c-0e6f-49a2-82a8-84960c60129e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Performance
+    CompressionSettings: !<TextureCompressionMipmapSettings>
+      Level: Medium
+      Mipmap: false
+- !<AssetImportMetadata/97f32f71-f4bc-17e2-93f2-a30e17077aa0>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 620a4898-4a34-40af-8aa5-ad43052f7763
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 620a4898-4a34-40af-8aa5-ad43052f7763
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/98da1d25-0f9b-7adf-e439-1886ec98c862>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> f6b7621a-f723-40bc-a433-fcded4a6d08b
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> f6b7621a-f723-40bc-a433-fcded4a6d08b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 7cdf2802-addc-4d40-80a0-9e2544b33b47
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/9d2110e7-2cac-4e6d-923e-c74f33f8c7e9>
+  PrefabRemaps:
+    []
+  Name: Color Picker Palette
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 024e88d3-da84-4b0c-a27e-a49f54819ea3
+    - !<own> 888bc769-cdec-4f65-a7b1-783f720e3f3d
+- !<ObjectPrefab/c6614eee-c765-452f-a3d1-8ab3621b2fc5>
+  PackagePath: Default Prefabs/Color Picker/Color PIcker Cursor
+  objects:
+    - !<own> 34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce
+  LazyLoading: false
+  RetainAssets: true
+- !<ScreenTransform/cc116c30-dd99-4f57-a349-132d2978d885>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -2.500000
+    bottom: -2.500000
+    right: 2.500000
+    top: 2.500000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<AssetImportMetadata/d7c3746f-b8b2-ae1f-7bee-ad250c566161>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 013574a4-1b56-4a08-85b6-80e095f76e20
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 013574a4-1b56-4a08-85b6-80e095f76e20
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> f450a9f0-0fc7-46db-a20c-18a933955907
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/e5db1002-b5ae-362a-e8ec-6ecdd49bef83>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 54ad3ba1-3952-45c8-9f0f-13f13cde7205
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 54ad3ba1-3952-45c8-9f0f-13f13cde7205
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/e6f578e7-4156-6f90-84ca-2bbe342cfd6d>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> bb75dba3-32e2-4013-a201-251c4332d166
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> bb75dba3-32e2-4013-a201-251c4332d166
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 6e6f2b0d-37c6-410a-91e5-b2586c473486
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/ed2aaa93-0fe9-4300-bda1-e89fb93d871d>
+  PackagePath: Default Prefabs/Color Picker/Color Picker Palette
+  objects:
+    - !<own> 9d2110e7-2cac-4e6d-923e-c74f33f8c7e9
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptAssetData/f450a9f0-0fc7-46db-a20c-18a933955907>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d386dd10-cc66-4a2a-8e51-8d9646132e52
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    32268401-8e79-49f5-ae45-39e3561cf9d1: 1b57ba56-0cfb-49cb-b8ce-1bd6762533a0/c2d4c4e597a9591ae3cf0a5848a21083/Data/timer_0001_8.png
+  Assets:
+    - !<FileTexture/32268401-8e79-49f5-ae45-39e3561cf9d1>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 199
+        Height: 477
+  SourceHash: c2d4c4e597a9591ae3cf0a5848a21083
+  FileHash: 211e40c0618c9671fe79775388233528
+  NativePackageItems:
+    []

@@ -27,9 +27,9 @@ metaInfo:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: jump_game
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
@@ -38,7 +38,7 @@ metaInfo:
     - Web
     - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: af8fa4ca5c41869179168a1d80d94ade
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906

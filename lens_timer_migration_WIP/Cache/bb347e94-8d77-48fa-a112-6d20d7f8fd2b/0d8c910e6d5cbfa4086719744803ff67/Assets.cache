@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    e7737b5a-ea76-4e13-b889-6e916b4d4ca4: bb347e94-8d77-48fa-a112-6d20d7f8fd2b/0d8c910e6d5cbfa4086719744803ff67/Data/circle.pvr
+  Assets:
+    - !<FileTexture/e7737b5a-ea76-4e13-b889-6e916b4d4ca4>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 64
+        Height: 64
+  SourceHash: 0d8c910e6d5cbfa4086719744803ff67
+  FileHash: 62cd8c5f809435abbf4375f3d49b0413
+  NativePackageItems:
+    []
