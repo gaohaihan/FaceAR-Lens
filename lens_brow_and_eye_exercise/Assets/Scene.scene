@@ -1655,7 +1655,7 @@
       finishText: Nice! You can go to the next exercise
       completedSets: !<float> 0.000000
       completedReps: !<float> 0.000000
-      baseDifficulty: 0.002000
+      baseDifficulty: 0.000200
       expressionIndex: !<float> 0.000000
       apiScript: !<reference.ScriptComponent> f62d85cb-ea3d-44c8-94ce-d5f510d02f84
   ScriptTypes:
