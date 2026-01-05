@@ -55,6 +55,10 @@ function handleResponse(hasError, json) {
                 global.requiredReps = setAndReps['reps'];
                 script.responseData.text = "sets and reps";
                 break;
+            case "reinitButton":
+                script.gameManager.ReInit();
+                script.responseData.text = "reinit";
+                break;
             default:
                 script.responseData.text = "Invalid request";
                 break;

@@ -27,17 +27,18 @@ metaInfo:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: basic
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
+    - CameraKit
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 5bebb303adb61925637e9fdf612b88e8
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.8.1.25040906

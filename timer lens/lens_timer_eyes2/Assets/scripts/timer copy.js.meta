@@ -5,42 +5,32 @@
   PrimaryAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> 4838724f-d3d2-4c95-a41d-061ca7625b1a
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/4838724f-d3d2-4c95-a41d-061ca7625b1a>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 657fb8f1-dbc6-4846-aede-fdd5e934f103
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
   ScriptInputsHidden:
     columns: false
     time: false
     timerTextures: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - timerTextures: !<reference.Texture[]>
-        []
-      columns: !<reference.Image[]>
-        []
+    - timerTextures: !<reference.Texture[]> []
+      columns: !<reference.Image[]> []
       time: 0
   ScriptTypes:
-    -
-      {}
+    - {}

@@ -5,28 +5,22 @@
   PrimaryAsset: !<reference> 14aa7c35-0173-434b-a400-f4f56a1685f6
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     JavaScriptAsset: !<own> b9621995-8f3a-4bc6-9c28-e3965e544415
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/b9621995-8f3a-4bc6-9c28-e3965e544415>
   SvgIcon: ""
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: ef99f998-adfd-4bfd-826a-2818396c95e0
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
   ScriptInputsHidden:
     editAdvancedOptions: false
     editConnections: false
@@ -35,8 +29,7 @@
     popupVisualTarget: false
     printDebugStatements: false
     printWarningStatements: false
-  ScriptTypesHidden:
-    {}
+  ScriptTypesHidden: {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
@@ -48,5 +41,4 @@
       popupIconObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       popupVisualTarget: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    -
-      {}
+    - {}

@@ -46,11 +46,13 @@ function InitializeUserBaseExpressionValue() {
 
 function Initialize(){
    // Set initial values
-   currentDifficulty = BaseExpressionValue + 0.05;
+   currentDifficulty = BaseExpressionValue + 0.01;
+   // script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
+   
    midRep = false;
    color = script.target.getMaterial(0).getPass(0).baseColor;
    difficulty = global.Difficulty;
-   //print("difficulty" +global.Difficulty);
+   print("difficulty" + difficulty);
    DisableBilateralDetection();
 
    // Display prompt text
@@ -129,7 +131,7 @@ function UpdateVisual(visualComponent) {
 */
 function UpdateCurrentDifficulty(){
 
-  var minDifficulty = BaseExpressionValue + 0.05
+  var minDifficulty = BaseExpressionValue + 0.01
   currentDifficulty = minDifficulty / ( 1 - difficulty);
   //print("Difficulty" + difficulty)
   //print("minDifficulty" + currentDifficulty)
@@ -144,7 +146,7 @@ function UpdateCurrentDifficulty(){
 */
 function CountReps() {
     //stop counting when hit required sets
-    if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets){
+    if (script.completedSets >= global.requiredSets){
         Finished();
         return;
     }
@@ -230,7 +232,7 @@ function Finished(){
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
   }
     } else {
-         if (script.completedSets >= global.requiredSets && script.completedSets >= global.requiredSets) {
+         if (script.completedSets >= global.requiredSets) {
             pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, script.finishText);
         }
     }
@@ -286,11 +288,6 @@ pubSub.subscribe(pubSub.EVENTS.ExpressionIndexEnabled, (data) => {
 /**
  * Pause exercise and reinit base expression value.
  */
-
-/**
- * Pause exercise and reinit base expression value.
- */
 pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
   InitializeUserBaseExpressionValue();
 });
-

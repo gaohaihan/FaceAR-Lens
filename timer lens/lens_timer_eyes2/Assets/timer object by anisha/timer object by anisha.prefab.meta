@@ -5,56 +5,47 @@
   PrimaryAsset: !<reference> 454b3941-2e51-4d78-9f64-0df4607ee3ba
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
-  ExtraData:
-    {}
+  ExtraData: {}
   AssetDataMap:
     ObjectPrefab: !<own> 70ece56f-ee19-421d-86cd-0ab26160bf9e
-  DependentFiles:
-    []
-  ImporterSettings: !<AssetImporterSettings>
-    {}
+  DependentFiles: []
+  ImporterSettings: !<AssetImporterSettings> {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/0086cb3d-c3a1-47f2-ad14-c01d4fa82986>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: second ones
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 8.936524, y: 4.986279, z: -50.029961}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.548043, y: 4.948164, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
+  LocalTransform: !<TransformEntity>
+    Position: {x: 8.936524, y: 4.986279, z: -50.029961}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 5.548043, y: 4.948164, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children: []
   Components:
     - !<own> c3c3bbe2-7800-4e5a-864f-a6b6e5490648
 - !<SceneObject/1ccc13d3-9b27-4646-bf62-6653a198191e>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Effects
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 0086cb3d-c3a1-47f2-ad14-c01d4fa82986
     - !<own> af84b309-9a10-41fb-b79f-5d63f799811b
-  Components:
-    []
+  Components: []
 - !<ScriptComponent/342c7619-4c56-486f-bffd-ba6ceb249c4f>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: timer copy
   Enabled: true
   ScriptAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
   ScriptInputsDefault:
     columns: true
-  ScriptTypesDefault:
-    {}
+  ScriptTypesDefault: {}
   ScriptInputs:
     "":
       timerTextures: !<reference.Texture[]>
@@ -68,15 +59,12 @@
         - !<reference> f38d3906-9e21-4d29-8ccd-1b915783f8a6
         - !<reference> 32268401-8e79-49f5-ae45-39e3561cf9d1
         - !<reference> 80cf2c97-f5da-4320-a88b-ba96e668556e
-      columns: !<reference.Image[]>
-        []
+      columns: !<reference.Image[]> []
       time: 10
   ScriptTypes:
-    "":
-      {}
+    "": {}
 - !<LookAtComponent/5d71ce2d-83d0-4383-8307-1a349264a513>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Look At
   Enabled: true
   LookAtMode: LookAtDirection
@@ -102,23 +90,20 @@
   LazyLoading: false
   RetainAssets: true
 - !<SceneObject/af84b309-9a10-41fb-b79f-5d63f799811b>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: second tens
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 8.579700, y: 10.036600, z: -50.861599}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 11.170684, y: 9.960501, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
+  LocalTransform: !<TransformEntity>
+    Position: {x: 8.579700, y: 10.036600, z: -50.861599}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 11.170684, y: 9.960501, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children: []
   Components:
     - !<own> 5d71ce2d-83d0-4383-8307-1a349264a513
 - !<LookAtComponent/c3c3bbe2-7800-4e5a-864f-a6b6e5490648>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Look At
   Enabled: true
   LookAtMode: LookAtDirection
@@ -127,16 +112,15 @@
   Target: !<reference> 00000000-0000-0065-0000-000000000064
   OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
 - !<SceneObject/f3e93784-2526-4323-8e40-4f505194747c>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Timer
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 1ccc13d3-9b27-4646-bf62-6653a198191e
   Components:

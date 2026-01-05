@@ -10,25 +10,25 @@
 // Valid Event Types: "onEnableInteractable", "onDisableInteractable"
 //
 // Manually enable interactable
-// script.api.enableInteractable()
+// script.enableInteractable()
 //
 // Manually disable interactable
-// script.api.disableInteractable()
+// script.disableInteractable()
 //
 // True if interactable
-// script.api.isInteractable()
+// script.isInteractable()
 //
 // Add callback function to event
-// script.api.addCallback(eventType, callback)
+// script.addCallback(eventType, callback)
 //
 // Remove callback function from event
-// script.api.removeCallback(eventType, callback)
+// script.removeCallback(eventType, callback)
 //
 // Enable touch events
-// script.api.enableTouchEvents()
+// script.enableTouchEvents()
 //
 // Disable touch events
-// script.api.disableTouchEvents()
+// script.disableTouchEvents()
 //
 // -----------------
 
@@ -49,31 +49,31 @@ if (!global.hasInitUIHelpers) {
 var callbackTracker = new global.CallbackTracker(script);
 
 // Local API
-script.api.enableInteractable = enableInteractable;
-script.api.disableInteractable = disableInteractable;
-script.api.isInteractable = isInteractable;
-script.api.enableTouchEvents = enableTouchEvents;
-script.api.disableTouchEvents = disableTouchEvents;
-script.api.initialized = false;
-script.api.widgetType = global.WidgetTypes.UIPanel;
-script.api.ownerScript = null;
+script.enableInteractable = enableInteractable;
+script.disableInteractable = disableInteractable;
+script.isInteractable = isInteractable;
+script.enableTouchEvents = enableTouchEvents;
+script.disableTouchEvents = disableTouchEvents;
+script.initialized = false;
+script.widgetType = global.WidgetTypes.UIPanel;
+script.ownerScript = null;
 
-script.api.addCallback = callbackTracker.addCallback.bind(callbackTracker);
-script.api.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
+script.addCallback = callbackTracker.addCallback.bind(callbackTracker);
+script.removeCallback = callbackTracker.removeCallback.bind(callbackTracker);
 
 // Touch Event callbacks
-script.api.onTouchStart = onTouchStart;
-script.api.onTouchEnd = onTouchEnd;
-script.api.onTouchMove = onTouchMove;
+script.onTouchStart = onTouchStart;
+script.onTouchEnd = onTouchEnd;
+script.onTouchMove = onTouchMove;
 
-script.api.allowTouchEvents = !script.disableTouchEvents;
+script.allowTouchEvents = !script.disableTouchEvents;
 
-script.api.acceptChildWidget = acceptChildWidget;
-script.api.setOwner = setOwner;
-script.api.notifyOnInitialize = notifyOnInitialize;
+script.acceptChildWidget = acceptChildWidget;
+script.setOwner = setOwner;
+script.notifyOnInitialize = notifyOnInitialize;
 
-script.api.getMainRenderOrder = getMainRenderOrder;
-script.api.claimTouchStart = claimTouchStart;
+script.getMainRenderOrder = getMainRenderOrder;
+script.claimTouchStart = claimTouchStart;
 
 // Is this widget interactable?
 var interactable = script.interactable;
@@ -134,15 +134,15 @@ function getSortedChildList() {
 }
 
 function acceptChildWidget(scriptComponent) {
-    var widgetType = scriptComponent.api.widgetType;
-    if (!scriptComponent.api.owner && widgetType != null && widgetType >= 0) {
+    var widgetType = scriptComponent.widgetType;
+    if (!scriptComponent.owner && widgetType != null && widgetType >= 0) {
         global.politeCall(scriptComponent, "setOwner", [script]);
 
         // Store its properties and identify it by the next id
         var id = nextWidgetID++;
 
         var child = scriptComponent.getSceneObject();
-        var renderOrder = scriptComponent.api.getMainRenderOrder ? scriptComponent.api.getMainRenderOrder() : null;
+        var renderOrder = scriptComponent.getMainRenderOrder ? scriptComponent.getMainRenderOrder() : null;
 
         var widgetInfo = {
             "sceneObject": child,
@@ -161,11 +161,11 @@ function acceptChildWidget(scriptComponent) {
 
         // If a UI Panel, disable its touch events so that this UI Panel controls its touch events
         if (widgetType == global.WidgetTypes.UIPanel) {
-            scriptComponent.api.disableTouchEvents();
+            scriptComponent.disableTouchEvents();
         }
 
         if (!interactable) {
-            scriptComponent.api.disableInteractable();
+            scriptComponent.disableInteractable();
         }
         return true;
     }
@@ -173,7 +173,7 @@ function acceptChildWidget(scriptComponent) {
 
 // Initialize all parameters
 function initParams() {
-    if (script.api.initialized) {
+    if (script.initialized) {
         return;
     }
 
@@ -187,25 +187,25 @@ function initParams() {
     global.answerPoliteCalls(script, "notifyOnInitialize");
     checkOwner();
 
-    script.api.initialized = true;
+    script.initialized = true;
 }
 
 function seekOwner() {
     global.findScriptUpwards(sceneObject, "acceptChildWidget", function(scr) {
-        return scr.api.acceptChildWidget(script);
+        return scr.acceptChildWidget(script);
     });
 }
 
 function setOwner(ownerScript) {
-    script.api.ownerScript = ownerScript;
+    script.ownerScript = ownerScript;
     refresh();
 }
 
 function checkOwner() {
-    if (!script.api.ownerScript) {
+    if (!script.ownerScript) {
         seekOwner();
     }
-    return !!script.api.ownerScript;
+    return !!script.ownerScript;
 }
 
 function notifyOnInitialize(callback) {
@@ -305,7 +305,7 @@ function invokeTouchStartEvents(eventData) {
 
     for (var i = 0; i < sortedChildren.length; i++) {
         var childWidget = sortedChildren[i];
-        var widgetApi = childWidget.scriptComponent.api;
+        var widgetApi = childWidget.scriptComponent;
 
         if (childWidget.sceneObject.enabled &&
             widgetApi.isInteractable() &&
@@ -342,8 +342,8 @@ function invokeTouchEndEvents(eventData) {
         if (!widget.sceneObject.enabled) {
             continue;
         }
-        if (widget.scriptComponent.api.onTouchEnd) {
-            widget.scriptComponent.api.onTouchEnd(eventData);
+        if (widget.scriptComponent.onTouchEnd) {
+            widget.scriptComponent.onTouchEnd(eventData);
         }
     }
 
@@ -367,8 +367,8 @@ function invokeTouchMoveEvents(eventData) {
         if (!widget.sceneObject.enabled) {
             continue;
         }
-        if (widget.scriptComponent.api.onTouchMove) {
-            widget.scriptComponent.api.onTouchMove(eventData);
+        if (widget.scriptComponent.onTouchMove) {
+            widget.scriptComponent.onTouchMove(eventData);
         }
     }
 }
@@ -389,7 +389,7 @@ function disableInteractable() {
 
     for (var i in childWidgets) {
         var widget = childWidgets[i];
-        widget.scriptComponent.api.disableInteractable();
+        widget.scriptComponent.disableInteractable();
     }
     printDebug("Disabled!");
 }
@@ -404,7 +404,7 @@ function enableInteractable() {
 
     for (var i in childWidgets) {
         var widget = childWidgets[i];
-        widget.scriptComponent.api.enableInteractable();
+        widget.scriptComponent.enableInteractable();
     }
     printDebug("Enabled!");
 }
@@ -441,7 +441,7 @@ function initGlobalHelpers() {
         var count = sceneObj.getComponentCount("Component.ScriptComponent");
         for (var i = 0; i < count; i++) {
             var component = sceneObj.getComponentByIndex("Component.ScriptComponent", i);
-            var scriptApi = component.api;
+            var scriptApi = component;
             if (propName && scriptApi[propName] === undefined) {
                 continue;
             }
@@ -486,7 +486,7 @@ function initGlobalHelpers() {
     }
 
     function politeCall(scr, funcName, args) {
-        var api = scr.api;
+        var api = scr;
         if (!api[funcName]) {
             getPendingCalls(scr, funcName).push(args);
         } else {
@@ -495,7 +495,7 @@ function initGlobalHelpers() {
     }
 
     function answerPoliteCalls(scr, funcName, func) {
-        var api = scr.api;
+        var api = scr;
         func = func || api[funcName];
         var pending = getPendingCalls(scr, funcName);
         for (var i = 0; i < pending.length; i++) {
@@ -555,8 +555,8 @@ function initGlobalHelpers() {
                         return;
                     }
                     for (var i = 0; i < behaviors.length; i++) {
-                        if (behaviors[i] && behaviors[i].api.trigger) {
-                            behaviors[i].api.trigger();
+                        if (behaviors[i] && behaviors[i].trigger) {
+                            behaviors[i].trigger();
                         }
                     }
                     break;
@@ -586,11 +586,11 @@ function initGlobalHelpers() {
                             print("You are trying to invoke an empty string function!");
                             continue;
                         }
-                        if (!otherScript.api[functionNames[k]]) {
+                        if (!otherScript[functionNames[k]]) {
                             print("Cannot find the " + functionNames[k] + " function in the assigned Script Component!");
                             continue;
                         }
-                        otherScript.api[functionNames[k]](eventData);
+                        otherScript[functionNames[k]](eventData);
                     }
                     break;
             }

@@ -1506,7 +1506,7 @@
   PrefabRemaps:
     []
   Name: SettingUiManager
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -52.137466, y: 0.000000, z: 0.000000}
@@ -1741,7 +1741,7 @@
   PrefabRemaps:
     []
   Name: Right Cap
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -1757,7 +1757,7 @@
   PrefabRemaps:
     []
   Name: "Button Cap [Optional]"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -2405,7 +2405,7 @@
   PrefabRemaps:
     []
   Name: Previous Button
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -4.000000, y: -5.000000, z: 0.000000}
@@ -2442,7 +2442,7 @@
   PrefabRemaps:
     []
   Name: Button Label
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -3066,7 +3066,7 @@
   PrefabRemaps:
     []
   Name: Button Label
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -5053,7 +5053,7 @@
   PrefabRemaps:
     []
   Name: Left Cap
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -5329,7 +5329,7 @@
   PrefabRemaps:
     []
   Name: Right Cap
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -5393,7 +5393,7 @@
   PrefabRemaps:
     []
   Name: "Button Cap [Optional]"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -7889,7 +7889,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.265492, y: -4.198629, z: 0.000000}
+    Position: {x: 0.265492, y: -14.174952, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -7991,7 +7991,7 @@
   PrefabRemaps:
     []
   Name: Background
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -8276,7 +8276,7 @@
   PrefabRemaps:
     []
   Name: Debug
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -8557,7 +8557,7 @@
   PrefabRemaps:
     []
   Name: Background
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -8807,7 +8807,7 @@
   PrefabRemaps:
     []
   Name: Left Cap
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -9369,7 +9369,7 @@
   PrefabRemaps:
     []
   Name: Next  Button
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 4.000000, y: -5.000000, z: 0.000000}

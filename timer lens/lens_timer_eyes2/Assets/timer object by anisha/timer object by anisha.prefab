@@ -5,23 +5,21 @@
   LazyLoading: false
   RetainAssets: true
 - !<SceneObject/0ce24357-36ad-41e4-8d18-9c1ffc44996b>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Timer
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 5669fb1c-1883-4546-80e4-00d828ba8b9d
   Components:
     - !<own> cf097b19-771c-4e1e-b5c7-f1bc4d4cb350
 - !<LookAtComponent/1250c9ef-43aa-4b2b-a7dd-f20d2dd79a16>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Look At
   Enabled: true
   LookAtMode: LookAtDirection
@@ -30,8 +28,7 @@
   Target: !<reference> 00000000-0000-0065-0000-000000000064
   OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
 - !<LookAtComponent/13d82eb5-74a2-46a9-8275-a739f05564a2>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Look At
   Enabled: true
   LookAtMode: LookAtDirection
@@ -40,46 +37,40 @@
   Target: !<reference> 00000000-0000-0065-0000-000000000064
   OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
 - !<SceneObject/5669fb1c-1883-4546-80e4-00d828ba8b9d>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: Effects
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 6a008b7f-811a-45c3-8f62-19754a0a3ab9
     - !<own> f94e2457-420b-4750-981f-06c9d8a57fc3
-  Components:
-    []
+  Components: []
 - !<SceneObject/6a008b7f-811a-45c3-8f62-19754a0a3ab9>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: second ones
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 8.936524, y: 4.986279, z: -50.029961}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.548043, y: 4.948164, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
+  LocalTransform: !<TransformEntity>
+    Position: {x: 8.936524, y: 4.986279, z: -50.029961}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 5.548043, y: 4.948164, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children: []
   Components:
     - !<own> 1250c9ef-43aa-4b2b-a7dd-f20d2dd79a16
 - !<ScriptComponent/cf097b19-771c-4e1e-b5c7-f1bc4d4cb350>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: timer copy
   Enabled: true
   ScriptAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
   ScriptInputsDefault:
     columns: true
-  ScriptTypesDefault:
-    {}
+  ScriptTypesDefault: {}
   ScriptInputs:
     "":
       timerTextures: !<reference.Texture[]>
@@ -93,24 +84,20 @@
         - !<reference> f38d3906-9e21-4d29-8ccd-1b915783f8a6
         - !<reference> 32268401-8e79-49f5-ae45-39e3561cf9d1
         - !<reference> 80cf2c97-f5da-4320-a88b-ba96e668556e
-      columns: !<reference.Image[]>
-        []
+      columns: !<reference.Image[]> []
       time: 10
   ScriptTypes:
-    "":
-      {}
+    "": {}
 - !<SceneObject/f94e2457-420b-4750-981f-06c9d8a57fc3>
-  PrefabRemaps:
-    []
+  PrefabRemaps: []
   Name: second tens
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 8.579700, y: 10.036600, z: -50.861599}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 11.170684, y: 9.960501, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
+  LocalTransform: !<TransformEntity>
+    Position: {x: 8.579700, y: 10.036600, z: -50.861599}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 11.170684, y: 9.960501, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children: []
   Components:
     - !<own> 13d82eb5-74a2-46a9-8275-a739f05564a2
