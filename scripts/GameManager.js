@@ -34,7 +34,7 @@ script.nextButton.enabled = false;
 script.CompleteExercise = GoToNextExercise;
 script.Next = GoToNextExercise;
 script.Previous = GoToPreviousExercise;
-script.Start = EnableFirstExercise;
+script.Start = InitializeBaseExpressionsThenStart;
 script.PauseUnPause = PauseUnPause;
 script.ReInit = ReInitBaseExpression;
 
@@ -65,6 +65,13 @@ function GoToPreviousExercise() {
    pubSub.publish(pubSub.EVENTS.ExpressionIndexEnabled, currentIndex);
 }
 
+
+function InitializeBaseExpressionsThenStart(){
+   var functionsToCallAfterDelay = [EnableFirstExercise]
+   pubSub.publish(pubSub.EVENTS.InitializeBaseExpressions);
+
+   StartDelay(3, functionsToCallAfterDelay);
+}
  /***
   * Enable the first exercise in the sequence and some UI elements. Disable the start button.
   */
@@ -89,7 +96,6 @@ function PauseUnPause(){
 }
 
 function ReInitBaseExpression(){
-   print("intit 1")
    pubSub.publish(pubSub.EVENTS.ReInitializeBaseExpression);
 }
 
@@ -120,3 +126,19 @@ var event = script.createEvent("UpdateEvent");
 event.bind(function(eventdata){
     script.apiScript.makeRequest()
 });
+
+function StartDelay(seconds, functionList){
+   var delayedEvent = script.createEvent("DelayedCallbackEvent");
+   delayedEvent.bind(function(eventData)
+   {
+    executeFunctions(eventData, functionList);
+   });
+   delayedEvent.reset(seconds);
+}
+
+/**
+ * function that executes all given functions
+ */
+function executeFunctions(eventData, functions) {
+  functions.forEach(func => func(eventData));
+}
