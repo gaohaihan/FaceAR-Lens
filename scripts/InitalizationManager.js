@@ -1,5 +1,6 @@
 // @input Component.RenderMeshVisual faceMesh
 // @input bool isBilateralSequence
+//@input string[] expressionNames
 const pubSub = require("./PubSubModule");
 
 function InitializeBaseExpressionsForSequence(){
@@ -12,16 +13,21 @@ function InitializeBaseExpressionsForSequence(){
         return;
     }
 
-    // get base expression value for all expressions in the sequence
-    for(let i = 0; i < global.SequenceExpression.length; i++){
-        var baseValue =  script.faceMesh.mesh.control.getExpressionWeightByName(SequenceExpression[i].name);
-        SequenceExpression[i].baseValue = baseValue;
-        print("Base value for " + SequenceExpression[i].name + " is " + baseValue);
-    }
+    CreateExpressionList_uni();
+
     pubSub.publish(pubSub.EVENTS.UnPause);
 
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "finished initalization");
 
+}
+
+function CreateExpressionList_uni(){
+    for(let i = 0; i < script.expressionNames.length; i++){
+        var expressionName = script.expressionNames[i];
+        var baseValue =  script.faceMesh.mesh.control.getExpressionWeightByName(expressionName);
+        global.SequenceExpression.push(new expression(expressionName, false, baseValue));
+        print("Base value for " + SequenceExpression[i].name + " is " + baseValue + " expression is added");
+    }
 }
 
 
@@ -33,13 +39,7 @@ class expression{
     }
 }
 
- global.SequenceExpression =[
-    new expression("LipsPucker", true, 0),
-    new expression("MouthLeft", true, 0),
-    new expression("MouthRight", false, 0),
-    new expression("JawOpen", false, 0),
-    new expression("Puff", false, 0)
- ]
+ global.SequenceExpression =[];
 
 
  /**
