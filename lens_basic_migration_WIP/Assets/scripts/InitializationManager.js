@@ -3,8 +3,7 @@
 const pubSub = require("./PubSubModule");
 
 function InitializeBaseExpressionsForSequence(){
-    print("initalizing base expressions");
-     print("⚠️ INITIALIZING BASE EXPRESSIONS - Stack trace:");
+    print("⚠️ INITIALIZING BASE EXPRESSIONS - Stack trace:");
     print(new Error().stack); 
     pubSub.publish(pubSub.EVENTS.Pause);
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
@@ -49,4 +48,5 @@ class expression{
  pubSub.subscribe(pubSub.EVENTS.InitializeBaseExpressions, () => {
    InitializeBaseExpressionsForSequence();
  });
+
 

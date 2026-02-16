@@ -1,0 +1,40 @@
+- !<AssetImportMetadata/30f90ba7-2658-415f-91bd-87bb718890e0>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> c4f5d67c-a28b-4dc5-8167-0de265db9e50
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> c4f5d67c-a28b-4dc5-8167-0de265db9e50
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 330ac24f-947d-4db4-9933-e70bcdb574d2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/330ac24f-947d-4db4-9933-e70bcdb574d2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 18e9f288-3362-4f06-bb34-838dccbc6669
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    faceMesh: false
+    isBilateralSequence: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      isBilateralSequence: false
+  ScriptTypes:
+    -
+      {}
