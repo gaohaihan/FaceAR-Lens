@@ -32,15 +32,8 @@ script.target.enabled = false;
 */
 function InitializeUserBaseExpressionValue() {
 
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
   Initialize();
   BindFunctionToRunEveryUpdate();
-  GetBaseExpressionValue();
-
-   function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
 }
 
 function Initialize(){
@@ -76,43 +69,11 @@ function GetExpressionByNameBaseValue() {
    for (let i = 0; i < global.SequenceExpression.length; i++) {
       if (global.SequenceExpression[i].name === script.expressionRight) {
         rightBaseExpressionValue = global.SequenceExpression[i].baseValue;
-        print("base value for right expression " + global.SequenceExpression[i].name + " is " + rightBaseExpressionValue);
       }
        if (global.SequenceExpression[i].name === script.expressionLeft) {
         leftBaseExpressionValue = global.SequenceExpression[i].baseValue;
       }
    }
-}
-
-/***
-* Grab user base expression values
-*/
-// function GetBaseExpressionValue() {
-//   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
-//   leftBaseExpressionValue = GetRawLeftWeight();
-//   //print("test left" + leftBaseExpressionValue.toString())
-//   rightBaseExpressionValue = GetRawRightWeight();
-//   //print("test right" + rightBaseExpressionValue.toString())
-// }
-
-/***
-* Start with a delay and invoke methods in list after delay complete
-*/
-function StartDelay(seconds, functionList){
-  var delayedEvent = script.createEvent("DelayedCallbackEvent");
-  delayedEvent.bind(function(eventData)
-  {
-   executeFunctions(eventData, functionList);
-  });
-  delayedEvent.reset(seconds);
-
-}
-
-/**
-* function that executes all given functions
-*/
-function executeFunctions(eventData, functions) {
- functions.forEach(func => func(eventData));
 }
 
 
@@ -237,6 +198,8 @@ function GetRawExpressionWeight(){
   var combinedWeight = (leftWeight + rightWeight) / 2
   DisplayDebug(leftWeight, rightWeight, combinedWeight)
 
+      print("right detection is " + isRightDetectionOn);
+      print("left detection is " + isLeftDetectionOn);
   if (!isLeftDetectionOn && !isRightDetectionOn ){
     print("an error has occurred and both left and right side detection is off for expression")
   }

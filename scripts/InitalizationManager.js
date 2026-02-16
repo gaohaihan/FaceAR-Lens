@@ -3,8 +3,8 @@
 const pubSub = require("./PubSubModule");
 
 function InitializeBaseExpressionsForSequence(){
-    print("⚠️ INITIALIZING BASE EXPRESSIONS - Stack trace:");
-    print(new Error().stack); 
+   // print("⚠️ INITIALIZING BASE EXPRESSIONS - Stack trace:");
+    //print(new Error().stack); 
     CreateExpressionList();
     return;
 }
@@ -19,7 +19,7 @@ function CreateExpressionList(){
         var expressionName = script.expressionNames[i];
         var baseValue =  script.faceMesh.mesh.control.getExpressionWeightByName(expressionName);
         global.SequenceExpression.push(new expression(expressionName, isBiLateral, baseValue));
-        print("Base value for " + SequenceExpression[i].name + " is " + baseValue + ", is bilateral: " + SequenceExpression[i].isBiLateral + " expression is added");
+      //  print("Base value for " + SequenceExpression[i].name + " is " + baseValue + ", is bilateral: " + SequenceExpression[i].isBiLateral + " expression is added");
     }
     return;
 }
