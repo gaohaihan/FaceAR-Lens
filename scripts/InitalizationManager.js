@@ -19,6 +19,8 @@ function InitializeBaseExpressionsForSequence(){
 
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "finished initalization");
 
+    return;
+
 }
 
 function CreateExpressionList_uni(){

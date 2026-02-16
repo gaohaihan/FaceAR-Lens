@@ -19,14 +19,21 @@ function InitializeBaseExpressionsForSequence(){
 
     pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "finished initalization");
 
+    return;
+
 }
 
 function CreateExpressionList_uni(){
     for(let i = 0; i < script.expressionNames.length; i++){
+        if(script.expressionNames[i].includes("left")){
+            var isBiLateral = true;
+        } else {
+            var isBiLateral = false;
+        }
         var expressionName = script.expressionNames[i];
         var baseValue =  script.faceMesh.mesh.control.getExpressionWeightByName(expressionName);
-        global.SequenceExpression.push(new expression(expressionName, false, baseValue));
-        print("Base value for " + SequenceExpression[i].name + " is " + baseValue + " expression is added");
+        global.SequenceExpression.push(new expression(expressionName, isBiLateral, baseValue));
+        print("Base value for " + SequenceExpression[i].name + " is " + baseValue + ", is bilateral: " + SequenceExpression[i].isBiLateral + " expression is added");
     }
 }
 
