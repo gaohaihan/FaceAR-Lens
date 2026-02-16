@@ -1,29 +1,15 @@
 // @input Component.RenderMeshVisual faceMesh
-// @input bool isBilateralSequence
 //@input string[] expressionNames
 const pubSub = require("./PubSubModule");
 
 function InitializeBaseExpressionsForSequence(){
     print("⚠️ INITIALIZING BASE EXPRESSIONS - Stack trace:");
     print(new Error().stack); 
-    pubSub.publish(pubSub.EVENTS.Pause);
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
-
-    if (script.isBilateralSequence){
-        return;
-    }
-
-    CreateExpressionList_uni();
-
-    pubSub.publish(pubSub.EVENTS.UnPause);
-
-    pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "finished initalization");
-
+    CreateExpressionList();
     return;
-
 }
 
-function CreateExpressionList_uni(){
+function CreateExpressionList(){
     for(let i = 0; i < script.expressionNames.length; i++){
         if(script.expressionNames[i].includes("left")){
             var isBiLateral = true;
@@ -35,6 +21,7 @@ function CreateExpressionList_uni(){
         global.SequenceExpression.push(new expression(expressionName, isBiLateral, baseValue));
         print("Base value for " + SequenceExpression[i].name + " is " + baseValue + ", is bilateral: " + SequenceExpression[i].isBiLateral + " expression is added");
     }
+    return;
 }
 
 
@@ -47,7 +34,6 @@ class expression{
 }
 
  global.SequenceExpression =[];
-
 
  /**
   * Pause exercise and reinit base expression value.

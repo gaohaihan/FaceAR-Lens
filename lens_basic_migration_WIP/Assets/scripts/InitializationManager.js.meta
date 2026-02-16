@@ -28,14 +28,12 @@
   ScriptInputsHidden:
     expressionNames: false
     faceMesh: false
-    isBilateralSequence: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - faceMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
-      isBilateralSequence: false
       expressionNames: !<string[]>
         []
   ScriptTypes:

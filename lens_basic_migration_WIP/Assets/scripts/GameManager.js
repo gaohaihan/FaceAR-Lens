@@ -67,10 +67,16 @@ function GoToPreviousExercise() {
 
 
 function InitializeBaseExpressionsThenStart(){
-   var functionsToCallAfterDelay = [EnableFirstExercise]
+   pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
+   var functionsToCallAfterDelay = [setText, EnableFirstExercise ]
    pubSub.publish(pubSub.EVENTS.InitializeBaseExpressions);
 
+
    StartDelay(3, functionsToCallAfterDelay);
+
+   function setText(){
+       pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "finished Initialization")
+   }
 }
  /***
   * Enable the first exercise in the sequence and some UI elements. Disable the start button.
@@ -127,13 +133,17 @@ event.bind(function(eventdata){
     script.apiScript.makeRequest()
 });
 
+/***
+* Start with a delay and invoke methods in list after delay complete
+*/
 function StartDelay(seconds, functionList){
-   var delayedEvent = script.createEvent("DelayedCallbackEvent");
-   delayedEvent.bind(function(eventData)
-   {
-    executeFunctions(eventData, functionList);
-   });
-   delayedEvent.reset(seconds);
+  var delayedEvent = script.createEvent("DelayedCallbackEvent");
+  delayedEvent.bind(function(eventData)
+  {
+   executeFunctions(eventData, functionList);
+  });
+  delayedEvent.reset(seconds);
+
 }
 
 /**
