@@ -996,7 +996,7 @@
   PrefabRemaps:
     []
   Name: Next
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1821,7 +1821,7 @@
   PrefabRemaps:
     []
   Name: Start
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -6.000000, z: 0.000000}
@@ -7480,6 +7480,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/c60542dd-fa37-4f67-b5f7-03ba21b9bb0c>
+  PrefabRemaps:
+    []
+  Name: InitializationManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e5e4eac7-cf78-4eda-a53c-8f58d09d503b
 - !<Text/c6e24089-8656-43c4-b8be-9d35ba2d943d>
   PrefabRemaps:
     []
@@ -7592,6 +7607,7 @@
     - !<own> 5d6ac81d-2e1f-49bf-9075-9d401e4b7554
     - !<own> 254b812f-6857-42b2-8d12-f9176896ade7
     - !<own> 7076fe2e-18cd-4699-9c30-df233b7a2486
+    - !<own> c60542dd-fa37-4f67-b5f7-03ba21b9bb0c
   Components:
     []
 - !<SceneObject/c8c8514e-9521-454a-96c7-226ca7c52b7b>
@@ -7977,7 +7993,7 @@
   PrefabRemaps:
     []
   Name: Next  Button
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 4.000000, y: -5.000000, z: 0.000000}
@@ -8267,6 +8283,28 @@
   Components:
     - !<own> e080f6c0-1f7d-4fbe-bdba-730e9743d32e
     - !<own> ebadff9d-1234-44d3-8018-00242c940827
+- !<ScriptComponent/e5e4eac7-cf78-4eda-a53c-8f58d09d503b>
+  PrefabRemaps:
+    []
+  Name: InitializationManager
+  Enabled: true
+  ScriptAsset: !<reference> c4f5d67c-a28b-4dc5-8167-0de265db9e50
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      faceMesh: !<reference.RenderMeshVisual> e0ad8839-150b-40a8-9d96-f40572bd8ab7
+      expressionNames: !<string[]>
+        - JawOpen
+        - MouthSmileRight
+        - MouthSmileLeft
+        - EyeBlinkRight
+        - EyeBlinkLeft
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/e928a3f3-bf70-40df-9b73-508a7ed05b96>
   PrefabRemaps:
     []

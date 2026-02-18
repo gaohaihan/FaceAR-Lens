@@ -32,21 +32,15 @@ script.target.enabled = false;
 */
 function InitializeUserBaseExpressionValue() {
 
-  var functionsToCallAfterDelay = [Initialize, BindFunctionToRunEveryUpdate, UnPause]
-
-  pubSub.publish(pubSub.EVENTS.Pause);
-
-  StartDelay(3, functionsToCallAfterDelay);
-  GetBaseExpressionValue();
-
-   function UnPause(){
-    pubSub.publish(pubSub.EVENTS.UnPause)
-  }
+  Initialize();
+  BindFunctionToRunEveryUpdate();
 }
 
 function Initialize(){
   // Set initial values
+  GetExpressionByNameBaseValue();
   currentDifficulty = (leftBaseExpressionValue + rightBaseExpressionValue) / 2 + 0.01;
+  print("current difficulty" + currentDifficulty);
   // script.apiScript.sendDataToSite('sensitivity', currentDifficulty);
 
   midRep = false;
@@ -68,35 +62,18 @@ function BindFunctionToRunEveryUpdate() {
   updateEvent.bind(OnUpdate);
 }
 
-/***
-* Grab user base expression values
-*/
-function GetBaseExpressionValue() {
-  pubSub.publish(pubSub.EVENTS.SetExpressionPromptText, "Initializing, please not move for 3s");
-  leftBaseExpressionValue = GetRawLeftWeight();
-  //print("test left" + leftBaseExpressionValue.toString())
-  rightBaseExpressionValue = GetRawRightWeight();
-  //print("test right" + rightBaseExpressionValue.toString())
-}
-
-/***
-* Start with a delay and invoke methods in list after delay complete
-*/
-function StartDelay(seconds, functionList){
-  var delayedEvent = script.createEvent("DelayedCallbackEvent");
-  delayedEvent.bind(function(eventData)
-  {
-   executeFunctions(eventData, functionList);
-  });
-  delayedEvent.reset(seconds);
-
-}
-
 /**
-* function that executes all given functions
-*/
-function executeFunctions(eventData, functions) {
- functions.forEach(func => func(eventData));
+ * Get an expression from the sequence by its name
+ */
+function GetExpressionByNameBaseValue() {
+   for (let i = 0; i < global.SequenceExpression.length; i++) {
+      if (global.SequenceExpression[i].name === script.expressionRight) {
+        rightBaseExpressionValue = global.SequenceExpression[i].baseValue;
+      }
+       if (global.SequenceExpression[i].name === script.expressionLeft) {
+        leftBaseExpressionValue = global.SequenceExpression[i].baseValue;
+      }
+   }
 }
 
 
@@ -173,6 +150,7 @@ function CountReps() {
     var rawWeight = GetRawExpressionWeight();
     if (rawWeight > currentDifficulty && midRep !== true){
       midRep = true;
+      print("rep counted, raw weight: " + rawWeight.toString() + " current difficulty: " + currentDifficulty.toString());
       script.completedReps += 1
       //script.apiScript.sendDataToSite('completedReps', script.completedReps);
       if (script.completedReps >= global.requiredReps){
@@ -220,6 +198,8 @@ function GetRawExpressionWeight(){
   var combinedWeight = (leftWeight + rightWeight) / 2
   DisplayDebug(leftWeight, rightWeight, combinedWeight)
 
+      print("right detection is " + isRightDetectionOn);
+      print("left detection is " + isLeftDetectionOn);
   if (!isLeftDetectionOn && !isRightDetectionOn ){
     print("an error has occurred and both left and right side detection is off for expression")
   }
@@ -322,10 +302,3 @@ pubSub.subscribe(pubSub.EVENTS.ToggleBilateralDetection_Right, (data) => {
   isRightDetectionOn = data
 });
 
-
-/**
- * Pause exercise and reinit base expression value.
- */
-pubSub.subscribe(pubSub.EVENTS.ReInitializeBaseExpression, () => {
-  InitializeUserBaseExpressionValue();
-});
