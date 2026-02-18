@@ -1,0 +1,116 @@
+- !<ObjectPrefab/454b3941-2e51-4d78-9f64-0df4607ee3ba>
+  PackagePath: ""
+  objects:
+    - !<own> 0ce24357-36ad-41e4-8d18-9c1ffc44996b
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/0ce24357-36ad-41e4-8d18-9c1ffc44996b>
+  PrefabRemaps:
+    []
+  Name: Timer
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5669fb1c-1883-4546-80e4-00d828ba8b9d
+  Components:
+    - !<own> cf097b19-771c-4e1e-b5c7-f1bc4d4cb350
+- !<LookAtComponent/1250c9ef-43aa-4b2b-a7dd-f20d2dd79a16>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtDirection
+  AimVectors: ZAimYUp
+  WorldUpVector: ObjectY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+- !<LookAtComponent/13d82eb5-74a2-46a9-8275-a739f05564a2>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtDirection
+  AimVectors: ZAimYUp
+  WorldUpVector: ObjectY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+- !<SceneObject/5669fb1c-1883-4546-80e4-00d828ba8b9d>
+  PrefabRemaps:
+    []
+  Name: Effects
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 6a008b7f-811a-45c3-8f62-19754a0a3ab9
+    - !<own> f94e2457-420b-4750-981f-06c9d8a57fc3
+  Components:
+    []
+- !<SceneObject/6a008b7f-811a-45c3-8f62-19754a0a3ab9>
+  PrefabRemaps:
+    []
+  Name: second ones
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 8.936524, y: 4.986279, z: -50.029961}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 5.548043, y: 4.948164, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1250c9ef-43aa-4b2b-a7dd-f20d2dd79a16
+- !<ScriptComponent/cf097b19-771c-4e1e-b5c7-f1bc4d4cb350>
+  PrefabRemaps:
+    []
+  Name: timer copy
+  Enabled: true
+  ScriptAsset: !<reference> 56d69a00-e48c-4ef4-9b94-850bccdba315
+  ScriptInputsDefault:
+    columns: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      timerTextures: !<reference.Texture[]>
+        - !<reference> 0f3fc4e5-718f-4882-b5bb-787603e32173
+        - !<reference> b7c9cb48-8fe4-4424-a108-1c3ff2f1cc93
+        - !<reference> 6dc60331-95b8-4d94-b19a-742ff0618d72
+        - !<reference> 101c5bcd-ff78-4f23-910f-74050a9d117f
+        - !<reference> a90597e7-d1a8-4a52-8979-d5acf7719088
+        - !<reference> 72d88ddc-04f6-490b-8153-799ee82699d8
+        - !<reference> 470e5d4c-eb19-48cf-b4b3-2137e8d01951
+        - !<reference> f38d3906-9e21-4d29-8ccd-1b915783f8a6
+        - !<reference> 32268401-8e79-49f5-ae45-39e3561cf9d1
+        - !<reference> 80cf2c97-f5da-4320-a88b-ba96e668556e
+      columns: !<reference.Image[]>
+        []
+      time: 10
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/f94e2457-420b-4750-981f-06c9d8a57fc3>
+  PrefabRemaps:
+    []
+  Name: second tens
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 8.579700, y: 10.036600, z: -50.861599}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 11.170684, y: 9.960501, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 13d82eb5-74a2-46a9-8275-a739f05564a2
